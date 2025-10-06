@@ -1,0 +1,390 @@
+---
+sidebar: sidebar 
+permalink: task-investigate-data.html 
+keywords: personal files, personal data, sensitive personal files, sensitive personal data, health data, ethnic origin, political opinions, gdpr, email address, credit card, ip address, iban, national ID, identifier, password, sex, criminal, compliance, privacy, filter data, permissions, csv file, json file, highlights, policies,json, csv, data investigation, data investigation report, download report, file metadata, file permissions, duplicate files, saved search 
+summary: Puoi analizzare i dati della tua organizzazione visualizzandone i dettagli nella pagina Analisi dati.  Qui puoi continuare la tua ricerca dopo aver consultato la dashboard di Governance. 
+---
+= Esamina i dati archiviati nella tua organizzazione con NetApp Data Classification
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+La dashboard di Data Investigation visualizza informazioni dettagliate sui dati a livello di file e directory, consentendo di ordinare e filtrare i risultati.  La pagina Analisi dati fornisce approfondimenti sui metadati e sulle autorizzazioni di file e directory, nonché sull'identificazione dei file duplicati.  Grazie alle informazioni a livello di file, directory e database, puoi adottare misure per migliorare la conformità della tua organizzazione e risparmiare spazio di archiviazione.  La pagina di analisi dei dati supporta anche lo spostamento, la copia e l'eliminazione dei file.
+
+
+NOTE: Per ottenere informazioni dalla pagina Indagine, è necessario eseguire una scansione completa della classificazione sulle origini dati.  Le origini dati sottoposte a scansione solo di mappatura non mostrano dettagli a livello di file.
+
+
+
+== Struttura dell'indagine sui dati
+
+La pagina Indagine sui dati ordina i dati in tre schede:
+
+* **Dati non strutturati**: dati di file
+* **Directory**: cartelle e condivisioni di file
+* **Strutturato**: database
+
+
+
+
+== Filtri dati
+
+La pagina Analisi dati fornisce numerosi filtri per ordinare i dati in modo da poter trovare ciò di cui hai bisogno.  È possibile utilizzare più filtri contemporaneamente.
+
+Per aggiungere un filtro, seleziona il pulsante **Aggiungi filtro**.
+
+image:screenshot_compliance_investigation_filtered.png["Uno screenshot dei filtri disponibili quando si perfezionano i risultati nella pagina di indagine."]
+
+*Sensibilità e contenuto del filtro*
+
+Utilizza i seguenti filtri per visualizzare la quantità di informazioni sensibili contenute nei tuoi dati.
+
+[cols="30,60"]
+|===
+| Filtro | Dettagli 
+
+
+| Categoria | Seleziona illink:reference-private-data-categories.html["tipi di categorie"] . 
+
+
+| Livello di sensibilità | Selezionare il livello di sensibilità: Personale, Personale sensibile o Non sensibile. 
+
+
+| Numero di identificatori | Selezionare l'intervallo di identificatori sensibili rilevati per file.  Include dati personali e dati personali sensibili.  Quando si filtra nelle directory, la classificazione dei dati somma le corrispondenze di tutti i file in ogni cartella (e sottocartelle).  NOTA: nella versione di dicembre 2023 (1.26.6) è stata rimossa l'opzione per calcolare il numero di dati di informazioni personali identificabili (PII) per directory. 
+
+
+| Dati personali | Seleziona illink:reference-private-data-categories.html["tipi di dati personali"] . 
+
+
+| Dati personali sensibili | Seleziona illink:reference-private-data-categories.html["tipi di dati personali sensibili"] . 
+
+
+| Interessato | Inserire il nome completo o un identificativo noto dell'interessato. link:task-generating-compliance-reports.html["Scopri di più sugli interessati qui"] . 
+|===
+*Filtra il proprietario dell'utente e i permessi dell'utente*
+
+Utilizza i seguenti filtri per visualizzare i proprietari dei file e le autorizzazioni per accedere ai tuoi dati.
+
+[cols="30,60"]
+|===
+| Filtro | Dettagli 
+
+
+| Permessi aperti | Selezionare il tipo di autorizzazioni all'interno dei dati e all'interno delle cartelle/condivisioni. 
+
+
+| Autorizzazioni utente/gruppo | Selezionare uno o più nomi utente e/o nomi di gruppo oppure immettere un nome parziale. 
+
+
+| Proprietario del file | Inserisci il nome del proprietario del file. 
+
+
+| Numero di utenti con accesso | Selezionare uno o più intervalli di categorie per mostrare quali file e cartelle sono aperti a un determinato numero di utenti. 
+|===
+*Filtra cronologicamente*
+
+Utilizzare i seguenti filtri per visualizzare i dati in base a criteri temporali.
+
+[cols="30,60"]
+|===
+| Filtro | Dettagli 
+
+
+| Tempo di creazione | Selezionare un intervallo di tempo in cui è stato creato il file.  È anche possibile specificare un intervallo di tempo personalizzato per perfezionare ulteriormente i risultati della ricerca. 
+
+
+| Tempo scoperto | Selezionare un intervallo di tempo in cui Data Classification ha rilevato il file.  È anche possibile specificare un intervallo di tempo personalizzato per perfezionare ulteriormente i risultati della ricerca. 
+
+
+| Ultima modifica | Seleziona un intervallo di tempo in cui il file è stato modificato l'ultima volta.  È anche possibile specificare un intervallo di tempo personalizzato per perfezionare ulteriormente i risultati della ricerca. 
+
+
+| Ultimo accesso  a| 
+Selezionare un intervallo di tempo in cui è avvenuto l'ultimo accesso al file o alla directory*.  È anche possibile specificare un intervallo di tempo personalizzato per perfezionare ulteriormente i risultati della ricerca.  Per i tipi di file analizzati da Data Classification, questa è l'ultima volta che Data Classification ha analizzato il file.
+
+|===
+{asterisco} L'orario dell'ultimo accesso a una directory è disponibile solo per le condivisioni NFS o CIFS.
+
+*Filtra metadati*
+
+Utilizzare i seguenti filtri per visualizzare i dati in base a posizione, dimensione e tipo di directory o file.
+
+[cols="30,60"]
+|===
+| Filtro | Dettagli 
+
+
+| Percorso del file | Inserisci fino a 20 percorsi parziali o completi che desideri includere o escludere dalla query.  Se si immettono sia percorsi di inclusione che percorsi di esclusione, Data Classification trova prima tutti i file nei percorsi inclusi, quindi rimuove i file dai percorsi esclusi e infine visualizza i risultati.  Tieni presente che l'utilizzo di "*" in questo filtro non ha alcun effetto e che non puoi escludere cartelle specifiche dalla scansione: verranno scansionate tutte le directory e i file in una condivisione configurata. 
+
+
+| Tipo di directory | Selezionare il tipo di directory: "Condividi" o "Cartella". 
+
+
+| Tipo di file | Seleziona illink:reference-private-data-categories.html["tipi di file"] . 
+
+
+| Dimensione del file | Seleziona l'intervallo di dimensioni del file. 
+
+
+| Hash del file | Inserisci l'hash del file per trovare un file specifico, anche se il nome è diverso. 
+|===
+*Tipo di archiviazione filtro*
+
+Utilizzare i seguenti filtri per visualizzare i dati in base al tipo di archiviazione.
+
+[cols="30,60"]
+|===
+| Filtro | Dettagli 
+
+
+| Tipo di sistema | Selezionare il tipo di sistema. 
+
+
+| Nome dell'ambiente di sistema | Selezionare sistemi specifici. 
+
+
+| Deposito di archiviazione | Selezionare il repository di archiviazione, ad esempio un volume o uno schema. 
+|===
+*Query filtro*
+
+Utilizzare il seguente filtro per visualizzare i dati in base alle query salvate.
+
+[cols="30,60"]
+|===
+| Filtro | Dettagli 
+
+
+| Query salvata | Selezionare una o più query salvate.  Vai allink:task-using-policies.html["scheda query salvate"] per visualizzare l'elenco delle query salvate esistenti e crearne di nuove. 
+
+
+| Etichette | Selezionarelink:task-org-private-data.html["il tag o i tag"] che sono assegnati ai tuoi file. 
+|===
+*Stato dell'analisi del filtro*
+
+Utilizzare il seguente filtro per visualizzare i dati in base allo stato della scansione di classificazione dei dati.
+
+[cols="30,60"]
+|===
+| Filtro | Dettagli 
+
+
+| Stato dell'analisi | Selezionare un'opzione per visualizzare l'elenco dei file in attesa della prima scansione, in fase di scansione completata, in attesa di nuova scansione o la cui scansione non è riuscita. 
+
+
+| Evento di analisi della scansione | Seleziona se desideri visualizzare i file che non sono stati classificati perché la classificazione dei dati non è riuscita a ripristinare l'orario dell'ultimo accesso oppure i file che sono stati classificati anche se la classificazione dei dati non è riuscita a ripristinare l'orario dell'ultimo accesso. 
+|===
+link:reference-collected-metadata.html["Visualizza i dettagli sul timestamp "ultimo accesso""]per maggiori informazioni sugli elementi che compaiono nella pagina Indagine quando si filtra utilizzando l'evento Analisi scansione.
+
+*Filtra i dati per duplicati*
+
+Utilizza il seguente filtro per visualizzare i file duplicati nel tuo archivio.
+
+[cols="30,60"]
+|===
+| Filtro | Dettagli 
+
+
+| Duplicati | Selezionare se il file è duplicato nei repository. 
+|===
+
+
+== Visualizza i metadati del file
+
+Oltre a mostrare il sistema e il volume in cui risiede il file, i metadati mostrano molte altre informazioni, tra cui le autorizzazioni del file, il proprietario del file e se sono presenti duplicati di questo file.  Questa informazione è utile se stai pianificando dilink:task-using-policies.html["creare query salvate"] perché puoi vedere tutte le informazioni che puoi utilizzare per filtrare i tuoi dati.
+
+La disponibilità delle informazioni dipende dalla fonte dei dati.  Ad esempio, il nome del volume e le autorizzazioni non vengono condivisi per i file del database.
+
+.Passi
+. Dal menu Classificazione dati, selezionare *Indagine*.
+. Nell'elenco Data Investigation sulla destra, seleziona il cursore verso il bassoimage:button_down_caret.png["accento circonflesso verso il basso"] sulla destra per ogni singolo file per visualizzare i metadati del file.
++
+image:screenshot_compliance_file_details.png["Uno screenshot che mostra i dettagli dei metadati di un file nella pagina Indagine sui dati."]
+
+. Facoltativamente, puoi creare o aggiungere un tag al file con il pulsante *Crea tag*.  Seleziona un tag esistente dal menu a discesa oppure aggiungi un nuovo tag con il pulsante *+ Aggiungi*.  I tag possono essere utilizzati per filtrare i dati.
+
+
+
+
+== Visualizza i permessi utente per file e directory
+
+Per visualizzare un elenco di tutti gli utenti o gruppi che hanno accesso a un file o a una directory e i tipi di autorizzazioni di cui dispongono, selezionare *Visualizza tutte le autorizzazioni*.  Questa opzione è disponibile solo per i dati nelle condivisioni CIFS.
+
+Se si utilizzano identificatori di sicurezza (SID) anziché nomi di utenti e gruppi, è consigliabile integrare Active Directory in Data Classification. Per ulteriori informazioni, consultare link:task-active-directory.html["aggiungi Active Directory alla classificazione dei dati"] .
+
+.Passi
+. Dal menu Classificazione dati, selezionare *Indagine*.
+. Nell'elenco Data Investigation sulla destra, seleziona il cursore verso il bassoimage:button_down_caret.png["accento circonflesso verso il basso"] sulla destra per ogni singolo file per visualizzare i metadati del file.
+. Per visualizzare un elenco di tutti gli utenti o gruppi che hanno accesso a un file o a una directory e i tipi di autorizzazioni di cui dispongono, nel campo Apri autorizzazioni, selezionare *Visualizza tutte le autorizzazioni*.
++
+
+NOTE: La classificazione dei dati mostra fino a 100 utenti nell'elenco.
+
+. Seleziona il cursore verso il bassoimage:button_down_caret.png["accento circonflesso verso il basso"] pulsante per qualsiasi gruppo per visualizzare l'elenco degli utenti che fanno parte del gruppo.
++
+
+TIP: È possibile espandere un livello del gruppo per visualizzare gli utenti che ne fanno parte.
+
+. Seleziona il nome di un utente o di un gruppo per aggiornare la pagina Indagine, in modo da poter visualizzare tutti i file e le directory a cui l'utente o il gruppo ha accesso.
+
+
+
+
+== Controlla i file duplicati nei tuoi sistemi di archiviazione
+
+Puoi verificare se nei tuoi sistemi di archiviazione sono archiviati file duplicati.  Questa funzione è utile se si desidera individuare le aree in cui è possibile risparmiare spazio di archiviazione.  È inoltre opportuno assicurarsi che determinati file con autorizzazioni specifiche o informazioni sensibili non vengano duplicati inutilmente nei sistemi di archiviazione.
+
+Tutti i file (esclusi i database) che hanno una dimensione pari o superiore a 1 MB o che contengono informazioni personali o sensibili vengono confrontati per verificare se sono presenti duplicati.
+
+La classificazione dei dati utilizza la tecnologia di hashing per individuare i file duplicati.  Se un file ha lo stesso codice hash di un altro file, puoi essere sicuro al 100% che i file sono duplicati esatti, anche se i nomi dei file sono diversi.
+
+.Passi
+. Dal menu Classificazione dati, selezionare *Indagine*.
+. Nel riquadro Filtro, seleziona "Dimensione file" insieme a "Duplicati" ("Contiene duplicati") per vedere quali file di un certo intervallo di dimensioni sono duplicati nel tuo ambiente.
+. Facoltativamente, scarica l'elenco dei file duplicati e invialo all'amministratore dell'archiviazione, in modo che possa decidere quali file, se presenti, possono essere eliminati.
+. Facoltativamente, puoi eliminare, contrassegnare o spostare i file duplicati.  Selezionare i file su cui si desidera eseguire un'azione, quindi selezionare l'azione appropriata.
+
+
+*Visualizza se un file specifico è duplicato*
+
+Puoi vedere se un singolo file ha dei duplicati.
+
+.Passi
+. Dal menu Classificazione dati, selezionare *Indagine*.
+. Nell'elenco Indagine sui dati, selezionareimage:button_down_caret.png["accento circonflesso verso il basso"] sulla destra per ogni singolo file per visualizzare i metadati del file.
++
+Se per un file esistono duplicati, questa informazione viene visualizzata accanto al campo _Duplicati_.
+
+. Per visualizzare l'elenco dei file duplicati e la loro posizione, selezionare *Visualizza dettagli*.
+. Nella pagina successiva seleziona *Visualizza duplicati* per visualizzare i file nella pagina Indagine.
+. Facoltativamente, puoi eliminare, contrassegnare o spostare i file duplicati.  Selezionare i file su cui si desidera eseguire un'azione, quindi selezionare l'azione appropriata.
+
+
+
+TIP: È possibile utilizzare il valore "hash del file" fornito in questa pagina e inserirlo direttamente nella pagina Indagine per cercare in qualsiasi momento uno specifico file duplicato, oppure è possibile utilizzarlo in una query salvata.
+
+
+
+== Scarica il tuo report
+
+Puoi scaricare i risultati filtrati in formato CSV o JSON.
+
+Se la classificazione dei dati esegue la scansione di file (dati non strutturati), directory (cartelle e condivisioni di file) e database (dati strutturati), è possibile scaricare fino a tre file di report.
+
+I file vengono suddivisi in file con un numero fisso di righe o record:
+
+* JSON: 100.000 record per report, la cui generazione richiede circa 5 minuti
+* CSV: 200.000 record per report, la cui generazione richiede circa 4 minuti
+
+
+
+NOTE: È possibile scaricare una versione del file CSV da visualizzare in questo browser.  Questa versione è limitata a 10.000 record.
+
+
+
+=== Cosa è incluso nel report scaricabile
+
+Il *Rapporto dati file non strutturati* include le seguenti informazioni sui tuoi file:
+
+* Nome del file
+* Tipo di posizione
+* Nome del sistema
+* Repository di archiviazione (ad esempio, un volume, un bucket, condivisioni)
+* Tipo di repository
+* Percorso del file
+* Tipo di file
+* Dimensione del file (in MB)
+* Ora di creazione
+* Ultima modifica
+* Ultimo accesso
+* Proprietario del file
++
+** I dati del proprietario del file comprendono il nome dell'account, il nome dell'account SAM e l'indirizzo e-mail quando Active Directory è configurato.
+
+
+* Categoria
+* Informazioni personali
+* Informazioni personali sensibili
+* Permessi aperti
+* Errore di analisi della scansione
+* Data di rilevamento dell'eliminazione
++
+La data di rilevamento dell'eliminazione identifica la data in cui il file è stato eliminato o spostato.  Ciò consente di identificare quando sono stati spostati file sensibili.  I file eliminati non contribuiscono al conteggio dei file visualizzato nella dashboard o nella pagina Indagine.  I file vengono visualizzati solo nei report CSV.
+
+
+
+Il *Rapporto dati directory non strutturate* include le seguenti informazioni sulle cartelle e sulle condivisioni file:
+
+* Tipo di sistema
+* Nome del sistema
+* Nome della directory
+* Repository di archiviazione (ad esempio, una cartella o condivisioni di file)
+* Proprietario della directory
+* Ora di creazione
+* Tempo scoperto
+* Ultima modifica
+* Ultimo accesso
+* Permessi aperti
+* Tipo di directory
+
+
+Il *Rapporto dati strutturati* include le seguenti informazioni sulle tabelle del database:
+
+* Nome della tabella DB
+* Tipo di posizione
+* Nome del sistema
+* Repository di archiviazione (ad esempio, uno schema)
+* Numero di colonne
+* Conteggio delle righe
+* Informazioni personali
+* Informazioni personali sensibili
+
+
+.Passaggi per generare il report
+. Dalla pagina Indagine sui dati, selezionareimage:button_download.png["pulsante di download"] pulsante in alto a destra della pagina.
+. Scegli il tipo di report: CSV o JSON.
+. Inserisci un **Nome del report**.
+. Per scaricare il report completo, seleziona **Sistema**, quindi scegli **Sistema** e **Volume** dai rispettivi menu a discesa.  Fornire un **percorso per la cartella di destinazione**.
++
+Per scaricare il report nel browser, seleziona **Locale**.  Si noti che questa opzione limita il report alle prime 10.000 righe ed è limitata al formato **CSV**.  Se selezioni **Locale** non è necessario compilare altri campi.
+
+. Seleziona **Scarica report**.
++
+image:screenshot_compliance_investigation_report2.png["Uno screenshot della pagina Scarica rapporto di indagine con più opzioni."]
+
+
+
+.Risultato
+Una finestra di dialogo visualizza un messaggio che indica che i report sono in fase di download.
+
+
+
+== Crea una query salvata in base ai filtri selezionati
+
+.Passi
+. Nella scheda Indagine, definisci una ricerca selezionando i filtri che desideri utilizzare. Vederelink:task-investigate-data.html["Filtraggio dei dati nella pagina Indagine"] per i dettagli.
+. Dopo aver impostato tutte le caratteristiche del filtro come preferisci, seleziona *Salva query*.
++
+image:../media/screenshot_compliance_save_as_highlight.png["Screenshot che mostra come salvare una query filtrata come query salvata."]
+
+. Assegna un nome alla query salvata e aggiungi una descrizione.  Il nome deve essere univoco.
+. Facoltativamente, puoi salvare la query come criterio:
++
+.. Per salvare la query come criterio, attivare l'opzione *Esegui come criterio*.
+.. Scegli se *Eliminare definitivamente* o *Inviare aggiornamenti via email*.  Se scegli gli aggiornamenti via e-mail, puoi inviare via e-mail i risultati della query a _tutti_ gli utenti della Console con cadenza giornaliera, settimanale o mensile.  In alternativa, è possibile inviare la notifica a un indirizzo e-mail specifico con le stesse frequenze.
+
+
+. Seleziona *Salva*.
++
+image:../media/screenshot_compliance_save_highlight2.png["Uno screenshot che mostra come configurare la query salvata e salvarla."]
+
+
+
+Dopo aver creato la ricerca o la policy, puoi visualizzarla nella scheda **Query salvate**.
+
+
+TIP: Potrebbero essere necessari fino a 15 minuti prima che i risultati vengano visualizzati nella pagina Query salvate.

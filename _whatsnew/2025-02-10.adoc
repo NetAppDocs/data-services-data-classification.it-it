@@ -1,0 +1,52 @@
+= Versione 1.40
+:allow-uri-read: 
+
+
+
+
+=== Versione 1.40
+
+Questa versione BlueXP classification include i seguenti aggiornamenti.
+
+.Supporto per RHEL 9.5
+Questa versione fornisce supporto per Red Hat Enterprise Linux v9.5 oltre alle versioni supportate in precedenza.  Ciò è applicabile a qualsiasi installazione manuale in sede della BlueXP classification, comprese le distribuzioni in dark site.
+
+I seguenti sistemi operativi richiedono l'utilizzo del motore container Podman e la versione BlueXP classification 1.30 o successiva: Red Hat Enterprise Linux versione 8.8, 8.10, 9.0, 9.1, 9.2, 9.3, 9.4 e 9.5.
+
+.Dare priorità alle scansioni
+Durante la scansione della configurazione, è possibile dare priorità alle scansioni più importanti in modo che vengano eseguite prima delle altre.  Questa funzionalità è utile quando si hanno molti ambienti di lavoro e si desidera assicurarsi che le scansioni ad alta priorità vengano eseguite correttamente fin dall'inizio.
+
+Esistono due tipi di scansioni:
+
+* Le *scansioni di sola mappatura* forniscono solo una panoramica di alto livello dei dati.  La mappatura delle fonti dati può essere eseguita molto rapidamente perché non è necessario accedere ai file per visualizzare i dati al loro interno.
+* Le scansioni *Mappa e classifica* forniscono una scansione approfondita dei tuoi dati.
+
+
+Potresti trarre vantaggio dall'utilizzo di scansioni di sola mappatura per analizzare rapidamente i tuoi dati e identificare le origini dati che richiedono più ricerca e quindi abilitare in seguito le scansioni di mappatura e classificazione solo su tali origini dati o volumi richiesti.
+
+La priorità viene assegnata solo alle scansioni di sola mappatura, non alle scansioni di mappatura e classificazione.
+
+Per impostazione predefinita, la priorità è impostata su 1, ma è possibile modificarla con un numero compreso tra 1 e 10.  Più basso è il numero, maggiore è la priorità.  Se non si imposta una priorità, alla scansione viene assegnata la priorità 5.
+
+Per modificare la priorità, procedere come segue:
+
+. Dal menu BlueXP classification , selezionare *Configurazione*.
+. Seleziona le risorse a cui vuoi dare priorità.
+. Dall'opzione Azioni..., seleziona *Assegna priorità alla scansione*.
+
+
+.Riprova le scansioni
+Con questa versione è possibile ripetere le scansioni non riuscite.  Questa funzionalità è utile quando una scansione non è riuscita a causa di un problema temporaneo, ad esempio un'interruzione della rete.  È possibile riprovare la scansione senza doverla riconfigurare.
+
+Per riprovare una scansione, procedere come segue:
+
+. Dal menu BlueXP classification , selezionare *Configurazione*.
+. Eseguire una delle seguenti operazioni:
++
+** Per riprovare tutte le scansioni non riuscite, seleziona *Riprova tutte le scansioni*.
+** Per riprovare una scansione specifica, selezionare la risorsa e selezionare *Riprova scansione* dall'opzione Azioni...
+
+
+
+
+La scansione viene ripetuta con la stessa configurazione della scansione originale.  Se la scansione fallisce di nuovo, puoi riprovare tutte le volte che vuoi.

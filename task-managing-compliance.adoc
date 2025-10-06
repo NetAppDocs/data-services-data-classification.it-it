@@ -1,0 +1,52 @@
+---
+sidebar: sidebar 
+permalink: task-managing-compliance.html 
+keywords: remove, stop, stop scans, stop scanning, cloud compliance, stop cloud compliance, deactivate, deactivating cloud compliance, data sense 
+summary: Se necessario, è possibile impedire a Data Classification di analizzare uno o più sistemi, database, gruppi di condivisione file, account OneDrive, account Google Drive o account SharePoint. 
+---
+= Rimuovere le origini dati da NetApp Data Classification
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Se necessario, è possibile impedire a NetApp Data Classification di analizzare uno o più sistemi, database o gruppi di condivisione file.
+
+
+
+== Disattivare le scansioni di conformità per un sistema
+
+Quando si disattivano le scansioni, Data Classification non esegue più la scansione dei dati sul sistema e rimuove le informazioni di conformità indicizzate dall'istanza di Data Classification (i dati del sistema stesso non vengono eliminati).
+
+. Dalla pagina _Configurazione_, selezionaimage:button-gallery-options.gif["Pulsante Altro"] pulsante nella riga per il sistema, quindi *Disattiva classificazione dati*.
+
+
+
+TIP: È anche possibile disattivare le scansioni di conformità per un sistema dal pannello Servizi quando si seleziona il sistema.
+
+
+
+== Rimuovere un database dalla classificazione dei dati
+
+Se non si desidera più eseguire la scansione di un determinato database, è possibile eliminarlo dall'interfaccia di classificazione dei dati e interrompere tutte le scansioni.
+
+. Dalla pagina _Configurazione_, selezionaimage:button-gallery-options.gif["Pulsante Altro"] pulsante nella riga per il database, quindi *Rimuovi server DB*.
+
+
+
+
+== Rimuovere un gruppo di condivisioni file dalla classificazione dei dati
+
+Se non si desidera più eseguire la scansione dei file utente da un gruppo di condivisioni file, è possibile eliminare il gruppo di condivisioni file dall'interfaccia di classificazione dei dati e interrompere tutte le scansioni.
+
+.Passi
+. Dalla pagina _Configurazione_, selezionaimage:button-gallery-options.gif["Pulsante Altro"] pulsante nella riga per il Gruppo Condivisioni File, quindi *Rimuovi Gruppo Condivisioni File*.
++
+image:screenshot_compliance_remove_db.png["Uno screenshot del pulsante Rimuovi server DB dalla pagina Configurazione scansione."]
+
+. Selezionare *Elimina gruppo di condivisioni* dalla finestra di dialogo di conferma.
+

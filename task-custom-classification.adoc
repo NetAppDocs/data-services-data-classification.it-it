@@ -1,0 +1,38 @@
+---
+sidebar: sidebar 
+permalink: task-custom-classification.html 
+keywords: custom classification, customize, regular expression, keyword, regex 
+summary: NetApp Data Classification consente di personalizzare la ricerca di informazioni sensibili, adattando il servizio a modelli individuali e parole chiave rilevanti per la tua organizzazione. 
+---
+= Crea una classificazione personalizzata in NetApp Data Classification
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Con NetApp Data Classification puoi creare una ricerca personalizzata per informazioni sensibili.  La ricerca può essere limitata a un'espressione regolare (regex).
+
+
+
+== Crea una classificazione personalizzata
+
+La classificazione personalizzata è disponibile solo per le scansioni Map & Classify, non per le scansioni di sola mappatura.  Questa funzionalità è attualmente in anteprima.
+
+.Passi
+. Selezionare la scheda **Classificazione personalizzata**.
+. Selezionare il pulsante **Aggiungi nuovo classificatore**.
+. Aggiungere un nome e una descrizione per il nuovo classificatore.
+. Scegli di aggiungere il classificatore come *Identificatore personale* o *Categoria*.
++
+image:screenshot-custom-classifier-name.png["Screenshot dell'aggiunta del classificatore"]
+
+. Selezionare *Avanti*.
+. Per aggiungere la personalizzazione come espressione regolare, seleziona **Espressione regolare personalizzata**, quindi **Avanti**.
+. Aggiungi uno schema per rilevare le informazioni specifiche dei tuoi dati.  Selezionare **Convalida** per confermare la sintassi della voce.image:screenshot-create-logic-regex.png["Uno screenshot della finestra di dialogo per creare un'espressione regolare."]
+. Selezionare **Fine** per creare la classificazione personalizzata.
+
+
+La nuova personalizzazione verrà acquisita nella successiva scansione pianificata.  Per visualizzare i risultati, vederexref:task-generating-compliance-reports.html[Generare report di conformità] .

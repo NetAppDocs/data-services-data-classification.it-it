@@ -1,0 +1,57 @@
+---
+sidebar: sidebar 
+permalink: task-add-group-id-as-open.html 
+keywords: permissions, open to organization, file access 
+summary: 'Quando gli ID di gruppo vengono allegati a file o cartelle in condivisioni file NFS, definiscono le autorizzazioni per il file o la cartella, ad esempio se sono "aperti all"organizzazione".  Se alcuni ID gruppo (GID) non sono inizialmente impostati con il livello di autorizzazione "Aperto all"organizzazione", è possibile aggiungere tale autorizzazione al GID in modo che tutti i file e le cartelle a cui è associato tale GID vengano considerati "aperti all"organizzazione".' 
+---
+= Definisci ID di gruppo aggiuntivi come aperti all'organizzazione in NetApp Data Classification
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Quando gli ID di gruppo (GID) vengono allegati a file o cartelle in condivisioni file NFS, definiscono le autorizzazioni per il file o la cartella, ad esempio se sono "aperti all'organizzazione".  Se alcuni GID non sono inizialmente configurati con il livello di autorizzazione "Aperto all'organizzazione", è possibile aggiungere tale autorizzazione al GID in modo che tutti i file e le cartelle a cui è associato tale GID vengano considerati "aperti all'organizzazione".
+
+Dopo aver apportato questa modifica e aver eseguito una nuova scansione dei file e delle cartelle da parte NetApp Data Classification, tutti i file e le cartelle a cui sono associati questi ID gruppo mostreranno questa autorizzazione nella pagina Dettagli indagine e appariranno anche nei report in cui vengono visualizzate le autorizzazioni dei file.
+
+Per attivare questa funzionalità, è necessario accedere al sistema di classificazione dei dati in modo da poter modificare un file di configurazione ed eseguire uno script.  Scopri comelink:reference-log-in-to-instance.html["accedi al sistema di classificazione dei dati"] a seconda che il software sia stato installato manualmente su una macchina Linux o che l'istanza sia stata distribuita nel cloud.
+
+
+
+== Aggiungere l'autorizzazione "apri all'organizzazione" agli ID di gruppo
+
+Prima di iniziare questa attività è necessario disporre dei numeri ID del gruppo (GID).
+
+.Passi
+. Nel sistema di classificazione dei dati, vai su "/opt/netapp/config/custom_configuration" e apri il file `data_provider.yaml` .
+. Nella riga "organization_group_ids: []" aggiungere gli ID del gruppo. Per esempio:
++
+ organization_group_ids: [1014, 1015, 21, 2021, 1013, 2020, 1018, 1019]
++
+Non modificare nient'altro in questo file.
+
+. Salvare le modifiche al file.
+. Vai su "/opt/netapp/Datasense/tools/customer_configuration/data_providers" ed esegui il seguente script:
++
+ update_data_providers_from_config_file.sh
++
+Questo comando invia le autorizzazioni dell'ID gruppo riviste al motore di classificazione.
+
+
+
+.Risultato
+Tutte le scansioni successive dei dati identificheranno i file o le cartelle a cui sono associati questi ID di gruppo come "aperti all'organizzazione".
+
+Puoi modificare l'elenco degli ID gruppo ed eliminare tutti gli ID gruppo aggiunti in passato seguendo gli stessi passaggi.  L'elenco rivisto degli ID gruppo verrà aggiornato dopo aver eseguito lo script per confermare le modifiche.
+
+
+
+== Visualizza l'elenco corrente degli ID gruppo
+
+È possibile che il contenuto del `data_provider.yaml` file di configurazione per differire da ciò che è stato effettivamente commesso dopo l'esecuzione del `update_data_providers_from_config_file.sh` sceneggiatura.  Per visualizzare l'elenco corrente degli ID gruppo aggiunti a Data Classification, eseguire il seguente comando da "/opt/netapp/Datasense/tools/customer_configuration/data_providers":
+
+ get_data_providers_configuration.sh

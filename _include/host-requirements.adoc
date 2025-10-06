@@ -1,0 +1,90 @@
+= 
+:allow-uri-read: 
+
+
+* La classificazione dei dati non è supportata su un host condiviso con altre applicazioni: l'host deve essere un host dedicato.
+* Quando si crea il sistema host nei propri locali, è possibile scegliere tra queste dimensioni di sistema a seconda delle dimensioni del set di dati su cui si prevede di eseguire la scansione di classificazione dei dati.
++
+[cols="17,17,27,31"]
+|===
+| Dimensioni del sistema | processore | RAM (la memoria di swap deve essere disabilitata) | Disco 
+
+
+| *Extra Large* | 32 CPU | 128 GB di RAM  a| 
+** SSD da 1 TiB su /, oppure 100 GiB disponibili su /opt
+** 895 GiB disponibili su /var/lib/docker
+** 5 GiB su /tmp
+** *Per Podman, 30 GB su /var/tmp*
+
+
+
+
+| *Grande* | 16 CPU | 64 GB di RAM  a| 
+** SSD da 500 GiB su /, oppure 100 GiB disponibili su /opt
+** 400 GiB disponibili su /var/lib/docker o per Podman /var/lib/containers
+** 5 GiB su /tmp
+** *Per Podman, 30 GB su /var/tmp*
+
+
+|===
+* Quando si distribuisce un'istanza di elaborazione nel cloud per l'installazione di Data Classification, si consiglia di utilizzare un sistema che soddisfi i requisiti di sistema "Large" sopra indicati:
++
+** *Tipo di istanza Amazon Elastic Compute Cloud (Amazon EC2)*: "m6i.4xlarge". link:reference-instance-types.html#aws-instance-types["Vedi altri tipi di istanze AWS"^] .
+** *Dimensioni della VM di Azure*: "Standard_D16s_v3". link:reference-instance-types.html#azure-instance-types["Visualizza altri tipi di istanze di Azure"^] .
+** *Tipo di macchina GCP*: "n2-standard-16". link:reference-instance-types.html#gcp-instance-types["Vedi altri tipi di istanza GCP"^] .
+
+
+* *Autorizzazioni cartella UNIX*: sono richieste le seguenti autorizzazioni UNIX minime:
++
+[cols="25,25"]
+|===
+| Cartella | Permessi minimi 
+
+
+| /tmp | `rwxrwxrwt` 
+
+
+| /optare | `rwxr-xr-x` 
+
+
+| /var/lib/docker | `rwx------` 
+
+
+| /usr/lib/systemd/sistema | `rwxr-xr-x` 
+|===
+* *Sistema operativo*:
++
+** I seguenti sistemi operativi richiedono l'utilizzo del motore container Docker:
++
+*** Red Hat Enterprise Linux versione 7.8 e 7.9
+*** Ubuntu 22.04 (richiede Data Classification versione 1.23 o successiva)
+*** Ubuntu 24.04 (richiede Data Classification versione 1.23 o successiva)
+
+
+** I seguenti sistemi operativi richiedono l'utilizzo del motore contenitore Podman e la versione 1.30 o successiva di Data Classification:
++
+*** Red Hat Enterprise Linux versione 8.8, 8.10, 9.0, 9.1, 9.2, 9.3, 9.4, 9.5 e 9.6.
+
+
+** Le estensioni vettoriali avanzate (AVX2) devono essere abilitate sul sistema host.
+
+
+* *Red Hat Subscription Management*: l'host deve essere registrato presso Red Hat Subscription Management.  Se non è registrato, il sistema non può accedere ai repository per aggiornare il software di terze parti richiesto durante l'installazione.
+* *Software aggiuntivo*: è necessario installare il seguente software sull'host prima di installare Data Classification:
++
+** A seconda del sistema operativo utilizzato, sarà necessario installare uno dei seguenti motori container:
++
+*** Docker Engine versione 19.3.1 o successiva. https://docs.docker.com/engine/install/["Visualizza le istruzioni di installazione"^] .
+*** Podman versione 4 o successiva.  Per installare Podman, inserisci(`sudo yum install podman netavark -y` ).
+
+
+
+
+
+
+* Python versione 3.6 o successiva. https://www.python.org/downloads/["Visualizza le istruzioni di installazione"^] .
++
+** *Considerazioni su NTP*: NetApp consiglia di configurare il sistema di classificazione dei dati per utilizzare un servizio Network Time Protocol (NTP).  L'ora deve essere sincronizzata tra il sistema di classificazione dei dati e il sistema agente della console.
+
+
+

@@ -1,0 +1,160 @@
+---
+sidebar: sidebar 
+permalink: task-exclude-scan-paths.html 
+keywords: exclude scans, folders, directories 
+summary: Se si desidera che NetApp Data Classification escluda la scansione dei dati che risiedono in determinate directory di origine dati, è possibile aggiungere i nomi di queste directory a un file di configurazione.  Dopo aver applicato questa modifica, il motore di classificazione dei dati escluderà la scansione dei dati in quelle directory. 
+---
+= Escludere directory specifiche dalle scansioni di NetApp Data Classification
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Se si desidera che NetApp Data Classification escluda directory specifiche dalle scansioni, è possibile aggiungere i nomi di queste directory a un file di configurazione.  Dopo aver applicato questa modifica, il motore di classificazione dei dati esclude tali directory dalle scansioni.
+
+
+NOTE: Per impostazione predefinita, le scansioni di classificazione dei dati escludono i dati degli snapshot del volume, che sono identici alla loro origine nel volume.
+
+
+
+== Fonti dati supportate
+
+L'esclusione di directory specifiche dalle scansioni di classificazione dei dati è supportata per le condivisioni NFS e CIFS nelle seguenti origini dati:
+
+* ONTAP in sede
+* Cloud Volumes ONTAP
+* Amazon FSx for NetApp ONTAP
+* Azure NetApp Files
+* Condivisioni di file generali
+
+
+
+
+== Definisci le directory da escludere dalla scansione
+
+Prima di poter escludere le directory dalla scansione della classificazione, è necessario accedere al sistema di classificazione dei dati in modo da poter modificare un file di configurazione ed eseguire uno script.  Scopri comelink:reference-log-in-to-instance.html["accedi al sistema di classificazione dei dati"] a seconda che il software sia stato installato manualmente su una macchina Linux o che l'istanza sia stata distribuita nel cloud.
+
+.Considerazioni
+* È possibile escludere un massimo di 50 percorsi di directory per sistema di classificazione dei dati.
+* L'esclusione dei percorsi delle directory può influire sui tempi di scansione.
+
+
+.Passi
+. Nel sistema di classificazione dei dati, vai su "/opt/netapp/config/custom_configuration" quindi apri il file `data_provider.yaml` .
+. Nella sezione "data_providers", sotto la riga "exclude:", immettere i percorsi delle directory da escludere. Per esempio:
++
+....
+exclude:
+- "folder1"
+- "folder2"
+....
++
+Non modificare nient'altro in questo file.
+
+. Salvare le modifiche al file.
+. Vai su "/opt/netapp/Datasense/tools/customer_configuration/data_providers" ed esegui il seguente script:
+
+
+`update_data_providers_from_config_file.sh`
+
++ Questo comando invia al motore di classificazione le directory da escludere dalla scansione.
+
+.Risultato
+Tutte le scansioni successive dei dati escluderanno la scansione delle directory specificate.
+
+È possibile aggiungere, modificare o eliminare elementi dall'elenco di esclusione seguendo gli stessi passaggi.  L'elenco delle esclusioni rivisto verrà aggiornato dopo aver eseguito lo script per confermare le modifiche.
+
+
+
+== Esempi
+
+.Configurazione 1:
+Ogni cartella che contiene "folder1" in qualsiasi punto del nome verrà esclusa da tutte le origini dati.
+
+....
+data_providers:
+   exclude:
+   - "folder1"
+....
+.Risultati previsti per i percorsi che saranno esclusi:
+* /CVO1/cartella1
+* /CVO1/nomecartella1
+* /CVO1/cartella10
+* /CVO1/*cartella1
+* /CVO1/+nomecartella1
+* /CVO1/noncartella10
+* /CVO22/cartella1
+* /CVO22/nomecartella1
+* /CVO22/cartella10
+
+
+.Esempi di percorsi che non verranno esclusi:
+* /CVO1/*cartella
+* /CVO1/nomecartella
+* /CVO22/*cartella20
+
+
+.Configurazione 2:
+Verranno escluse tutte le cartelle che contengono "*folder1" solo all'inizio del nome.
+
+....
+data_providers:
+   exclude:
+   - "\\*folder1"
+....
+.Risultati previsti per i percorsi che saranno esclusi:
+* /CVO/*cartella1
+* /CVO/*nomecartella1
+* /CVO/*cartella10
+
+
+.Esempi di percorsi che non verranno esclusi:
+* /CVO/cartella1
+* /CVO/nomecartella1
+* /CVO/non*cartella10
+
+
+.Configurazione 3:
+Verrà esclusa ogni cartella nella sorgente dati "CVO22" che contiene "folder1" in qualsiasi punto del nome.
+
+....
+data_providers:
+   exclude:
+   - "CVO22/folder1"
+....
+.Risultati previsti per i percorsi che saranno esclusi:
+* /CVO22/cartella1
+* /CVO22/nomecartella1
+* /CVO22/cartella10
+
+
+.Esempi di percorsi che non verranno esclusi:
+* /CVO1/cartella1
+* /CVO1/nomecartella1
+* /CVO1/cartella10
+
+
+
+
+== Escape dei caratteri speciali nei nomi delle cartelle
+
+Se il nome di una cartella contiene uno dei seguenti caratteri speciali e si desidera escludere dalla scansione i dati in quella cartella, sarà necessario utilizzare la sequenza di escape \\ prima del nome della cartella.
+
+ ., +, *, ?, ^, $, (, ), [, ], {, }, |
+Per esempio:
+
+Percorso nella sorgente: `/project/*not_to_scan`
+
+Sintassi nel file di esclusione: `"\\*not_to_scan"`
+
+
+
+== Visualizza l'elenco delle esclusioni corrente
+
+È possibile che il contenuto del `data_provider.yaml` file di configurazione diverso da quello effettivamente commesso dopo l'esecuzione del `update_data_providers_from_config_file.sh` sceneggiatura.  Per visualizzare l'elenco corrente delle directory escluse dalla scansione di Data Classification, eseguire il seguente comando da "/opt/netapp/Datasense/tools/customer_configuration/data_providers":
+
+ get_data_providers_configuration.sh

@@ -1,0 +1,117 @@
+---
+sidebar: sidebar 
+permalink: task-scanning-databases.html 
+keywords: cloud compliance, enable cloud compliance, outbound internet, endpoints, cloud compliance internet, web browser connectivity, cloud compliance access, privacy, compliance, databases, database schemas, Oracle, SAP HANA, SQL Server, MongoDB, PostgreSQL, data sense 
+summary: Completa alcuni passaggi per iniziare a scansionare gli schemi del tuo database con NetApp Data Classification. 
+---
+= Scansiona gli schemi del database con NetApp Data Classification
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Completa alcuni passaggi per iniziare a scansionare gli schemi del tuo database con NetApp Data Classification.
+
+
+
+== Rivedere i prerequisiti
+
+Prima di abilitare la classificazione dei dati, rivedere i seguenti prerequisiti per assicurarsi di disporre di una configurazione supportata.
+
+
+
+=== Database supportati
+
+La classificazione dei dati può analizzare gli schemi dai seguenti database:
+
+* Servizio di database relazionale Amazon (Amazon RDS)
+* MongoDB
+* MySQL
+* Oracolo
+* PostgreSQL
+* SAP HANA
+* SQL Server (MSSQL)
+
+
+
+CAUTION: La funzionalità di raccolta delle statistiche *deve essere abilitata* nel database.
+
+
+
+=== Requisiti del database
+
+È possibile eseguire la scansione di qualsiasi database con connettività all'istanza di classificazione dei dati, indipendentemente da dove sia ospitato.  Per connettersi al database sono necessarie solo le seguenti informazioni:
+
+* Indirizzo IP o nome host
+* Porta
+* Nome del servizio (solo per l'accesso ai database Oracle)
+* Credenziali che consentono l'accesso in lettura agli schemi
++
+Quando si sceglie un nome utente e una password, è importante sceglierne uno che disponga di autorizzazioni di lettura complete per tutti gli schemi e le tabelle che si desidera analizzare.  Ti consigliamo di creare un utente dedicato per il sistema di classificazione dei dati con tutte le autorizzazioni necessarie.
+
+
+
+
+NOTE: Per MongoDB è richiesto un ruolo di amministratore di sola lettura.
+
+
+
+== Distribuisci l'istanza di classificazione dei dati
+
+Distribuire la classificazione dei dati se non è già stata distribuita un'istanza.
+
+Se si esegue la scansione di schemi di database accessibili tramite Internet, è possibilelink:task-deploy-cloud-compliance.html["distribuire la classificazione dei dati nel cloud"^] Olink:task-deploy-compliance-onprem.html["distribuire la classificazione dei dati in una posizione locale dotata di accesso a Internet"^] .
+
+Se si stanno eseguendo la scansione di schemi di database installati in un sito buio che non ha accesso a Internet, è necessariolink:task-deploy-compliance-dark-site.html["distribuire la classificazione dei dati nella stessa posizione locale che non ha accesso a Internet"^] .  Ciò richiede anche che l'agente della console venga distribuito nella stessa posizione locale.
+
+
+
+== Aggiungere il server del database
+
+Aggiungere il server del database in cui risiedono gli schemi.
+
+. Dal menu Classificazione dati, selezionare *Configurazione*.
+. Dalla pagina Configurazione, seleziona *Aggiungi sistema* > *Aggiungi server database*.
+. Immettere le informazioni richieste per identificare il server del database.
++
+.. Selezionare il tipo di database.
+.. Immettere la porta e il nome host o l'indirizzo IP per connettersi al database.
+.. Per i database Oracle, immettere il nome del servizio.
+.. Immettere le credenziali affinché Data Classification possa accedere al server.
+.. Selezionare *Aggiungi server DB*.
++
+image:screenshot_compliance_add_db_server_dialog.png["Uno screenshot della pagina Aggiungi server DB per consentirti di identificare il database."]
+
+
+
+
+
+Il database viene aggiunto all'elenco dei sistemi.
+
+
+
+== Abilita e disabilita le scansioni di conformità sugli schemi del database
+
+È possibile interrompere o avviare la scansione completa degli schemi in qualsiasi momento.
+
+
+TIP: Non è possibile selezionare scansioni di sola mappatura per gli schemi del database.
+
+. Dalla pagina Configurazione, seleziona il pulsante *Configurazione* per il database che desideri configurare.
++
+image:screenshot_compliance_db_server_config.png["Uno screenshot della pagina Configurazione scansione in cui è possibile selezionare il pulsante Configurazione."]
+
+. Selezionare gli schemi che si desidera analizzare spostando il cursore verso destra.
++
+image:screenshot_compliance_select_schemas.png["Uno screenshot della pagina Configurazione scansione in cui è possibile scegliere gli schemi da scansionare."]
+
+
+
+.Risultato
+La classificazione dei dati avvia la scansione degli schemi del database abilitati.  È possibile monitorare l'avanzamento della scansione iniziale accedendo al menu **Configurazione** e selezionando quindi **Configurazione di sistema**.  L'avanzamento di ogni scansione viene visualizzato tramite una barra di avanzamento.  È anche possibile passare il mouse sulla barra di avanzamento per visualizzare il numero di file scansionati rispetto al totale dei file presenti nel volume.  Se sono presenti errori, questi appariranno nella colonna Stato, insieme all'azione richiesta per correggerli.
+
+Data Classification esegue la scansione dei database una volta al giorno; i database non vengono scansionati continuamente come altre fonti di dati.

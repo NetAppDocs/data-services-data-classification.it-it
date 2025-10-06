@@ -1,0 +1,260 @@
+---
+sidebar: sidebar 
+permalink: task-scanning-overview.html 
+keywords: cloud compliance, get started, enable cloud compliance, cifs credentials, smb credentials, cloud compliance access, privacy, compliance, dp volumes, data protection volumes, CVO, Cloud Volumes ONTAP, data sense, cloud data sense, mapping-only scans, map and classify, map & classify 
+summary: Esegui la scansione delle tue fonti dati con NetApp Data Classification. 
+---
+= Scansiona le origini dati con NetApp Data Classification
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Data Classification analizza i dati nei repository (volumi, schemi di database o altri dati utente) selezionati per identificare i dati personali e sensibili.  La classificazione dei dati mappa quindi i dati della tua organizzazione, categorizza ogni file e identifica modelli predefiniti nei dati.  Il risultato della scansione è un indice di informazioni personali, informazioni personali sensibili, categorie di dati e tipi di file.
+
+Dopo la scansione iniziale, Data Classification analizza continuamente i dati in modalità round-robin per rilevare modifiche incrementali.  Ecco perché è importante mantenere l'istanza in esecuzione.
+
+È possibile abilitare e disabilitare le scansioni a livello di volume o a livello di schema del database.
+
+
+
+== Qual è la differenza tra le scansioni di mappatura e classificazione?
+
+È possibile eseguire due tipi di scansioni nella classificazione dei dati:
+
+* Le **scansioni di sola mappatura** forniscono solo una panoramica di alto livello dei dati e vengono eseguite su origini dati selezionate.  Le scansioni di sola mappatura richiedono meno tempo rispetto alle scansioni di mappatura e classificazione perché non accedono ai file per visualizzare i dati al loro interno.  Potresti volerlo fare inizialmente per identificare le aree di ricerca e poi eseguire una scansione Map & Classify su tali aree.
+* **Le scansioni Map & Classify** forniscono una scansione approfondita dei tuoi dati.
+
+
+La tabella seguente mostra alcune delle differenze:
+
+[cols="47,18,18"]
+|===
+| Caratteristica | Mappa e classifica le scansioni | Scansioni solo di mappatura 
+
+
+| Velocità di scansione | Lento | Veloce 
+
+
+| Prezzi | Gratuito | Gratuito 
+
+
+| Capacità | Limitato a 500 TiB* | Limitato a 500 TiB* 
+
+
+| Elenco dei tipi di file e della capacità utilizzata | SÌ | SÌ 
+
+
+| Numero di file e capacità utilizzata | SÌ | SÌ 
+
+
+| Età e dimensione dei file | SÌ | SÌ 
+
+
+| Capacità di eseguire unlink:task-controlling-governance-data.html["Rapporto di mappatura dei dati"] | SÌ | SÌ 
+
+
+| Pagina di indagine sui dati per visualizzare i dettagli del file | SÌ | NO 
+
+
+| Cerca nomi all'interno dei file | SÌ | NO 
+
+
+| Crearelink:task-using-policies.html["query salvate"] che forniscono risultati di ricerca personalizzati | SÌ | NO 
+
+
+| Possibilità di eseguire altri report | SÌ | NO 
+
+
+| Possibilità di visualizzare i metadati dai file** | NO | SÌ 
+|===
+{asterisco} La classificazione dei dati non impone limiti alla quantità di dati che può analizzare.  Ogni agente della console supporta la scansione e la visualizzazione di 500 TiB di dati. Per scansionare più di 500 TiB di dati,link:https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html#connector-installation["installare un altro agente Console"^] Poilink:https://docs.netapp.com/us-en/bluexp-classification/task-deploy-overview.html["distribuire un'altra istanza di classificazione dei dati"] .  + L'interfaccia utente della console visualizza i dati da un singolo connettore.  Per suggerimenti sulla visualizzazione dei dati da più agenti della console, vederelink:https://docs.netapp.com/us-en/bluexp-setup-admin/task-manage-multiple-connectors.html#switch-between-connectors["Lavora con più agenti della console"^] .
+
+{asterisco}{asterisco} I seguenti metadati vengono estratti dai file durante le scansioni di mappatura:
+
+* Sistema
+* Tipo di sistema
+* Deposito di archiviazione
+* Tipo di file
+* Capacità utilizzata
+* Numero di file
+* Dimensione del file
+* Creazione di file
+* Ultimo accesso al file
+* File modificato l'ultima volta
+* Ora di scoperta del file
+* Estrazione dei permessi
+
+
+.Differenze nella dashboard di governance:
+[%collapsible]
+====
+[cols="40,25,25"]
+|===
+| Caratteristica | Mappa e classifica | Mappa 
+
+
+| dati obsoleti | SÌ | SÌ 
+
+
+| Dati non aziendali | SÌ | SÌ 
+
+
+| File duplicati | SÌ | SÌ 
+
+
+| Query salvate predefinite | SÌ | NO 
+
+
+| Query salvate predefinite | SÌ | SÌ 
+
+
+| Rapporto DDA | SÌ | SÌ 
+
+
+| Rapporto di mappatura | SÌ | SÌ 
+
+
+| Rilevamento del livello di sensibilità | SÌ | NO 
+
+
+| Dati sensibili con ampi permessi | SÌ | NO 
+
+
+| Permessi aperti | SÌ | SÌ 
+
+
+| Età dei dati | SÌ | SÌ 
+
+
+| Dimensione dei dati | SÌ | SÌ 
+
+
+| Categorie | SÌ | NO 
+
+
+| Tipi di file | SÌ | SÌ 
+|===
+====
+.Differenze nella dashboard di conformità:
+[%collapsible]
+====
+[cols="40,25,25"]
+|===
+| Caratteristica | Mappa e classifica | Mappa 
+
+
+| Informazioni personali | SÌ | NO 
+
+
+| Informazioni personali sensibili | SÌ | NO 
+
+
+| Rapporto di valutazione del rischio per la privacy | SÌ | NO 
+
+
+| Rapporto HIPAA | SÌ | NO 
+
+
+| Rapporto PCI DSS | SÌ | NO 
+|===
+====
+.Differenze nei filtri di indagine:
+[%collapsible]
+====
+[cols="40,25,25"]
+|===
+| Caratteristica | Mappa e classifica | Mappa 
+
+
+| Query salvate | SÌ | SÌ 
+
+
+| Tipo di sistema | SÌ | SÌ 
+
+
+| Sistema | SÌ | SÌ 
+
+
+| Deposito di archiviazione | SÌ | SÌ 
+
+
+| Tipo di file | SÌ | SÌ 
+
+
+| Dimensione del file | SÌ | SÌ 
+
+
+| Ora di creazione | SÌ | SÌ 
+
+
+| Tempo scoperto | SÌ | SÌ 
+
+
+| Ultima modifica | SÌ | SÌ 
+
+
+| Ultimo accesso | SÌ | SÌ 
+
+
+| Permessi aperti | SÌ | SÌ 
+
+
+| Percorso della directory del file | SÌ | SÌ 
+
+
+| Categoria | SÌ | NO 
+
+
+| Livello di sensibilità | SÌ | NO 
+
+
+| Numero di identificatori | SÌ | NO 
+
+
+| Dati personali | SÌ | NO 
+
+
+| Dati personali sensibili | SÌ | NO 
+
+
+| Interessato | SÌ | NO 
+
+
+| Duplicati | SÌ | SÌ 
+
+
+| Stato di classificazione | SÌ | Lo stato è sempre "Approfondimenti limitati" 
+
+
+| Evento di analisi della scansione | SÌ | SÌ 
+
+
+| Hash del file | SÌ | SÌ 
+
+
+| Numero di utenti con accesso | SÌ | SÌ 
+
+
+| Autorizzazioni utente/gruppo | SÌ | SÌ 
+
+
+| Proprietario del file | SÌ | SÌ 
+
+
+| Tipo di directory | SÌ | SÌ 
+|===
+====
+
+
+== Con quale rapidità la classificazione dei dati esegue la scansione dei dati
+
+La velocità di scansione è influenzata dalla latenza di rete, dalla latenza del disco, dalla larghezza di banda di rete, dalle dimensioni dell'ambiente e dalle dimensioni di distribuzione dei file.
+
+* Quando si eseguono scansioni di sola mappatura, la classificazione dei dati può analizzare tra 100 e 150 TiB di dati al giorno.
+* Quando si eseguono scansioni Map & Classify, Data Classification può analizzare tra 15 e 40 TiB di dati al giorno.
+

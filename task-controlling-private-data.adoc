@@ -1,0 +1,81 @@
+---
+sidebar: sidebar 
+permalink: task-controlling-private-data.html 
+keywords: personal files, personal data, sensitive personal files, sensitive personal data, health data, ethnic origin, political opinions, gdpr, email address, credit card, ip address, iban, national ID, identifier, password, sex, criminal, compliance, privacy, filter data, permissions, csv file, json file, highlights 
+summary: 'Ottieni il controllo dei tuoi dati privati visualizzando i dettagli sui dati personali (PII) e sui dati personali sensibili (SPII) nella tua organizzazione.  Puoi anche ottenere visibilità esaminando le categorie e i tipi di file che Data Classification ha trovato nei tuoi dati.' 
+---
+= Visualizza i dettagli di conformità sui dati privati ​​archiviati nella tua organizzazione con NetApp Data Classification
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Ottieni il controllo dei tuoi dati privati ​​visualizzando i dettagli sui dati personali (PII) e sui dati personali sensibili (SPII) nella tua organizzazione.  Puoi anche ottenere visibilità esaminando le categorie e i tipi di file che NetApp Data Classification ha trovato nei tuoi dati.
+
+
+NOTE: I dettagli sulla conformità a livello di file sono disponibili solo se si esegue una scansione di classificazione completa.  Le scansioni di sola mappatura non forniscono dettagli a livello di file.
+
+Per impostazione predefinita, la dashboard Classificazione dati visualizza i dati di conformità per tutti i sistemi e database.  Per visualizzare i dati solo di alcuni sistemi, selezionarli.
+
+image:screenshot_compliance_dashboard.png["Uno screenshot della dashboard di classificazione dei dati"]
+
+È possibile filtrare i risultati dalla pagina Indagine dati e scaricare un report dei risultati come file CSV. Vederelink:task-investigate-data.html["Filtraggio dei dati nella pagina Indagine sui dati"] per i dettagli.
+
+
+
+== Visualizza i file che contengono dati personali
+
+La classificazione dei dati identifica automaticamente parole, stringhe e modelli specifici (Regex) all'interno dei dati. link:link:reference-private-data-categories.html["Ad esempio, numeri di carte di credito, numeri di previdenza sociale, numeri di conti bancari, password e altro ancora."] La classificazione dei dati identifica questo tipo di informazioni nei singoli file, nei file all'interno delle directory (condivisioni e cartelle) e nelle tabelle del database.
+
+Puoi anche creare termini di ricerca personalizzati per identificare dati personali specifici della tua organizzazione. Per ulteriori informazioni, consultare link:task-custom-classification.html["Crea una classificazione personalizzata"] .
+
+Per alcuni tipi di dati personali, la classificazione dei dati utilizza la _validazione di prossimità_ per convalidare i propri risultati.  La validazione avviene ricercando una o più parole chiave predefinite in prossimità dei dati personali trovati.  Ad esempio, la classificazione dei dati identifica un numero di previdenza sociale (SSN) statunitense come SSN se vede una parola di prossimità accanto ad esso, ad esempio _SSN_ o _previdenza sociale_. link:reference-private-data-categories.html["La tabella dei dati personali"] mostra quando la classificazione dei dati utilizza la convalida di prossimità.
+
+.Passi
+. Dal menu Classificazione dati, selezionare la scheda *Conformità*.
+. Per esaminare i dettagli di tutti i dati personali, selezionare l'icona accanto alla percentuale dei dati personali.
++
+image:screenshot_compliance_dashboard.png["Uno screenshot della dashboard di classificazione dei dati"]
+
+. Per esaminare i dettagli di un tipo specifico di dati personali, seleziona *Visualizza tutto* e poi seleziona l'icona a freccia *Esamina risultati* per un tipo specifico di dati personali, ad esempio indirizzi e-mail.
++
+image:screenshot_personal_files.png["Uno screenshot della finestra di dialogo dei file personali in cui è possibile selezionare l'icona Esamina risultati accanto a un tipo di dati personali."]
+
+. Esamina i dati cercando, ordinando, espandendo i dettagli per un file specifico, selezionando la freccia *Esamina risultati* per visualizzare le informazioni mascherate o scaricando l'elenco dei file.
++
+L'immagine seguente mostra i dati personali trovati in una directory (condivisioni e cartelle).  Nella scheda *Strutturato* puoi visualizzare i dati personali presenti nei database.  Nella scheda *Non strutturato* è possibile visualizzare i dati a livello di file.
+
++
+image:screenshot_compliance_investigation_page.png["Uno screenshot delle informazioni dettagliate trovate nei file dopo aver cliccato su Esamina risultati."]
+
++
+image:screenshot_compliance_investigation_page_directory.png["Uno screenshot delle informazioni dettagliate trovate nelle directory dopo aver cliccato su Esamina risultati."]
+
+
+
+
+
+== Visualizza i file che contengono dati personali sensibili
+
+La classificazione dei dati identifica automaticamente tipi speciali di informazioni personali sensibili, come definito dalle normative sulla privacy come https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32016R0679&from=EN#d1e2051-1-1["articoli 9 e 10 del GDPR"^] .  Ad esempio, informazioni riguardanti la salute, l'origine etnica o l'orientamento sessuale di una persona. link:reference-private-data-categories.html["Vedi l'elenco completo"] .  La classificazione dei dati identifica questo tipo di informazioni nei singoli file, nei file all'interno delle directory (condivisioni e cartelle) e nelle tabelle del database.
+
+La classificazione dei dati utilizza l'intelligenza artificiale, l'elaborazione del linguaggio naturale (NLP), l'apprendimento automatico (ML) e il cognitive computing (CC) per comprendere il significato del contenuto analizzato, al fine di estrarre entità e categorizzarle di conseguenza.
+
+Ad esempio, una categoria di dati sensibili del GDPR è l'origine etnica.  Grazie alle sue capacità di NLP, la classificazione dei dati è in grado di distinguere tra una frase che recita "George è messicano" (che indica dati sensibili come specificato nell'articolo 9 del GDPR) e una frase che dice "George sta mangiando cibo messicano".
+
+
+NOTE: Per la scansione dei dati personali sensibili è supportata solo la lingua inglese.  In seguito verrà aggiunto il supporto per altre lingue.
+
+.Passi
+. Dal menu Classificazione dati, selezionare *Conformità*.
+. Per esaminare i dettagli di tutti i dati personali sensibili, individua la scheda **Risultati personali sensibili**, quindi seleziona **Mostra tutto**.
++
+image:screenshot-sensitive-personal.png["Screenshot della scheda dei risultati personali sensibili"] .
+
+. Per esaminare i dettagli di un tipo specifico di dati personali sensibili, seleziona *Visualizza tutto*, quindi seleziona l'icona a freccia *Esamina risultati* per un tipo specifico di dati personali sensibili.
+. Esamina i dati cercando, ordinando, espandendo i dettagli per un file specifico, cliccando su *Esamina risultati* per visualizzare le informazioni mascherate o scaricando l'elenco dei file.
+

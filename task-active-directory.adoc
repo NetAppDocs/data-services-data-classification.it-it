@@ -1,0 +1,119 @@
+---
+sidebar: sidebar 
+permalink: task-active-directory.html 
+keywords: active directory, ad, data sense, cloud data sense 
+summary: È possibile integrare un Active Directory globale con NetApp Data Classification per migliorare i risultati che Data Classification riporta sui proprietari dei file e sugli utenti e gruppi che hanno accesso ai file. 
+---
+= Integra Active Directory con NetApp Data Classification
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile integrare un Active Directory globale con NetApp Data Classification per migliorare i risultati che Data Classification riporta sui proprietari dei file e sugli utenti e gruppi che hanno accesso ai file.
+
+Quando si configurano determinate origini dati (elencate di seguito), è necessario immettere le credenziali di Active Directory affinché Data Classification esegua la scansione dei volumi CIFS.  Questa integrazione fornisce alla classificazione dei dati i dettagli sul proprietario del file e sulle autorizzazioni per i dati che risiedono in tali origini dati.  Le credenziali di Active Directory immesse per tali origini dati potrebbero essere diverse dalle credenziali di Active Directory globali immesse qui.  La classificazione dei dati cercherà in tutte le Active Directory integrate i dettagli degli utenti e delle autorizzazioni.
+
+Questa integrazione fornisce informazioni aggiuntive nelle seguenti posizioni nella Classificazione dei dati:
+
+* Puoi usare il "Proprietario del file"link:task-investigate-data.html["filtro"] e visualizza i risultati nei metadati del file nel riquadro Indagine.  Invece del proprietario del file contenente il SID (Security IDentifier), viene inserito il nome utente effettivo.
++
+È inoltre possibile visualizzare maggiori dettagli sul proprietario del file: nome dell'account, indirizzo e-mail e nome dell'account SAM, oppure visualizzare gli elementi di proprietà di tale utente.
+
+* Puoi vederelink:task-investigate-data.html["permessi completi del file"] per ogni file e directory quando si fa clic sul pulsante "Visualizza tutte le autorizzazioni".
+* Nellink:task-controlling-governance-data.html["Dashboard di governance"] , il pannello Autorizzazioni aperte mostrerà un livello di dettaglio maggiore sui tuoi dati.
+
+
+
+NOTE: I SID degli utenti locali e i SID di domini sconosciuti non vengono tradotti nel nome utente effettivo.
+
+
+
+== Fonti dati supportate
+
+Un'integrazione di Active Directory con Data Classification può identificare i dati dalle seguenti origini dati:
+
+* Sistemi ONTAP on-premise
+* Cloud Volumes ONTAP
+* Azure NetApp Files
+* FSx per ONTAP
+
+
+
+
+== Connettiti al tuo server Active Directory
+
+Dopo aver distribuito Data Classification e attivato la scansione sulle origini dati, è possibile integrare Data Classification con Active Directory.  È possibile accedere ad Active Directory tramite un indirizzo IP del server DNS o un indirizzo IP del server LDAP.
+
+Le credenziali di Active Directory possono essere di sola lettura, ma fornendo le credenziali di amministratore si garantisce che Data Classification possa leggere tutti i dati che richiedono autorizzazioni elevate.  Le credenziali vengono archiviate nell'istanza di classificazione dei dati.
+
+Per i volumi/condivisioni file CIFS, se si desidera assicurarsi che gli "ultimi orari di accesso" dei file non vengano modificati dalle scansioni di classificazione dei dati, l'utente deve disporre dell'autorizzazione di scrittura degli attributi.  Se possibile, consigliamo di far sì che l'utente configurato in Active Directory faccia parte di un gruppo padre nell'organizzazione che dispone delle autorizzazioni per tutti i file.
+
+.Requisiti
+* È necessario che sia già stata configurata una Active Directory per gli utenti della propria azienda.
+* È necessario disporre delle informazioni per Active Directory:
++
+** Indirizzo IP del server DNS o più indirizzi IP
++
+O
+
++
+Indirizzo IP del server LDAP o più indirizzi IP
+
+** Nome utente e password per accedere al server
+** Nome di dominio (nome di Active Directory)
+** Se stai utilizzando LDAP sicuro (LDAPS) o meno
+** Porta del server LDAP (in genere 389 per LDAP e 636 per LDAP sicuro)
+
+
+* Le seguenti porte devono essere aperte per la comunicazione in uscita da parte dell'istanza di classificazione dei dati:
++
+[cols="20,20,30,30"]
+|===
+| Protocollo | Porta | Destinazione | Scopo 
+
+
+| TCP e UDP | 389 | Directory attiva | LDAP 
+
+
+| TCP | 636 | Directory attiva | LDAP su SSL 
+
+
+| TCP | 3268 | Directory attiva | Catalogo globale 
+
+
+| TCP | 3269 | Directory attiva | Catalogo globale su SSL 
+|===
+
+
+.Passi
+. Nella pagina Configurazione classificazione dati, fare clic su *Aggiungi Active Directory*.
++
+image:screenshot_compliance_integrate_active_directory.png["Uno screenshot che mostra come fare clic sul pulsante per aggiungere un server Active Directory in Data Classification."]
+
+. Nella finestra di dialogo Connetti ad Active Directory, immettere i dettagli di Active Directory e fare clic su *Connetti*.
++
+Se necessario, è possibile aggiungere più indirizzi IP selezionando *Aggiungi IP*.
+
++
+image:screenshot_compliance_active_directory_dialog.png["Uno screenshot della finestra di dialogo in cui si definisce l'Active Directory che si desidera integrare con Data Classification."]
+
++
+La classificazione dei dati si integra con Active Directory e una nuova sezione viene aggiunta alla pagina Configurazione.
+
++
+image:screenshot_compliance_active_directory_added.png["Uno screenshot che mostra il nuovo Active Directory integrato in Data Classification."]
+
+
+
+
+
+== Gestisci la tua integrazione con Active Directory
+
+Se è necessario modificare dei valori nell'integrazione di Active Directory, fare clic sul pulsante *Modifica* e apportare le modifiche.
+
+Puoi anche eliminare l'integrazione selezionando l'opzioneimage:button-gallery-options.gif["Pulsante Altro"] pulsante quindi *Rimuovi Active Directory*.

@@ -1,0 +1,67 @@
+---
+sidebar: sidebar 
+permalink: reference-collected-metadata.html 
+keywords: compliance, metadata, permissions, time stamps, privacy, last access time 
+summary: 'La classificazione dei dati raccoglie determinati metadati durante l"esecuzione di scansioni di classificazione sui dati provenienti dalle fonti dati e dai sistemi.  Data Classification può accedere alla maggior parte dei metadati di cui abbiamo bisogno per classificare i tuoi dati, ma ci sono alcune fonti da cui non siamo in grado di accedere ai dati di cui abbiamo bisogno.' 
+---
+= Metadati raccolti da fonti di dati in NetApp Data Classification
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Data Classification raccoglie determinati metadati durante l'esecuzione di scansioni di classificazione sui dati provenienti dalle fonti dati e dai sistemi.  Data Classification può accedere alla maggior parte dei metadati di cui abbiamo bisogno per classificare i tuoi dati, ma ci sono alcune fonti da cui non siamo in grado di accedere ai dati di cui abbiamo bisogno.
+
+[cols="15,25,25,25"]
+|===
+|  | *Metadati* | *CIFS* | *Non è vero* 
+
+
+.3+| *Timbri temporali* | _Ora di creazione_ | Disponibile | Non disponibile (non supportato in Linux) 
+
+
+| _Ultimo orario di accesso_ | Disponibile | Disponibile 
+
+
+| _Ora dell'ultima modifica_ | Disponibile | Disponibile 
+
+
+.2+| *Autorizzazioni* | _Apri permessi_ | Se il gruppo "TUTTI" ha accesso al file, questo è considerato "Aperto all'organizzazione" | Se "Altri" ha accesso al file, questo è considerato "Aperto all'organizzazione" 
+
+
+| _Accesso utenti/gruppi_ | Le informazioni sugli utenti e sui gruppi vengono prese da LDAP | Non disponibile (gli utenti NFS sono solitamente gestiti localmente sul server, pertanto lo stesso individuo può avere un UID diverso in ogni server) 
+|===
+[NOTE]
+====
+* La classificazione dei dati non estrae l'"orario dell'ultimo accesso" dalle fonti dati del database.
+* Le versioni precedenti del sistema operativo Windows (ad esempio, Windows 7 e Windows 8) disabilitano per impostazione predefinita la raccolta dell'attributo "ora dell'ultimo accesso" perché può influire sulle prestazioni del sistema.  Se questo attributo non viene raccolto, le analisi di classificazione dei dati basate sull'"orario dell'ultimo accesso" saranno interessate.  Se necessario, è possibile abilitare la raccolta dell'orario dell'ultimo accesso su questi vecchi sistemi Windows.
+
+
+====
+
+
+== Timestamp dell'ultimo accesso
+
+Quando Data Classification estrae dati dalle condivisioni di file, il sistema operativo lo considera come se stesse accedendo ai dati e modifica di conseguenza l'"orario dell'ultimo accesso".  Dopo la scansione, la classificazione dei dati tenta di ripristinare l'orario dell'ultimo accesso al timestamp originale.  Se Data Classification non dispone di autorizzazioni di scrittura degli attributi in CIFS o di autorizzazioni di scrittura in NFS, il sistema non può ripristinare l'orario dell'ultimo accesso al timestamp originale.  I volumi ONTAP configurati con SnapLock hanno autorizzazioni di sola lettura e non possono ripristinare l'orario dell'ultimo accesso al timestamp originale.
+
+Per impostazione predefinita, se Data Classification non dispone di queste autorizzazioni, il sistema non analizzerà i file nei volumi perché Data Classification non può ripristinare l'"ultimo orario di accesso" al timestamp originale.  Tuttavia, se non ti interessa che l'orario dell'ultimo accesso venga reimpostato sull'orario originale nei tuoi file, puoi selezionare l'opzione *Scansiona quando mancano le autorizzazioni "attributi di scrittura"* nella parte inferiore della pagina Configurazione, in modo che Data Classification esegua la scansione dei volumi indipendentemente dalle autorizzazioni.
+
+image:screenshot_scan_missing_permissions.png["Uno screenshot che mostra l'interruttore che puoi utilizzare per far sì che Data Classification esegua la scansione dei tuoi file anche se non dispone delle autorizzazioni corrette per ripristinare l'orario dell'ultimo accesso al timestamp originale."]
+
+Questa funzionalità è applicabile ai sistemi ONTAP locali, Cloud Volumes ONTAP, Azure NetApp Files, Amazon FSx for NetApp ONTAP e condivisioni file di terze parti.
+
+Nella pagina Indagine è presente un filtro denominato _Evento analisi scansione_ che consente di visualizzare i file che non sono stati classificati perché la classificazione dei dati non è riuscita a ripristinare l'orario dell'ultimo accesso oppure i file che sono stati classificati anche se la classificazione dei dati non è riuscita a ripristinare l'orario dell'ultimo accesso.
+
+image:screenshot_scan_analysis_event_filter.png["Uno screenshot del filtro per vedere quali file sono stati scansionati e quali no, in base al possesso o meno di permessi di scrittura."]
+
+Le selezioni del filtro sono:
+
+* "Non classificato - Impossibile ripristinare l'ultimo orario di accesso": mostra i file che non sono stati classificati a causa della mancanza di autorizzazioni di scrittura.
+* "Ultimo orario di accesso classificato e aggiornato": mostra i file che sono stati classificati e la classificazione dei dati non è riuscita a reimpostare l'ultimo orario di accesso alla data originale.  Questo filtro è rilevante solo per gli ambienti in cui è stata attivata l'opzione *Scansione quando mancano le autorizzazioni "attributi di scrittura"*.
+
+
+Se necessario, è possibile esportare questi risultati in un report, in modo da poter vedere quali file vengono o non vengono analizzati in base alle autorizzazioni. https://docs.netapp.com/us-en/bluexp-classification/task-investigate-data.html#data-investigation-report["Scopri di più sul rapporto di indagine sui dati"^] .

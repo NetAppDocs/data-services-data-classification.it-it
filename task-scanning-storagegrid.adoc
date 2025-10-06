@@ -1,0 +1,82 @@
+---
+sidebar: sidebar 
+permalink: task-scanning-storagegrid.html 
+keywords: cloud compliance, enable cloud compliance, privacy, compliance, object storage, data sense 
+summary: 'Completa alcuni passaggi per avviare la scansione dei dati all"interno StorageGRID direttamente con NetApp Data Classification.' 
+---
+= Scansiona i dati StorageGRID con NetApp Data Classification
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Completa alcuni passaggi per avviare la scansione dei dati all'interno StorageGRID direttamente con NetApp Data Classification.
+
+
+
+== Esaminare i requisiti di StorageGRID
+
+Prima di abilitare la classificazione dei dati, rivedere i seguenti prerequisiti per assicurarsi di disporre di una configurazione supportata.
+
+* È necessario disporre dell'URL dell'endpoint per connettersi al servizio di archiviazione degli oggetti.
+* È necessario disporre della chiave di accesso e della chiave segreta di StorageGRID affinché Data Classification possa accedere ai bucket.
+
+
+
+
+== Distribuisci l'istanza di classificazione dei dati
+
+Distribuire la classificazione dei dati se non è già stata distribuita un'istanza.
+
+Se si esegue la scansione di dati da StorageGRID accessibili tramite Internet, è possibilelink:task-deploy-cloud-compliance.html["distribuire la classificazione dei dati nel cloud"^] Olink:task-deploy-compliance-onprem.html["distribuire la classificazione dei dati in una posizione locale dotata di accesso a Internet"^] .
+
+Se si esegue la scansione di dati da StorageGRID installato in un sito buio senza accesso a Internet, è necessariolink:task-deploy-compliance-dark-site.html["distribuire la classificazione dei dati nella stessa posizione locale che non ha accesso a Internet"^] .  Ciò richiede anche che l'agente della console venga distribuito nella stessa posizione locale.
+
+
+
+== Aggiungere il servizio StorageGRID alla classificazione dei dati
+
+Aggiungere il servizio StorageGRID .
+
+.Passi
+. Dal menu Classificazione dati, selezionare l'opzione *Configurazione*.
+. Dalla pagina Configurazione, seleziona *Aggiungi sistema* > *Aggiungi StorageGRID*.
+. Nella finestra di dialogo Aggiungi servizio StorageGRID , immettere i dettagli per il servizio StorageGRID e selezionare *Continua*.
++
+.. Inserisci il nome che vuoi usare per il sistema.  Questo nome dovrebbe riflettere il nome del servizio StorageGRID a cui ci si sta connettendo.
+.. Immettere l'URL dell'endpoint per accedere al servizio di archiviazione degli oggetti.
+.. Immettere la chiave di accesso e la chiave segreta in modo che Data Classification possa accedere ai bucket in StorageGRID.
++
+image:screenshot-scanning-storagegrid-add.png["Uno screenshot della finestra di dialogo in cui immettere i valori per accedere al servizio StorageGRID ."]
+
+
+
+
+
+.Risultato
+StorageGRID viene aggiunto all'elenco dei sistemi.
+
+
+
+== Abilita e disabilita le scansioni di conformità sui bucket StorageGRID
+
+Dopo aver abilitato la classificazione dei dati su StorageGRID, il passaggio successivo consiste nel configurare i bucket che si desidera analizzare.  La classificazione dei dati rileva tali bucket e li visualizza nel sistema creato.
+
+.Passi
+. Nella pagina Configurazione, individuare il sistema StorageGRID .
+. Nel riquadro del sistema StorageGRID , seleziona *Configurazione*.
+. Per abilitare o disabilitare la scansione, completare uno dei seguenti passaggi:
++
+** Per abilitare le scansioni di sola mappatura su un bucket, selezionare *Mappa*.
+** Per abilitare le scansioni complete su un bucket, seleziona *Mappa e classifica*.
+** Per disattivare la scansione su un bucket, selezionare *Off*.
+
+
+
+
+.Risultato
+La classificazione dei dati avvia la scansione dei bucket abilitati.  È possibile monitorare l'avanzamento della scansione iniziale accedendo al menu **Configurazione** e selezionando quindi **Configurazione di sistema**.  L'avanzamento di ogni scansione viene visualizzato tramite una barra di avanzamento.  È anche possibile passare il mouse sulla barra di avanzamento per visualizzare il numero di file scansionati rispetto al totale dei file presenti nel volume.  Se sono presenti errori, questi appariranno nella colonna Stato, insieme all'azione richiesta per correggerli.

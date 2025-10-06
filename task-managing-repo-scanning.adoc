@@ -1,0 +1,132 @@
+---
+sidebar: sidebar 
+permalink: task-managing-repo-scanning.html 
+keywords: compliance, stop scan, start scan, map scan, classify scan, data sense, pause scan, resume scan, cloud data sense, bluexp classification 
+summary: 'Puoi gestire il modo in cui i tuoi dati vengono scansionati in ciascuno dei tuoi sistemi e delle tue fonti dati in NetApp Data Classification.  È possibile apportare modifiche su base "repository", ovvero è possibile apportare modifiche per ogni volume, bucket, condivisione, schema, utente, ecc. a seconda del tipo di origine dati che si sta analizzando.' 
+---
+= Modifica le impostazioni di scansione della classificazione dei dati NetApp per i tuoi repository
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Puoi gestire il modo in cui i tuoi dati vengono scansionati in ciascuno dei tuoi sistemi e fonti di dati.  È possibile apportare modifiche su base "repository", ovvero è possibile apportare modifiche per ciascun volume, schema, utente, ecc. a seconda del tipo di origine dati che si sta analizzando.
+
+Alcune delle cose che puoi modificare sono se un repository viene scansionato o meno e se NetApp Data Classification sta eseguendo unlink:concept-classification.html["scansione di mappatura o scansione di mappatura e classificazione"] .  È anche possibile mettere in pausa e riprendere la scansione, ad esempio se è necessario interrompere la scansione di un volume per un periodo di tempo.
+
+
+
+== Visualizza lo stato della scansione per i tuoi repository
+
+È possibile visualizzare i singoli repository sottoposti a scansione da NetApp Data Classification (volumi, bucket, ecc.) per ciascun sistema e origine dati.  Puoi anche vedere quanti sono stati "Mappati" e quanti sono stati "Classificati".  La classificazione richiede più tempo perché l'identificazione completa dell'IA viene eseguita su tutti i dati.
+
+È possibile visualizzare lo stato di scansione di ciascun ambiente di lavoro nella pagina Configurazione:
+
+* *Inizializzazione* (punto azzurro): la configurazione della mappa o della classificazione è attivata.  Appare per alcuni secondi prima di avviare lo stato di "coda in attesa".
+* *Coda in attesa* (punto arancione): l'attività di scansione è in attesa di essere elencata nella coda di scansione.
+* *In coda* (punto arancione): l'attività è stata aggiunta correttamente alla coda di scansione.  Il sistema inizierà a mappare o classificare il volume quando arriverà il suo turno nella coda.
+* *In esecuzione* (punto verde): l'attività di scansione, che era in coda, è in corso sul repository di archiviazione selezionato.
+* *Finito* (punto verde): la scansione del repository di archiviazione è completa.
+* *In pausa* (punto grigio): hai selezionato l'opzione "Pausa" per mettere in pausa la scansione.  Sebbene le modifiche al volume non vengano visualizzate nel sistema, le informazioni acquisite tramite scansione vengono comunque visualizzate.
+* *Errore* (punto rosso): la scansione non può essere completata perché si sono verificati dei problemi.  Se è necessario completare un'azione, l'errore viene visualizzato nella descrizione comandi nella colonna "Azione richiesta".  In caso contrario, il sistema visualizza lo stato di "errore" e tenta di ripristinare.  Una volta terminato, lo stato cambia.
+* *Non in scansione*: è stata selezionata la configurazione del volume su "Off" e il sistema non sta eseguendo la scansione del volume.
+
+
+.Passi
+. Dal menu Classificazione dati, selezionare *Configurazione*.
++
+image:screenshot_compliance_config_button.png["Uno screenshot che mostra come selezionare il pulsante Configurazione per un sistema."]
+
+. Dalla scheda Configurazione, selezionare il pulsante *Configurazione* per il sistema.
+. Nella pagina Configurazione scansione, visualizza le impostazioni di scansione per tutti i repository.
++
+image:screenshot_compliance_repo_scan_settings.png["Uno screenshot che mostra se i tuoi bucket sono in fase di scansione e lo stato attuale della scansione."]
+
+. Passa il cursore sul grafico nella colonna _Stato di mappatura_ per visualizzare il numero di file che devono ancora essere mappati o classificati in ciascun repository (bucket in questo esempio).
+
+
+
+
+== Cambia il tipo di scansione per un repository
+
+È possibile avviare o interrompere in qualsiasi momento le scansioni di sola mappatura o le scansioni di mappatura e classificazione in un sistema dalla pagina Configurazione.  È anche possibile passare da scansioni di sola mappatura a scansioni di mappatura e classificazione e viceversa.
+
+
+TIP: I database non possono essere impostati per scansioni di sola mappatura.  La scansione del database può essere disattivata o attivata; dove attivata equivale a mappare e classificare.
+
+.Passi
+. Dal menu Classificazione dati, selezionare *Configurazione*.
+. Dalla scheda Configurazione, selezionare il pulsante *Configurazione* per il sistema.
++
+image:screenshot_compliance_config_button.png["Uno screenshot che mostra come selezionare il pulsante Configurazione per un sistema."]
+
+. Nella pagina Configurazione scansione, modifica uno qualsiasi dei repository (bucket in questo esempio) per eseguire scansioni *Mappa* o *Mappa e classifica*.
++
+image:screenshot_compliance_repo_scan_settings.png["Uno screenshot che mostra come selezionare il tipo di scansione per un bucket."]
+
++
+Alcuni tipi di sistemi consentono di modificare il tipo di scansione a livello globale per tutti i repository utilizzando una barra dei pulsanti nella parte superiore della pagina.  Ciò è valido per i sistemi Cloud Volumes ONTAP, ONTAP locale, Azure NetApp Files e Amazon FSx per ONTAP .
+
++
+L'esempio seguente mostra questa barra dei pulsanti per un sistema Azure NetApp Files .
+
++
+image:screenshot_compliance_repo_scan_all.png["Uno screenshot che mostra come configurare la stessa impostazione di scansione per tutti i volumi di un sistema."]
+
+
+
+
+
+== Dare priorità alle scansioni
+
+È possibile dare priorità alle scansioni più importanti di sola mappatura oppure alle scansioni di mappatura e classificazione per garantire che le scansioni ad alta priorità vengano completate per prime.
+
+Per impostazione predefinita, le scansioni vengono messe in coda in base all'ordine in cui vengono avviate.  Grazie alla possibilità di dare priorità alle scansioni, è possibile spostarle in cima alla coda.  È possibile dare priorità a più scansioni.  La priorità viene assegnata in base all'ordine "first-in, first-out", ovvero la prima scansione a cui si dà priorità viene spostata in cima alla coda; la seconda scansione a cui si dà priorità diventa la seconda nella coda e così via.
+
+La priorità viene concessa una sola volta.  Le nuove scansioni automatiche dei dati di mappatura avvengono nell'ordine predefinito.
+
+.Passi
+. Dal menu Classificazione dati, selezionare *Configurazione*.
+. Seleziona le risorse a cui vuoi dare priorità.
+. Dalle azioni `...` opzione, seleziona *Dai priorità alla scansione*.
+
+
+
+
+== Interrompere la scansione per un repository
+
+È possibile interrompere la scansione di un repository (ad esempio, un volume) se non è più necessario monitorarne la conformità.  Per farlo, è necessario disattivare la scansione.  Quando la scansione è disattivata, tutta l'indicizzazione e le informazioni relative a quel volume vengono rimosse dal sistema e la tariffazione per la scansione dei dati viene interrotta.
+
+.Passi
+. Dal menu Classificazione dati, selezionare *Configurazione*.
+. Dalla scheda Configurazione, selezionare il pulsante *Configurazione* per il sistema.
++
+image:screenshot_compliance_config_button.png["Uno screenshot che mostra come selezionare il pulsante Configurazione per un sistema."]
+
+. Nella pagina Configurazione scansione selezionare *Off* per interrompere la scansione di un bucket specifico.
++
+image:screenshot_compliance_repo_scan_settings.png["Uno screenshot che mostra come selezionare il tipo di scansione per un bucket."]
+
+
+
+
+
+== Metti in pausa e riprendi la scansione di un repository
+
+È possibile "mettere in pausa" la scansione di un repository se si desidera interrompere temporaneamente la scansione di determinati contenuti.  Sospendere la scansione significa che Data Classification non eseguirà più scansioni future per rilevare modifiche o aggiunte al repository, ma tutti i risultati correnti continueranno a essere visualizzati nel sistema.  La sospensione della scansione non interrompe l'addebito dei dati scansionati, perché i dati esistono ancora.
+
+È possibile "riprendere" la scansione in qualsiasi momento.
+
+.Passi
+. Dal menu Classificazione dati, selezionare *Configurazione*.
+. Dalla scheda Configurazione, selezionare il pulsante *Configurazione* per il sistema.
++
+image:screenshot_compliance_config_button.png["Uno screenshot che mostra come selezionare il pulsante Configurazione per un sistema."]
+
+. Nella pagina Configurazione scansione, selezionare Azioniimage:button-actions-horizontal.png["Icona Azioni"] icona.
+. Selezionare *Pausa* per mettere in pausa la scansione di un volume oppure selezionare *Riprendi* per riprendere la scansione di un volume che era stata precedentemente messa in pausa.
+

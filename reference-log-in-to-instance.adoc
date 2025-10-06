@@ -1,0 +1,41 @@
+---
+sidebar: sidebar 
+permalink: reference-log-in-to-instance.html 
+keywords: log in, data sense, classification 
+summary: A volte potrebbe essere necessario accedere al sistema di classificazione dei dati NetApp per poter accedere ai file di registro o modificare i file di configurazione. 
+---
+= Accedi al sistema di classificazione dei dati NetApp
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+È necessario accedere al sistema di classificazione dei dati NetApp per poter accedere ai file di registro o modificare i file di configurazione.
+
+Quando Data Classification è installato su una macchina Linux in sede o su una macchina Linux distribuita nel cloud, è possibile accedere direttamente al file di configurazione e allo script.
+
+Quando Data Classification viene distribuito nel cloud, è necessario connettersi tramite SSH all'istanza di Data Classification.  È possibile accedere al sistema tramite SSH immettendo nome utente e password oppure utilizzando la chiave SSH fornita durante l'installazione dell'agente Console.  Il comando SSH è:
+
+`ssh -i <path_to_the_ssh_key> <machine_user>@<datasense_ip>`
+
+* `<path_to_the_ssh_key>`= posizione delle chiavi di autenticazione ssh
+* `<machine_user>:`
++
+** Per AWS: utilizzare <ec2-user>
+** Per Azure: utilizzare l'utente creato per l'istanza della console
+** Per GCP: utilizzare l'utente creato per l'istanza della console
+
+
+* `<datasense_ip>`= Indirizzo IP dell'istanza della macchina virtuale
+
+
+Per accedere al sistema nel cloud è necessario modificare le regole in entrata del gruppo di sicurezza.  Per maggiori dettagli, vedere:
+
+* https://docs.netapp.com/us-en/bluexp-setup-admin/reference-ports-aws.html["Regole del gruppo di sicurezza in AWS"^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/reference-ports-azure.html["Regole del gruppo di sicurezza in Azure"^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/reference-ports-gcp.html["Regole del firewall in Google Cloud"^]
+

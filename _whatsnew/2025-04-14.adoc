@@ -1,0 +1,17 @@
+= Versione 1.42
+:allow-uri-read: 
+
+
+
+
+=== Versione 1.42
+
+Questa versione BlueXP classification include:
+
+.Scansione in blocco per ambienti di lavoro
+La BlueXP classification supporta operazioni in blocco per ambienti di lavoro.  È possibile scegliere di abilitare le scansioni di mappatura, abilitare le scansioni di mappatura e classificazione, disabilitare le scansioni o creare una configurazione personalizzata tra i volumi nell'ambiente di lavoro.  Se si effettua una selezione per un singolo volume, questa sostituisce la selezione in blocco.  Per eseguire un'operazione in blocco, vai alla pagina **Configurazione** ed effettua la tua selezione.
+
+.Scarica localmente il rapporto di indagine
+La BlueXP classification supporta la possibilità di scaricare localmente i report di indagine sui dati per visualizzarli nel browser.  Se si sceglie l'opzione locale, l'analisi dei dati è disponibile solo nel formato CSV e visualizza solo le prime 10.000 righe di dati.
+
+Per ulteriori informazioni, consultare link:https://docs.netapp.com/us-en/bluexp-classification/task-investigate-data.html#create-the-data-investigation-report["Esamina i dati archiviati nella tua organizzazione con la BlueXP classification"] .

@@ -1,0 +1,196 @@
+---
+sidebar: sidebar 
+permalink: task-controlling-governance-data.html 
+keywords: savings, stale data, duplicate data, highlights, data discovery assessment report, data mapping overview report, data repositories, sensitive data, wide permissions, open permissions, age of data, size of data, classification, costs of data 
+summary: Ottieni il controllo dei costi relativi ai dati sulle risorse di archiviazione della tua organizzazione.  NetApp Data Classification identifica la quantità di dati obsoleti, file duplicati e file di grandi dimensioni presenti nei tuoi sistemi, così puoi decidere se rimuovere o spostare alcuni file in un archivio di oggetti meno costoso. 
+---
+= Visualizza i dettagli di governance sui dati archiviati nella tua organizzazione con NetApp Data Classification
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Ottieni il controllo dei costi relativi ai dati sulle risorse di archiviazione della tua organizzazione.  NetApp Data Classification identifica la quantità di dati obsoleti, file duplicati e file di grandi dimensioni presenti nei tuoi sistemi, così puoi decidere se rimuovere o spostare alcuni file in un archivio di oggetti meno costoso.
+
+È qui che dovresti iniziare la tua ricerca.  Dalla dashboard Governance è possibile selezionare un'area su cui effettuare ulteriori indagini.
+
+Inoltre, se si prevede di migrare i dati da sedi locali al cloud, è possibile visualizzare le dimensioni dei dati e verificare se contengono informazioni sensibili prima di spostarli.
+
+
+
+== Esaminare la dashboard di governance
+
+La dashboard Governance fornisce informazioni che consentono di aumentare l'efficienza e controllare i costi relativi ai dati archiviati nelle risorse di storage.
+
+image:screenshot_compliance_governance_dashboard.png["Uno screenshot della dashboard di Data Classification Governance."]
+
+.Passi
+. Dal menu della console NetApp , selezionare *Governance > Classificazione*.
+. Selezionare *Governance*.
++
+Viene visualizzata la dashboard Governance.
+
+
+
+
+
+=== Esaminare le opportunità di risparmio
+
+Il componente _Opportunità di risparmio_ mostra i dati che è possibile eliminare o spostare in un archivio di oggetti meno costoso.  I dati in _Opportunità di risparmio_ vengono aggiornati ogni 2 ore.  È anche possibile aggiornare manualmente i dati.
+
+.Passi
+. Dal menu Classificazione dati, selezionare *Governance*.
+. In ogni riquadro Opportunità di risparmio della dashboard Governance, seleziona *Ottimizza archiviazione* per visualizzare i risultati filtrati nella pagina Indagine.  Per scoprire quali dati dovresti eliminare o spostare in un archivio meno costoso, esamina le _Opportunità di risparmio_.
++
+** *Dati obsoleti* - Dati modificati l'ultima volta più di 3 anni fa.
+** *File duplicati*: file duplicati in altre posizioni nelle origini dati sottoposte a scansione. link:task-investigate-data.html["Visualizza quali tipi di file duplicati vengono visualizzati"] .
+
+
+
+
+
+NOTE: Se una qualsiasi delle tue origini dati implementa la suddivisione in livelli dei dati, i vecchi dati che risiedono già nell'archiviazione degli oggetti possono essere identificati nella categoria _Dati obsoleti_.
+
+
+
+== Creare il report di valutazione della scoperta dei dati
+
+Il report di valutazione della scoperta dei dati fornisce un'analisi di alto livello dell'ambiente scansionato per evidenziare le aree problematiche e i potenziali interventi di risanamento.  I risultati si basano sia sulla mappatura che sulla classificazione dei dati.  L'obiettivo di questo rapporto è quello di aumentare la consapevolezza di tre aspetti significativi del tuo set di dati:
+
+[cols="25,65"]
+|===
+| Caratteristica | Descrizione 
+
+
+| Preoccupazioni sulla governance dei dati | Un quadro dettagliato di tutti i dati in tuo possesso e delle aree in cui potresti ridurre la quantità di dati per risparmiare sui costi. 
+
+
+| Esposizioni alla sicurezza dei dati | Aree in cui i tuoi dati sono accessibili ad attacchi interni o esterni grazie ad ampi permessi di accesso. 
+
+
+| Lacune nella conformità dei dati | Dove si trovano i tuoi dati personali o sensibili, sia per motivi di sicurezza che per le richieste di accesso ai dati (DSAR). 
+|===
+Con il report puoi intraprendere le seguenti azioni:
+
+* Riduci i costi di archiviazione modificando i criteri di conservazione oppure spostando o eliminando determinati dati (obsoleti o duplicati).
+* Proteggi i tuoi dati con autorizzazioni estese rivedendo le policy di gestione del gruppo globale.
+* Proteggi i tuoi dati contenenti informazioni personali o sensibili spostando le informazioni personali identificabili (PII) in archivi dati più sicuri.
+
+
+.Passi
+. Da Classificazione dati, seleziona *Governance*.
+. Nel riquadro dei report, seleziona *Report di valutazione della scoperta dei dati*.
++
+image:screenshot-compliance-report-buttons.png["Uno screenshot della Governance Dashboard che mostra come avviare il Data Discovery Assessment Report."]
+
+
+
+.Risultato
+La classificazione dei dati genera un report PDF che puoi rivedere e condividere.
+
+
+
+== Creare il report di panoramica della mappatura dei dati
+
+Il report di panoramica sulla mappatura dei dati fornisce una panoramica dei dati archiviati nelle fonti dati aziendali per assisterti nelle decisioni relative ai processi di migrazione, backup, sicurezza e conformità.  Il rapporto riassume tutti i sistemi e le fonti di dati.  Fornisce inoltre un'analisi per ciascun sistema.
+
+Il rapporto include le seguenti informazioni:
+
+[cols="25,65"]
+|===
+| Categoria | Descrizione 
+
+
+| Capacità di utilizzo | Per tutti i sistemi: elenca il numero di file e la capacità utilizzata per ciascun sistema.  Per sistemi singoli: elenca i file che utilizzano la maggiore capacità. 
+
+
+| L'età dei dati | Fornisce tre grafici e diagrammi che indicano quando i file sono stati creati, modificati per l'ultima volta o a cui è stato effettuato l'ultimo accesso.  Elenca il numero di file e la loro capacità utilizzata in base a determinati intervalli di date. 
+
+
+| Dimensione dei dati | Elenca il numero di file presenti nei tuoi sistemi entro determinati intervalli di dimensioni. 
+|===
+.Passi
+. Da Classificazione dati, seleziona *Governance*.
+. Nel riquadro dei report, seleziona *Report di panoramica completa della mappatura dei dati*.
++
+image:screenshot-compliance-report-buttons.png["Uno screenshot della Governance Dashboard che mostra come avviare il Data Mapping Report."]
+
+
+
+.Risultato
+La classificazione dei dati genera un report PDF che puoi rivedere e inviare ad altri gruppi, se necessario.
+
+Se il report è più grande di 1 MB, il file PDF viene conservato nell'istanza di Data Classification e verrà visualizzato un messaggio pop-up con la posizione esatta.  Quando Data Classification è installato su una macchina Linux in sede o su una macchina Linux distribuita nel cloud, è possibile accedere direttamente al file PDF.  Quando Data Classification viene distribuito nel cloud, è necessario autorizzare tramite SSH l'istanza di Data Classification per scaricare il file PDF.
+
+
+
+=== Esamina i principali repository di dati elencati in base alla sensibilità dei dati
+
+L'area _Principali repository di dati per livello di sensibilità_ del report Panoramica mappatura dati elenca i quattro principali repository di dati (sistemi e origini dati) che contengono gli elementi più sensibili.  Il grafico a barre per ciascun sistema è suddiviso in:
+
+* Dati non sensibili
+* Dati personali
+* Dati personali sensibili
+
+
+Questi dati vengono aggiornati ogni due ore e possono essere aggiornati manualmente.
+
+.Passi
+. Per visualizzare il numero totale di elementi in ogni categoria, posiziona il cursore su ogni sezione della barra.
+. Per filtrare i risultati che appariranno nella pagina Indagine, seleziona ciascuna area nella barra e prosegui nell'indagine.
+
+
+
+
+=== Esaminare i dati sensibili e le autorizzazioni estese
+
+L'area _Dati sensibili e autorizzazioni estese_ della dashboard Governance mostra i conteggi dei file che contengono dati sensibili e dispongono di autorizzazioni estese.  Nella tabella sono riportati i seguenti tipi di autorizzazioni:
+
+* Dai permessi più restrittivi alle restrizioni più permissive sull'asse orizzontale.
+* Dai dati meno sensibili a quelli più sensibili sull'asse verticale.
+
+
+.Passi
+. Per visualizzare il numero totale di file in ogni categoria, posiziona il cursore su ogni casella.
+. Per filtrare i risultati che appariranno nella pagina Indagine, seleziona una casella e prosegui l'indagine.
+
+
+
+
+=== Esaminare i dati elencati in base ai tipi di autorizzazioni aperte
+
+L'area _Autorizzazioni aperte_ del report Panoramica mappatura dati mostra la percentuale per ciascun tipo di autorizzazioni esistenti per tutti i file sottoposti a scansione.  Il grafico mostra i seguenti tipi di autorizzazioni:
+
+* Nessuna autorizzazione aperta
+* Aperto all'organizzazione
+* Aperto al pubblico
+* Accesso sconosciuto
+
+
+.Passi
+. Per visualizzare il numero totale di file in ogni categoria, posiziona il cursore su ogni casella.
+. Per filtrare i risultati che appariranno nella pagina Indagine, seleziona una casella e prosegui l'indagine.
+
+
+
+
+=== Esaminare l'età e la dimensione dei dati
+
+È possibile esaminare gli elementi nei grafici _Età_ e _Dimensione_ del report Panoramica mappatura dati per verificare se vi sono dati da eliminare o da spostare in un archivio di oggetti meno costoso.
+
+.Passi
+. Nel grafico Età dei dati, per visualizzare i dettagli sull'età dei dati, posizionare il cursore su un punto del grafico.
+. Per filtrare in base a un intervallo di età o di taglia, seleziona l'età o la taglia desiderata.
++
+** *Grafico Età dei dati* - Categorizza i dati in base all'ora in cui sono stati creati, all'ultima volta che vi si è avuto accesso o all'ultima volta che sono stati modificati.
+** *Grafico Dimensioni dei dati* - Categorizza i dati in base alle dimensioni.
+
+
+
+
+
+NOTE: Se una qualsiasi delle tue origini dati implementa la suddivisione in livelli dei dati, i vecchi dati già presenti nell'archiviazione degli oggetti potrebbero essere identificati nel grafico _Age of Data_.

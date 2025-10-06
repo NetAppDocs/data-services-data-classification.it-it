@@ -1,0 +1,134 @@
+---
+sidebar: sidebar 
+permalink: task-scanning-anf.html 
+keywords: cloud compliance, get started, enable cloud compliance, cloud compliance access, privacy, compliance, ANF, azure netApp files, data sense 
+summary: Completa alcuni passaggi per iniziare a usare la classificazione dei dati per Azure NetApp Files. 
+---
+= Scansiona i volumi Azure NetApp Files con NetApp Data Classification
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Completa alcuni passaggi per iniziare a usare NetApp Data Classification per Azure NetApp Files.
+
+
+
+== Individuare il sistema Azure NetApp Files che si desidera analizzare
+
+Se il sistema Azure NetApp Files che si desidera analizzare non è già presente nella console NetApp come sistema,link:https://docs.netapp.com/us-en/bluexp-azure-netapp-files/task-quick-start.html["aggiungilo nella pagina Sistemi"^] .
+
+
+
+== Distribuisci l'istanza di classificazione dei dati
+
+link:task-deploy-cloud-compliance.html["Distribuisci la Cassificazione dei Dati"^]se non è già presente un'istanza distribuita.
+
+La classificazione dei dati deve essere distribuita nel cloud durante la scansione dei volumi Azure NetApp Files e deve essere distribuita nella stessa area geografica dei volumi che si desidera analizzare.
+
+*Nota:* la distribuzione della classificazione dei dati in una posizione locale non è attualmente supportata durante la scansione dei volumi Azure NetApp Files .
+
+
+
+== Abilita la classificazione dei dati nei tuoi sistemi
+
+È possibile abilitare la classificazione dei dati sui volumi Azure NetApp Files .
+
+. Dal menu Classificazione dati, selezionare *Configurazione*.
++
+image:screenshot_cloud_compliance_anf_scan_config.png["Uno screenshot della scheda Configurazione subito dopo la distribuzione dell'istanza di Classificazione dati."]
+
+. Selezionare la modalità di scansione dei volumi in ciascun sistema. link:concept-classification.html#whats-the-difference-between-mapping-and-classification-scans["Scopri di più sulle scansioni di mappatura e classificazione"]:
++
+** Per mappare tutti i volumi, selezionare *Mappa tutti i volumi*.
+** Per mappare e classificare tutti i volumi, selezionare *Mappa e classifica tutti i volumi*.
+** Per personalizzare la scansione per ciascun volume, seleziona *Oppure seleziona il tipo di scansione per ciascun volume*, quindi scegli i volumi che desideri mappare e/o classificare.
++
+Vedere<<Abilita e disabilita le scansioni di conformità sui volumi,Abilita e disabilita le scansioni di conformità sui volumi>> per i dettagli.
+
+
+
+. Nella finestra di dialogo di conferma, seleziona *Approva*.
+
+
+.Risultato
+La classificazione dei dati avvia la scansione dei volumi selezionati nel sistema.  I risultati sono disponibili nella dashboard Conformità non appena la Classificazione dei dati termina le scansioni iniziali.  Il tempo necessario dipende dalla quantità di dati: potrebbero volerci pochi minuti o ore.  È possibile monitorare l'avanzamento della scansione iniziale accedendo al menu **Configurazione** e selezionando quindi **Configurazione di sistema**.  L'avanzamento di ogni scansione viene visualizzato tramite una barra di avanzamento.  È anche possibile passare il mouse sulla barra di avanzamento per visualizzare il numero di file scansionati rispetto al totale dei file presenti nel volume.
+
+* Per impostazione predefinita, se Data Classification non dispone di autorizzazioni per gli attributi di scrittura in CIFS o di autorizzazioni per la scrittura in NFS, il sistema non eseguirà la scansione dei file nei volumi perché Data Classification non può ripristinare l'"ora dell'ultimo accesso" al timestamp originale.  Se non ti interessa che l'ultimo orario di accesso venga reimpostato, seleziona *Oppure seleziona il tipo di scansione per ciascun volume*.  La pagina risultante contiene un'impostazione che è possibile abilitare in modo che la classificazione dei dati esegua la scansione dei volumi indipendentemente dalle autorizzazioni.
+* La classificazione dei dati analizza solo una condivisione file in un volume.  Se nei volumi sono presenti più condivisioni, sarà necessario eseguire la scansione delle altre condivisioni separatamente come gruppo di condivisioni. link:reference-limitations.html#data-classification-scans-only-one-share-under-a-volume["Scopri di più su questa limitazione della classificazione dei dati"^] .
+
+
+
+
+== Verificare che la classificazione dei dati abbia accesso ai volumi
+
+Assicurarsi che Data Classification possa accedere ai volumi controllando la rete, i gruppi di sicurezza e i criteri di esportazione.  È necessario fornire a Data Classification le credenziali CIFS affinché possa accedere ai volumi CIFS.
+
+
+NOTE: Per Azure NetApp Files, la classificazione dei dati può analizzare solo i volumi nella stessa area della console.
+
+.Lista di controllo
+* Assicurarsi che vi sia una connessione di rete tra l'istanza di Data Classification e ciascuna rete che include volumi per Azure NetApp Files.
+* Assicurarsi che le seguenti porte siano aperte all'istanza di classificazione dei dati:
++
+** Per NFS: porte 111 e 2049.
+** Per CIFS: porte 139 e 445.
+
+
+* Assicurarsi che i criteri di esportazione del volume NFS includano l'indirizzo IP dell'istanza di classificazione dei dati in modo che possa accedere ai dati su ciascun volume.
+
+
+.Passi
+. Dal menu Classificazione dati, selezionare *Configurazione*.
++
+.. Se si utilizza CIFS (SMB), assicurarsi che le credenziali di Active Directory siano corrette.  Per ciascun sistema, selezionare *Modifica credenziali CIFS*, quindi immettere il nome utente e la password necessari a Data Classification per accedere ai volumi CIFS sul sistema.
++
+Le credenziali possono essere di sola lettura, ma fornendo le credenziali di amministratore si garantisce che Data Classification possa leggere tutti i dati che richiedono autorizzazioni elevate.  Le credenziali vengono archiviate nell'istanza di classificazione dei dati.
+
++
+Se si desidera assicurarsi che gli "ultimi orari di accesso" dei file non vengano modificati dalle scansioni di classificazione dei dati, si consiglia che l'utente disponga delle autorizzazioni di scrittura degli attributi in CIFS o delle autorizzazioni di scrittura in NFS. Se possibile, configurare l'utente di Active Directory come parte di un gruppo padre nell'organizzazione che dispone delle autorizzazioni per tutti i file.
+
++
+Dopo aver immesso le credenziali, dovresti visualizzare un messaggio che indica che tutti i volumi CIFS sono stati autenticati correttamente.
+
++
+image:screenshot_cifs_status.gif["Uno screenshot che mostra la pagina di configurazione e un sistema Cloud Volumes ONTAP per il quale sono state fornite correttamente le credenziali CIFS."]
+
+
+
+. Nella pagina Configurazione, seleziona *Visualizza dettagli* per rivedere lo stato di ciascun volume CIFS e NFS e correggere eventuali errori.
++
+Ad esempio, l'immagine seguente mostra quattro volumi; uno dei quali Data Classification non può analizzare a causa di problemi di connettività di rete tra l'istanza di Data Classification e il volume.
+
++
+image:screenshot_compliance_volume_details.gif["Uno screenshot della pagina Visualizza dettagli nella configurazione della scansione che mostra quattro volumi; uno dei quali non viene sottoposto a scansione a causa della connettività di rete tra Data Classification e il volume."]
+
+
+
+
+
+== Abilita e disabilita le scansioni di conformità sui volumi
+
+È possibile avviare o interrompere in qualsiasi momento le scansioni di sola mappatura o le scansioni di mappatura e classificazione in un sistema dalla pagina Configurazione.  È anche possibile passare da scansioni di sola mappatura a scansioni di mappatura e classificazione e viceversa.  Ti consigliamo di scansionare tutti i volumi.
+
+
+TIP: I nuovi volumi aggiunti al sistema vengono scansionati automaticamente solo se nell'area dell'intestazione è stata impostata l'opzione *Mappa* o *Mappa e classifica*.  Se impostato su *Personalizzato* o *Disattivato* nell'area dell'intestazione, sarà necessario attivare la mappatura e/o la scansione completa su ogni nuovo volume aggiunto al sistema.
+
+L'interruttore in cima alla pagina per *Esegui scansione quando mancano i permessi "attributi di scrittura"* è disabilitato per impostazione predefinita.  Ciò significa che se Data Classification non dispone di autorizzazioni di scrittura degli attributi in CIFS o di autorizzazioni di scrittura in NFS, il sistema non eseguirà la scansione dei file perché Data Classification non può ripristinare l'"ultimo orario di accesso" al timestamp originale.  Se non ti interessa che l'ultimo orario di accesso venga reimpostato, attiva l'interruttore e tutti i file verranno analizzati indipendentemente dalle autorizzazioni. link:reference-collected-metadata.html#last-access-time-timestamp["Saperne di più"^] .
+
+image:screenshot_volume_compliance_selection.png["Uno screenshot della pagina di configurazione in cui è possibile abilitare o disabilitare la scansione dei singoli volumi."]
+
+.Passi
+. Dal menu Classificazione dati, selezionare *Configurazione*.
+. Eseguire una delle seguenti operazioni:
++
+** Per abilitare le scansioni di sola mappatura su un volume, nell'area del volume, selezionare *Mappa*.  Per abilitare su tutti i volumi, nell'area dell'intestazione, selezionare *Mappa*.
+** Per abilitare la scansione completa di un volume, nell'area del volume, selezionare *Mappa e classifica*.  Per abilitare su tutti i volumi, nell'area dell'intestazione, selezionare *Mappa e classifica*.
+** Per disattivare la scansione su un volume, nell'area del volume, selezionare *Off*.  Per disattivare la scansione su tutti i volumi, nell'area dell'intestazione selezionare *Disattivato*.
+
+
+

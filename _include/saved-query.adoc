@@ -1,0 +1,24 @@
+= 
+:allow-uri-read: 
+
+
+.Passi
+. Nella scheda Indagine, definisci una ricerca selezionando i filtri che desideri utilizzare. Vederelink:task-investigate-data.html["Filtraggio dei dati nella pagina Indagine"] per i dettagli.
+. Dopo aver impostato tutte le caratteristiche del filtro come preferisci, seleziona *Salva query*.
++
+image:../media/screenshot_compliance_save_as_highlight.png["Screenshot che mostra come salvare una query filtrata come query salvata."]
+
+. Assegna un nome alla query salvata e aggiungi una descrizione.  Il nome deve essere univoco.
+. Facoltativamente, puoi salvare la query come criterio:
++
+.. Per salvare la query come criterio, attivare l'opzione *Esegui come criterio*.
+.. Scegli se *Eliminare definitivamente* o *Inviare aggiornamenti via email*.  Se scegli gli aggiornamenti via e-mail, puoi inviare via e-mail i risultati della query a _tutti_ gli utenti della Console con cadenza giornaliera, settimanale o mensile.  In alternativa, è possibile inviare la notifica a un indirizzo e-mail specifico con le stesse frequenze.
+
+
+. Seleziona *Salva*.
++
+image:../media/screenshot_compliance_save_highlight2.png["Uno screenshot che mostra come configurare la query salvata e salvarla."]
+
+
+
+Dopo aver creato la ricerca o la policy, puoi visualizzarla nella scheda **Query salvate**.

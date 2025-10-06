@@ -1,0 +1,126 @@
+---
+sidebar: sidebar 
+permalink: reference-db-capabilities.html 
+keywords: database actions, database filters, supported, unsupported 
+summary: Alcune funzionalità e caratteristiche non sono disponibili con NetApp Data Classification quando si esegue la scansione degli schemi del database. 
+---
+= Funzionalità di database supportate e non supportate in NetApp Data Classification
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Alcune funzionalità e caratteristiche non sono disponibili con NetApp Data Classification quando si esegue la scansione degli schemi del database.  Vedi l'elenco qui sotto.
+
+Puoi aggiungere gli schemi dei tuoi database alla classificazione dei dati per eseguirne la scansionelink:task-scanning-databases.html["come descritto qui"^] .
+
+[cols="12,25,9,9,9,9,9,9,9"]
+|===
+| Tipo | Descrizione | MongoDB | Server SQL | MySQL | Oracolo | PostgreSQL | SAP HANA | Amazon RDS 
+
+
+.9+| Azioni | Crea query salvata | ✓ | ✓ | ✓ | ✓ | ✓ |  |  
+
+
+| Etichetta | ✓ | ✓ | ✓ | ✓ | ✓ |  |  
+
+
+| Assegna a | ✓ | ✓ | ✓ | ✓ | ✓ |  |  
+
+
+| Esporta dati | ✓ | ✓ | ✓ | ✓ | ✓ |  |  
+
+
+| Nuova scansione | X | X | X | X | X | X | X 
+
+
+| Eliminare |  | ✓ | ✓ | ✓ | ✓ | ✓ |  
+
+
+|  | Mossa | ✓ | ✓ | ✓ | ✓ | ✓ |  
+
+
+|  | Copia | ✓ | ✓ | ✓ | ✓ | ✓ |  
+
+
+|  | Etichetta | ✓ | ✓ | ✓ | ✓ | ✓ |  
+
+
+|  .25+| Filtri | Query salvate | ✓ | ✓ | ✓ | ✓ | ✓ |  
+
+
+|  | Stato dell'analisi della scansione | ✓ | ✓ | ✓ | ✓ | ✓ |  
+
+
+|  | Tipo di sistema | ✓ | ✓ | ✓ | ✓ | ✓ |  
+
+
+|  | Sistema | ✓ | ✓ | ✓ | ✓ | ✓ |  
+
+
+|  | Deposito di archiviazione | ✓ | ✓ | ✓ | ✓ | ✓ |  
+
+
+|  | Livello di sensibilità | ✓ | ✓ | ✓ | ✓ | ✓ |  
+
+
+|  | Dati personali sensibili | ✓ | ✓ | ✓ | ✓ | ✓ |  
+
+
+|  | Categorie | ✓ | ✓ | ✓ | ✓ | ✓ |  
+
+
+|  | Dati personali | ✓ | ✓ | ✓ | ✓ | ✓ |  
+
+
+|  | Interessato | ✓ | ✓ | ✓ | ✓ | ✓ |  
+
+
+|  | Tipo di file | ✓ | ✓ | ✓ | ✓ | ✓ |  
+
+
+|  | Dimensione del file | ✓ | ✓ | ✓ | ✓ | ✓ |  
+
+
+|  | Tempo scoperto | ✓ | ✓ | ✓ | ✓ | ✓ |  
+
+
+|  | Etichette | ✓ | ✓ | ✓ | ✓ | ✓ |  
+
+
+|  | Assegna a | ✓ | ✓ | ✓ | ✓ | ✓ |  
+
+
+|  | Evento di analisi della scansione | X | X | X | X | X | X 
+
+
+| X | Percorso file/directory | X | X | X | X | X | X 
+
+
+| X | Filtri dei permessi | X | X | X | X | X | X 
+
+
+| X | Etichetta | X | X | X | X | X | X 
+
+
+| X | Numero di identificatori | X | X | X | X | X | X 
+
+
+| X | Tipo di directory | X | X | X | X | X | X 
+
+
+| X | Ora di creazione | X | X | X | X | X | X 
+
+
+| X | Ultima modifica | X | X | X | X | X | X 
+
+
+| X | Ultimo accesso | X | X | X | X | X | X 
+
+
+| X | Duplicati | X | X | X | X | X | X 
+|===

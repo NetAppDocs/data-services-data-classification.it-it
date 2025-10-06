@@ -1,0 +1,75 @@
+---
+sidebar: sidebar 
+permalink: reference-limitations.html 
+keywords: limitations, data sense, classification, scan shares 
+summary: Le limitazioni note identificano funzioni non supportate da questa versione del prodotto o che non interagiscono correttamente con essa. Esamina attentamente queste limitazioni. 
+---
+= Limitazioni note nella classificazione dei dati NetApp
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Le limitazioni note identificano funzioni che non sono supportate o non interagiscono correttamente in questa versione. Esamina attentamente queste limitazioni.
+
+
+
+== Opzioni disabilitate per la classificazione dei dati NetApp
+
+Nella versione di dicembre 2023 (1.26.6) sono state rimosse le seguenti opzioni:
+
+* L'opzione per attivare la raccolta dei registri di controllo è stata disabilitata.
+* Durante l'indagine di Directories, l'opzione per calcolare il numero di dati di informazioni personali identificabili (PII) da parte di Directories non è disponibile.
+* L'opzione per integrare i dati tramite etichette di Azure Information Protection (AIP) è stata disabilitata.
+
+
+
+
+== Scansione della classificazione dei dati
+
+Le scansioni di classificazione dei dati presentano le seguenti limitazioni.
+
+
+
+=== La classificazione dei dati esegue la scansione di una sola condivisione in un volume
+
+Se si dispone di più condivisioni di file in un singolo volume, la classificazione dei dati analizza la condivisione con la gerarchia più elevata.  Ad esempio, se hai azioni come le seguenti:
+
+* /UN
+* /A/B
+* /C
+* /D/E
+
+
+In questa configurazione vengono scansionati solo i dati in /A.  I dati in /C e /D non vengono scansionati.
+
+.Soluzione alternativa
+Esiste una soluzione alternativa per assicurarsi di eseguire la scansione dei dati da tutte le condivisioni nel volume. Segui questi passaggi:
+
+. Nel sistema, aggiungere il volume da scansionare.
+. Dopo che Data Classification ha completato la scansione del volume, vai alla pagina _Data Investigation_ e crea un filtro per vedere quale condivisione è in fase di scansione:
++
+Filtra i dati in base a "Nome sistema" e "Tipo directory = Condivisione" per vedere quale condivisione viene scansionata.
+
+. Ottieni l'elenco completo delle condivisioni presenti nel volume, così puoi vedere quali condivisioni non vengono scansionate.
+. link:task-scanning-file-shares.html["Aggiungi le azioni rimanenti a un gruppo di condivisione"] .
++
+Aggiungi tutte le azioni singolarmente, ad esempio:
+
++
+....
+/C
+/D
+....
+. Eseguire questi passaggi per ogni volume del sistema che dispone di più condivisioni.
+
+
+
+
+=== Ultimo timestamp di accesso
+
+Quando Data Classification esegue una scansione di una directory, la scansione ha effetto sul campo **Ultimo accesso** della directory.  Quando si visualizza il campo **Ultimo accesso**, i metadati riflettono la data e l'ora della scansione oppure l'ultima volta che un utente ha effettuato l'accesso alla directory.

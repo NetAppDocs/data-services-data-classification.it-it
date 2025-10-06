@@ -1,0 +1,6 @@
+= 
+:allow-uri-read: 
+
+
+
+NOTE: Queste informazioni sono rilevanti solo per le versioni legacy 1.30 e precedenti.

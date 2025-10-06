@@ -1,0 +1,146 @@
+---
+sidebar: sidebar 
+permalink: task-scanning-file-shares.html 
+keywords: cloud compliance, enable cloud compliance, privacy, compliance, file shares, nfs, cifs, smb, data sense, 7-mode 
+summary: Completare alcuni passaggi per avviare la scansione di condivisioni file NFS o CIFS non NetApp direttamente con Data Classification.  Queste condivisioni di file possono risiedere in locale o nel cloud. 
+---
+= Scansiona le condivisioni di file con NetApp Data Classification
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Per eseguire la scansione delle condivisioni file, è necessario prima creare un gruppo di condivisioni file in NetApp Data Classification.  I gruppi di condivisione file sono per condivisioni NFS o CIFS (SMB) ospitate in locale o nel cloud.
+
+
+NOTE: La scansione dei dati provenienti da condivisioni file non NetApp non è supportata nella versione core di Data Classification.
+
+
+
+== Prerequisiti
+
+Prima di abilitare la classificazione dei dati, rivedere i seguenti prerequisiti per assicurarsi di disporre di una configurazione supportata.
+
+* Le condivisioni possono essere ospitate ovunque, anche nel cloud o in locale.  Le condivisioni CIFS dei vecchi sistemi di archiviazione NetApp 7-Mode possono essere scansionate come condivisioni di file.
++
+** La classificazione dei dati non può estrarre le autorizzazioni o l'"ultimo orario di accesso" dai sistemi 7-Mode.
+** A causa di un problema noto tra alcune versioni di Linux e le condivisioni CIFS sui sistemi 7-Mode, è necessario configurare la condivisione in modo che utilizzi solo SMBv1 con l'autenticazione NTLM abilitata.
+
+
+* È necessaria la connettività di rete tra l'istanza di classificazione dei dati e le condivisioni.
+* È possibile aggiungere una condivisione DFS (Distributed File System) come una normale condivisione CIFS.  Poiché Data Classification non è a conoscenza del fatto che la condivisione è basata su più server/volumi combinati in un'unica condivisione CIFS, potrebbero essere visualizzati errori di autorizzazione o connettività relativi alla condivisione quando in realtà il messaggio si applica solo a una delle cartelle/condivisioni che si trova su un server/volume diverso.
+* Per le condivisioni CIFS (SMB), assicurati di disporre delle credenziali di Active Directory che forniscano l'accesso in lettura alle condivisioni.  Le credenziali di amministratore sono preferibili nel caso in cui Data Classification debba analizzare dati che richiedono autorizzazioni elevate.
++
+Se si desidera assicurarsi che gli "ultimi orari di accesso" dei file non vengano modificati dalle scansioni di classificazione dei dati, si consiglia che l'utente disponga delle autorizzazioni di scrittura degli attributi in CIFS o delle autorizzazioni di scrittura in NFS. Se possibile, configurare l'utente di Active Directory come parte di un gruppo padre nell'organizzazione che dispone delle autorizzazioni per tutti i file.
+
+* Tutte le condivisioni file CIFS in un gruppo devono utilizzare le stesse credenziali di Active Directory.
+* È possibile combinare condivisioni NFS e CIFS (utilizzando Kerberos o NTLM).  È necessario aggiungere le azioni al gruppo separatamente.  Ciò significa che è necessario completare il processo due volte, una volta per protocollo.
++
+** Non è possibile creare un gruppo di condivisioni file che combini i tipi di autenticazione CIFS (Kerberos e NTLM).
+
+
+* Se si utilizza CIFS con autenticazione Kerberos, assicurarsi che l'indirizzo IP fornito sia accessibile alla classificazione dei dati.  Le condivisioni di file non possono essere aggiunte se l'indirizzo IP non è raggiungibile.
+
+
+
+
+== Crea un gruppo di condivisione file
+
+Quando aggiungi condivisioni di file al gruppo, devi utilizzare il formato `<host_name>:/<share_path>` .
+
+È possibile aggiungere le condivisioni file singolarmente oppure immettere un elenco separato da righe delle condivisioni file che si desidera analizzare.  Puoi aggiungere fino a 100 azioni alla volta.
+
+.Passi
+. Dal menu Classificazione dati, selezionare *Configurazione*.
+. Dalla pagina Configurazione, seleziona *Aggiungi sistema* > *Aggiungi gruppo di condivisioni file*.
+. Nella finestra di dialogo Aggiungi gruppo di condivisioni file, immettere il nome del gruppo di condivisioni, quindi selezionare *Continua*.
+. Seleziona il protocollo per le condivisioni file che stai aggiungendo.
++
+image:screen-cl-config-shares-add.png["Uno screenshot della finestra modale per aggiungere condivisioni, che mostra le opzioni per selezionare protocolli e condivisioni"]
+
++
+.. Se si aggiungono condivisioni CIFS con autenticazione NTLM, immettere le credenziali di Active Directory per accedere ai volumi CIFS.  Sebbene siano supportate le credenziali di sola lettura, si consiglia di fornire l'accesso completo con le credenziali di amministratore. Seleziona **Salva**.
+
+
+. Aggiungere le condivisioni file che si desidera analizzare (una condivisione file per riga).  Quindi seleziona **Continua**.
+. Una finestra di dialogo di conferma visualizza il numero di condivisioni aggiunte.
++
+Se nella finestra di dialogo sono elencate delle condivisioni che non è stato possibile aggiungere, acquisire queste informazioni in modo da poter risolvere il problema.  Se il problema riguarda una convenzione di denominazione, puoi aggiungere nuovamente la condivisione con un nome corretto.
+
+. Configurare la scansione sul volume:
++
+** Per abilitare le scansioni di sola mappatura sulle condivisioni file, selezionare *Mappa*.
+** Per abilitare le scansioni complete sulle condivisioni file, seleziona *Mappa e classifica*.
+** Per disattivare la scansione sulle condivisioni file, selezionare *Off*.
++
+
+NOTE: Per impostazione predefinita, l'interruttore in cima alla pagina per *Esegui scansione quando mancano i permessi "attributi di scrittura"* è disabilitato.  Ciò significa che se Data Classification non dispone di autorizzazioni di scrittura degli attributi in CIFS o di autorizzazioni di scrittura in NFS, il sistema non eseguirà la scansione dei file perché Data Classification non può ripristinare l'"ultimo orario di accesso" al timestamp originale.  + Se si imposta *Scansione in caso di mancanza di autorizzazioni "attributi di scrittura"* su *Attivato*, la scansione reimposta l'orario dell'ultimo accesso ed esegue la scansione di tutti i file indipendentemente dalle autorizzazioni.  + Per saperne di più sull'ultimo timestamp di accesso, vederelink:link:reference-collected-metadata.html#last-access-time-timestamp["Metadati raccolti da fonti di dati nella classificazione dei dati"] .
+
+
+
+
+
+.Risultato
+La classificazione dei dati avvia la scansione dei file nelle condivisioni file aggiunte.  Puoixref:#track-the-scanning-progress[Monitora l'avanzamento della scansione] e visualizzare i risultati della scansione nella **Dashboard**.
+
+
+NOTE: Se la scansione non viene completata correttamente per una configurazione CIFS con autenticazione Kerberos, controllare la scheda **Configurazione** per eventuali errori.
+
+
+
+== Modifica un gruppo di condivisione file
+
+Dopo aver creato un gruppo di condivisioni file, è possibile modificare il protocollo CIFS o aggiungere e rimuovere condivisioni file.
+
+.Modifica la configurazione del protocollo CIFS
+. Dal menu Classificazione dati, selezionare *Configurazione*.
+. Dalla pagina Configurazione, seleziona il gruppo di condivisioni file che desideri modificare.
+. Selezionare **Modifica credenziali CIFS**.
++
+image:screenshot-edit-cifs-credential.png["Screenshot del menu Modifica credenziali CIFS."]
+
+. Selezionare il metodo di autenticazione: **NTLM** o **Kerberos**.
+. Immettere **Nome utente** e **Password** di Active Directory.
+. Selezionare **Salva** per completare il processo.
+
+
+.Aggiungere condivisioni di file alle scansioni di conformità
+. Dal menu Classificazione dati, selezionare *Configurazione*.
+. Dalla pagina Configurazione, seleziona il gruppo di condivisioni file che desideri modificare.
+. Seleziona **+ Aggiungi azioni**.
+. Seleziona il protocollo per le condivisioni file che stai aggiungendo.
++
+image:screen-cl-config-shares-add.png["Uno screenshot della finestra modale per aggiungere condivisioni, che mostra le opzioni per selezionare protocolli e condivisioni"]
+
++
+Se si aggiungono condivisioni file a un protocollo già configurato, non sono necessarie modifiche.
+
++
+Se si aggiungono condivisioni di file con un secondo protocollo, assicurarsi di aver configurato correttamente l'autenticazione come descritto in dettaglio inlink:#prerequisites["prerequisiti"] .
+
+. Aggiungi le condivisioni di file che desideri scansionare (una condivisione di file per riga) utilizzando il formato `<host_name>:/<share_path>` .
+. Selezionare **Continua** per completare l'aggiunta delle condivisioni file.
+
+
+.Rimuovere una condivisione file dalle scansioni di conformità
+. Dal menu Classificazione dati, selezionare *Configurazione*.
+. Seleziona il sistema da cui desideri rimuovere le condivisioni file.
+. Selezionare *Configurazione*.
+. Dalla pagina Configurazione, seleziona Azioniimage:button-actions-horizontal.png["Icona Azioni"] per la condivisione file che vuoi rimuovere.
+. Dal menu Azioni, seleziona *Rimuovi condivisione*.
+
+
+
+
+== Monitora l'avanzamento della scansione
+
+È possibile monitorare l'avanzamento della scansione iniziale.
+
+. Selezionare il menu **Configurazione**.
+. Selezionare **Configurazione di sistema**.
+. Per il repository di archiviazione, controllare la colonna Avanzamento scansione per visualizzarne lo stato.
+
