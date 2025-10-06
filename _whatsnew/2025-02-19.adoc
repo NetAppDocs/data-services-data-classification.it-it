@@ -20,9 +20,9 @@ Per impostazione predefinita, le scansioni vengono messe in coda in base all'ord
 
 La priorità viene concessa una sola volta.  Le nuove scansioni automatiche dei dati di mappatura avvengono nell'ordine predefinito.
 
-La priorità è limitata alink:https://docs.netapp.com/us-en/bluexp-classification/concept-classification.html["scansioni solo di mappatura"^] ; non è disponibile per le scansioni di mappatura e classificazione.
+La priorità è limitata alink:https://docs.netapp.com/us-en/data-services-data-classification/concept-classification.html["scansioni solo di mappatura"^] ; non è disponibile per le scansioni di mappatura e classificazione.
 
-Per ulteriori informazioni, consultare link:https://docs.netapp.com/us-en/bluexp-classification/task-managing-repo-scanning.html#prioritize-scans["Dare priorità alle scansioni"^] .
+Per ulteriori informazioni, consultare link:https://docs.netapp.com/us-en/data-services-data-classification/task-managing-repo-scanning.html#prioritize-scans["Dare priorità alle scansioni"^] .
 
 .Riprova tutte le scansioni
 La BlueXP classification supporta la possibilità di ripetere in batch tutte le scansioni non riuscite.
@@ -36,4 +36,4 @@ Per riprovare tutte le scansioni:
 
 
 .Miglioramento della precisione del modello di categorizzazione
-L'accuratezza del modello di apprendimento automatico perlink:https://docs.netapp.com/us-en/bluexp-classification/reference-private-data-categories.html#types-of-sensitive-personal-datapredefined-categories["categorie predefinite"] è migliorato dell'11%.
+L'accuratezza del modello di apprendimento automatico perlink:https://docs.netapp.com/us-en/data-services-data-classification/reference-private-data-categories.html#types-of-sensitive-personal-datapredefined-categories["categorie predefinite"] è migliorato dell'11%.

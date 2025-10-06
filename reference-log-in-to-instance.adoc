@@ -35,7 +35,7 @@ Quando Data Classification viene distribuito nel cloud, è necessario connetters
 
 Per accedere al sistema nel cloud è necessario modificare le regole in entrata del gruppo di sicurezza.  Per maggiori dettagli, vedere:
 
-* https://docs.netapp.com/us-en/bluexp-setup-admin/reference-ports-aws.html["Regole del gruppo di sicurezza in AWS"^]
-* https://docs.netapp.com/us-en/bluexp-setup-admin/reference-ports-azure.html["Regole del gruppo di sicurezza in Azure"^]
-* https://docs.netapp.com/us-en/bluexp-setup-admin/reference-ports-gcp.html["Regole del firewall in Google Cloud"^]
+* https://docs.netapp.com/us-en/console-setup-admin/reference-ports-aws.html["Regole del gruppo di sicurezza in AWS"^]
+* https://docs.netapp.com/us-en/console-setup-admin/reference-ports-azure.html["Regole del gruppo di sicurezza in Azure"^]
+* https://docs.netapp.com/us-en/console-setup-admin/reference-ports-gcp.html["Regole del firewall in Google Cloud"^]
 

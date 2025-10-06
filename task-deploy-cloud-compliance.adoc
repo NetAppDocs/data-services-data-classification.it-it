@@ -26,10 +26,10 @@ Inizia subito seguendo questi passaggi oppure scorri verso il basso fino alle se
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Uno"]Creare un agente Console
 [role="quick-margin-para"]
-Se non si dispone già di un agente Console, crearne uno.  Vedere https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-aws.html["creazione di un agente Console in AWS"^] , https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-azure.html["creazione di un agente Console in Azure"^] , O https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-google.html["creazione di un agente Console in GCP"^] .
+Se non si dispone già di un agente Console, crearne uno. Vedere https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-aws.html["creazione di un agente Console in AWS"^] , https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-azure.html["creazione di un agente Console in Azure"^] , O https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-google.html["creazione di un agente Console in GCP"^] .
 
 [role="quick-margin-para"]
-Puoi anche https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-on-prem.html["installare l'agente Console in locale"^] su un host Linux nella tua rete o su un host Linux nel cloud.
+Puoi anche https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-on-prem.html["installare l'agente Console in locale"^] su un host Linux nella tua rete o su un host Linux nel cloud.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Due"]Prerequisiti
 [role="quick-margin-para"]
@@ -43,7 +43,7 @@ Avviare la procedura guidata di installazione per distribuire l'istanza di Data 
 
 == Creare un agente Console
 
-Se non disponi già di un agente Console, creane uno nel tuo provider cloud.  Vedere https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-aws.html["creazione di un agente Console in AWS"^] O https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-azure.html["creazione di un agente Console in Azure"^] , O https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-google.html["creazione di un agente Console in GCP"^] .  Nella maggior parte dei casi sarà probabilmente configurato un agente Console prima di tentare di attivare la classificazione dei dati perché la maggior parte https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html#when-a-connector-is-required["Le funzionalità della console richiedono un agente della console"] , ma ci sono casi in cui sarà necessario impostarne uno ora.
+Se non disponi già di un agente Console, creane uno nel tuo provider cloud. Vedere https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-aws.html["creazione di un agente Console in AWS"^] O https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-azure.html["creazione di un agente Console in Azure"^] , O https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-google.html["creazione di un agente Console in GCP"^] . Nella maggior parte dei casi sarà probabilmente configurato un agente Console prima di tentare di attivare la classificazione dei dati perché la maggior parte https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html#when-a-connector-is-required["Le funzionalità della console richiedono un agente della console"] , ma ci sono casi in cui sarà necessario impostarne uno ora.
 
 Esistono alcuni scenari in cui è necessario utilizzare un agente Console distribuito in uno specifico provider cloud:
 
@@ -58,12 +58,12 @@ Esistono alcuni scenari in cui è necessario utilizzare un agente Console distri
 
 È possibile eseguire la scansione dei sistemi ONTAP on-premise, delle condivisioni file NetApp e dei database utilizzando uno qualsiasi di questi agenti della console cloud.
 
-Nota che puoi anche https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-on-prem.html["installare l'agente Console in locale"^] su un host Linux nella tua rete o nel cloud.  Alcuni utenti che intendono installare Data Classification in locale potrebbero anche scegliere di installare l'agente Console in locale.
+Nota che puoi anche https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-on-prem.html["installare l'agente Console in locale"^] su un host Linux nella tua rete o nel cloud. Alcuni utenti che intendono installare Data Classification in locale potrebbero anche scegliere di installare l'agente Console in locale.
 
-Come puoi vedere, potrebbero esserci alcune situazioni in cui è necessario utilizzare https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html#multiple-connectors["più agenti della console"] .
+Come puoi vedere, potrebbero esserci alcune situazioni in cui è necessario utilizzare https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html#multiple-connectors["più agenti della console"] .
 
 
-TIP: La classificazione dei dati non impone limiti alla quantità di dati che può analizzare.  Ogni agente della console supporta la scansione e la visualizzazione di 500 TiB di dati. Per scansionare più di 500 TiB di dati,link:https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html#connector-installation["installare un altro agente Console"^] Poilink:https://docs.netapp.com/us-en/bluexp-classification/task-deploy-overview.html["distribuire un'altra istanza di classificazione dei dati"] .  + L'interfaccia utente della console visualizza i dati da un singolo connettore.  Per suggerimenti sulla visualizzazione dei dati da più agenti della console, vederelink:https://docs.netapp.com/us-en/bluexp-setup-admin/task-manage-multiple-connectors.html#switch-between-connectors["Lavora con più agenti della console"^] .
+TIP: La classificazione dei dati non impone limiti alla quantità di dati che può analizzare. Ogni agente della console supporta la scansione e la visualizzazione di 500 TiB di dati. Per scansionare più di 500 TiB di dati,link:https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html#connector-installation["installare un altro agente Console"^] Poilink:https://docs.netapp.com/us-en/data-services-data-classification/task-deploy-overview.html["distribuire un'altra istanza di classificazione dei dati"] . + L'interfaccia utente della console visualizza i dati da un singolo connettore. Per suggerimenti sulla visualizzazione dei dati da più agenti della console, vederelink:https://docs.netapp.com/us-en/console-setup-admin/task-manage-multiple-connectors.html#switch-between-connectors["Lavora con più agenti della console"^] .
 
 
 
@@ -71,7 +71,7 @@ TIP: La classificazione dei dati non impone limiti alla quantità di dati che pu
 
 La classificazione dei dati è supportata quando l'agente della console viene distribuito in una regione governativa (AWS GovCloud, Azure Gov o Azure DoD).  Quando implementata in questo modo, la classificazione dei dati presenta le seguenti restrizioni:
 
-https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-restricted-mode.html["Visualizza ulteriori informazioni sulla distribuzione dell'agente Console in una regione governativa"^] .
+https://docs.netapp.com/us-en/console-setup-admin/task-install-restricted-mode.html["Visualizza ulteriori informazioni sulla distribuzione dell'agente Console in una regione governativa"^] .
 
 
 
@@ -96,7 +96,7 @@ Consultare la tabella appropriata qui sotto a seconda che si stia distribuendo l
 | Punti finali | Scopo 
 
 
-| \ https://api.bluexp.netapp.com | Comunicazione con il servizio Console, che include gli account NetApp . 
+| \ https://api.console.netapp.com | Comunicazione con il servizio Console, che include gli account NetApp . 
 
 
 | \ https://netapp-cloud-account.auth0.com \ https://auth0.com | Comunicazione con il sito web della Console per l'autenticazione centralizzata degli utenti. 
@@ -118,16 +118,16 @@ Consultare la tabella appropriata qui sotto a seconda che si stia distribuendo l
 | Punti finali | Scopo 
 
 
-| \ https://api.bluexp.netapp.com | Comunicazione con il servizio Console, che include gli account NetApp . 
+| \ https://api.console.netapp.com | Comunicazione con il servizio Console, che include gli account NetApp . 
 
 
 | \ https://netapp-cloud-account.auth0.com \ https://auth0.com | Comunicazione con il sito web della Console per l'autenticazione centralizzata degli utenti. 
 
 
-| \ https://support.compliance.api.bluexp.netapp.com/ \ https://hub.docker.com \ https://auth.docker.io \ https://registry-1.docker.io \ https://index.docker.io/ \ https://dseasb33srnrn.cloudfront.net/ \ https://production.cloudflare.docker.com/ | Fornisce accesso a immagini software, manifesti, modelli e consente di inviare log e metriche. 
+| \ https://support.compliance.api.console.netapp.com/ \ https://hub.docker.com \ https://auth.docker.io \ https://registry-1.docker.io \ https://index.docker.io/ \ https://dseasb33srnrn.cloudfront.net/ \ https://production.cloudflare.docker.com/ | Fornisce accesso a immagini software, manifesti, modelli e consente di inviare log e metriche. 
 
 
-| \ https://support.compliance.api.bluexp.netapp.com/ | Consente a NetApp di trasmettere in streaming i dati dai record di audit. 
+| \ https://support.compliance.api.console.netapp.com/ | Consente a NetApp di trasmettere in streaming i dati dai record di audit. 
 |===
 --
 .Endpoint richiesti per GCP
@@ -137,34 +137,34 @@ Consultare la tabella appropriata qui sotto a seconda che si stia distribuendo l
 | Punti finali | Scopo 
 
 
-| \ https://api.bluexp.netapp.com | Comunicazione con il servizio Console, che include gli account NetApp . 
+| \ https://api.console.netapp.com | Comunicazione con il servizio Console, che include gli account NetApp . 
 
 
 | \ https://netapp-cloud-account.auth0.com \ https://auth0.com | Comunicazione con il sito web della Console per l'autenticazione centralizzata degli utenti. 
 
 
-| \ https://support.compliance.api.bluexp.netapp.com/ \ https://hub.docker.com \ https://auth.docker.io \ https://registry-1.docker.io \ https://index.docker.io/ \ https://dseasb33srnrn.cloudfront.net/ \ https://production.cloudflare.docker.com/ | Fornisce accesso a immagini software, manifesti, modelli e consente di inviare log e metriche. 
+| \ https://support.compliance.api.console.netapp.com/ \ https://hub.docker.com \ https://auth.docker.io \ https://registry-1.docker.io \ https://index.docker.io/ \ https://dseasb33srnrn.cloudfront.net/ \ https://production.cloudflare.docker.com/ | Fornisce accesso a immagini software, manifesti, modelli e consente di inviare log e metriche. 
 
 
-| \ https://support.compliance.api.bluexp.netapp.com/ | Consente a NetApp di trasmettere in streaming i dati dai record di audit. 
+| \ https://support.compliance.api.console.netapp.com/ | Consente a NetApp di trasmettere in streaming i dati dai record di audit. 
 |===
 --
 ====
 Assicurarsi che la classificazione dei dati disponga delle autorizzazioni richieste:: Assicurarsi che Data Classification disponga delle autorizzazioni per distribuire risorse e creare gruppi di sicurezza per l'istanza di Data Classification.
 +
 --
-* link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-gcp.html["Autorizzazioni di Google Cloud"^]
-* link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-aws.html#classification["Autorizzazioni AWS"^]
-* link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-azure.html#classification["Autorizzazioni di Azure"^]
+* link:https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-gcp.html["Autorizzazioni di Google Cloud"^]
+* link:https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-aws.html#classification["Autorizzazioni AWS"^]
+* link:https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-azure.html#classification["Autorizzazioni di Azure"^]
 
 
 --
 Assicurarsi che l'agente della console possa accedere alla classificazione dei dati:: Garantire la connettività tra l'agente della console e l'istanza di classificazione dei dati.  Il gruppo di sicurezza per l'agente Console deve consentire il traffico in entrata e in uscita sulla porta 443 da e verso l'istanza di classificazione dei dati.  Questa connessione consente la distribuzione dell'istanza di classificazione dei dati e consente di visualizzare le informazioni nelle schede Conformità e Governance.  La classificazione dei dati è supportata nelle regioni governative in AWS e Azure.
 +
 --
-Per le distribuzioni AWS e AWS GovCloud sono necessarie regole aggiuntive per i gruppi di sicurezza in entrata e in uscita. Vedere https://docs.netapp.com/us-en/bluexp-setup-admin/reference-ports-aws.html["Regole per l'agente della console in AWS"^] per i dettagli.
+Per le distribuzioni AWS e AWS GovCloud sono necessarie regole aggiuntive per i gruppi di sicurezza in entrata e in uscita. Vedere https://docs.netapp.com/us-en/console-setup-admin/reference-ports-aws.html["Regole per l'agente della console in AWS"^] per i dettagli.
 
-Per le distribuzioni di Azure e Azure Government sono necessarie regole aggiuntive per i gruppi di sicurezza in entrata e in uscita. Vedere https://docs.netapp.com/us-en/bluexp-setup-admin/reference-ports-azure.html["Regole per l'agente Console in Azure"^] per i dettagli.
+Per le distribuzioni di Azure e Azure Government sono necessarie regole aggiuntive per i gruppi di sicurezza in entrata e in uscita. Vedere https://docs.netapp.com/us-en/console-setup-admin/reference-ports-azure.html["Regole per l'agente Console in Azure"^] per i dettagli.
 
 --
 Assicurati di poter mantenere in esecuzione la classificazione dei dati:: L'istanza di classificazione dei dati deve rimanere attiva per analizzare continuamente i dati.

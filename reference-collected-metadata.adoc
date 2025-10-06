@@ -64,4 +64,4 @@ Le selezioni del filtro sono:
 * "Ultimo orario di accesso classificato e aggiornato": mostra i file che sono stati classificati e la classificazione dei dati non è riuscita a reimpostare l'ultimo orario di accesso alla data originale.  Questo filtro è rilevante solo per gli ambienti in cui è stata attivata l'opzione *Scansione quando mancano le autorizzazioni "attributi di scrittura"*.
 
 
-Se necessario, è possibile esportare questi risultati in un report, in modo da poter vedere quali file vengono o non vengono analizzati in base alle autorizzazioni. https://docs.netapp.com/us-en/bluexp-classification/task-investigate-data.html#data-investigation-report["Scopri di più sul rapporto di indagine sui dati"^] .
+Se necessario, è possibile esportare questi risultati in un report, in modo da poter vedere quali file vengono o non vengono analizzati in base alle autorizzazioni. link:task-investigate-data.html#data-investigation-report["Scopri di più sul rapporto di indagine sui dati"^] .

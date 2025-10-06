@@ -16,10 +16,10 @@ summary: Per iniziare a utilizzare NetApp Data Classification, accedi al servizi
 
 Per accedere alla Console, puoi utilizzare le credenziali del sito di supporto NetApp oppure registrarti per accedere alla Console NetApp utilizzando il tuo indirizzo email e una password. link:https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-logging-in.html["Scopri di più sull'accesso alla Console"^] .
 
-Attività specifiche richiedono ruoli utente specifici nella Console. link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["Scopri di più sui ruoli di accesso alla console per tutti i servizi"^] .
+Attività specifiche richiedono ruoli utente specifici nella Console. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["Scopri di più sui ruoli di accesso alla console per tutti i servizi"^] .
 
 .Prima di iniziare
-* link:https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html["Dovresti aggiungere un agente Console."^]
+* link:https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html["Dovresti aggiungere un agente Console."^]
 * link:task-deploy-cloud-compliance.html["Scopri quale stile di distribuzione della classificazione dei dati è più adatto al tuo carico di lavoro."]
 
 

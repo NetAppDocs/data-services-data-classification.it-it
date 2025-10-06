@@ -26,4 +26,4 @@ L'esportazione dei dati dal report di indagine sui dati presenta le seguenti lim
 * Si prevede che l'esportazione di un milione di record richiederà circa 35 minuti.
 
 
-Per i dettagli sull'indagine dei dati e sul rapporto, vedere https://docs.netapp.com/us-en/bluexp-classification/task-investigate-data.html["Esamina i dati archiviati nella tua organizzazione"] .
+Per i dettagli sull'indagine dei dati e sul rapporto, vedere https://docs.netapp.com/us-en/data-services-data-classification/task-investigate-data.html["Esamina i dati archiviati nella tua organizzazione"] .

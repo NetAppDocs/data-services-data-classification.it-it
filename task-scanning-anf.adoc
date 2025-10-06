@@ -20,7 +20,7 @@ Completa alcuni passaggi per iniziare a usare NetApp Data Classification per Azu
 
 == Individuare il sistema Azure NetApp Files che si desidera analizzare
 
-Se il sistema Azure NetApp Files che si desidera analizzare non è già presente nella console NetApp come sistema,link:https://docs.netapp.com/us-en/bluexp-azure-netapp-files/task-quick-start.html["aggiungilo nella pagina Sistemi"^] .
+Se il sistema Azure NetApp Files che si desidera analizzare non è già presente nella console NetApp come sistema,link:https://docs.netapp.com/us-en/storage-management-azure-netapp-files/task-quick-start.html["aggiungilo nella pagina Sistemi"^] .
 
 
 
