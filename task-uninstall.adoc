@@ -22,7 +22,7 @@ I passaggi da seguire variano a seconda che Data Classification sia stato distri
 
 == Disinstallare Data Classification da un provider cloud
 
-. Da Classificazione dati, seleziona **Configurazione**.
+. Da Classificazione dati, selezionare **Configurazione**.
 . Nella parte inferiore della pagina di configurazione, seleziona **Disinstalla classificazione**.
 +
 image:screenshot-uninstall.png["Uno screenshot del pulsante per disinstallare Data Classification."]
@@ -36,7 +36,7 @@ image:screenshot-uninstall.png["Uno screenshot del pulsante per disinstallare Da
 
 == Disinstallare Data Classification da una distribuzione locale
 
-. Da Classificazione dati, seleziona **Configurazione**.
+. Da Classificazione dati, selezionare **Configurazione**.
 . Nella parte inferiore della pagina di configurazione, seleziona **Disinstalla classificazione**.
 +
 image:screenshot-uninstall.png["Uno screenshot del pulsante per disinstallare Data Classification."]

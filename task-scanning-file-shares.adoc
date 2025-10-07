@@ -63,7 +63,7 @@ Quando aggiungi condivisioni di file al gruppo, devi utilizzare il formato `<hos
 image:screen-cl-config-shares-add.png["Uno screenshot della finestra modale per aggiungere condivisioni, che mostra le opzioni per selezionare protocolli e condivisioni"]
 
 +
-.. Se si aggiungono condivisioni CIFS con autenticazione NTLM, immettere le credenziali di Active Directory per accedere ai volumi CIFS.  Sebbene siano supportate le credenziali di sola lettura, si consiglia di fornire l'accesso completo con le credenziali di amministratore. Seleziona **Salva**.
+.. Se si aggiungono condivisioni CIFS con autenticazione NTLM, immettere le credenziali di Active Directory per accedere ai volumi CIFS.  Sebbene siano supportate le credenziali di sola lettura, si consiglia di fornire l'accesso completo con le credenziali di amministratore.  Seleziona **Salva**.
 
 
 . Aggiungere le condivisioni file che si desidera analizzare (una condivisione file per riga).  Quindi seleziona **Continua**.
@@ -78,7 +78,7 @@ Se nella finestra di dialogo sono elencate delle condivisioni che non è stato p
 ** Per disattivare la scansione sulle condivisioni file, selezionare *Off*.
 +
 
-NOTE: Per impostazione predefinita, l'interruttore in cima alla pagina per *Esegui scansione quando mancano i permessi "attributi di scrittura"* è disabilitato.  Ciò significa che se Data Classification non dispone di autorizzazioni di scrittura degli attributi in CIFS o di autorizzazioni di scrittura in NFS, il sistema non eseguirà la scansione dei file perché Data Classification non può ripristinare l'"ultimo orario di accesso" al timestamp originale.  + Se si imposta *Scansione in caso di mancanza di autorizzazioni "attributi di scrittura"* su *Attivato*, la scansione reimposta l'orario dell'ultimo accesso ed esegue la scansione di tutti i file indipendentemente dalle autorizzazioni.  + Per saperne di più sull'ultimo timestamp di accesso, vederelink:link:reference-collected-metadata.html#last-access-time-timestamp["Metadati raccolti da fonti di dati nella classificazione dei dati"] .
+NOTE: Per impostazione predefinita, l'interruttore in cima alla pagina per *Esegui scansione quando mancano i permessi "attributi di scrittura"* è disabilitato.  Ciò significa che se Data Classification non dispone di autorizzazioni di scrittura degli attributi in CIFS o di autorizzazioni di scrittura in NFS, il sistema non eseguirà la scansione dei file perché Data Classification non può ripristinare l'"ora dell'ultimo accesso" al timestamp originale.  + Se si imposta *Scansione in caso di mancanza di autorizzazioni "attributi di scrittura"* su *Attivato*, la scansione reimposta l'orario dell'ultimo accesso ed esegue la scansione di tutti i file indipendentemente dalle autorizzazioni.  + Per saperne di più sull'ultimo timestamp di accesso, vederelink:link:reference-collected-metadata.html#last-access-time-timestamp["Metadati raccolti da fonti di dati nella classificazione dei dati"] .
 
 
 

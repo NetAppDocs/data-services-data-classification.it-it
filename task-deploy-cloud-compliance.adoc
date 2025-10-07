@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-deploy-cloud-compliance.html 
 keywords: cloud compliance, data sense, quickstart, outbound internet, endpoints, cloud compliance internet, browser connectivity, cloud compliance access, privacy, compliance, bluexp classification, classification, netapp console, 
-summary: 'Completa alcuni passaggi per distribuire NetApp Data Classification nel cloud.  La console NetApp distribuisce l"istanza di classificazione dei dati nella stessa rete del provider cloud dell"agente della console.' 
+summary: 'Completa alcuni passaggi per distribuire NetApp Data Classification nel cloud.  La NetApp Console distribuisce l"istanza di classificazione dei dati nella stessa rete del provider cloud dell"agente della console.' 
 ---
-= Distribuisci NetApp Data Classification nel cloud utilizzando la console NetApp
+= Distribuisci NetApp Data Classification nel cloud utilizzando la NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -26,7 +26,7 @@ Inizia subito seguendo questi passaggi oppure scorri verso il basso fino alle se
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Uno"]Creare un agente Console
 [role="quick-margin-para"]
-Se non si dispone già di un agente Console, crearne uno. Vedere https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-aws.html["creazione di un agente Console in AWS"^] , https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-azure.html["creazione di un agente Console in Azure"^] , O https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-google.html["creazione di un agente Console in GCP"^] .
+Se non si dispone già di un agente Console, crearne uno.  Vedere https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-aws.html["creazione di un agente Console in AWS"^] , https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-azure.html["creazione di un agente Console in Azure"^] , O https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-google.html["creazione di un agente Console in GCP"^] .
 
 [role="quick-margin-para"]
 Puoi anche https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-on-prem.html["installare l'agente Console in locale"^] su un host Linux nella tua rete o su un host Linux nel cloud.
@@ -43,7 +43,7 @@ Avviare la procedura guidata di installazione per distribuire l'istanza di Data 
 
 == Creare un agente Console
 
-Se non disponi già di un agente Console, creane uno nel tuo provider cloud. Vedere https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-aws.html["creazione di un agente Console in AWS"^] O https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-azure.html["creazione di un agente Console in Azure"^] , O https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-google.html["creazione di un agente Console in GCP"^] . Nella maggior parte dei casi sarà probabilmente configurato un agente Console prima di tentare di attivare la classificazione dei dati perché la maggior parte https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html#when-a-connector-is-required["Le funzionalità della console richiedono un agente della console"] , ma ci sono casi in cui sarà necessario impostarne uno ora.
+Se non disponi già di un agente Console, creane uno nel tuo provider cloud.  Vedere https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-aws.html["creazione di un agente Console in AWS"^] O https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-azure.html["creazione di un agente Console in Azure"^] , O https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-google.html["creazione di un agente Console in GCP"^] .  Nella maggior parte dei casi sarà probabilmente configurato un agente Console prima di tentare di attivare la classificazione dei dati perché la maggior parte https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html#when-a-connector-is-required["Le funzionalità della console richiedono un agente della console"] , ma ci sono casi in cui sarà necessario impostarne uno ora.
 
 Esistono alcuni scenari in cui è necessario utilizzare un agente Console distribuito in uno specifico provider cloud:
 
@@ -58,12 +58,12 @@ Esistono alcuni scenari in cui è necessario utilizzare un agente Console distri
 
 È possibile eseguire la scansione dei sistemi ONTAP on-premise, delle condivisioni file NetApp e dei database utilizzando uno qualsiasi di questi agenti della console cloud.
 
-Nota che puoi anche https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-on-prem.html["installare l'agente Console in locale"^] su un host Linux nella tua rete o nel cloud. Alcuni utenti che intendono installare Data Classification in locale potrebbero anche scegliere di installare l'agente Console in locale.
+Nota che puoi anche https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-on-prem.html["installare l'agente Console in locale"^] su un host Linux nella tua rete o nel cloud.  Alcuni utenti che intendono installare Data Classification in locale potrebbero anche scegliere di installare l'agente Console in locale.
 
 Come puoi vedere, potrebbero esserci alcune situazioni in cui è necessario utilizzare https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html#multiple-connectors["più agenti della console"] .
 
 
-TIP: La classificazione dei dati non impone limiti alla quantità di dati che può analizzare. Ogni agente della console supporta la scansione e la visualizzazione di 500 TiB di dati. Per scansionare più di 500 TiB di dati,link:https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html#connector-installation["installare un altro agente Console"^] Poilink:https://docs.netapp.com/us-en/data-services-data-classification/task-deploy-overview.html["distribuire un'altra istanza di classificazione dei dati"] . + L'interfaccia utente della console visualizza i dati da un singolo connettore. Per suggerimenti sulla visualizzazione dei dati da più agenti della console, vederelink:https://docs.netapp.com/us-en/console-setup-admin/task-manage-multiple-connectors.html#switch-between-connectors["Lavora con più agenti della console"^] .
+TIP: La classificazione dei dati non impone limiti alla quantità di dati che può analizzare.  Ogni agente della console supporta la scansione e la visualizzazione di 500 TiB di dati. Per scansionare più di 500 TiB di dati,link:https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html#connector-installation["installare un altro agente Console"^] Poilink:https://docs.netapp.com/us-en/data-services-data-classification/task-deploy-overview.html["distribuire un'altra istanza di classificazione dei dati"] .  + L'interfaccia utente della console visualizza i dati da un singolo connettore.  Per suggerimenti sulla visualizzazione dei dati da più agenti della console, vederelink:https://docs.netapp.com/us-en/console-setup-admin/task-manage-multiple-connectors.html#switch-between-connectors["Lavora con più agenti della console"^] .
 
 
 
@@ -79,7 +79,7 @@ https://docs.netapp.com/us-en/console-setup-admin/task-install-restricted-mode.h
 
 Esaminare i seguenti prerequisiti per assicurarsi di disporre di una configurazione supportata prima di distribuire Data Classification nel cloud.  Quando si distribuisce Data Classification nel cloud, questa si trova nella stessa subnet dell'agente Console.
 
-Abilita l'accesso a Internet in uscita dalla classificazione dei dati:: La classificazione dei dati richiede l'accesso a Internet in uscita.  Se la rete virtuale o fisica utilizza un server proxy per l'accesso a Internet, assicurarsi che l'istanza di classificazione dei dati disponga di accesso a Internet in uscita per contattare i seguenti endpoint.  La delega non deve essere trasparente.  I proxy trasparenti non sono attualmente supportati.
+Abilita l'accesso a Internet in uscita dalla classificazione dei dati:: La classificazione dei dati richiede l'accesso a Internet in uscita.  Se la rete virtuale o fisica utilizza un server proxy per l'accesso a Internet, assicurarsi che l'istanza di Data Classification disponga di accesso a Internet in uscita per contattare i seguenti endpoint.  La delega non deve essere trasparente.  I proxy trasparenti non sono attualmente supportati.
 +
 --
 Consultare la tabella appropriata qui sotto a seconda che si stia distribuendo la classificazione dei dati in AWS, Azure o GCP.

@@ -4,7 +4,7 @@ permalink: reference-instance-types.html
 keywords: BlueXP classification, installation, deployment, instance, virtual machine, cpu, ram, memory, disk, capacity 
 summary: 'Il software di classificazione dei dati deve essere eseguito su un host che soddisfi specifici requisiti del sistema operativo, requisiti di RAM, requisiti software e così via.  Quando si distribuisce la classificazione dei dati nel cloud, si consiglia di utilizzare un sistema con caratteristiche "grandi" per una funzionalità completa.' 
 ---
-= Tipi di istanza di classificazione dei dati NetApp supportati
+= Tipi di istanza NetApp Data Classification supportati
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

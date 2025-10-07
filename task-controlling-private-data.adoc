@@ -17,7 +17,7 @@ summary: 'Ottieni il controllo dei tuoi dati privati visualizzando i dettagli su
 Ottieni il controllo dei tuoi dati privati ​​visualizzando i dettagli sui dati personali (PII) e sui dati personali sensibili (SPII) nella tua organizzazione.  Puoi anche ottenere visibilità esaminando le categorie e i tipi di file che NetApp Data Classification ha trovato nei tuoi dati.
 
 
-NOTE: I dettagli sulla conformità a livello di file sono disponibili solo se si esegue una scansione di classificazione completa.  Le scansioni di sola mappatura non forniscono dettagli a livello di file.
+NOTE: I dettagli sulla conformità a livello di file sono disponibili solo se si esegue una scansione completa della classificazione.  Le scansioni di sola mappatura non forniscono dettagli a livello di file.
 
 Per impostazione predefinita, la dashboard Classificazione dati visualizza i dati di conformità per tutti i sistemi e database.  Per visualizzare i dati solo di alcuni sistemi, selezionarli.
 

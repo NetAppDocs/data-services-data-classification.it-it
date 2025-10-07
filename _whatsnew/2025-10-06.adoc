@@ -7,14 +7,14 @@
 === Versione 1.47
 
 .La BlueXP classification è ora NetApp Data Classification
-La BlueXP classification è stata rinominata NetApp Data Classification.  Oltre al cambio di nome, è stata migliorata anche l'interfaccia utente.
+La BlueXP classification è stata rinominata NetApp Data Classification. Oltre al cambio di nome, è stata migliorata anche l'interfaccia utente.
 
 .BlueXP è ora NetApp Console
 BlueXP è stato rinominato e riprogettato per riflettere meglio il suo ruolo nella gestione dell'infrastruttura dati.
 
 NetApp Console offre una gestione centralizzata dei servizi di storage e dati in ambienti on-premise e cloud di livello aziendale, offrendo informazioni in tempo reale, flussi di lavoro più rapidi e amministrazione semplificata.
 
-Per i dettagli su cosa è cambiato, vedere il https://docs.netapp.com/us-en/console-relnotes/index.html["Note sulla versione della console NetApp"] .
+Per i dettagli su cosa è cambiato, vedere il https://docs.netapp.com/us-en/console-relnotes/index.html["Note sulla versione NetApp Console"] .
 
 .Esperienza di indagine migliorata
 Trova e comprendi i tuoi dati più velocemente con nuovi filtri di ricerca, conteggi dei risultati per valore, informazioni in tempo reale che riepilogano i risultati principali e una tabella dei risultati aggiornata con colonne personalizzabili e un riquadro dei dettagli scorrevole.
@@ -22,10 +22,10 @@ Trova e comprendi i tuoi dati più velocemente con nuovi filtri di ricerca, cont
 Per ulteriori informazioni, consultare link:https://docs.netapp.com/us-en/data-services-data-classification/task-investigate-data.html#view-file-metada["Indagare i dati"] .
 
 .Nuove dashboard di governance e conformità
-Ottieni informazioni critiche più rapidamente grazie a widget intuitivi, immagini più chiare e prestazioni di caricamento migliorate.  Per maggiori informazioni, vederelink:https://docs.netapp.com/us-en/data-services-data-classification//task-controlling-governance-data.html["Esamina le informazioni di governance sui tuoi dati"] Elink:https://docs.netapp.com/us-en/data-services-data-classification/task-controlling-private-data.html["Visualizza le informazioni sulla conformità dei tuoi dati"] .
+Ottieni informazioni critiche più rapidamente grazie a widget intuitivi, immagini più chiare e prestazioni di caricamento migliorate. Per maggiori informazioni, vederelink:https://docs.netapp.com/us-en/data-services-data-classification//task-controlling-governance-data.html["Esamina le informazioni di governance sui tuoi dati"] Elink:https://docs.netapp.com/us-en/data-services-data-classification/task-controlling-private-data.html["Visualizza le informazioni sulla conformità dei tuoi dati"] .
 
 .Criteri per le query salvate (anteprima)
-La classificazione dei dati ora consente di automatizzare la governance con azioni condizionali.  È possibile creare regole di conservazione con eliminazione automatica e impostare notifiche e-mail periodiche, il tutto gestito da una pagina di query salvate aggiornate.
+La classificazione dei dati ora consente di automatizzare la governance con azioni condizionali. È possibile creare regole di conservazione con eliminazione automatica e impostare notifiche e-mail periodiche, il tutto gestito da una pagina di query salvate aggiornate.
 
 Per ulteriori informazioni, consultare link:https://docs.netapp.com/us-en/data-services-data-classification/task-using-policies.html["Creare politiche"] .
 
@@ -35,4 +35,4 @@ Assumi il controllo diretto dalla pagina Investigazione: elimina, sposta, copia 
 Per ulteriori informazioni, consultare link:https://docs.netapp.com/us-en/data-services-data-classification/task-investigate-data.html#view-file-metada["Indagare i dati"] .
 
 .Supporto per Google Cloud NetApp Volumes
-Data Classification ora supporta la scansione su Google Cloud NetApp Volumes.  Aggiungi facilmente Google Cloud NetApp Volumes dalla console NetApp per una scansione e una classificazione dei dati senza interruzioni.
+Data Classification ora supporta la scansione su Google Cloud NetApp Volumes. Aggiungi facilmente Google Cloud NetApp Volumes dalla NetApp Console per una scansione e una classificazione dei dati senza interruzioni.

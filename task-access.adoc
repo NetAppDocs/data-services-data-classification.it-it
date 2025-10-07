@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-access.html 
 keywords: log in, sign in 
-summary: Per iniziare a utilizzare NetApp Data Classification, accedi al servizio nella console NetApp . 
+summary: Per iniziare a utilizzare NetApp Data Classification, accedi al servizio nella NetApp Console. 
 ---
-= Accedi alla classificazione dei dati NetApp
+= Accedi NetApp Data Classification
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
@@ -12,9 +12,9 @@ summary: Per iniziare a utilizzare NetApp Data Classification, accedi al servizi
 
 
 [role="lead"]
-È possibile accedere alla classificazione dei dati NetApp tramite la console NetApp .
+È possibile accedere alla NetApp Data Classification tramite la NetApp Console.
 
-Per accedere alla Console, puoi utilizzare le credenziali del sito di supporto NetApp oppure registrarti per accedere alla Console NetApp utilizzando il tuo indirizzo email e una password. link:https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-logging-in.html["Scopri di più sull'accesso alla Console"^] .
+Per accedere alla Console, puoi utilizzare le credenziali del sito di supporto NetApp oppure registrarti per accedere alla NetApp Console utilizzando il tuo indirizzo email e una password. link:https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-logging-in.html["Scopri di più sull'accesso alla Console"^] .
 
 Attività specifiche richiedono ruoli utente specifici nella Console. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["Scopri di più sui ruoli di accesso alla console per tutti i servizi"^] .
 
@@ -26,7 +26,7 @@ Attività specifiche richiedono ruoli utente specifici nella Console. link:https
 .Passi
 . In un browser web, vai alink:https://console.netapp.com/["Consolle"^] .
 . Accedi alla Console.
-. Dalla pagina principale della console NetApp , selezionare *Governance* > *Classificazione dati*.
+. Dalla pagina principale della NetApp Console, selezionare *Governance* > *Classificazione dati*.
 . Se è la prima volta che accedi a Data Classification, verrà visualizzata la pagina di destinazione.
 +
 Seleziona *Distribuisci classificazione in locale o nel cloud* per iniziare a distribuire la tua istanza di classificazione.  Per maggiori informazioni, vederelink:task-deploy-cloud-compliance.html["Quale distribuzione di classificazione dei dati dovresti utilizzare?"]

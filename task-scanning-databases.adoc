@@ -62,7 +62,7 @@ NOTE: Per MongoDB è richiesto un ruolo di amministratore di sola lettura.
 
 == Distribuisci l'istanza di classificazione dei dati
 
-Distribuire la classificazione dei dati se non è già stata distribuita un'istanza.
+Distribuisci Data Classification se non è già stata distribuita un'istanza.
 
 Se si esegue la scansione di schemi di database accessibili tramite Internet, è possibilelink:task-deploy-cloud-compliance.html["distribuire la classificazione dei dati nel cloud"^] Olink:task-deploy-compliance-onprem.html["distribuire la classificazione dei dati in una posizione locale dotata di accesso a Internet"^] .
 

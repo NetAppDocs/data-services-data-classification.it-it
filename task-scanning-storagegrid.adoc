@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-scanning-storagegrid.html 
 keywords: cloud compliance, enable cloud compliance, privacy, compliance, object storage, data sense 
-summary: 'Completa alcuni passaggi per avviare la scansione dei dati all"interno StorageGRID direttamente con NetApp Data Classification.' 
+summary: 'Completare alcuni passaggi per avviare la scansione dei dati all"interno StorageGRID direttamente con NetApp Data Classification.' 
 ---
 = Scansiona i dati StorageGRID con NetApp Data Classification
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 'Completa alcuni passaggi per avviare la scansione dei dati all"interno
 
 
 [role="lead"]
-Completa alcuni passaggi per avviare la scansione dei dati all'interno StorageGRID direttamente con NetApp Data Classification.
+Completare alcuni passaggi per avviare la scansione dei dati all'interno StorageGRID direttamente con NetApp Data Classification.
 
 
 
@@ -30,11 +30,11 @@ Prima di abilitare la classificazione dei dati, rivedere i seguenti prerequisiti
 
 == Distribuisci l'istanza di classificazione dei dati
 
-Distribuire la classificazione dei dati se non è già stata distribuita un'istanza.
+Distribuisci Data Classification se non è già stata distribuita un'istanza.
 
 Se si esegue la scansione di dati da StorageGRID accessibili tramite Internet, è possibilelink:task-deploy-cloud-compliance.html["distribuire la classificazione dei dati nel cloud"^] Olink:task-deploy-compliance-onprem.html["distribuire la classificazione dei dati in una posizione locale dotata di accesso a Internet"^] .
 
-Se si esegue la scansione di dati da StorageGRID installato in un sito buio senza accesso a Internet, è necessariolink:task-deploy-compliance-dark-site.html["distribuire la classificazione dei dati nella stessa posizione locale che non ha accesso a Internet"^] .  Ciò richiede anche che l'agente della console venga distribuito nella stessa posizione locale.
+Se si stanno eseguendo la scansione dei dati da StorageGRID installato in un sito buio senza accesso a Internet, è necessariolink:task-deploy-compliance-dark-site.html["distribuire la classificazione dei dati nella stessa posizione locale che non ha accesso a Internet"^] .  Ciò richiede anche che l'agente della console venga distribuito nella stessa posizione locale.
 
 
 

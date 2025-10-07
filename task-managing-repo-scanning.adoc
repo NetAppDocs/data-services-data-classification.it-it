@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-managing-repo-scanning.html 
 keywords: compliance, stop scan, start scan, map scan, classify scan, data sense, pause scan, resume scan, cloud data sense, bluexp classification 
-summary: 'Puoi gestire il modo in cui i tuoi dati vengono scansionati in ciascuno dei tuoi sistemi e delle tue fonti dati in NetApp Data Classification.  È possibile apportare modifiche su base "repository", ovvero è possibile apportare modifiche per ogni volume, bucket, condivisione, schema, utente, ecc. a seconda del tipo di origine dati che si sta analizzando.' 
+summary: 'Puoi gestire il modo in cui i tuoi dati vengono scansionati in ciascuno dei tuoi sistemi e delle tue origini dati in NetApp Data Classification.  È possibile apportare modifiche su base "repository", ovvero è possibile apportare modifiche per ogni volume, bucket, condivisione, schema, utente, ecc. a seconda del tipo di origine dati che si sta analizzando.' 
 ---
-= Modifica le impostazioni di scansione della classificazione dei dati NetApp per i tuoi repository
+= Modifica le impostazioni di scansione NetApp Data Classification per i tuoi repository
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -85,9 +85,9 @@ image:screenshot_compliance_repo_scan_all.png["Uno screenshot che mostra come co
 
 È possibile dare priorità alle scansioni più importanti di sola mappatura oppure alle scansioni di mappatura e classificazione per garantire che le scansioni ad alta priorità vengano completate per prime.
 
-Per impostazione predefinita, le scansioni vengono messe in coda in base all'ordine in cui vengono avviate.  Grazie alla possibilità di dare priorità alle scansioni, è possibile spostarle in cima alla coda.  È possibile dare priorità a più scansioni.  La priorità viene assegnata in base all'ordine "first-in, first-out", ovvero la prima scansione a cui si dà priorità viene spostata in cima alla coda; la seconda scansione a cui si dà priorità diventa la seconda nella coda e così via.
+Per impostazione predefinita, le scansioni vengono messe in coda in base all'ordine in cui vengono avviate. Grazie alla possibilità di dare priorità alle scansioni, è possibile spostarle in cima alla coda. È possibile dare priorità a più scansioni. La priorità viene assegnata in base all'ordine "first-in, first-out", ovvero la prima scansione a cui si dà priorità viene spostata in cima alla coda; la seconda scansione a cui si dà priorità diventa la seconda nella coda e così via.
 
-La priorità viene concessa una sola volta.  Le nuove scansioni automatiche dei dati di mappatura avvengono nell'ordine predefinito.
+La priorità viene concessa una sola volta. Le nuove scansioni automatiche dei dati di mappatura avvengono nell'ordine predefinito.
 
 .Passi
 . Dal menu Classificazione dati, selezionare *Configurazione*.
@@ -127,6 +127,6 @@ image:screenshot_compliance_repo_scan_settings.png["Uno screenshot che mostra co
 +
 image:screenshot_compliance_config_button.png["Uno screenshot che mostra come selezionare il pulsante Configurazione per un sistema."]
 
-. Nella pagina Configurazione scansione, selezionare Azioniimage:button-actions-horizontal.png["Icona Azioni"] icona.
+. Nella pagina Configurazione scansione, seleziona Azioniimage:button-actions-horizontal.png["Icona Azioni"] icona.
 . Selezionare *Pausa* per mettere in pausa la scansione di un volume oppure selezionare *Riprendi* per riprendere la scansione di un volume che era stata precedentemente messa in pausa.
 

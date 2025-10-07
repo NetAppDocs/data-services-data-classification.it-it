@@ -9,17 +9,17 @@
 Questa versione di classificazione dei dati include:
 
 .Dare priorità alle scansioni di classificazione
-La classificazione dei dati supporta la possibilità di dare priorità alle scansioni Map & Classify oltre alle scansioni di sola mappatura, consentendo di selezionare quali scansioni completare per prime.  La definizione delle priorità delle scansioni Map & Classify è supportata durante e prima dell'inizio delle scansioni.  Se si sceglie di dare priorità a una scansione mentre è in corso, verrà data priorità sia alla scansione di mappatura che a quella di classificazione.
+La classificazione dei dati supporta la possibilità di dare priorità alle scansioni Map & Classify oltre alle scansioni di sola mappatura, consentendo di selezionare quali scansioni completare per prime. La definizione delle priorità delle scansioni Map & Classify è supportata durante e prima dell'inizio delle scansioni. Se si sceglie di dare priorità a una scansione mentre è in corso, verrà data priorità sia alla scansione di mappatura che a quella di classificazione.
 
 Per ulteriori informazioni, consultare link:https://docs.netapp.com/us-en/data-services-data-classification/task-managing-repo-scanning.html#prioritize-scans["Dare priorità alle scansioni"] .
 
 .Supporto per le categorie di dati di identificazione personale (PII) canadesi
-Le scansioni di classificazione dei dati identificano le categorie di dati PII canadesi.  Queste categorie includono informazioni bancarie, numeri di passaporto, numeri di previdenza sociale, numeri di patente di guida e numeri di tessera sanitaria per tutte le province e i territori canadesi.
+Le scansioni di classificazione dei dati identificano le categorie di dati PII canadesi. Queste categorie includono informazioni bancarie, numeri di passaporto, numeri di previdenza sociale, numeri di patente di guida e numeri di tessera sanitaria per tutte le province e i territori canadesi.
 
 Per ulteriori informazioni, consultare link:https://docs.netapp.com/us-en/data-services-data-classification/reference-private-data-categories.html#types-of-personal-data["Categorie di dati personali"] .
 
 .Classificazione personalizzata (anteprima)
-La classificazione dei dati supporta classificazioni personalizzate per le scansioni Map & Classify.  Grazie alle classificazioni personalizzate, puoi adattare le scansioni di classificazione dei dati per acquisire dati specifici per la tua organizzazione utilizzando espressioni regolari.  Questa funzionalità è attualmente in anteprima.
+La classificazione dei dati supporta classificazioni personalizzate per le scansioni Map & Classify. Grazie alle classificazioni personalizzate, puoi adattare le scansioni di classificazione dei dati per acquisire dati specifici per la tua organizzazione utilizzando espressioni regolari. Questa funzionalità è attualmente in anteprima.
 
 Per ulteriori informazioni, consultare link:https://docs.netapp.com/us-en/data-services-data-classification/task-custom-classification.html["Aggiungi classificazioni personalizzate"] .
 
@@ -31,7 +31,7 @@ La classificazione dei dati supporta l'invio di eventi di classificazione (quand
 
 .Aggiornamenti di sicurezza
 * Il pacchetto Keras è stato aggiornato, mitigando le vulnerabilità (BDSA-2025-0107 e BDSA-2025-1984).
-* La configurazione dei container Docker è stata aggiornata.  Il contenitore non ha più accesso alle interfacce di rete dell'host per creare pacchetti di rete non elaborati.  Riducendo gli accessi non necessari, l'aggiornamento attenua i potenziali rischi per la sicurezza.
+* La configurazione dei container Docker è stata aggiornata. Il contenitore non ha più accesso alle interfacce di rete dell'host per creare pacchetti di rete non elaborati. Riducendo gli accessi non necessari, l'aggiornamento attenua i potenziali rischi per la sicurezza.
 
 
 .Miglioramenti delle prestazioni

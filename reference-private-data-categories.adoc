@@ -4,7 +4,7 @@ permalink: reference-private-data-categories.html
 keywords: personal files, personal data, sensitive personal files, sensitive personal data, categories, health data, ethnic origin, political opinions, gdpr, email address, credit card, ip address, iban, national ID, identifier, sex, criminal, compliance, privacy, 
 summary: Esistono molti tipi di dati privati che Data Classification può identificare nei tuoi volumi. 
 ---
-= Categorie di dati privati ​​nella classificazione dei dati NetApp
+= Categorie di dati privati ​​nella NetApp Data Classification
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -302,7 +302,7 @@ Nella tabella sono indicate le lingue in cui questi elementi possono essere rico
 | Carta d'identità svedese | SÌ | ✓ | ✓ | ✓ |  |  
 
 
-| ID del Regno Unito (NINO) | SÌ | ✓ | ✓ | ✓ |  |  
+| ID UK (NINO) | SÌ | ✓ | ✓ | ✓ |  |  
 
 
 | Patente di guida USA California | SÌ | ✓ | ✓ | ✓ |  |  

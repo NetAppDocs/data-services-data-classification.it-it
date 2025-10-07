@@ -4,7 +4,7 @@ permalink: reference-limitations.html
 keywords: limitations, data sense, classification, scan shares 
 summary: Le limitazioni note identificano funzioni non supportate da questa versione del prodotto o che non interagiscono correttamente con essa. Esamina attentamente queste limitazioni. 
 ---
-= Limitazioni note nella classificazione dei dati NetApp
+= Limitazioni note nella NetApp Data Classification
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -18,7 +18,7 @@ Le limitazioni note identificano funzioni che non sono supportate o non interagi
 
 
 
-== Opzioni disabilitate per la classificazione dei dati NetApp
+== Opzioni disabilitate NetApp Data Classification
 
 Nella versione di dicembre 2023 (1.26.6) sono state rimosse le seguenti opzioni:
 

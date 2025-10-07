@@ -4,7 +4,7 @@ permalink: task-exclude-scan-paths.html
 keywords: exclude scans, folders, directories 
 summary: Se si desidera che NetApp Data Classification escluda la scansione dei dati che risiedono in determinate directory di origine dati, è possibile aggiungere i nomi di queste directory a un file di configurazione.  Dopo aver applicato questa modifica, il motore di classificazione dei dati escluderà la scansione dei dati in quelle directory. 
 ---
-= Escludere directory specifiche dalle scansioni di NetApp Data Classification
+= Escludere directory specifiche dalle scansioni NetApp Data Classification
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -80,7 +80,7 @@ data_providers:
    exclude:
    - "folder1"
 ....
-.Risultati previsti per i percorsi che saranno esclusi:
+.Risultati previsti per i percorsi che verranno esclusi:
 * /CVO1/cartella1
 * /CVO1/nomecartella1
 * /CVO1/cartella10
@@ -106,7 +106,7 @@ data_providers:
    exclude:
    - "\\*folder1"
 ....
-.Risultati previsti per i percorsi che saranno esclusi:
+.Risultati previsti per i percorsi che verranno esclusi:
 * /CVO/*cartella1
 * /CVO/*nomecartella1
 * /CVO/*cartella10
@@ -126,7 +126,7 @@ data_providers:
    exclude:
    - "CVO22/folder1"
 ....
-.Risultati previsti per i percorsi che saranno esclusi:
+.Risultati previsti per i percorsi che verranno esclusi:
 * /CVO22/cartella1
 * /CVO22/nomecartella1
 * /CVO22/cartella10

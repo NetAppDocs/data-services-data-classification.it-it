@@ -39,7 +39,7 @@ Inizia subito seguendo questi passaggi oppure scorri verso il basso fino alle se
 Se non hai ancora un agente Console, https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-on-prem.html["distribuire l'agente della console in locale"^] su un host Linux nella tua rete o su un host Linux nel cloud.
 
 [role="quick-margin-para"]
-Puoi anche creare un agente Console con il tuo provider cloud. Vedere https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-aws.html["creazione di un agente Console in AWS"^] , https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-azure.html["creazione di un agente Console in Azure"^] , O https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-google.html["creazione di un agente Console in GCP"^] .
+Puoi anche creare un agente Console con il tuo provider cloud.  Vedere https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-aws.html["creazione di un agente Console in AWS"^] , https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-azure.html["creazione di un agente Console in Azure"^] , O https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-google.html["creazione di un agente Console in GCP"^] .
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Due"]Rivedere i prerequisiti
 [role="quick-margin-para"]
@@ -56,7 +56,7 @@ Scarica il software Cloud Data Classification dal sito di supporto NetApp e copi
 
 == Creare un agente Console
 
-Per poter installare e utilizzare Data Classification è necessario un agente Console. Nella maggior parte dei casi, probabilmente avrai configurato un agente Console prima di tentare di attivare la classificazione dei dati perché la maggior parte https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html["Le funzionalità della console richiedono un agente della console"] , ma ci sono casi in cui sarà necessario impostarne uno ora.
+Per poter installare e utilizzare Data Classification è necessario un agente Console.  Nella maggior parte dei casi, probabilmente avrai configurato un agente Console prima di tentare di attivare la classificazione dei dati perché la maggior parte https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html["Le funzionalità della console richiedono un agente della console"] , ma ci sono casi in cui sarà necessario impostarne uno ora.
 
 Per crearne uno nell'ambiente del tuo provider cloud, vedi https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-aws.html["creazione di un agente Console in AWS"^] , https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-azure.html["creazione di un agente Console in Azure"^] , O https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-google.html["creazione di un agente Console in GCP"^] .
 
@@ -72,7 +72,7 @@ Per Azure NetApp Files, è necessario distribuirlo nella stessa area dei volumi 
 
 I sistemi ONTAP on-premise, le condivisioni file NetApp e gli account di database possono essere scansionati utilizzando uno qualsiasi di questi agenti della console cloud.
 
-Nota che puoi anche https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-on-prem.html["distribuire l'agente della console in locale"^] su un host Linux nella tua rete o su un host Linux nel cloud. Alcuni utenti che intendono installare Data Classification in locale potrebbero anche scegliere di installare l'agente Console in locale.
+Nota che puoi anche https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-on-prem.html["distribuire l'agente della console in locale"^] su un host Linux nella tua rete o su un host Linux nel cloud.  Alcuni utenti che intendono installare Data Classification in locale potrebbero anche scegliere di installare l'agente Console in locale.
 
 Durante l'installazione di Data Classification sarà necessario l'indirizzo IP o il nome host del sistema agente della console.  Queste informazioni saranno disponibili se hai installato l'agente Console nella tua sede.  Se l'agente della console è distribuito nel cloud, è possibile trovare queste informazioni nella console: selezionare l'icona della Guida, quindi *Supporto* e infine **Agente della console**.
 
@@ -255,7 +255,7 @@ La console rileva i cluster ONTAP tramite HTTPS. Se si utilizzano criteri firewa
 * Per CIFS - 139 (TCP\UDP) e 445 (TCP\UDP)
 
  a| 
-La classificazione dei dati necessita di una connessione di rete a ciascuna subnet Cloud Volumes ONTAP o sistema ONTAP locale.  I firewall o le regole di routing per Cloud Volumes ONTAP devono consentire le connessioni in entrata dall'istanza di classificazione dei dati.
+La classificazione dei dati necessita di una connessione di rete a ciascuna subnet Cloud Volumes ONTAP o sistema ONTAP locale.  I firewall o le regole di routing per Cloud Volumes ONTAP devono consentire le connessioni in ingresso dall'istanza di classificazione dei dati.
 
 Assicurarsi che queste porte siano aperte all'istanza di classificazione dei dati:
 
@@ -293,7 +293,7 @@ Vedere<<Preparare il sistema host Linux,Preparazione del sistema host Linux>> E<
 Gli aggiornamenti al software di classificazione dei dati sono automatizzati, a condizione che l'istanza disponga di connettività Internet.
 
 
-NOTE: Al momento, Data Classification non è in grado di analizzare bucket S3, Azure NetApp Files o FSx per ONTAP quando il software è installato in locale. In questi casi sarà necessario distribuire un agente Console separato e un'istanza di Data Classification nel cloud e https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html["passare da un connettore all'altro"^] per le tue diverse fonti di dati.
+NOTE: Al momento, Data Classification non è in grado di analizzare bucket S3, Azure NetApp Files o FSx per ONTAP quando il software è installato in locale.  In questi casi sarà necessario distribuire un agente Console separato e un'istanza di Data Classification nel cloud e https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html["passare da un connettore all'altro"^] per le tue diverse fonti di dati.
 
 
 
@@ -314,7 +314,7 @@ Si noti che tutte le attività di installazione vengono registrate durante l'ins
 ** Avrai bisogno delle informazioni sul server proxy (indirizzo IP o nome host, porta di connessione, schema di connessione: https o http, nome utente e password).
 ** Se il proxy esegue l'intercettazione TLS, è necessario conoscere il percorso sul sistema Data Classification Linux in cui sono archiviati i certificati TLS CA.
 ** La delega non deve essere trasparente.  Attualmente la classificazione dei dati non supporta proxy trasparenti.
-** L'utente deve essere un utente locale. Gli utenti di dominio non sono supportati.
+** L'utente deve essere un utente locale.  Gli utenti di dominio non sono supportati.
 
 
 * Verifica che il tuo ambiente offline soddisfi i requisiti richiesti<<Abilita l'accesso a Internet in uscita dalla classificazione dei dati,permessi e connettività>> .

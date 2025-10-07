@@ -19,7 +19,7 @@ Con NetApp Data Classification puoi creare una ricerca personalizzata per inform
 
 == Crea una classificazione personalizzata
 
-La classificazione personalizzata è disponibile solo per le scansioni Map & Classify, non per le scansioni di sola mappatura.  Questa funzionalità è attualmente in anteprima.
+La classificazione personalizzata è disponibile solo per le scansioni Map & Classify, non per le scansioni di sola mappatura. Questa funzionalità è attualmente in anteprima.
 
 .Passi
 . Selezionare la scheda **Classificazione personalizzata**.

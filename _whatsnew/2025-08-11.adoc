@@ -9,9 +9,9 @@
 Questa versione di Data Classification include correzioni di bug e i seguenti aggiornamenti:
 
 .Informazioni dettagliate sugli eventi di scansione migliorate nella pagina di controllo
-La pagina Audit ora supporta approfondimenti avanzati sugli eventi di scansione per la BlueXP classification.  Nella pagina Audit ora viene visualizzato quando inizia la scansione di un sistema, lo stato dei sistemi e gli eventuali problemi.  Gli stati delle condivisioni e dei sistemi sono disponibili solo per le scansioni di mappatura.
+La pagina Audit ora supporta approfondimenti avanzati sugli eventi di scansione per la BlueXP classification. Nella pagina Audit ora viene visualizzato quando inizia la scansione di un sistema, lo stato dei sistemi e gli eventuali problemi. Gli stati delle condivisioni e dei sistemi sono disponibili solo per le scansioni di mappatura.
 
-Per ulteriori informazioni sulla pagina Audit, vederelink:https://docs.netapp.com/us-en/console-setup-admin/task-monitor-cm-operations.html["Monitorare le operazioni della console NetApp"^] .
+Per ulteriori informazioni sulla pagina Audit, vederelink:https://docs.netapp.com/us-en/console-setup-admin/task-monitor-cm-operations.html["Monitorare le operazioni NetApp Console"^] .
 
 .Supporto per RHEL 9.6
 Questa versione aggiunge il supporto per Red Hat Enterprise Linux v9.6 per l'installazione manuale in sede della BlueXP classification, comprese le distribuzioni di siti oscuri.

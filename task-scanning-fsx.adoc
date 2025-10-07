@@ -57,7 +57,7 @@ Gli aggiornamenti al software di classificazione dei dati sono automatizzati, a 
 
 È possibile abilitare la classificazione dei dati per FSx per i volumi ONTAP .
 
-. Dalla console NetApp , *Governance > Classificazione*.
+. Dalla NetApp Console, *Governance > Classificazione*.
 . Dal menu Classificazione dati, selezionare *Configurazione*.
 +
 image:screenshot_fsx_scanning_activate.png["Uno screenshot della scheda Configurazione subito dopo la distribuzione dell'istanza di Classificazione dati."]
@@ -78,7 +78,7 @@ La classificazione dei dati avvia la scansione dei volumi selezionati nel sistem
 [NOTE]
 ====
 * Per impostazione predefinita, se Data Classification non dispone di autorizzazioni per gli attributi di scrittura in CIFS o di autorizzazioni per la scrittura in NFS, il sistema non eseguirà la scansione dei file nei volumi perché Data Classification non può ripristinare l'"ora dell'ultimo accesso" al timestamp originale.  Se non ti interessa che l'ultimo orario di accesso venga reimpostato, seleziona *Oppure seleziona il tipo di scansione per ciascun volume*.  La pagina risultante contiene un'impostazione che è possibile abilitare in modo che la classificazione dei dati esegua la scansione dei volumi indipendentemente dalle autorizzazioni.
-* La classificazione dei dati analizza solo una condivisione file in un volume.  Se nei volumi sono presenti più condivisioni, sarà necessario eseguire la scansione delle altre condivisioni separatamente come gruppo di condivisioni. link:reference-limitations.html#data-classification-scans-only-one-share-under-a-volume["Vedi maggiori dettagli su questa limitazione della classificazione dei dati"^] .
+* La classificazione dei dati analizza solo una condivisione file in un volume.  Se nei volumi sono presenti più condivisioni, sarà necessario eseguire la scansione di tali altre condivisioni separatamente, come gruppo di condivisioni. link:reference-limitations.html#data-classification-scans-only-one-share-under-a-volume["Vedi maggiori dettagli su questa limitazione della classificazione dei dati"^] .
 
 
 ====
@@ -143,7 +143,7 @@ image:screenshot_volume_compliance_selection.png["Uno screenshot della pagina di
 
 
 
-NOTE: I nuovi volumi aggiunti al sistema vengono scansionati automaticamente solo se nell'area dell'intestazione è stata impostata l'opzione *Mappa* o *Mappa e classifica*.  Se impostato su *Personalizzato* o *Disattivato* nell'area dell'intestazione, sarà necessario attivare la mappatura e/o la scansione completa su ogni nuovo volume aggiunto al sistema.
+NOTE: I nuovi volumi aggiunti al sistema vengono automaticamente scansionati solo se nell'area dell'intestazione è stata impostata l'opzione *Mappa* o *Mappa e classifica*.  Se impostato su *Personalizzato* o *Disattivato* nell'area dell'intestazione, sarà necessario attivare la mappatura e/o la scansione completa su ogni nuovo volume aggiunto al sistema.
 
 
 
@@ -165,7 +165,7 @@ Se si desidera eseguire la scansione di questi volumi di protezione dei dati:
 ** I volumi inizialmente creati come volumi NFS nel file system FSx for ONTAP di origine sono abilitati.
 ** I volumi inizialmente creati come volumi CIFS nel file system FSx for ONTAP di origine richiedono l'immissione delle credenziali CIFS per eseguire la scansione di tali volumi DP.  Se hai già immesso le credenziali di Active Directory affinché Data Classification possa analizzare i volumi CIFS, puoi utilizzare tali credenziali oppure specificare un set diverso di credenziali di amministratore.
 +
-image:screenshot_compliance_dp_cifs_volumes.png["Uno screenshot delle due opzioni per abilitare i volumi di protezione dati CIFS."]
+image:screenshot_compliance_dp_cifs_volumes.png["Uno screenshot delle due opzioni per abilitare i volumi di protezione dei dati CIFS."]
 
 
 
@@ -178,4 +178,4 @@ Una volta abilitata, la classificazione dei dati crea una condivisione NFS da ci
 Se non erano presenti volumi di protezione dati CIFS quando è stato inizialmente abilitato l'accesso ai volumi DP e in seguito ne sono stati aggiunti alcuni, nella parte superiore della pagina Configurazione viene visualizzato il pulsante *Abilita accesso a CIFS DP*.  Selezionare questo pulsante e aggiungere le credenziali CIFS per abilitare l'accesso a questi volumi CIFS DP.
 
 
-NOTE: Le credenziali di Active Directory vengono registrate solo nella VM di archiviazione del primo volume CIFS DP, pertanto verranno scansionati tutti i volumi DP su tale SVM.  Tutti i volumi che risiedono su altre SVM non avranno le credenziali di Active Directory registrate, quindi tali volumi DP non verranno analizzati.
+NOTE: Le credenziali di Active Directory vengono registrate solo nella VM di archiviazione del primo volume CIFS DP, pertanto tutti i volumi DP su tale SVM verranno analizzati.  Tutti i volumi che risiedono su altre SVM non avranno le credenziali di Active Directory registrate, quindi tali volumi DP non verranno analizzati.

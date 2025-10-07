@@ -29,7 +29,7 @@ Per la classificazione dei dati sono disponibili i seguenti report:
 
 * *Rapporto di valutazione della scoperta dei dati*: fornisce un'analisi di alto livello dell'ambiente scansionato per evidenziare i risultati del sistema e mostrare le aree problematiche e i potenziali passaggi di correzione.
 * *Report di mappatura dei dati*: fornisce informazioni sulle dimensioni e sul numero di file presenti nei sistemi.  Ciò include la capacità di utilizzo, l'età dei dati, la dimensione dei dati e i tipi di file.
-* *Rapporto sulla richiesta di accesso ai dati dell'interessato*: consente di estrarre un rapporto di tutti i file che contengono informazioni riguardanti il nome specifico o l'identificativo personale di un interessato.
+* *Rapporto sulla richiesta di accesso ai dati dell'interessato*: consente di estrarre un rapporto di tutti i file che contengono informazioni riguardanti il nome specifico o l'identificatore personale di un interessato.
 * *Rapporto HIPAA*: ti aiuta a identificare la distribuzione delle informazioni sanitarie nei tuoi file.
 * *Rapporto PCI DSS*: ti aiuta a identificare la distribuzione delle informazioni sulle carte di credito nei tuoi file.
 * *Rapporto di valutazione del rischio per la privacy*: fornisce informazioni sulla privacy dei tuoi dati e un punteggio del rischio per la privacy.
@@ -59,7 +59,7 @@ image:screenshot-report-filter.png["Schermata che mostra il filtraggio dei siste
 
 Le normative sulla privacy, come il GDPR europeo, garantiscono agli interessati (come clienti o dipendenti) il diritto di accedere ai propri dati personali.  Quando un soggetto interessato richiede queste informazioni, si parla di DSAR (richiesta di accesso ai dati).  Le organizzazioni sono tenute a rispondere a tali richieste "senza indebito ritardo" e al più tardi entro un mese dal ricevimento.
 
-È possibile rispondere a una DSAR cercando il nome completo di un soggetto o un identificativo noto (ad esempio un indirizzo e-mail) e quindi scaricando un rapporto.  Il report è stato ideato per aiutare la tua organizzazione a rispettare i requisiti del GDPR o di leggi simili sulla privacy dei dati.
+È possibile rispondere a una DSAR cercando il nome completo di un soggetto o un identificativo noto (ad esempio un indirizzo e-mail) e quindi scaricando un rapporto.  Il report è stato ideato per aiutare la tua organizzazione a conformarsi al GDPR o a leggi simili sulla privacy dei dati.
 
 *In che modo la classificazione dei dati può aiutarti a rispondere a una DSAR?*
 
@@ -105,7 +105,7 @@ NOTE: Se i risultati sono più di 10.000, nell'elenco dei file vengono visualizz
 
 == Rapporto sulla legge sulla portabilità e responsabilità dell'assicurazione sanitaria (HIPAA)
 
-Il rapporto HIPAA (Health Insurance Portability and Accountability Act) può aiutarti a identificare i file contenenti informazioni sanitarie.  È progettato per aiutare la tua organizzazione a rispettare i requisiti delle leggi sulla privacy dei dati HIPAA.  Le informazioni ricercate dalla classificazione dei dati includono:
+Il rapporto HIPAA (Health Insurance Portability and Accountability Act) può aiutarti a identificare i file contenenti informazioni sanitarie.  È progettato per aiutare la tua organizzazione a rispettare i requisiti di conformità alle leggi sulla privacy dei dati HIPAA.  Le informazioni ricercate dalla classificazione dei dati includono:
 
 * Modello di riferimento sanitario
 * Codice medico ICD-10-CM

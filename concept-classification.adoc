@@ -4,7 +4,7 @@ permalink: concept-classification.html
 keywords: artificial intelligence, ai, compliance, cloud compliance, dsar, personal data, personal information, sensitive, personal sensitive data, gdpr, hipaa, scans, scanning,  governance, cloud data sense, data sense, privacy control, classification, optimization, bluexp, bluexp classification, netapp console 
 summary: Data Classification è un servizio di governance dei dati per NetApp Console che analizza le fonti di dati aziendali on-premise e cloud per mappare e classificare i dati e identificare le informazioni private. Ciò può contribuire a ridurre i rischi per la sicurezza e la conformità, a diminuire i costi di archiviazione e ad agevolare i progetti di migrazione dei dati. 
 ---
-= Scopri di più sulla classificazione dei dati NetApp
+= Scopri di più sulla NetApp Data Classification
 :allow-uri-read: 
 :no-hardbreaks: 
 :nofooter: 
@@ -17,19 +17,19 @@ summary: Data Classification è un servizio di governance dei dati per NetApp Co
 NetApp Data Classification è un servizio di governance dei dati per NetApp Console che analizza le fonti di dati aziendali on-premise e cloud per mappare e classificare i dati e identificare le informazioni private. Ciò può contribuire a ridurre i rischi per la sicurezza e la conformità, a diminuire i costi di archiviazione e ad agevolare i progetti di migrazione dei dati.
 
 
-IMPORTANT: A partire dalla versione 1.31, la classificazione dei dati è disponibile come funzionalità principale nella console NetApp .  Non ci sono costi aggiuntivi.  Non è richiesta alcuna licenza o abbonamento di classificazione.  + Se hai utilizzato la versione legacy 1.30 o una versione precedente, tale versione sarà disponibile fino alla scadenza dell'abbonamento.
+IMPORTANT: A partire dalla versione 1.31, la classificazione dei dati è disponibile come funzionalità principale nella NetApp Console.  Non ci sono costi aggiuntivi.  Non è richiesta alcuna licenza o abbonamento di classificazione.  + Se hai utilizzato la versione legacy 1.30 o una versione precedente, tale versione sarà disponibile fino alla scadenza dell'abbonamento.
 
 
 
-== Console NetApp
+== NetApp Console
 
-La classificazione dei dati è accessibile tramite la console NetApp .
+La classificazione dei dati è accessibile tramite la NetApp Console.
 
 NetApp Console offre una gestione centralizzata dei servizi di storage e dati NetApp in ambienti on-premise e cloud di livello aziendale. La console è necessaria per accedere e utilizzare i servizi dati NetApp . In quanto interfaccia di gestione, consente di gestire numerose risorse di archiviazione da un'unica interfaccia. Gli amministratori della console possono controllare l'accesso allo storage e ai servizi per tutti i sistemi all'interno dell'azienda.
 
 Per iniziare a utilizzare NetApp Console non è necessaria una licenza o un abbonamento e verranno addebitati costi solo quando sarà necessario distribuire gli agenti della console nel cloud per garantire la connettività ai sistemi di storage o ai servizi dati NetApp . Tuttavia, alcuni servizi dati NetApp accessibili dalla Console sono concessi in licenza o basati su abbonamento.
 
-Scopri di più sulink:https://docs.netapp.com/us-en/console-setup-admin/concept-overview.html["Console NetApp"^] .
+Scopri di più sulink:https://docs.netapp.com/us-en/console-setup-admin/concept-overview.html["NetApp Console"^] .
 
 
 
@@ -108,14 +108,14 @@ L'utilizzo della classificazione dei dati è gratuito.  Non è richiesta alcuna 
 === Costi delle infrastrutture
 
 * L'installazione di Data Classification nel cloud richiede la distribuzione di un'istanza cloud, che comporta l'addebito di costi da parte del provider cloud presso cui viene distribuita. Vedere <<L'istanza di classificazione dei dati,il tipo di istanza distribuita per ciascun provider cloud>> .  Non ci sono costi se si installa Data Classification su un sistema locale.
-* Per la classificazione dei dati è necessario aver distribuito un agente Console. In molti casi si dispone già di un agente Console perché si utilizzano altri servizi e risorse di archiviazione nella Console. L'istanza dell'agente Console comporta addebiti da parte del provider cloud presso cui è distribuita. Vedi il https://docs.netapp.com/us-en/console-setup-admin/task-install-connector-on-prem.html["tipo di istanza distribuita per ciascun provider cloud"^] . Non ci sono costi se si installa l'agente Console su un sistema locale.
+* Per la classificazione dei dati è necessario aver distribuito un agente Console.  In molti casi si dispone già di un agente Console perché si utilizzano altri servizi e risorse di archiviazione nella Console.  L'istanza dell'agente Console comporta addebiti da parte del provider cloud presso cui è distribuita. Vedi il https://docs.netapp.com/us-en/console-setup-admin/task-install-connector-on-prem.html["tipo di istanza distribuita per ciascun provider cloud"^] .  Non ci sono costi se si installa l'agente Console su un sistema locale.
 
 
 
 
 === Costi di trasferimento dati
 
-I costi di trasferimento dati dipendono dalla configurazione.  Se l'istanza di classificazione dei dati e l'origine dati si trovano nella stessa zona di disponibilità e regione, non vi sono costi di trasferimento dei dati.  Tuttavia, se la fonte dei dati, ad esempio un sistema Cloud Volumes ONTAP , si trova in una zona di disponibilità o regione _diversa_, il tuo provider cloud ti addebiterà i costi di trasferimento dei dati.  Per maggiori dettagli consultare questi link:
+I costi di trasferimento dati dipendono dalla configurazione.  Se l'istanza di Data Classification e l'origine dati si trovano nella stessa zona di disponibilità e regione, non vi sono costi di trasferimento dati.  Tuttavia, se la fonte dei dati, ad esempio un sistema Cloud Volumes ONTAP , si trova in una zona di disponibilità o regione _diversa_, il tuo provider cloud ti addebiterà i costi di trasferimento dei dati.  Per maggiori dettagli consultare questi link:
 
 * https://aws.amazon.com/ec2/pricing/on-demand/["AWS: Prezzi di Amazon Elastic Compute Cloud (Amazon EC2)"^]
 * https://azure.microsoft.com/en-us/pricing/details/bandwidth/["Microsoft Azure: dettagli sui prezzi della larghezza di banda"^]
@@ -132,7 +132,7 @@ image:diagram_cloud_compliance_instance.png["Un diagramma che mostra un'istanza 
 
 Si noti quanto segue riguardo all'istanza predefinita:
 
-* In AWS, la classificazione dei dati viene eseguita su un https://aws.amazon.com/ec2/instance-types/m6i/["istanza m6i.4xlarge"^] con un disco GP2 da 500 GiB.  L'immagine del sistema operativo è Amazon Linux 2.  Quando distribuita in AWS, puoi scegliere un'istanza di dimensioni inferiori se stai analizzando una piccola quantità di dati.
+* In AWS, la classificazione dei dati viene eseguita su un https://aws.amazon.com/ec2/instance-types/m6i/["istanza m6i.4xlarge"^] con un disco GP2 da 500 GiB.  L'immagine del sistema operativo è Amazon Linux 2.  Se distribuita in AWS, puoi scegliere un'istanza di dimensioni inferiori se stai analizzando una piccola quantità di dati.
 * In Azure, la classificazione dei dati viene eseguita su unlink:https://docs.microsoft.com/en-us/azure/virtual-machines/dv3-dsv3-series#dsv3-series["Standard_D16s_v3 VM"^] con un disco da 500 GiB.  L'immagine del sistema operativo è Ubuntu 22.04.
 * In GCP, la classificazione dei dati viene eseguita su unlink:https://cloud.google.com/compute/docs/general-purpose-machines#n2_machines["VM n2-standard-16"^] con un disco persistente Standard da 500 GiB.  L'immagine del sistema operativo è Ubuntu 22.04.
 * Nelle regioni in cui l'istanza predefinita non è disponibile, Data Classification viene eseguito su un'istanza alternativa. link:reference-instance-types.html["Vedi i tipi di istanza alternativi"] .
@@ -184,7 +184,7 @@ Dopo la scansione iniziale, Data Classification analizza continuamente i dati in
 È possibile abilitare e disabilitare le scansioni a livello di volume o a livello di schema del database.
 
 
-NOTE: La classificazione dei dati non impone limiti alla quantità di dati che può analizzare. Ogni agente della console supporta la scansione e la visualizzazione di 500 TiB di dati. Per scansionare più di 500 TiB di dati,link:https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html#connector-installation["installare un altro agente Console"^] Poilink:https://docs.netapp.com/us-en/data-services-data-classification/task-deploy-overview.html["distribuire un'altra istanza di classificazione dei dati"] . + L'interfaccia utente della console visualizza i dati da un singolo connettore. Per suggerimenti sulla visualizzazione dei dati da più agenti della console, vederelink:https://docs.netapp.com/us-en/console-setup-admin/task-manage-multiple-connectors.html#switch-between-connectors["Lavora con più agenti della console"^] .
+NOTE: La classificazione dei dati non impone limiti alla quantità di dati che può analizzare.  Ogni agente della console supporta la scansione e la visualizzazione di 500 TiB di dati. Per scansionare più di 500 TiB di dati,link:https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html#connector-installation["installare un altro agente Console"^] Poilink:https://docs.netapp.com/us-en/data-services-data-classification/task-deploy-overview.html["distribuire un'altra istanza di classificazione dei dati"] .  + L'interfaccia utente della console visualizza i dati da un singolo connettore.  Per suggerimenti sulla visualizzazione dei dati da più agenti della console, vederelink:https://docs.netapp.com/us-en/console-setup-admin/task-manage-multiple-connectors.html#switch-between-connectors["Lavora con più agenti della console"^] .
 
 
 
@@ -208,7 +208,7 @@ La classificazione dei dati raccoglie, indicizza e assegna categorie ai seguenti
 * *Dati personali*: informazioni di identificazione personale (PII), come indirizzi e-mail, numeri di identificazione o numeri di carte di credito, che Data Classification identifica utilizzando parole, stringhe e modelli specifici nei file. link:task-controlling-private-data.html#view-files-that-contain-personal-data["Scopri di più sui dati personali"^] .
 * *Dati personali sensibili*: tipologie particolari di informazioni personali sensibili (SPII), come dati sanitari, origine etnica o opinioni politiche, come definito dal Regolamento generale sulla protezione dei dati (GDPR) e da altre normative sulla privacy. link:task-controlling-private-data.html#view-files-that-contain-sensitive-personal-data["Scopri di più sui dati personali sensibili"^] .
 * *Categorie*: la classificazione dei dati prende i dati scansionati e li divide in diversi tipi di categorie.  Le categorie sono argomenti basati sull'analisi AI del contenuto e dei metadati di ciascun file. link:task-controlling-private-data.html#view-files-by-categories["Scopri di più sulle categorie"^] .
-* *Tipi*: la classificazione dei dati prende i dati scansionati e li suddivide in base al tipo di file. link:task-controlling-private-data.html#view-files-by-file-types["Scopri di più sui tipi"^] .
+* *Tipi*: la classificazione dei dati prende i dati analizzati e li suddivide in base al tipo di file. link:task-controlling-private-data.html#view-files-by-file-types["Scopri di più sui tipi"^] .
 * *Riconoscimento dell'entità del nome*: la classificazione dei dati utilizza l'intelligenza artificiale per estrarre i nomi naturali delle persone dai documenti. link:task-generating-compliance-reports.html["Scopri come rispondere alle richieste di accesso ai dati personali"^] .
 
 
@@ -220,7 +220,7 @@ Data Classification distribuisce un singolo server, o cluster, ovunque tu scelga
 
 La Console distribuisce l'istanza di classificazione dei dati con un gruppo di sicurezza che abilita le connessioni HTTP in entrata dall'agente della Console.
 
-Quando si utilizza la Console in modalità SaaS, la connessione alla Console avviene tramite HTTPS e i dati privati ​​inviati tra il browser e l'istanza di Data Classification sono protetti tramite crittografia end-to-end tramite TLS 1.2, il che significa che NetApp e terze parti non possono leggerli.
+Quando si utilizza la Console in modalità SaaS, la connessione alla Console viene fornita tramite HTTPS e i dati privati ​​inviati tra il browser e l'istanza di Data Classification sono protetti tramite crittografia end-to-end tramite TLS 1.2, il che significa che NetApp e terze parti non possono leggerli.
 
 Le regole in uscita sono completamente aperte.  Per installare e aggiornare il software di classificazione dei dati e per inviare le metriche di utilizzo è necessario l'accesso a Internet.
 

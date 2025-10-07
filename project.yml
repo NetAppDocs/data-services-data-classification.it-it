@@ -12,7 +12,7 @@ settings:
   langs: it-it,us-en,de-de,es-es,fr-fr,pt-br,ja-jp,ko-kr,zh-cn,zh-tw
 sidebar:
   entries:
-  - title: Documentazione sulla classificazione dei dati NetApp
+  - title: Documentazione NetApp Data Classification
     url: "/index.html"
   - title: Note di rilascio
     entries:

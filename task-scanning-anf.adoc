@@ -20,7 +20,7 @@ Completa alcuni passaggi per iniziare a usare NetApp Data Classification per Azu
 
 == Individuare il sistema Azure NetApp Files che si desidera analizzare
 
-Se il sistema Azure NetApp Files che si desidera analizzare non è già presente nella console NetApp come sistema,link:https://docs.netapp.com/us-en/storage-management-azure-netapp-files/task-quick-start.html["aggiungilo nella pagina Sistemi"^] .
+Se il sistema Azure NetApp Files che si desidera analizzare non è già presente nella NetApp Console come sistema,link:https://docs.netapp.com/us-en/storage-management-azure-netapp-files/task-quick-start.html["aggiungilo nella pagina Sistemi"^] .
 
 
 
@@ -116,7 +116,7 @@ image:screenshot_compliance_volume_details.gif["Uno screenshot della pagina Visu
 È possibile avviare o interrompere in qualsiasi momento le scansioni di sola mappatura o le scansioni di mappatura e classificazione in un sistema dalla pagina Configurazione.  È anche possibile passare da scansioni di sola mappatura a scansioni di mappatura e classificazione e viceversa.  Ti consigliamo di scansionare tutti i volumi.
 
 
-TIP: I nuovi volumi aggiunti al sistema vengono scansionati automaticamente solo se nell'area dell'intestazione è stata impostata l'opzione *Mappa* o *Mappa e classifica*.  Se impostato su *Personalizzato* o *Disattivato* nell'area dell'intestazione, sarà necessario attivare la mappatura e/o la scansione completa su ogni nuovo volume aggiunto al sistema.
+TIP: I nuovi volumi aggiunti al sistema vengono automaticamente scansionati solo se nell'area dell'intestazione è stata impostata l'opzione *Mappa* o *Mappa e classifica*.  Se impostato su *Personalizzato* o *Disattivato* nell'area dell'intestazione, sarà necessario attivare la mappatura e/o la scansione completa su ogni nuovo volume aggiunto al sistema.
 
 L'interruttore in cima alla pagina per *Esegui scansione quando mancano i permessi "attributi di scrittura"* è disabilitato per impostazione predefinita.  Ciò significa che se Data Classification non dispone di autorizzazioni di scrittura degli attributi in CIFS o di autorizzazioni di scrittura in NFS, il sistema non eseguirà la scansione dei file perché Data Classification non può ripristinare l'"ultimo orario di accesso" al timestamp originale.  Se non ti interessa che l'ultimo orario di accesso venga reimpostato, attiva l'interruttore e tutti i file verranno analizzati indipendentemente dalle autorizzazioni. link:reference-collected-metadata.html#last-access-time-timestamp["Saperne di più"^] .
 

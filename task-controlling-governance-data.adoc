@@ -29,7 +29,7 @@ La dashboard Governance fornisce informazioni che consentono di aumentare l'effi
 image:screenshot_compliance_governance_dashboard.png["Uno screenshot della dashboard di Data Classification Governance."]
 
 .Passi
-. Dal menu della console NetApp , selezionare *Governance > Classificazione*.
+. Dal menu NetApp Console , selezionare *Governance > Classificazione*.
 . Selezionare *Governance*.
 +
 Viene visualizzata la dashboard Governance.
@@ -90,7 +90,7 @@ image:screenshot-compliance-report-buttons.png["Uno screenshot della Governance 
 
 
 .Risultato
-La classificazione dei dati genera un report PDF che puoi rivedere e condividere.
+La classificazione dei dati genera un report in formato PDF che puoi rivedere e condividere.
 
 
 

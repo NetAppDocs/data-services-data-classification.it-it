@@ -178,7 +178,7 @@ Utilizzare il seguente filtro per visualizzare i dati in base allo stato della s
 
 | Evento di analisi della scansione | Seleziona se desideri visualizzare i file che non sono stati classificati perché la classificazione dei dati non è riuscita a ripristinare l'orario dell'ultimo accesso oppure i file che sono stati classificati anche se la classificazione dei dati non è riuscita a ripristinare l'orario dell'ultimo accesso. 
 |===
-link:reference-collected-metadata.html["Visualizza i dettagli sul timestamp "ultimo accesso""]per maggiori informazioni sugli elementi che compaiono nella pagina Indagine quando si filtra utilizzando l'evento Analisi scansione.
+link:reference-collected-metadata.html["Visualizza i dettagli sul timestamp "ultimo accesso""]per maggiori informazioni sugli elementi che compaiono nella pagina Indagine quando si filtra tramite l'evento Analisi scansione.
 
 *Filtra i dati per duplicati*
 
@@ -201,7 +201,7 @@ La disponibilità delle informazioni dipende dalla fonte dei dati.  Ad esempio, 
 
 .Passi
 . Dal menu Classificazione dati, selezionare *Indagine*.
-. Nell'elenco Data Investigation sulla destra, seleziona il cursore verso il bassoimage:button_down_caret.png["accento circonflesso verso il basso"] sulla destra per ogni singolo file per visualizzare i metadati del file.
+. Nell'elenco Indagine dati a destra, seleziona il cursore verso il bassoimage:button_down_caret.png["accento circonflesso verso il basso"] sulla destra per ogni singolo file per visualizzare i metadati del file.
 +
 image:screenshot_compliance_file_details.png["Uno screenshot che mostra i dettagli dei metadati di un file nella pagina Indagine sui dati."]
 
@@ -218,7 +218,7 @@ Se si utilizzano identificatori di sicurezza (SID) anziché nomi di utenti e gru
 
 .Passi
 . Dal menu Classificazione dati, selezionare *Indagine*.
-. Nell'elenco Data Investigation sulla destra, seleziona il cursore verso il bassoimage:button_down_caret.png["accento circonflesso verso il basso"] sulla destra per ogni singolo file per visualizzare i metadati del file.
+. Nell'elenco Indagine dati a destra, seleziona il cursore verso il bassoimage:button_down_caret.png["accento circonflesso verso il basso"] sulla destra per ogni singolo file per visualizzare i metadati del file.
 . Per visualizzare un elenco di tutti gli utenti o gruppi che hanno accesso a un file o a una directory e i tipi di autorizzazioni di cui dispongono, nel campo Apri autorizzazioni, selezionare *Visualizza tutte le autorizzazioni*.
 +
 
@@ -236,7 +236,7 @@ TIP: È possibile espandere un livello del gruppo per visualizzare gli utenti ch
 
 == Controlla i file duplicati nei tuoi sistemi di archiviazione
 
-Puoi verificare se nei tuoi sistemi di archiviazione sono archiviati file duplicati.  Questa funzione è utile se si desidera individuare le aree in cui è possibile risparmiare spazio di archiviazione.  È inoltre opportuno assicurarsi che determinati file con autorizzazioni specifiche o informazioni sensibili non vengano duplicati inutilmente nei sistemi di archiviazione.
+Puoi verificare se nei tuoi sistemi di archiviazione sono archiviati file duplicati.  Questa funzione è utile se si desidera identificare le aree in cui è possibile risparmiare spazio di archiviazione.  È inoltre opportuno assicurarsi che determinati file con autorizzazioni specifiche o informazioni sensibili non vengano duplicati inutilmente nei sistemi di archiviazione.
 
 Tutti i file (esclusi i database) che hanno una dimensione pari o superiore a 1 MB o che contengono informazioni personali o sensibili vengono confrontati per verificare se sono presenti duplicati.
 

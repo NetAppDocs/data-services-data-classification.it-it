@@ -62,7 +62,7 @@ Per impostazione predefinita, l'interruttore in cima alla pagina per *Esegui sca
 La classificazione dei dati avvia la scansione dei volumi selezionati nel sistema.  I risultati iniziano ad apparire nella dashboard Conformità non appena la Classificazione dei dati avvia la scansione.  Il tempo necessario per il completamento dipende dalla quantità di dati: potrebbe richiedere pochi minuti o ore.
 
 
-NOTE: La classificazione dei dati analizza solo una condivisione file in un volume.  Se nei volumi sono presenti più condivisioni, sarà necessario eseguire la scansione delle altre condivisioni separatamente come gruppo di condivisioni. link:reference-limitations.html#data-classification-scans-only-one-share-under-a-volume["Vedi maggiori dettagli su questa limitazione della classificazione dei dati"^] .
+NOTE: La classificazione dei dati analizza solo una condivisione file in un volume.  Se nei volumi sono presenti più condivisioni, sarà necessario eseguire la scansione di tali altre condivisioni separatamente, come gruppo di condivisioni. link:reference-limitations.html#data-classification-scans-only-one-share-under-a-volume["Vedi maggiori dettagli su questa limitazione della classificazione dei dati"^] .
 
 
 
@@ -71,7 +71,7 @@ NOTE: La classificazione dei dati analizza solo una condivisione file in un volu
 Assicurarsi che Data Classification possa accedere ai volumi controllando la rete, i gruppi di sicurezza e i criteri di esportazione.  Sarà necessario fornire a Data Classification le credenziali CIFS affinché possa accedere ai volumi CIFS.
 
 .Lista di controllo
-* Assicurarsi che vi sia una connessione di rete tra l'istanza di Data Classification e ciascuna rete che include volumi per Cloud Volumes ONTAP o cluster ONTAP locali.
+* Assicurarsi che vi sia una connessione di rete tra l'istanza di Data Classification e ciascuna rete che include volumi per Cloud Volumes ONTAP o cluster ONTAP on-prem.
 * Assicurarsi che il gruppo di sicurezza per Cloud Volumes ONTAP consenta il traffico in entrata dall'istanza di classificazione dei dati.
 +
 È possibile aprire il gruppo di sicurezza per il traffico proveniente dall'indirizzo IP dell'istanza di classificazione dei dati oppure per tutto il traffico dall'interno della rete virtuale.

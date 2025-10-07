@@ -16,7 +16,7 @@ summary: 'Quando gli ID di gruppo vengono allegati a file o cartelle in condivis
 [role="lead"]
 Quando gli ID di gruppo (GID) vengono allegati a file o cartelle in condivisioni file NFS, definiscono le autorizzazioni per il file o la cartella, ad esempio se sono "aperti all'organizzazione".  Se alcuni GID non sono inizialmente configurati con il livello di autorizzazione "Aperto all'organizzazione", è possibile aggiungere tale autorizzazione al GID in modo che tutti i file e le cartelle a cui è associato tale GID vengano considerati "aperti all'organizzazione".
 
-Dopo aver apportato questa modifica e aver eseguito una nuova scansione dei file e delle cartelle da parte NetApp Data Classification, tutti i file e le cartelle a cui sono associati questi ID gruppo mostreranno questa autorizzazione nella pagina Dettagli indagine e appariranno anche nei report in cui vengono visualizzate le autorizzazioni dei file.
+Dopo aver apportato questa modifica e aver eseguito una nuova scansione dei file e delle cartelle da NetApp Data Classification , tutti i file e le cartelle a cui sono associati questi ID gruppo mostreranno questa autorizzazione nella pagina Dettagli indagine e appariranno anche nei report in cui vengono visualizzate le autorizzazioni dei file.
 
 Per attivare questa funzionalità, è necessario accedere al sistema di classificazione dei dati in modo da poter modificare un file di configurazione ed eseguire uno script.  Scopri comelink:reference-log-in-to-instance.html["accedi al sistema di classificazione dei dati"] a seconda che il software sia stato installato manualmente su una macchina Linux o che l'istanza sia stata distribuita nel cloud.
 

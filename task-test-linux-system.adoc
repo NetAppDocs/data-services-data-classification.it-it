@@ -26,7 +26,7 @@ Dovrai svolgere le seguenti attività.
 
 . Facoltativamente, installa un agente Console se non ne hai già installato uno.  È possibile eseguire lo script di test senza avere installato un agente Console, ma lo script verifica la connettività tra l'agente Console e la macchina host di Data Classification, pertanto è consigliabile disporre di un agente Console.
 . Preparare la macchina host e verificare che soddisfi tutti i requisiti.
-. Abilita l'accesso a Internet in uscita dalla macchina host di classificazione dei dati.
+. Abilitare l'accesso a Internet in uscita dalla macchina host di classificazione dei dati.
 . Verificare che tutte le porte richieste siano abilitate su tutti i sistemi.
 . Scarica ed esegui lo script di test dei prerequisiti.
 
@@ -37,7 +37,7 @@ Dovrai svolgere le seguenti attività.
 
 Per poter installare e utilizzare Data Classification è necessario un agente Console.  Tuttavia, è possibile eseguire lo script Prerequisiti senza un agente Console.
 
-Puoi https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-on-prem.html["installare l'agente Console in locale"^] su un host Linux nella tua rete o su un host Linux nel cloud. Alcuni utenti che intendono installare Data Classification in locale potrebbero anche scegliere di installare l'agente Console in locale.
+Puoi https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-on-prem.html["installare l'agente Console in locale"^] su un host Linux nella tua rete o su un host Linux nel cloud.  Alcuni utenti che intendono installare Data Classification in locale potrebbero anche scegliere di installare l'agente Console in locale.
 
 Per creare un agente Console nell'ambiente del tuo provider cloud, vedi https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-aws.html["creazione di un agente Console in AWS"^] , https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-azure.html["creazione di un agente Console in Azure"^] , O https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-google.html["creazione di un agente Console in GCP"^] .
 
@@ -253,7 +253,7 @@ Aggiungere l'opzione "--darksite" solo se si esegue lo script su un host che non
 ** Inserisci *Y* se hai un agente Console installato.  Quindi immettere l'indirizzo IP o il nome host dell'agente della console in modo che lo script di test possa testare questa connettività.
 
 
-. Lo script esegue una serie di test sul sistema e visualizza i risultati man mano che procede.  Quando termina, scrive un registro della sessione in un file denominato `prerequisites-test-<timestamp>.log` nella directory `/opt/netapp/install_logs` .
+. Lo script esegue una serie di test sul sistema e ne visualizza i risultati man mano che procede.  Quando termina, scrive un registro della sessione in un file denominato `prerequisites-test-<timestamp>.log` nella directory `/opt/netapp/install_logs` .
 
 
 .Risultato

@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: api-classification.html 
 keywords: api, rest, authorization, data classification, data sense, swagger 
-summary: 'Le funzionalità di classificazione dei dati NetApp disponibili tramite l"interfaccia utente Web sono disponibili anche tramite l"API.' 
+summary: 'Le funzionalità NetApp Data Classification disponibili tramite l"interfaccia utente Web sono disponibili anche tramite l"API.' 
 ---
-= API di classificazione dei dati NetApp
+= API NetApp Data Classification
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 'Le funzionalità di classificazione dei dati NetApp disponibili tramit
 
 
 [role="lead"]
-Le funzionalità di classificazione dei dati NetApp disponibili tramite l'interfaccia utente Web sono disponibili anche tramite l'API REST.
+Le funzionalità NetApp Data Classification disponibili tramite l'interfaccia utente Web sono disponibili anche tramite l'API REST.
 
 Nella Classificazione dei dati sono definite quattro categorie che corrispondono alle schede nell'interfaccia utente:
 
