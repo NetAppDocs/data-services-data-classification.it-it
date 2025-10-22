@@ -1,0 +1,27 @@
+= 
+:allow-uri-read: 
+
+
+È possibile avviare o interrompere le scansioni su qualsiasi sistema in qualsiasi momento dalla pagina Configurazione.  È anche possibile passare da scansioni di sola mappatura a scansioni di mappatura e classificazione e viceversa.  Si consiglia di eseguire la scansione di tutti i volumi di un sistema.
+
+
+TIP: I nuovi volumi aggiunti al sistema vengono automaticamente scansionati solo se è stata selezionata l'impostazione *Mappa* o *Mappa e classifica* nell'area dell'intestazione. Se impostato su *Personalizzato* o *Disattivato* nell'area dell'intestazione, sarà necessario attivare la mappatura e/o la scansione completa su ogni nuovo volume aggiunto al sistema.
+
+Per impostazione predefinita, l'interruttore in cima alla pagina per *Esegui scansione in caso di permessi di "scrittura" mancanti* è disabilitato. Ciò significa che se Data Classification non dispone di autorizzazioni di scrittura degli attributi in CIFS o di autorizzazioni di scrittura in NFS, il sistema non eseguirà la scansione dei file perché Data Classification non può ripristinare l'"ora dell'ultimo accesso" al timestamp originale. Se non ti interessa che l'ultimo orario di accesso venga reimpostato, attiva l'interruttore e tutti i file verranno analizzati indipendentemente dalle autorizzazioni. link:reference-collected-metadata.html#last-access-time-timestamp["Saperne di più"^].
+
+
+NOTE: I nuovi volumi aggiunti al sistema vengono automaticamente scansionati solo se nell'area dell'intestazione è stata impostata l'opzione *Mappa* o *Mappa e classifica*. Se l'impostazione per tutti i volumi è *Personalizzata* o *Disattivata*, è necessario attivare manualmente la scansione per ogni nuovo volume aggiunto.
+
+image:screenshot_volume_compliance_selection.png["Uno screenshot della pagina di configurazione in cui è possibile abilitare o disabilitare la scansione dei singoli volumi."]
+
+.Passi
+. Dal menu Classificazione dati, selezionare *Configurazione*.
+. Scegli un sistema, quindi seleziona *Configurazione*.
+. Per abilitare o disabilitare le scansioni per tutti i volumi, selezionare **Mappa**, **Mappa e classifica** o **Disattivato** nell'intestazione sopra tutti i volumi.
++
+Per abilitare o disabilitare le scansioni per singoli volumi, trova i volumi nell'elenco, quindi seleziona **Mappa**, **Mappa e classifica** o **Disattivato** accanto al nome del volume.
+
+
+
+.Risultato
+Quando si abilita la scansione, Data Classification avvia la scansione dei volumi selezionati nel sistema. I risultati iniziano ad apparire nella dashboard Conformità non appena la Classificazione dei dati avvia la scansione.  Il tempo di completamento della scansione dipende dalla quantità di dati e può variare da minuti a ore.

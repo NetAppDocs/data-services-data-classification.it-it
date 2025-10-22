@@ -59,7 +59,7 @@ NOTE: Se una qualsiasi delle tue origini dati implementa la suddivisione in live
 
 == Creare il report di valutazione della scoperta dei dati
 
-Il report di valutazione della scoperta dei dati fornisce un'analisi di alto livello dell'ambiente scansionato per evidenziare le aree problematiche e i potenziali interventi di risanamento.  I risultati si basano sia sulla mappatura che sulla classificazione dei dati.  L'obiettivo di questo rapporto è quello di aumentare la consapevolezza di tre aspetti significativi del tuo set di dati:
+Il rapporto di valutazione della scoperta dei dati fornisce un'analisi di alto livello dell'ambiente scansionato per evidenziare le aree problematiche e i potenziali interventi di risanamento. I risultati si basano sia sulla mappatura che sulla classificazione dei dati. L'obiettivo di questo rapporto è quello di aumentare la consapevolezza di tre aspetti significativi del tuo set di dati:
 
 [cols="25,65"]
 |===

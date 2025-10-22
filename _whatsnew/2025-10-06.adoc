@@ -35,4 +35,4 @@ Assumi il controllo diretto dalla pagina Investigazione: elimina, sposta, copia 
 Per ulteriori informazioni, consultare link:https://docs.netapp.com/us-en/data-services-data-classification/task-investigate-data.html#view-file-metada["Indagare i dati"] .
 
 .Supporto per Google Cloud NetApp Volumes
-Data Classification ora supporta la scansione su Google Cloud NetApp Volumes. Aggiungi facilmente Google Cloud NetApp Volumes dalla NetApp Console per una scansione e una classificazione dei dati senza interruzioni.
+Data Classification ora supporta la scansione su Google Cloud NetApp Volumes. Aggiungi facilmente Google Cloud NetApp Volumes dalla NetApp Console per una scansione e una classificazione dei dati senza interruzioni. Per maggiori informazioni, vedere link:https://docs.netapp.com/us-en/data-services-data-classification/task-scan-google-cloud.html["Scansiona i Google Cloud NetApp Volumes"^].

@@ -27,12 +27,12 @@ Per impostazione predefinita, i dashboard di classificazione dei dati visualizza
 ====
 Per la classificazione dei dati sono disponibili i seguenti report:
 
-* *Rapporto di valutazione della scoperta dei dati*: fornisce un'analisi di alto livello dell'ambiente scansionato per evidenziare i risultati del sistema e mostrare le aree problematiche e i potenziali passaggi di correzione.
-* *Report di mappatura dei dati*: fornisce informazioni sulle dimensioni e sul numero di file presenti nei sistemi.  Ciò include la capacità di utilizzo, l'età dei dati, la dimensione dei dati e i tipi di file.
-* *Rapporto sulla richiesta di accesso ai dati dell'interessato*: consente di estrarre un rapporto di tutti i file che contengono informazioni riguardanti il nome specifico o l'identificatore personale di un interessato.
-* *Rapporto HIPAA*: ti aiuta a identificare la distribuzione delle informazioni sanitarie nei tuoi file.
-* *Rapporto PCI DSS*: ti aiuta a identificare la distribuzione delle informazioni sulle carte di credito nei tuoi file.
-* *Rapporto di valutazione del rischio per la privacy*: fornisce informazioni sulla privacy dei tuoi dati e un punteggio del rischio per la privacy.
+* *Rapporto di valutazione della scoperta dei dati*: fornisce un'analisi di alto livello dell'ambiente scansionato per evidenziare i risultati del sistema e mostrare le aree problematiche e i potenziali passaggi di correzione.  Questo report è disponibile nella dashboard Governance.
+* *Report completo sulla mappatura dei dati*: fornisce informazioni sulle dimensioni e sul numero di file presenti nei sistemi. Ciò include la capacità di utilizzo, l'età dei dati, la dimensione dei dati e i tipi di file.  Questo report è disponibile nella dashboard Governance.
+* *Rapporto sulla richiesta di accesso ai dati dell'interessato*: consente di estrarre un rapporto di tutti i file che contengono informazioni riguardanti il nome specifico o l'identificatore personale di un interessato. Questo report è disponibile nella dashboard Conformità.
+* *Rapporto HIPAA*: ti aiuta a identificare la distribuzione delle informazioni sanitarie nei tuoi file. Questo report è disponibile nella dashboard Conformità.
+* *Rapporto PCI DSS*: ti aiuta a identificare la distribuzione delle informazioni sulle carte di credito nei tuoi file. Questo report è disponibile nella dashboard Conformità.
+* *Rapporto di valutazione del rischio per la privacy*: fornisce informazioni sulla privacy dei tuoi dati e un punteggio di rischio per la privacy.  Questo report è disponibile nella dashboard Conformità.
 * *Report su un tipo di informazione specifico*: sono disponibili report che includono dettagli sui file identificati che contengono dati personali e dati personali sensibili.  È anche possibile visualizzare i file suddivisi per categoria e tipo di file.
 
 
@@ -79,24 +79,25 @@ NOTE: Per la ricerca dei nomi degli interessati sono supportate le lingue ingles
 
 .Passi
 . Dal menu Classificazione dati, selezionare *Conformità*.
-
-
-. Dalla pagina Conformità, seleziona *Interessati*.
-. Cerca il nome completo o l'identificativo noto dell'interessato.
+. Nella pagina Conformità, individuare la scheda **Interessati**.
+. Nella sezione *Interessati*, inserisci un nome o un identificativo noto, quindi seleziona **Cerca**.
+. Una volta completata la ricerca, seleziona **Scarica** per accedere alla risposta alla richiesta di accesso ai dati dell'interessato.  Selezionare **Indaga sui risultati** per visualizzare maggiori informazioni nella pagina Indagine sui dati.image:screenshot-data-subject-john-doe.png["Screenshot della ricerca DSAR"]
+. Esamina i risultati in Classificazione dati o scaricali come report selezionando l'icona di download.
 +
-Ecco un esempio che mostra una ricerca del nome _john doe_:
+.. Quando selezioni l'icona di download, configura le impostazioni di download:
++
+*** Scegli il formato del film: CSV o JSON
+*** Inserisci un *Nome del report*
+*** Scegli la destinazione di esportazione: *Sistema* o la tua macchina *Locale*.
++
+Se si sceglie il sistema, tutti i dati vengono scaricati.  È necessario selezionare anche *Sistema*, *Volume* e *Percorso della cartella di destinazione*.
 
 +
-image:screenshot_dsar_search.gif["Screenshot della ricerca dell'interessato."]
+Se si sceglie *Locale*, il report viene limitato alle prime 10.000 righe di dati non strutturati, 5.000 righe di dati non strutturati e 1.000 righe di dati strutturati.
 
-. Scegli una delle opzioni disponibili:
-+
-** *Scarica il rapporto DSAR*: una risposta formale alla richiesta di accesso che puoi inviare all'interessato.  Questo rapporto contiene informazioni generate automaticamente in base ai dati rilevati da Data Classification sul soggetto interessato ed è concepito per essere utilizzato come modello.  Dovresti compilare il modulo e rivederlo internamente prima di inviarlo all'interessato.
-** *Risultati dell'analisi*: una pagina che consente di analizzare i dati effettuando ricerche, ordinando, espandendo i dettagli di un file specifico e scaricando l'elenco dei file.
-+
 
-NOTE: Se i risultati sono più di 10.000, nell'elenco dei file vengono visualizzati solo i primi 10.000.
 
+.. Selezionare **Scarica report** per avviare il download.image:screenshot-download-report.png["Screenshot delle opzioni di download del report"]
 
 
 
@@ -136,7 +137,7 @@ image:screenshot-report-options.png["Screenshot delle opzioni del report nella p
 
 
 .Risultato
-La classificazione dei dati genera un report PDF che puoi rivedere e inviare ad altri gruppi, se necessario.
+La classificazione dei dati genera un report in formato PDF.
 
 
 

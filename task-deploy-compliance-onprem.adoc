@@ -334,10 +334,7 @@ tar -xzf DATASENSE-INSTALLER-V1.25.0.tar.gz
 +
 image:screenshot-deploy-classification.png["Uno screenshot della selezione del pulsante per attivare la classificazione dei dati."]
 
-. A seconda che si stia installando Data Classification su un'istanza preparata nel cloud o su un'istanza preparata in sede, selezionare il pulsante *Distribuisci* appropriato per avviare l'installazione di Data Classification.
-+
-image:screenshot_cloud_compliance_deploy_onprem.png["Uno screenshot della selezione del pulsante per distribuire Data Classification su una macchina nel cloud o nella tua sede."]
-
+. A seconda che si stia installando Data Classification su un'istanza preparata nel cloud o su un'istanza preparata in sede, selezionare l'opzione *Distribuisci* appropriata per avviare l'installazione di Data Classification.
 . Viene visualizzata la finestra di dialogo _Distribuisci classificazione dati in locale_.  Copia il comando fornito (ad esempio: `sudo ./install.sh -a 12345 -c 27AG75 -t 2198qq` ) e incollalo in un file di testo in modo da poterlo utilizzare in seguito.  Quindi seleziona *Chiudi* per chiudere la finestra di dialogo.
 . Sulla macchina host, immetti il comando che hai copiato e segui una serie di prompt, oppure puoi fornire il comando completo, inclusi tutti i parametri richiesti, come argomenti della riga di comando.
 +
