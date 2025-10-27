@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-managing-compliance.html 
 keywords: remove, stop, stop scans, stop scanning, cloud compliance, stop cloud compliance, deactivate, deactivating cloud compliance, data sense 
-summary: Se necessario, è possibile impedire a Data Classification di analizzare uno o più sistemi, database, gruppi di condivisione file, account OneDrive, account Google Drive o account SharePoint. 
+summary: Se necessario, è possibile impedire a Data Classification di analizzare sistemi, database o gruppi di condivisione file. 
 ---
 = Rimuovere le origini dati da NetApp Data Classification
 :hardbreaks:
@@ -18,21 +18,21 @@ Se necessario, è possibile impedire a NetApp Data Classification di analizzare 
 
 
 
-== Disattivare le scansioni di conformità per un sistema
+== Disattivare le scansioni per un sistema
 
-Quando si disattivano le scansioni, Data Classification non esegue più la scansione dei dati sul sistema e rimuove le informazioni di conformità indicizzate dall'istanza di Data Classification (i dati del sistema stesso non vengono eliminati).
+Quando si disattivano le scansioni, Data Classification non esegue più la scansione dei dati sul sistema e rimuove le informazioni indicizzate dall'istanza di Data Classification.  I dati del sistema stesso non vengono eliminati.
 
 . Dalla pagina _Configurazione_, selezionaimage:button-gallery-options.gif["Pulsante Altro"] pulsante nella riga per il sistema, quindi *Disattiva classificazione dati*.
 
 
 
-TIP: È anche possibile disattivare le scansioni di conformità per un sistema dal pannello Servizi quando si seleziona il sistema.
+TIP: È anche possibile disattivare le scansioni per un sistema dal pannello Servizi quando si seleziona il sistema.
 
 
 
 == Rimuovere un database dalla classificazione dei dati
 
-Se non si desidera più eseguire la scansione di un determinato database, è possibile eliminarlo dall'interfaccia di classificazione dei dati e interrompere tutte le scansioni.
+Se non è più necessario eseguire la scansione di un determinato database, è possibile eliminarlo dall'interfaccia di classificazione dei dati e interrompere tutte le scansioni.
 
 . Dalla pagina _Configurazione_, selezionaimage:button-gallery-options.gif["Pulsante Altro"] pulsante nella riga per il database, quindi *Rimuovi server DB*.
 
@@ -41,7 +41,7 @@ Se non si desidera più eseguire la scansione di un determinato database, è pos
 
 == Rimuovere un gruppo di condivisioni file dalla classificazione dei dati
 
-Se non si desidera più eseguire la scansione dei file utente da un gruppo di condivisioni file, è possibile eliminare il gruppo di condivisioni file dall'interfaccia di classificazione dei dati e interrompere tutte le scansioni.
+Se non si desidera più eseguire la scansione dei file utente da un gruppo di condivisione file, è possibile eliminare il gruppo di condivisione file dall'interfaccia di classificazione dei dati e interrompere tutte le scansioni.
 
 .Passi
 . Dalla pagina _Configurazione_, selezionaimage:button-gallery-options.gif["Pulsante Altro"] pulsante nella riga per il Gruppo Condivisioni File, quindi *Rimuovi Gruppo Condivisioni File*.

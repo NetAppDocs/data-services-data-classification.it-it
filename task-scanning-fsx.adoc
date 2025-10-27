@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-scanning-fsx.html 
 keywords: cloud compliance, get started, enable cloud compliance, cloud compliance access, privacy, compliance, fsx, fsx for ontap, aws, data sense 
-summary: Completa alcuni passaggi per iniziare a scansionare Amazon FSx per il volume ONTAP con NetApp Data Classification. 
+summary: Completa alcuni passaggi per iniziare a scansionare Amazon FSx per i volumi ONTAP con NetApp Data Classification. 
 ---
 = Scansiona Amazon FSx per volumi ONTAP con NetApp Data Classification
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: Completa alcuni passaggi per iniziare a scansionare Amazon FSx per il v
 
 
 [role="lead"]
-Completa alcuni passaggi per iniziare a scansionare Amazon FSx per il volume ONTAP con NetApp Data Classification.
+Completa alcuni passaggi per eseguire la scansione Amazon FSx per volumi ONTAP con NetApp Data Classification.
 
 
 
@@ -73,7 +73,7 @@ image:screenshot_fsx_scanning_activate.png["Uno screenshot della scheda Configur
 
 
 .Risultato
-La classificazione dei dati avvia la scansione dei volumi selezionati nel sistema.  I risultati saranno disponibili nella dashboard Conformità non appena Data Classification avrà completato le scansioni iniziali.  Il tempo necessario dipende dalla quantità di dati: potrebbero volerci pochi minuti o ore.  È possibile monitorare l'avanzamento della scansione iniziale accedendo al menu **Configurazione** e selezionando quindi **Configurazione di sistema**.  L'avanzamento di ogni scansione viene visualizzato tramite una barra di avanzamento.  È anche possibile passare il mouse sulla barra di avanzamento per visualizzare il numero di file scansionati rispetto al totale dei file presenti nel volume.
+La classificazione dei dati avvia la scansione dei volumi selezionati nel sistema. I risultati saranno disponibili nella dashboard Conformità non appena Data Classification avrà completato le scansioni iniziali. Il tempo necessario dipende dalla quantità di dati: potrebbero volerci pochi minuti o ore. È possibile monitorare l'avanzamento della scansione iniziale accedendo al menu **Configurazione** e selezionando quindi **Configurazione di sistema**. Tieni traccia dell'avanzamento di ogni scansione nella barra di avanzamento; puoi passare il mouse sulla barra di avanzamento per vedere il numero di file scansionati in relazione al totale dei file nel volume.
 
 [NOTE]
 ====
@@ -124,7 +124,7 @@ Dopo aver immesso le credenziali, dovresti visualizzare un messaggio che indica 
 
 
 
-== Abilita e disabilita le scansioni di conformità sui volumi
+== Abilita e disabilita le scansioni sui volumi
 
 È possibile avviare o interrompere le scansioni su qualsiasi sistema in qualsiasi momento dalla pagina Configurazione.  È anche possibile passare da scansioni di sola mappatura a scansioni di mappatura e classificazione e viceversa.  Si consiglia di eseguire la scansione di tutti i volumi di un sistema.
 

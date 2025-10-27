@@ -94,7 +94,7 @@ Il database viene aggiunto all'elenco dei sistemi.
 
 
 
-== Abilita e disabilita le scansioni di conformità sugli schemi del database
+== Abilita e disabilita le scansioni sugli schemi del database
 
 È possibile interrompere o avviare la scansione completa degli schemi in qualsiasi momento.
 
@@ -112,6 +112,6 @@ image:screenshot_compliance_select_schemas.png["Uno screenshot della pagina Conf
 
 
 .Risultato
-La classificazione dei dati avvia la scansione degli schemi del database abilitati.  È possibile monitorare l'avanzamento della scansione iniziale accedendo al menu **Configurazione** e selezionando quindi **Configurazione di sistema**.  L'avanzamento di ogni scansione viene visualizzato tramite una barra di avanzamento.  È anche possibile passare il mouse sulla barra di avanzamento per visualizzare il numero di file scansionati rispetto al totale dei file presenti nel volume.  Se sono presenti errori, questi appariranno nella colonna Stato, insieme all'azione richiesta per correggerli.
+La classificazione dei dati avvia la scansione degli schemi del database abilitati. È possibile monitorare l'avanzamento della scansione iniziale accedendo al menu **Configurazione** e selezionando quindi **Configurazione di sistema**. L'avanzamento di ogni scansione viene visualizzato tramite una barra di avanzamento.  È anche possibile passare il mouse sulla barra di avanzamento per visualizzare il numero di file scansionati rispetto al numero totale di file presenti nel volume.  Se ci sono errori, questi appariranno nella colonna Stato, insieme alle azioni necessarie per correggerli.
 
 Data Classification esegue la scansione dei database una volta al giorno; i database non vengono scansionati continuamente come altre fonti di dati.

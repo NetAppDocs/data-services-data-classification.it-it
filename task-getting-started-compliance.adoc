@@ -61,7 +61,7 @@ Se le credenziali sono state immesse correttamente, un messaggio conferma che tu
 
 
 
-== Abilita o disabilita le scansioni di conformità sui volumi
+== Abilita o disabilita le scansioni sui volumi
 
 È possibile avviare o interrompere le scansioni su qualsiasi sistema in qualsiasi momento dalla pagina Configurazione.  È anche possibile passare da scansioni di sola mappatura a scansioni di mappatura e classificazione e viceversa.  Si consiglia di eseguire la scansione di tutti i volumi di un sistema.
 

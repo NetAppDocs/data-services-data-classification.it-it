@@ -62,7 +62,7 @@ StorageGRID viene aggiunto all'elenco dei sistemi.
 
 
 
-== Abilita e disabilita le scansioni di conformità sui bucket StorageGRID
+== Abilita e disabilita le scansioni sui bucket StorageGRID
 
 Dopo aver abilitato la classificazione dei dati su StorageGRID, il passaggio successivo consiste nel configurare i bucket che si desidera analizzare.  La classificazione dei dati rileva tali bucket e li visualizza nel sistema creato.
 

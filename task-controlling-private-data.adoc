@@ -17,7 +17,7 @@ summary: 'Ottieni il controllo dei tuoi dati privati visualizzando i dettagli su
 Ottieni il controllo dei tuoi dati privati ​​visualizzando i dettagli sui dati personali (PII) e sui dati personali sensibili (SPII) nella tua organizzazione.  Puoi anche ottenere visibilità esaminando le categorie e i tipi di file che NetApp Data Classification ha trovato nei tuoi dati.
 
 
-NOTE: I dettagli sulla conformità a livello di file sono disponibili solo se si esegue una scansione completa della classificazione.  Le scansioni di sola mappatura non forniscono dettagli a livello di file.
+NOTE: I dettagli sulla conformità a livello di file sono disponibili solo se si esegue una scansione completa della classificazione. Le scansioni di sola mappatura non forniscono dettagli a livello di file.
 
 Per impostazione predefinita, la dashboard Classificazione dati visualizza i dati di conformità per tutti i sistemi e database.  Per visualizzare i dati solo di alcuni sistemi, selezionarli.
 
@@ -29,7 +29,7 @@ image:screenshot_compliance_dashboard.png["Uno screenshot della dashboard di cla
 
 == Visualizza i file che contengono dati personali
 
-La classificazione dei dati identifica automaticamente parole, stringhe e modelli specifici (Regex) all'interno dei dati. link:link:reference-private-data-categories.html["Ad esempio, numeri di carte di credito, numeri di previdenza sociale, numeri di conti bancari, password e altro ancora."] La classificazione dei dati identifica questo tipo di informazioni nei singoli file, nei file all'interno delle directory (condivisioni e cartelle) e nelle tabelle del database.
+La classificazione dei dati identifica automaticamente parole, stringhe e modelli specifici (Regex) all'interno dei dati. link:reference-private-data-categories.html["Ad esempio, numeri di carte di credito, numeri di previdenza sociale, numeri di conti bancari, password e altro ancora."]La classificazione dei dati identifica questo tipo di informazioni nei singoli file, nei file all'interno delle directory (condivisioni e cartelle) e nelle tabelle del database.
 
 Puoi anche creare termini di ricerca personalizzati per identificare dati personali specifici della tua organizzazione. Per ulteriori informazioni, consultare link:task-custom-classification.html["Crea una classificazione personalizzata"] .
 
@@ -47,7 +47,7 @@ image:screenshot_personal_files.png["Uno screenshot della finestra di dialogo de
 
 . Esamina i dati cercando, ordinando, espandendo i dettagli per un file specifico, selezionando la freccia *Esamina risultati* per visualizzare le informazioni mascherate o scaricando l'elenco dei file.
 +
-L'immagine seguente mostra i dati personali trovati in una directory (condivisioni e cartelle).  Nella scheda *Strutturato* puoi visualizzare i dati personali presenti nei database.  Nella scheda *Non strutturato* è possibile visualizzare i dati a livello di file.
+Le immagini seguenti mostrano i dati personali presenti in una directory (condivisioni e cartelle). Nella scheda *Strutturato* puoi visualizzare i dati personali presenti nei database. Nella scheda *Non strutturato* è possibile visualizzare i dati a livello di file.
 
 +
 image:screenshot_compliance_investigation_page.png["Uno screenshot delle informazioni dettagliate trovate nei file dopo aver cliccato su Esamina risultati."]

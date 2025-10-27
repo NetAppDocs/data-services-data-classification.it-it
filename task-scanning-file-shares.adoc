@@ -78,7 +78,7 @@ Se nella finestra di dialogo sono elencate delle condivisioni che non è stato p
 ** Per disattivare la scansione sulle condivisioni file, selezionare *Off*.
 +
 
-NOTE: Per impostazione predefinita, l'interruttore in cima alla pagina per *Esegui scansione quando mancano i permessi "attributi di scrittura"* è disabilitato.  Ciò significa che se Data Classification non dispone di autorizzazioni di scrittura degli attributi in CIFS o di autorizzazioni di scrittura in NFS, il sistema non eseguirà la scansione dei file perché Data Classification non può ripristinare l'"ora dell'ultimo accesso" al timestamp originale.  + Se si imposta *Scansione in caso di mancanza di autorizzazioni "attributi di scrittura"* su *Attivato*, la scansione reimposta l'orario dell'ultimo accesso ed esegue la scansione di tutti i file indipendentemente dalle autorizzazioni.  + Per saperne di più sull'ultimo timestamp di accesso, vederelink:link:reference-collected-metadata.html#last-access-time-timestamp["Metadati raccolti da fonti di dati nella classificazione dei dati"] .
+NOTE: Per impostazione predefinita, l'interruttore in cima alla pagina per *Esegui scansione quando mancano i permessi "attributi di scrittura"* è disabilitato. Ciò significa che se Data Classification non dispone di autorizzazioni di scrittura degli attributi in CIFS o di autorizzazioni di scrittura in NFS, il sistema non eseguirà la scansione dei file perché Data Classification non può ripristinare l'"ora dell'ultimo accesso" al timestamp originale. + Se si imposta *Scansione in caso di mancanza di autorizzazioni "attributi di scrittura"* su *Attivato*, la scansione reimposta l'orario dell'ultimo accesso ed esegue la scansione di tutti i file indipendentemente dalle autorizzazioni. + Per saperne di più sull'ultimo timestamp di accesso, vederelink:reference-collected-metadata.html#last-access-time-timestamp["Metadati raccolti da fonti di dati nella classificazione dei dati"] .
 
 
 
@@ -108,7 +108,7 @@ image:screenshot-edit-cifs-credential.png["Screenshot del menu Modifica credenzi
 . Selezionare **Salva** per completare il processo.
 
 
-.Aggiungere condivisioni di file alle scansioni di conformità
+.Aggiungi condivisioni di file alle scansioni
 . Dal menu Classificazione dati, selezionare *Configurazione*.
 . Dalla pagina Configurazione, seleziona il gruppo di condivisioni file che desideri modificare.
 . Seleziona **+ Aggiungi azioni**.
@@ -126,7 +126,7 @@ Se si aggiungono condivisioni di file con un secondo protocollo, assicurarsi di 
 . Selezionare **Continua** per completare l'aggiunta delle condivisioni file.
 
 
-.Rimuovere una condivisione file dalle scansioni di conformità
+.Rimuovere una condivisione file dalle scansioni
 . Dal menu Classificazione dati, selezionare *Configurazione*.
 . Seleziona il sistema da cui desideri rimuovere le condivisioni file.
 . Selezionare *Configurazione*.
