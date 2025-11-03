@@ -219,7 +219,7 @@ La classificazione dei dati richiede l'accesso a Internet in uscita.  Se la rete
 | \ https://support.compliance.api.bluexp.netapp.com/ \ https://hub.docker.com \ https://auth.docker.io \ https://registry-1.docker.io \ https://index.docker.io/ \ https://dseasb33srnrn.cloudfront.net/ \ https://production.cloudflare.docker.com/ | Fornisce accesso a immagini software, manifesti, modelli e consente di inviare log e metriche. 
 
 
-| \ https://support.compliance.api.console.netapp.com/ | Consente a NetApp di trasmettere in streaming i dati dai record di audit. 
+| \ https://support.compliance.api.bluexp.netapp.com/ | Consente a NetApp di trasmettere in streaming i dati dai record di audit. 
 
 
 | \ https://github.com/docker \ https://download.docker.com | Fornisce i pacchetti prerequisiti per l'installazione di Docker. 
