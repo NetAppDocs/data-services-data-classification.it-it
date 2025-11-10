@@ -238,9 +238,13 @@ TIP: È possibile espandere un livello del gruppo per visualizzare gli utenti ch
 
 Puoi verificare se nei tuoi sistemi di archiviazione sono archiviati file duplicati.  Questa funzione è utile se si desidera identificare le aree in cui è possibile risparmiare spazio di archiviazione.  È inoltre opportuno assicurarsi che determinati file con autorizzazioni specifiche o informazioni sensibili non vengano duplicati inutilmente nei sistemi di archiviazione.
 
-Tutti i file (esclusi i database) che hanno una dimensione pari o superiore a 1 MB o che contengono informazioni personali o sensibili vengono confrontati per verificare se sono presenti duplicati.
+La classificazione dei dati confronta tutti i file (esclusi i database) per individuare eventuali duplicati se sono:
 
-La classificazione dei dati utilizza la tecnologia di hashing per individuare i file duplicati.  Se un file ha lo stesso codice hash di un altro file, puoi essere sicuro al 100% che i file sono duplicati esatti, anche se i nomi dei file sono diversi.
+* 1 MB o più
+* Oppure contengono informazioni personali o sensibili
+
+
+La classificazione dei dati utilizza la tecnologia di hashing per individuare i file duplicati. Se un file ha lo stesso codice hash di un altro file, i file sono duplicati esatti anche se i nomi dei file sono diversi.
 
 .Passi
 . Dal menu Classificazione dati, selezionare *Indagine*.

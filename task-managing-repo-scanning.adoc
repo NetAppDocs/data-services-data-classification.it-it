@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-managing-repo-scanning.html 
 keywords: compliance, stop scan, start scan, map scan, classify scan, data sense, pause scan, resume scan, cloud data sense, bluexp classification 
-summary: 'Puoi gestire il modo in cui i tuoi dati vengono scansionati in ciascuno dei tuoi sistemi e delle tue origini dati in NetApp Data Classification.  È possibile apportare modifiche su base "repository", ovvero è possibile apportare modifiche per ogni volume, bucket, condivisione, schema, utente, ecc. a seconda del tipo di origine dati che si sta analizzando.' 
+summary: Scopri come modificare le impostazioni di scansione per un sistema in NetApp Data Classification. 
 ---
 = Modifica le impostazioni di scansione NetApp Data Classification per i tuoi repository
 :hardbreaks:
@@ -26,12 +26,12 @@ Alcune delle cose che puoi modificare sono se un repository viene scansionato o 
 
 È possibile visualizzare lo stato di scansione di ciascun ambiente di lavoro nella pagina Configurazione:
 
-* *Inizializzazione* (punto azzurro): la configurazione della mappa o della classificazione è attivata.  Appare per alcuni secondi prima di avviare lo stato di "coda in attesa".
+* *Inizializzazione* (punto azzurro): la configurazione della mappa o della classificazione è attivata. Appare brevemente prima di passare allo stato "coda in sospeso".
 * *Coda in attesa* (punto arancione): l'attività di scansione è in attesa di essere elencata nella coda di scansione.
 * *In coda* (punto arancione): l'attività è stata aggiunta correttamente alla coda di scansione.  Il sistema inizierà a mappare o classificare il volume quando arriverà il suo turno nella coda.
 * *In esecuzione* (punto verde): l'attività di scansione, che era in coda, è in corso sul repository di archiviazione selezionato.
 * *Finito* (punto verde): la scansione del repository di archiviazione è completa.
-* *In pausa* (punto grigio): hai selezionato l'opzione "Pausa" per mettere in pausa la scansione.  Sebbene le modifiche al volume non vengano visualizzate nel sistema, le informazioni acquisite tramite scansione vengono comunque visualizzate.
+* *In pausa* (punto grigio): hai messo in pausa la scansione. Sebbene le modifiche al volume non vengano visualizzate nel sistema, le informazioni acquisite tramite scansione restano disponibili.
 * *Errore* (punto rosso): la scansione non può essere completata perché si sono verificati dei problemi.  Se è necessario completare un'azione, l'errore viene visualizzato nella descrizione comandi nella colonna "Azione richiesta".  In caso contrario, il sistema visualizza lo stato di "errore" e tenta di ripristinare.  Una volta terminato, lo stato cambia.
 * *Non in scansione*: è stata selezionata la configurazione del volume su "Off" e il sistema non sta eseguendo la scansione del volume.
 
@@ -46,7 +46,7 @@ image:screenshot_compliance_config_button.png["Uno screenshot che mostra come se
 +
 image:screenshot_compliance_repo_scan_settings.png["Uno screenshot che mostra se i tuoi bucket sono in fase di scansione e lo stato attuale della scansione."]
 
-. Passa il cursore sul grafico nella colonna _Stato di mappatura_ per visualizzare il numero di file che devono ancora essere mappati o classificati in ciascun repository (bucket in questo esempio).
+. Durante una scansione, passa il cursore sulla barra di avanzamento nella colonna _Stato di mappatura_ per visualizzare il numero di file nella coda da mappare o classificare per quel repository.
 
 
 
@@ -117,9 +117,11 @@ image:screenshot_compliance_repo_scan_settings.png["Uno screenshot che mostra co
 
 == Metti in pausa e riprendi la scansione di un repository
 
-È possibile "mettere in pausa" la scansione di un repository se si desidera interrompere temporaneamente la scansione di determinati contenuti.  Sospendere la scansione significa che Data Classification non eseguirà più scansioni future per rilevare modifiche o aggiunte al repository, ma tutti i risultati correnti continueranno a essere visualizzati nel sistema.  La sospensione della scansione non interrompe l'addebito dei dati scansionati, perché i dati esistono ancora.
+È possibile "mettere in pausa" la scansione di un repository se si desidera interrompere temporaneamente la scansione di determinati contenuti. Sospendendo la scansione, Data Classification non eseguirà più scansioni future per rilevare modifiche o aggiunte al repository. Tutti i risultati della scansione corrente restano accessibili in Classificazione dati.
 
-È possibile "riprendere" la scansione in qualsiasi momento.
+Se si mettono in pausa le scansioni, gli addebiti non vengono eliminati perché i dati restano nel sistema.
+
+È possibile riprendere la scansione in qualsiasi momento.
 
 .Passi
 . Dal menu Classificazione dati, selezionare *Configurazione*.

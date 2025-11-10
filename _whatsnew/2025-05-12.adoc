@@ -6,7 +6,7 @@
 
 === Versione 1.43
 
-Questa versione di classificazione dei dati include:
+Questa versione della classificazione BlueXP include:
 
 .Dare priorità alle scansioni di classificazione
 La classificazione dei dati supporta la possibilità di dare priorità alle scansioni Map & Classify oltre alle scansioni di sola mappatura, consentendo di selezionare quali scansioni completare per prime. La definizione delle priorità delle scansioni Map & Classify è supportata durante e prima dell'inizio delle scansioni. Se si sceglie di dare priorità a una scansione mentre è in corso, verrà data priorità sia alla scansione di mappatura che a quella di classificazione.

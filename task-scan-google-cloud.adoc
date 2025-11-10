@@ -45,7 +45,7 @@ Puoi abilitare la classificazione dei dati sul tuo sistema Google Cloud NetApp V
 ** Per mappare e classificare tutti i volumi, selezionare *Mappa e classifica tutti i volumi*.
 ** Per personalizzare la scansione per ciascun volume, seleziona *Oppure seleziona il tipo di scansione per ciascun volume*, quindi scegli i volumi che desideri mappare e/o classificare.
 +
-Vedere<<Abilita e disabilita le scansioni di conformità sui volumi,Abilita e disabilita le scansioni di conformità sui volumi>> per i dettagli.
+Vedere<<Abilita e disabilita le scansioni sui volumi,Abilita e disabilita le scansioni sui volumi>> per i dettagli.
 
 
 
