@@ -1,0 +1,62 @@
+---
+sidebar: sidebar 
+permalink: task-health-monitor.html 
+keywords: health monitor, disk usage, disk utilization, cpu usage, memory usage, metrics 
+summary: 'La classificazione dei dati fornisce informazioni sull"utilizzo e sull"utilizzazione per contribuire a ottimizzare le prestazioni e risolvere i problemi.' 
+---
+= Monitora lo stato di integrità NetApp Data Classification
+:hardbreaks:
+:allow-uri-read: 
+:firstname: :nofooter
+:author: :nofooter
+:authorinitials: :
+:authors: :nofooter
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+La dashboard NetApp Data Classification Health Monitor fornisce monitoraggio in tempo reale e approfondimenti sulle prestazioni. Health Monitor acquisisce informazioni sull'infrastruttura di classificazione dei dati, sullo stato del sistema, sulle metriche di utilizzo e sui dati di utilizzo, consentendo di identificare e risolvere i problemi.
+
+
+
+== Approfondimenti di Health Monitor
+
+La dashboard Health Monitor presenta le informazioni in quattro categorie.
+
+* **Stato dell'infrastruttura**
++
+Visualizza informazioni tra cui lo stato della versione, la stabilità del sistema, il tipo di distribuzione e la scala della macchina.
+
+* **Contenitori problematici**
++
+Esaminare il campo dei contenitori problematici per informazioni dettagliate sui contenitori che vengono arrestati o riavviati frequentemente. Utilizzare queste informazioni per esaminare i contenitori specifici.
+
+* **Informazioni di sistema**
++
+Il pannello delle informazioni di sistema acquisisce informazioni critiche sulla NetApp Console e sulla classificazione dei dati, come gli indirizzi IP pubblici e privati, il nome host, il sistema operativo, la versione della console e l'ID della console.
+
+* **Utilizzo e utilizzazione**
++
+Esaminare l'utilizzo della CPU, l'utilizzo del disco, l'utilizzo del disco e l'utilizzo della memoria. Questi valori vengono visualizzati in unità di archiviazione (GB) o in percentuale dell'utilizzo totale. Se in uno dei campi viene visualizzato un avviso, selezionarlo per ottenere informazioni e consigli su come risolvere il problema.
+
+
+
+
+
+== Accedi alla dashboard di Health Monitor
+
+. In Classificazione dati, seleziona **Configurazione**.
+. Sotto l'intestazione **Configurazione**, seleziona **Monitoraggio dello stato di classificazione dei dati**.
+. Nella dashboard Health Monitor puoi:
++
+** Esaminare l'utilizzo e l'utilizzazione. Se vengono visualizzati avvisi per le metriche di utilizzo o di utilizzo, selezionare l'avviso per ricevere consigli su come risolvere il problema.
+** Attiva/disattiva il grafico per visualizzare l'utilizzo della CPU, l'utilizzo del disco, l'utilizzo del disco e l'utilizzo della memoria. È possibile modificare l'asse x per visualizzare il contenuto in base alle ore (6, 12 o 24) o ai giorni (2, 7 o 14).
+** Aggiorna la dashboard per visualizzare le metriche dei dati più recenti.
++
+image:health-monitor.png["Screenshot della dashboard di Health Monitor"]
+
+
+
+

@@ -2618,4 +2618,36 @@
   <block id="f918c4aee73951e03ee5c0a40ad23d9e" category="list-text"><block ref="f918c4aee73951e03ee5c0a40ad23d9e" category="inline-link-macro-rx"></block></block>
   <block id="d642b544681a16a1135a35722647009f" category="list-text"><block ref="d642b544681a16a1135a35722647009f" category="inline-link-macro-rx"></block></block>
   <block id="7a1e3b83c1962dc960f34e0a588fe7c6" category="list-text"><block ref="7a1e3b83c1962dc960f34e0a588fe7c6" category="inline-link-macro-rx"></block></block>
+  <block id="6a6493990827c82055e808631b52c236" category="doc">Versione 1.49</block>
+  <block id="640602402999fbf572de482a35f449bc" category="paragraph">Questa versione di Data Classification include correzioni di bug e i seguenti aggiornamenti:</block>
+  <block id="c257ad0ab1dd1ba68f40f6d92155f5dd" category="paragraph-title">Monitora le metriche e le prestazioni nella dashboard di monitoraggio dello stato</block>
+  <block id="d62744b30354624c6087760cfd47ae58" category="paragraph">Data Classification ora fornisce una dashboard di monitoraggio dello stato di salute, che fornisce un monitoraggio in tempo reale delle risorse e informazioni dettagliate sull'utilizzo della memoria, sull'utilizzo del disco, sull'utilizzo del disco e altro ancora. Grazie alle informazioni fornite dalla dashboard di monitoraggio dello stato, puoi esaminare l'infrastruttura della tua distribuzione e ottenere informazioni utili per ottimizzare storage e prestazioni.</block>
+  <block id="3b3cf1105e8b8d40f3cb14b9f956e666" category="inline-link-macro">Monitorare lo stato di salute della classificazione dei dati</block>
+  <block id="699330677c1a0f32d795bf5b4ef62c06" category="paragraph">Per maggiori informazioni, vedere <block ref="47a26f0a929ccc455d276fcbc1329665" category="inline-link-macro-rx"></block>.</block>
+  <block id="bf17c0b6bb3350440ee2a9bb4f2c9d89" category="paragraph-title">Prestazioni di caricamento migliorate</block>
+  <block id="b6a3c9ea2c8f586e05010be520e7c46c" category="paragraph">Le prestazioni di caricamento di tutte le pagine in Data Classification sono state migliorate per creare un'esperienza utente più efficiente.</block>
+  <block id="c7a647b1e9f70e39870907a0d37fc861" category="summary">La classificazione dei dati fornisce informazioni sull'utilizzo e sull'utilizzazione per contribuire a ottimizzare le prestazioni e risolvere i problemi.</block>
+  <block id="c208094b8f607967357f585bbb210ee8" category="doc">Monitora lo stato di integrità NetApp Data Classification</block>
+  <block id="55378ce4db7316dfb9237beedafacea5" category="paragraph">La dashboard NetApp Data Classification Health Monitor fornisce monitoraggio in tempo reale e approfondimenti sulle prestazioni. Health Monitor acquisisce informazioni sull'infrastruttura di classificazione dei dati, sullo stato del sistema, sulle metriche di utilizzo e sui dati di utilizzo, consentendo di identificare e risolvere i problemi.</block>
+  <block id="74284c840f1a46105287599aeeb36666" category="section-title">Approfondimenti di Health Monitor</block>
+  <block id="99c8a52d112bc64ea49b7c3ae9466bb1" category="paragraph">La dashboard Health Monitor presenta le informazioni in quattro categorie.</block>
+  <block id="31d69bd302c379e8dd3809d44fd66b0b" category="list-text">**Stato dell'infrastruttura**</block>
+  <block id="224bc922db3535905d796b83072bab9e" category="paragraph">Visualizza informazioni tra cui lo stato della versione, la stabilità del sistema, il tipo di distribuzione e la scala della macchina.</block>
+  <block id="6cf6002236ce4335abed24751f5b76ab" category="list-text">**Contenitori problematici**</block>
+  <block id="36dc167dffd8c19c769e418537d40622" category="paragraph">Esaminare il campo dei contenitori problematici per informazioni dettagliate sui contenitori che vengono arrestati o riavviati frequentemente. Utilizzare queste informazioni per esaminare i contenitori specifici.</block>
+  <block id="fecbcd93350c62d4fa51da76bf1a71d1" category="list-text">**Informazioni di sistema**</block>
+  <block id="56c4481830e251a9c86a214c55e28f89" category="paragraph">Il pannello delle informazioni di sistema acquisisce informazioni critiche sulla NetApp Console e sulla classificazione dei dati, come gli indirizzi IP pubblici e privati, il nome host, il sistema operativo, la versione della console e l'ID della console.</block>
+  <block id="daf2396a7df11bb386f6f0b6e764d25d" category="list-text">**Utilizzo e utilizzazione**</block>
+  <block id="c0da9201fe0226c2cfae194eb58f075e" category="paragraph">Esaminare l'utilizzo della CPU, l'utilizzo del disco, l'utilizzo del disco e l'utilizzo della memoria. Questi valori vengono visualizzati in unità di archiviazione (GB) o in percentuale dell'utilizzo totale. Se in uno dei campi viene visualizzato un avviso, selezionarlo per ottenere informazioni e consigli su come risolvere il problema.</block>
+  <block id="0e5df83893e08f2ce609d5d98a243034" category="section-title">Accedi alla dashboard di Health Monitor</block>
+  <block id="e56e80fd2d4ecf280907b94ef6dc65d3" category="list-text">In Classificazione dati, seleziona **Configurazione**.</block>
+  <block id="0ba19edf70d40c73c09b6ece96976c62" category="list-text">Sotto l'intestazione **Configurazione**, seleziona **Monitoraggio dello stato di classificazione dei dati**.</block>
+  <block id="9849eb5259dead598d64015da2440d80" category="list-text">Nella dashboard Health Monitor puoi:</block>
+  <block id="1e89a4779f111b1b55332c656e31c873" category="list-text">Esaminare l'utilizzo e l'utilizzazione. Se vengono visualizzati avvisi per le metriche di utilizzo o di utilizzo, selezionare l'avviso per ricevere consigli su come risolvere il problema.</block>
+  <block id="1f3e983d3d3718d5420e82cddb623f74" category="list-text">Attiva/disattiva il grafico per visualizzare l'utilizzo della CPU, l'utilizzo del disco, l'utilizzo del disco e l'utilizzo della memoria. È possibile modificare l'asse x per visualizzare il contenuto in base alle ore (6, 12 o 24) o ai giorni (2, 7 o 14).</block>
+  <block id="741cc455cec02a51740c82ff294658cd" category="list-text">Aggiorna la dashboard per visualizzare le metriche dei dati più recenti.</block>
+  <block id="323f5d636a1eaba87aab3adcb85ff2db" category="inline-image-macro">Screenshot della dashboard di Health Monitor</block>
+  <block id="6ece59dbc8c65f220411ec2ce290cfd6" category="paragraph"><block ref="6ece59dbc8c65f220411ec2ce290cfd6" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="2727f68982ff25e8b3c57e026120561d" category="section-title">08 dicembre 2025</block>
+  <block id="3b02682cee7334412169a53934571445" category="sidebar">Monitorare lo stato di salute del sistema</block>
 </blocks>

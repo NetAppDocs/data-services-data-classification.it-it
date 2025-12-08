@@ -1,0 +1,17 @@
+= Versione 1.49
+:allow-uri-read: 
+
+
+
+
+=== Versione 1.49
+
+Questa versione di Data Classification include correzioni di bug e i seguenti aggiornamenti:
+
+.Monitora le metriche e le prestazioni nella dashboard di monitoraggio dello stato
+Data Classification ora fornisce una dashboard di monitoraggio dello stato di salute, che fornisce un monitoraggio in tempo reale delle risorse e informazioni dettagliate sull'utilizzo della memoria, sull'utilizzo del disco, sull'utilizzo del disco e altro ancora. Grazie alle informazioni fornite dalla dashboard di monitoraggio dello stato, puoi esaminare l'infrastruttura della tua distribuzione e ottenere informazioni utili per ottimizzare storage e prestazioni.
+
+Per maggiori informazioni, vedere link:https://docs.netapp.com/us-en/data-services-data-classification/task-health-monitor.html["Monitorare lo stato di salute della classificazione dei dati"].
+
+.Prestazioni di caricamento migliorate
+Le prestazioni di caricamento di tutte le pagine in Data Classification sono state migliorate per creare un'esperienza utente più efficiente.
