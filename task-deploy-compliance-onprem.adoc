@@ -84,7 +84,7 @@ Il software di classificazione dei dati deve essere eseguito su un host che sodd
 
 Assicurarsi di poter mantenere in esecuzione la classificazione dei dati.  La macchina di classificazione dei dati deve rimanere accesa per analizzare continuamente i dati.
 
-* La classificazione dei dati non è supportata su un host condiviso con altre applicazioni: l'host deve essere un host dedicato.
+* La classificazione dei dati deve avvenire su un host dedicato. L'host non può essere condiviso con altre applicazioni o software di terze parti, come gli antivirus.
 * Quando si crea il sistema host nei propri locali, è possibile scegliere tra queste dimensioni di sistema a seconda delle dimensioni del set di dati su cui si prevede di eseguire la scansione di classificazione dei dati.
 +
 [cols="17,17,27,31"]
