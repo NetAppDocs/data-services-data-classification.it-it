@@ -55,7 +55,7 @@ Quando si esegue lo script dei prerequisiti, è necessario l'indirizzo IP o il n
 Il software di classificazione dei dati deve essere eseguito su un host che soddisfi specifici requisiti del sistema operativo, requisiti di RAM e requisiti software.
 
 * La classificazione dei dati deve avvenire su un host dedicato. L'host non può essere condiviso con altre applicazioni o software di terze parti, come gli antivirus.
-* Quando si crea il sistema host nei propri locali, è possibile scegliere tra queste dimensioni di sistema a seconda delle dimensioni del set di dati su cui si prevede di eseguire la scansione di classificazione dei dati.
+* Scegli la dimensione più adatta al set di dati che intendi analizzare con Data Classification.
 +
 [cols="17,17,27,31"]
 |===
@@ -124,7 +124,7 @@ Il software di classificazione dei dati deve essere eseguito su un host che sodd
 * *Red Hat Subscription Management*: l'host deve essere registrato presso Red Hat Subscription Management.  Se non è registrato, il sistema non può accedere ai repository per aggiornare il software di terze parti richiesto durante l'installazione.
 * *Software aggiuntivo*: è necessario installare il seguente software sull'host prima di installare Data Classification:
 +
-** A seconda del sistema operativo utilizzato, sarà necessario installare uno dei seguenti motori container:
+** A seconda del sistema operativo utilizzato, è necessario installare uno dei seguenti motori container:
 +
 *** Docker Engine versione 19.3.1 o successiva. https://docs.docker.com/engine/install/["Visualizza le istruzioni di installazione"^] .
 *** Podman versione 4 o successiva.  Per installare Podman, inserisci(`sudo yum install podman netavark -y` ).

@@ -46,7 +46,7 @@ Il componente _Opportunità di risparmio_ mostra i dati che è possibile elimina
 . Dal menu Classificazione dati, selezionare *Governance*.
 . In ogni riquadro Opportunità di risparmio della dashboard Governance, seleziona *Ottimizza archiviazione* per visualizzare i risultati filtrati nella pagina Indagine.  Per scoprire quali dati dovresti eliminare o spostare in un archivio meno costoso, esamina le _Opportunità di risparmio_.
 +
-** *Dati obsoleti* - Dati modificati l'ultima volta più di 3 anni fa.
+** *Dati obsoleti* - Per impostazione predefinita, i dati vengono considerati obsoleti se l'ultima modifica risale a più di 3 anni fa. È possibile [personalizzare la definizione di dati obsoleti](task-stale-data.html).
 ** *File duplicati*: file duplicati in altre posizioni nelle origini dati sottoposte a scansione. link:task-investigate-data.html["Visualizza quali tipi di file duplicati vengono visualizzati"] .
 
 

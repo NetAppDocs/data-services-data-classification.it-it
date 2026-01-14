@@ -6,7 +6,6 @@
   <block id="9c2e66c7cc7479b8b57b9b1aa0225853" category="inline-link-macro">distribuire un'altra istanza di classificazione dei dati</block>
   <block id="322805244d3cfbc06b20be41ebf54d36" category="inline-link-macro">Lavora con più agenti della console</block>
   <block id="813ae9f2c1d0f0f27d01eeab67dcb1d7" category="paragraph">La classificazione dei dati non impone limiti alla quantità di dati che può analizzare.  Ogni agente della console supporta la scansione e la visualizzazione di 500 TiB di dati. Per scansionare più di 500 TiB di dati,<block ref="d1d02c710daba5ea82985e30be7b0051" category="inline-link-macro-rx"></block> Poi<block ref="b84ff2addee2a287f168d097865dda36" category="inline-link-macro-rx"></block> .  + L'interfaccia utente della console visualizza i dati da un singolo connettore.  Per suggerimenti sulla visualizzazione dei dati da più agenti della console, vedere<block ref="1fc134af43ed7d59a9071c288f242f94" category="inline-link-macro-rx"></block> .</block>
-  <block id="14246e64b6cc314c499299b0f4808cdb" category="list-text">Quando si crea il sistema host nei propri locali, è possibile scegliere tra queste dimensioni di sistema a seconda delle dimensioni del set di dati su cui si prevede di eseguire la scansione di classificazione dei dati.</block>
   <block id="8c270421a057347baf727ea386f58d8f" category="cell">Dimensioni del sistema</block>
   <block id="2b55387dd066c5bac646ac61543d152d" category="cell">processore</block>
   <block id="05289cee10f1f9057410b216de0d7e36" category="cell">RAM (la memoria di swap deve essere disabilitata)</block>
@@ -32,7 +31,6 @@
   <block id="e7d3c98d4730560139776bd99350f7c9" category="list-text">*Tipo di macchina GCP*: "n2-standard-16". <block ref="0560993eb8cc456f0c5f18a57a7d0f71" category="inline-link-macro-rx"></block> .</block>
   <block id="114b40cee02180a916d6e0a652f1300d" category="list-text">*Autorizzazioni cartella UNIX*: sono richieste le seguenti autorizzazioni UNIX minime:</block>
   <block id="b0f2b97dc5d2b76b26e040408bb1d8af" category="cell">Cartella</block>
-  <block id="9dc48a158dad20b2148d68f6a5863b5e" category="cell">Permessi minimi</block>
   <block id="d42b9c57d24cf5db3bd8d332dc35437f" category="cell">/tmp</block>
   <block id="f1e98237c93c0717db2bfa4c6177762f" category="cell"><block ref="4d0e8b4926781b53ee3d95354f5c8bb5" prefix="" category="inline-code"></block></block>
   <block id="68ab1268abb7e5f5688810968df97d6b" category="cell">/optare</block>
@@ -50,7 +48,6 @@
   <block id="d4113e36e86a18cdd4a4813e9e66b30e" category="list-text">Le estensioni vettoriali avanzate (AVX2) devono essere abilitate sul sistema host.</block>
   <block id="f2183b09e54e4aa491c008ea8ca08bbc" category="list-text">*Red Hat Subscription Management*: l'host deve essere registrato presso Red Hat Subscription Management.  Se non è registrato, il sistema non può accedere ai repository per aggiornare il software di terze parti richiesto durante l'installazione.</block>
   <block id="c925667b183375955ce7e62c22a4acdf" category="list-text">*Software aggiuntivo*: è necessario installare il seguente software sull'host prima di installare Data Classification:</block>
-  <block id="2a2958e5280a05650587dc8d454a5f8d" category="list-text">A seconda del sistema operativo utilizzato, sarà necessario installare uno dei seguenti motori container:</block>
   <block id="117c0c98e2a5cb3503de68c655378d13" category="inline-link">Visualizza le istruzioni di installazione</block>
   <block id="42b04f3730744d602d0c4b812384dce9" category="list-text">Docker Engine versione 19.3.1 o successiva.<block ref="bbcf0e5e8b0c8687d84c2c22a5ad2ecf" category="inline-link-rx"></block> .</block>
   <block id="1e61042bc6437e79f5a1cc09c86acd1a" category="list-text">Podman versione 4 o successiva.  Per installare Podman, inserisci<block ref="9305f04686d4e3dadce4d1e9e77d9d71" prefix="(" category="inline-code"></block> ).</block>
@@ -1031,7 +1028,6 @@
   <block id="fdc70de4a3ff53369e5ddb3633c1a655" category="paragraph">Il componente _Opportunità di risparmio_ mostra i dati che è possibile eliminare o spostare in un archivio di oggetti meno costoso.  I dati in _Opportunità di risparmio_ vengono aggiornati ogni 2 ore.  È anche possibile aggiornare manualmente i dati.</block>
   <block id="07d1846c53b76f00910e641f12d09fd8" category="list-text">Dal menu Classificazione dati, selezionare *Governance*.</block>
   <block id="70de9418b6d77c7f4c2d4632b262c0df" category="list-text">In ogni riquadro Opportunità di risparmio della dashboard Governance, seleziona *Ottimizza archiviazione* per visualizzare i risultati filtrati nella pagina Indagine.  Per scoprire quali dati dovresti eliminare o spostare in un archivio meno costoso, esamina le _Opportunità di risparmio_.</block>
-  <block id="da7e456f74e6e77de59afc145e42d85d" category="list-text">*Dati obsoleti* - Dati modificati l'ultima volta più di 3 anni fa.</block>
   <block id="dc6d9a4419750aae3db17878ffe18e5c" category="inline-link-macro">Visualizza quali tipi di file duplicati vengono visualizzati</block>
   <block id="5791d2ebf242b348a1cbfa550a356083" category="list-text">*File duplicati*: file duplicati in altre posizioni nelle origini dati sottoposte a scansione. <block ref="4f528c73ac5ca4ef85380f36d4dccad7" category="inline-link-macro-rx"></block> .</block>
   <block id="dfd23906ba391609b608a93fdd40fdb2" category="admonition">Se una qualsiasi delle tue origini dati implementa la suddivisione in livelli dei dati, i vecchi dati che risiedono già nell'archiviazione degli oggetti possono essere identificati nella categoria _Dati obsoleti_.</block>
@@ -1125,21 +1121,8 @@
   <block id="bec06ffefcc7ab6b7882b310c3c7790a" category="list-text">Esamina i dati cercando, ordinando, espandendo i dettagli per un file specifico, cliccando su *Esamina risultati* per visualizzare le informazioni mascherate o scaricando l'elenco dei file.</block>
   <block id="3265c9e86d312c6ca0f5f0bd0ae3bb17" category="summary">NetApp Data Classification consente di personalizzare la ricerca di informazioni sensibili, adattando il servizio a modelli individuali e parole chiave rilevanti per la tua organizzazione.</block>
   <block id="79dfb2dc15cbc8bb59c764a1eeb110a7" category="doc">Crea una classificazione personalizzata in NetApp Data Classification</block>
-  <block id="e53ce77d74c0a69af874134b7d8f39cf" category="paragraph">Con NetApp Data Classification puoi creare una ricerca personalizzata per informazioni sensibili.  La ricerca può essere limitata a un'espressione regolare (regex).</block>
-  <block id="166182078c23275fb3140bd76772894f" category="paragraph">La classificazione personalizzata è disponibile solo per le scansioni Map &amp; Classify, non per le scansioni di sola mappatura. Questa funzionalità è attualmente in anteprima.</block>
   <block id="b89901231bd925d9935358eec83c9df7" category="list-text">Selezionare la scheda **Classificazione personalizzata**.</block>
-  <block id="75397441bf4c14c2afae2e04e7cd5571" category="list-text">Selezionare il pulsante **Aggiungi nuovo classificatore**.</block>
-  <block id="2dec625d6c345cf302dbf7d35c450b10" category="list-text">Aggiungere un nome e una descrizione per il nuovo classificatore.</block>
-  <block id="46d2a8f57f8272ef959d08642ec54e72" category="list-text">Scegli di aggiungere il classificatore come *Identificatore personale* o *Categoria*.</block>
-  <block id="69750659c6ac332ddddc11e18c4ac065" category="inline-image-macro">Screenshot dell'aggiunta del classificatore</block>
-  <block id="160081b5f7d9182afb44b790dcb7357e" category="paragraph"><block ref="160081b5f7d9182afb44b790dcb7357e" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="e6cd86d61f4639c8a27006c6c29b3e9f" category="list-text">Selezionare *Avanti*.</block>
-  <block id="0290a20bef89a572b708f13b5de6010d" category="list-text">Per aggiungere la personalizzazione come espressione regolare, seleziona **Espressione regolare personalizzata**, quindi **Avanti**.</block>
-  <block id="ce6c93af63d5a72eb3c15bc99afe14ec" category="inline-image-macro">Uno screenshot della finestra di dialogo per creare un'espressione regolare.</block>
-  <block id="2fbc1bcaba732168404159c46526458c" category="list-text">Aggiungi uno schema per rilevare le informazioni specifiche dei tuoi dati.  Selezionare **Convalida** per confermare la sintassi della voce.<block ref="931af7ddfc52cb7655deb8b332ab2e24" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="6d7ee64f46753faf45fb70361a3d7659" category="list-text">Selezionare **Fine** per creare la classificazione personalizzata.</block>
   <block id="becce430afb103abe05ad66b3e6cde8a" category="inline-xref-macro">Generare report di conformità</block>
-  <block id="92dbbe7b48f44c4348b9a878f60f182e" category="paragraph">La nuova personalizzazione verrà acquisita nella successiva scansione pianificata.  Per visualizzare i risultati, vedere<block ref="9d0d45f702bd2dff4853a9920dd0f534" category="inline-xref-macro-rx"></block> .</block>
   <block id="c96a9d84a663911f2a121acca6ddb4ba" category="summary">Completa alcuni passaggi per distribuire NetApp Data Classification nel cloud.  La NetApp Console distribuisce l'istanza di classificazione dei dati nella stessa rete del provider cloud dell'agente della console.</block>
   <block id="e7d1c98dba976d189ba1f2507302b650" category="doc">Distribuisci NetApp Data Classification nel cloud utilizzando la NetApp Console</block>
   <block id="6ce84a46ad99469863f22b588d00cd1b" category="paragraph">È possibile distribuire NetApp Data Classification nel cloud con NetApp Console.  La Console distribuisce l'istanza di classificazione dei dati nella stessa rete del provider cloud dell'agente della Console.</block>
@@ -2125,7 +2108,6 @@
   <block id="e7e9f49f4584c68b9d97c578e73b7583" category="list-text">Nell'angolo in alto a destra della Console, seleziona l'icona Aiuto e seleziona *Supporto*.</block>
   <block id="2974170a8b1b5b4a2ac69aacd4c1c9c3" category="list-text">Individua il numero di serie del tuo ID account nella pagina di registrazione del supporto.</block>
   <block id="b50f0a46135bcb7083b1f2f82032fc26" category="inline-image-macro">Uno screenshot del menu Aiuto in cui Supporto è la prima opzione elencata</block>
-  <block id="379f9cd57d97013f3f7fdd24f692a0b1" category="paragraph"><block ref="379f9cd57d97013f3f7fdd24f692a0b1" category="inline-image-macro-rx" type="image"></block></block>
   <block id="dd50e314c18933734174c1156dd9237f" category="inline-link">Sito di registrazione del supporto NetApp</block>
   <block id="78f94e749b89d69dcbf3baff21ccb958" category="list-text">Vai a<block ref="e1c4be66250fd76d5c52bfe2cb7daee2" category="inline-link-rx"></block> e seleziona *Non sono un cliente NetApp registrato*.</block>
   <block id="d4f633ef130727b2776fa7f45024ca7d" category="list-text">Compila i campi obbligatori (quelli contrassegnati da asterischi rossi).</block>
@@ -2148,7 +2130,6 @@
   <block id="5bc1315a63455544e7a917a7cc968939" category="paragraph">Queste credenziali NSS sono associate al tuo ID account Console specifico. Gli utenti che appartengono all'organizzazione Console possono accedere a queste credenziali da *Supporto &gt; Gestione NSS*.</block>
   <block id="328a2c1e7778e9edaf79d90c51409ac4" category="list-text">Se disponi di un account a livello cliente, puoi aggiungere uno o più account NSS.</block>
   <block id="e3cd99e4aa330ae6bdfb3754d83ae962" category="list-text">Se disponi di un account partner o rivenditore, puoi aggiungere uno o più account NSS, ma non possono essere aggiunti insieme agli account a livello di cliente.</block>
-  <block id="e8d4092baef6680c6a35d5228ae31de2" category="paragraph"><block ref="e8d4092baef6680c6a35d5228ae31de2" category="inline-image-macro-rx" type="image"></block></block>
   <block id="c0e0b7ff0de9558404e9b77ece42948a" category="list-text">Selezionare *Gestione NSS &gt; Aggiungi account NSS*.</block>
   <block id="85b9386ed443776127e099931d73448a" category="list-text">Quando richiesto, seleziona *Continua* per essere reindirizzato alla pagina di accesso di Microsoft.</block>
   <block id="d59e0b46782e48a01966e5c7ccc38d17" category="paragraph">NetApp utilizza Microsoft Entra ID come provider di identità per i servizi di autenticazione specifici per il supporto e le licenze.</block>
@@ -2160,8 +2141,6 @@
   <block id="a04a3a5322782e8c18d0d64be7e1ccbc" category="paragraph">Lo stesso vale se si dispone di account NSS preesistenti a livello di cliente e si tenta di aggiungere un account a livello di partner.</block>
   <block id="1afe8a81cfddc9fa9559e272bb6b9496" category="list-text">Dopo aver effettuato l'accesso, NetApp memorizzerà il nome utente NSS.</block>
   <block id="1dcb63fd55c4d22e87cb32275b8cc808" category="inline-image-macro">Un'icona di tre punti orizzontali</block>
-  <block id="0dfcbbbe02d3e96f8ad78782e8772587" category="paragraph">Si tratta di un ID generato dal sistema che corrisponde al tuo indirizzo email. Nella pagina *Gestione NSS*, puoi visualizzare la tua email da<block ref="5151db0ded96d46f40ae09b5e5b167a1" category="inline-image-macro-rx" type="image"></block> menu.</block>
-  <block id="fc79de85a483938f72fbcb9822ec0ae3" category="list-text">Se hai bisogno di aggiornare i token delle credenziali di accesso, è disponibile anche l'opzione *Aggiorna credenziali* in<block ref="5151db0ded96d46f40ae09b5e5b167a1" category="inline-image-macro-rx" type="image"></block> menu.</block>
   <block id="b14d512a3c64fb5df16f6721b0603c63" category="paragraph">Utilizzando questa opzione ti verrà richiesto di effettuare nuovamente l'accesso. Si noti che il token per questi account scade dopo 90 giorni. Verrà pubblicata una notifica per avvisarti di ciò.</block>
   <block id="1be13928b8bb7dda39b97e766c497b4e" category="summary">Prima di installare manualmente Data Classification su un host Linux, è possibile eseguire uno script sull'host per verificare che siano soddisfatti tutti i prerequisiti per l'installazione di Data Classification.  Puoi eseguire questo script su un host Linux nella tua rete o su un host Linux nel cloud.  L'host può essere connesso a Internet oppure risiedere in un sito che non ha accesso a Internet.</block>
   <block id="16b2ab7371415f7c5eda355d2064fce6" category="doc">Verifica che il tuo host Linux sia pronto per installare NetApp Data Classification</block>
@@ -2588,7 +2567,6 @@
   <block id="d34f29080dba1970a613ab39b7166d0c" category="paragraph">Questa versione di Data Classification include correzioni di bug, miglioramenti della sicurezza e delle prestazioni.</block>
   <block id="8905ad2fb9f028e6bd28666015b4b50a" category="paragraph-title">Maggiore chiarezza nell'avanzamento della scansione</block>
   <block id="206c07a2ed5644be711186a00b2c6ae2" category="paragraph">Le configurazioni di scansione ora includono informazioni più approfondite sul completamento della scansione. In precedenza, la barra di avanzamento veniva visualizzata solo durante l'esecuzione della scansione. Ora la barra di avanzamento rimane visibile anche dopo il completamento per confermare che le scansioni sono state completate correttamente. È anche possibile visualizzare il numero di file mappati e scansionati.</block>
-  <block id="dc9fb8f25cdf758c060f4782f41b0b0f" category="paragraph">Per ulteriori informazioni sulle impostazioni di scansione, vedere <block ref="19cf1405cd38e956788f418f2be34a68" category="inline-link-macro-rx"></block>.</block>
   <block id="eb3cd7064baa457b68c9e6f4bc37005a" category="paragraph">La classificazione dei dati confronta tutti i file (esclusi i database) per individuare eventuali duplicati se sono:</block>
   <block id="0ca96e556827c0f5e25df8d0643f52ed" category="list-text">1 MB o più</block>
   <block id="618a117288f96069f1cdbf0f4bded643" category="list-text">Oppure contengono informazioni personali o sensibili</block>
@@ -2653,4 +2631,95 @@
   <block id="99472e84d7b0a6bdf69b082286217650" category="list-text"><block ref="99472e84d7b0a6bdf69b082286217650" category="inline-link-rx"></block></block>
   <block id="6c1aa195a9abc1b402b9f2ded0d68124" category="paragraph">Quando si esegue lo script dei prerequisiti, è necessario l'indirizzo IP o il nome host del sistema agente della console. Queste informazioni sono disponibili se hai installato l'agente Console nei tuoi locali. Se l'agente della Console è distribuito nel cloud, è possibile trovare queste informazioni nella Console: selezionare l'icona della Guida, quindi *Supporto*; nella sezione Agente e audit, selezionare *Vai all'agente*.</block>
   <block id="7a49d8bea04f537bdd8b9c0dadc345aa" category="paragraph">Il software di classificazione dei dati deve essere eseguito su un host che soddisfi specifici requisiti del sistema operativo, requisiti di RAM e requisiti software.</block>
+  <block id="dab1073bd81b638476185f7da08c7e72" category="list-text">Scegli la dimensione più adatta al set di dati che intendi analizzare con Data Classification.</block>
+  <block id="baf6246d7a1f90583599825a4d8818c0" category="cell">Permessi minimi</block>
+  <block id="cd3fbf7c4da6e490eec17762a02afcb8" category="list-text">A seconda del sistema operativo utilizzato, è necessario installare uno dei seguenti motori container:</block>
+  <block id="9f4066a8aad2a422e68c5b69dd9472f8" category="paragraph">Per ulteriori informazioni sulle impostazioni di scansione, vedere <block ref="26da27bca2c7e859f7f769768b8a4285" category="inline-link-macro-rx"></block>.</block>
+  <block id="a4abecdc1a189db5254898cad3b99a7e" category="doc">Versione 1.50</block>
+  <block id="0bbdca5358fc47c779aaa8d26a52510f" category="paragraph-title">Miglioramenti della classificazione personalizzata</block>
+  <block id="3d1c64f6b833049963a84f1722911079" category="paragraph">Data Classification ora supporta la creazione di categorie personalizzate per i tuoi dati. È possibile caricare file per perfezionare un modello di intelligenza artificiale che Data Classification utilizza per applicare il marcatore di categoria ai dati. L'interfaccia per tutte le classificazioni personalizzate è stata migliorata.</block>
+  <block id="1ea7cf77170c31be18fc52c7e9649923" category="paragraph">Per maggiori informazioni, vedere <block ref="c45381d223df5e8e5c4b98a60b8b65d3" category="inline-link-macro-rx"></block>.</block>
+  <block id="3e1e55a16c45f87e5a51189ca804eaf3" category="paragraph-title">Definizione di dati obsoleti personalizzati</block>
+  <block id="97b36bc8814884dc26bf5a568d08d691" category="paragraph">La classificazione dei dati ora consente di personalizzare la definizione dei dati obsoleti in modo che si adatti alle esigenze della tua organizzazione. In precedenza, per dati obsoleti si intendevano tutti i dati la cui ultima modifica risaliva a tre anni prima. Ora è possibile identificare i dati obsoleti in base alla data dell'ultimo accesso o dell'ultima modifica; il periodo di tempo può variare da 6 mesi a 10 anni fa.</block>
+  <block id="493a301aeed6d63ec61fcc12caab7b22" category="inline-link-macro">Personalizza la definizione dei dati obsoleti</block>
+  <block id="14748686f892545cd3b61c5ed2221369" category="paragraph">Per maggiori informazioni, vedere <block ref="a0a0e231fdda706f469e0c838920ede3" category="inline-link-macro-rx"></block>.</block>
+  <block id="e887aed8f9c3dbecd37e8896d96b6637" category="paragraph-title">Prestazioni migliorate</block>
+  <block id="0106b64c8d04b65e1353d763ca518487" category="paragraph">I tempi di caricamento per tutte le pagine della Classificazione dati, del report di mappatura dati e dei filtri nella pagina Indagine sono stati ridotti.</block>
+  <block id="ff7b9533f576d72772ad31931f1070c3" category="paragraph-title">Tempo stimato per i rapporti di indagine</block>
+  <block id="317bcae14c763efc48845c774a224df6" category="paragraph">Quando si scarica un rapporto di indagine, la classificazione dei dati ora visualizza il tempo stimato necessario per il completamento del download.</block>
+  <block id="6abf7fab7b752e46fde7722aa48e8370" category="list-text">*Dati obsoleti* - Per impostazione predefinita, i dati vengono considerati obsoleti se l'ultima modifica risale a più di 3 anni fa. È possibile [personalizzare la definizione di dati obsoleti](task-stale-data.html).</block>
+  <block id="c44dcda9842080ca5e1535aa1424097c" category="paragraph">NetApp Data Classification consente di creare categorie personalizzate o identificatori personali per identificare dati specifici in base ai requisiti normativi e di conformità della tua organizzazione.</block>
+  <block id="30e06b6620c9e16c96bc86941ba219fa" category="paragraph">Data Classification supporta due tipi di classificatori personalizzati: categorie e identificatori personali. Le categorie personalizzate vengono create in base a un set di file caricati, da cui Data Classification crea un modello di intelligenza artificiale per identificare dati simili nella tua organizzazione (ad esempio, un'azienda di ricerca sanitaria potrebbe creare una categoria di analisi clinica). Gli identificatori personali personalizzati vengono creati utilizzando elenchi di parole chiave o un'espressione regolare (regex) per identificare informazioni specifiche della tua organizzazione che possono rappresentare un rischio per la conformità.</block>
+  <block id="ad1196a8e2ab72278c680e142d978bc4" category="paragraph">Tutte le classificazioni personalizzate sono disponibili nella dashboard Classificazione personalizzata.</block>
+  <block id="1ba1b3a444d3d64f9daabf45fb989fd2" category="section-title">Crea un identificatore personale personalizzato</block>
+  <block id="b4939a2e8d6bd43aaa8bc680f9eae2fb" category="paragraph">La classificazione dei dati consente di creare un identificatore personale personalizzato utilizzando parole chiave contestuali o un'espressione regolare per identificare i dati univoci della tua organizzazione.</block>
+  <block id="ffc8a633e652805bd5ef66036dbc527c" category="paragraph-title">Requisiti per le parole chiave</block>
+  <block id="e795baca6e06f00e94a8ede6d1df02c6" category="paragraph">Se stai creando il tuo identificatore personale con un elenco di parole chiave, l'elenco deve soddisfare i seguenti requisiti:</block>
+  <block id="dbdc75dca548c0496ce98b34a114fe10" category="list-text">Le voci delle parole chiave non fanno distinzione tra maiuscole e minuscole.</block>
+  <block id="33cbb77faa9b15f7237792726483de99" category="list-text">Le parole chiave devono essere composte da almeno tre caratteri. Tutte le parole più corte di tre caratteri verranno ignorate.</block>
+  <block id="9b2456bacc9d094f1cd53f784d659a37" category="list-text">Le parole duplicate vengono aggiunte una sola volta.</block>
+  <block id="b19b7076c7db40a4b28fe26aec9c9b4b" category="list-text">L'elenco totale delle parole chiave non può superare i 500.000 caratteri. L'elenco deve includere almeno una parola chiave.</block>
+  <block id="cf1e8338b7ca586bb5f08c18c3ae72c2" category="list-text">Selezionare **+ Nuovo classificatore** per creare il classificatore personalizzato.</block>
+  <block id="cf7d4d402d28087d21ec9bec73735b5b" category="list-text">Selezionare *Identificatore personale*. Facoltativamente, seleziona **Maschera risultati** per mascherare i dati personali rilevati.</block>
+  <block id="c716b644cde6bcf010e93cdafcb078a0" category="list-text">Selezionare **Avanti**.</block>
+  <block id="bd4c44c38eaba14b323cbe03eea80fda" category="inline-image-macro">Screenshot della scelta del tipo di classificatore.</block>
+  <block id="c27932e7af336b0cc016dbf946dd3dc6" category="paragraph"><block ref="c27932e7af336b0cc016dbf946dd3dc6" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="22fa659d0a0e0b67e69dcc66c25fbc92" category="inline-image-macro">Screenshot della creazione di un classificatore personalizzato con parole chiave.</block>
+  <block id="2bdbb2525ac7bacd2b3d7bbcd0882360" category="list-text">Per aggiungere il classificatore con parole chiave, seleziona **Parole chiave**. Inserisci un elenco di parole chiave, inserendo ogni voce su una riga separata. Assicurarsi che le parole chiave siano conformi ai requisiti. <block ref="eadc639f92793e875eac44a06d796796" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="c8b0a564997abd595267a333d8fe04e4" category="paragraph">Per aggiungere il classificatore come espressione regolare, seleziona **Espressione regolare**, quindi aggiungi un modello per rilevare le informazioni specifiche dei tuoi dati. Selezionare **Convalida** per confermare la sintassi della voce.</block>
+  <block id="cd1c98088a39f34696fe79ebc1562bec" category="inline-image-macro">Screenshot della finestra di dialogo per creare un'espressione regolare.</block>
+  <block id="469301e5e880e425be8c3237a9909f8a" category="paragraph"><block ref="469301e5e880e425be8c3237a9909f8a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="69de7e8ad4204438d509ae28653d0494" category="list-text">Facoltativamente, inserisci una stringa di esempio che corrisponda al tuo modello regex, quindi seleziona **Test** per verificarla.</block>
+  <block id="7b94065cc0be228fca6962098693c997" category="list-text">Facoltativamente, aggiungere parole di prossimità. Se si aggiungono parole di prossimità, la classificazione dei dati contrassegna il modello regex solo se le parole di prossimità sono adiacenti alla stringa corrispondente.</block>
+  <block id="e882fe7b3895b8dcc5b7bcf492c3a817" category="list-text">Inserisci un **Nome classificatore** e una **Descrizione** per identificare la categoria personalizzata nella dashboard.</block>
+  <block id="e945e9a3916160ca29d877b518797840" category="list-text">Selezionare **Salva** per creare l'identificatore personale personalizzato.</block>
+  <block id="11e3c6d90314baadaf9594e0d711327d" category="paragraph">Dopo aver creato un identificatore personale personalizzato, i suoi risultati vengono acquisiti nella successiva scansione pianificata. Per ottenere risultati più rapidamente, esegui una scansione su richiesta. Per visualizzare i risultati, vedere <block ref="9d0d45f702bd2dff4853a9920dd0f534" category="inline-xref-macro-rx"></block>.</block>
+  <block id="ee23f91f9500eeb3cb3e89e705562b0c" category="section-title">Crea una categoria personalizzata</block>
+  <block id="7376edb702d9f8b9c9ab4cd81594643c" category="paragraph">Grazie alle categorie personalizzate puoi categorizzare i dati specifici della tua organizzazione. Le categorie personalizzate vengono create in base ai file di testo caricati, dai quali Data Classification crea un modello di intelligenza artificiale per identificare informazioni simili in altri file.</block>
+  <block id="634023398ed1caee657db7fc4eb08979" category="list-title">Requisiti dei dati di formazione</block>
+  <block id="5508b330ba8096375edcddabb69df349" category="list-text">Il set di dati di addestramento deve contenere almeno 25 file. Il numero massimo di file è 1.000.</block>
+  <block id="1f0391202e3ca0e262147c4807d1247d" category="list-text">Tutti i file devono trovarsi direttamente nel percorso file fornito.</block>
+  <block id="1476c5f6234c59512221e8fdd2d77b60" category="list-text">Tutti i file devono essere più grandi di 100 byte.</block>
+  <block id="7764de07beec7179c2ed0242747ba52a" category="list-text">I dati di addestramento per la classificazione dei dati devono essere uno dei seguenti tipi di file: CSV, DOCX, DOC, GZ, JSON, PDF, PPTX, TXT, RTT, XLS o XLSX. È possibile caricare una combinazione di tutti i tipi di file supportati.</block>
+  <block id="a49188ca3667eda075a449f49fa25fda" category="list-text">In NetApp Data Classification, seleziona *Classificazione personalizzata*.</block>
+  <block id="c8f6ab5cc81dd9729dc1fa1107541cc8" category="list-text">Seleziona *+ Nuovo classificatore*.</block>
+  <block id="93b1450efc0df8091ae7ecdd258dd189" category="list-text">Seleziona *Categoria personalizzata* come tipo di classificatore, quindi **Avanti**.</block>
+  <block id="7d52d3b40d52e36a1f4c546542c8d0a3" category="list-text">Definisci la logica per la tua categoria personalizzata con una raccolta di file basati su testo. Fornire l'indirizzo IP dell'*Indirizzo di lavoro*, quindi selezionare il *Volume* dal menu a discesa.</block>
+  <block id="582dcf1234f91300d5dd559e2b759d04" category="paragraph">Immettere il **Percorso directory** per la directory che contiene i dati di formazione.</block>
+  <block id="dc6d46e682032130076140b1c6b9f422" category="list-text">Selezionare **Carica file** per la classificazione dei dati per eseguire un controllo dei file. È possibile rivedere il riepilogo dei file, che elenca il nome del file, la dimensione, il tipo e le note se il file è stato ritenuto accettabile per la formazione.</block>
+  <block id="60d2aee5a316a80a131d402c7cfaa44a" category="inline-image-macro">Screenshot che mostra il riepilogo dei file caricati per la formazione.</block>
+  <block id="6ca27c96af59179d21a409d88cb4139c" category="paragraph"><block ref="6ca27c96af59179d21a409d88cb4139c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="839860ecb593c72a6c18f98bd45565b0" category="list-text">Per modificare il percorso del file o ricaricare i file, seleziona **Cambia percorso**, quindi inserisci i dati e carica nuovamente i file.</block>
+  <block id="78edc8efdc4ac520c8f06ac58e069eac" category="list-text">Quando sei soddisfatto dei file caricati, seleziona **Avanti**.</block>
+  <block id="baacdea09c8bef5361744801ca025b67" category="list-text">Selezionare **Salva** per creare la categoria personalizzata.</block>
+  <block id="d2edcb6e893e23e45a9b667d3d7f0c9e" category="paragraph">Dopo aver creato una categoria personalizzata, i suoi risultati vengono acquisiti nella successiva scansione pianificata. Per ottenere risultati più rapidamente, avviare manualmente la scansione.</block>
+  <block id="de6c38194e516df4fcb360803e7bc45b" category="section-title">Modifica un classificatore personalizzato</block>
+  <block id="00af115e508e98110cd2d8e399b9ee0d" category="paragraph">È possibile modificare la logica di un identificatore personale dopo averlo creato. Non è possibile modificare il tipo di identificatore personale o il tipo logico; ad esempio, non è possibile modificare una categoria personalizzata in un identificatore personale personalizzato. Non è inoltre possibile modificare un identificatore personalizzato basato su parole chiave in un identificatore personalizzato basato su espressioni regolari.</block>
+  <block id="df302e54bc4bbb3693588fc462ffbeb1" category="list-text">Identifica il classificatore che vuoi eliminare, quindi seleziona il menu Azione<block ref="2f43b42fd833d1e77420a8dae7419000" prefix=" " category="inline-code"></block> alla fine della sua fila.</block>
+  <block id="7796faadbea75fe3608c9ba1d9f44e44" category="list-text">Selezionare **Modifica logica**.</block>
+  <block id="7453a1c1616bf1348f6f77fc1196c4df" category="list-text">Se stai modificando le parole chiave, aggiungi, elimina o modifica le parole chiave appropriate. Se stai modificando un'espressione regolare, inserisci la nuova espressione regolare e convalidala. Facoltativamente, aggiungi parole chiave di prossimità.</block>
+  <block id="b545932772e1164fe11f0b729a00c13f" category="list-text">Selezionare **Salva** per applicare le modifiche.</block>
+  <block id="0aba856a8621c76c8747404bef41ae34" category="section-title">Elimina un classificatore personalizzato</block>
+  <block id="cbeceb64fbec50832e1e348746cb5499" category="list-text">Identifica il classificatore che vuoi eliminare, quindi seleziona il menu Azione<block ref="2f43b42fd833d1e77420a8dae7419000" prefix=" " category="inline-code"></block> alla fine della sua fila.</block>
+  <block id="5eb8d39406f33bac15e75a46db7ad955" category="list-text">Seleziona **Elimina classificatore**.</block>
+  <block id="cce78dc6ebbec7385a01f2146d6d01c8" category="section-title">Prossimi passi</block>
+  <block id="9d0d45f702bd2dff4853a9920dd0f534" category="list-text"><block ref="9d0d45f702bd2dff4853a9920dd0f534" category="inline-xref-macro-rx"></block></block>
+  <block id="14e54339fc3ec740d220afd6b1ee35ed" category="summary">Personalizza la definizione dei dati obsoleti in NetApp Data Classification in modo che la reportistica corrisponda alle esigenze della tua organizzazione.</block>
+  <block id="b5a4424f99a791a0f222cc5ae7923d73" category="doc">Personalizza la definizione dei dati obsoleti in NetApp Data Classification</block>
+  <block id="9c7dd10cb5831cf239a4bc5dedbb332b" category="paragraph">NetApp Data Classification identifica i dati obsoleti per aiutarti a identificare opportunità di risparmio e rischi di governance. Poiché la definizione di dati obsoleti può variare a seconda del contesto organizzativo, è possibile personalizzare il modo in cui la classificazione dei dati definisce i dati obsoleti.</block>
+  <block id="a19fda4781709630dbfb543922e4d612" category="paragraph">I dati obsoleti possono essere definiti in base alla data dell'ultimo accesso o dell'ultima modifica. Le selezioni di periodo di tempo vanno da 6 mesi a 10 anni fa.</block>
+  <block id="24ece81002d5816b98626cc57ced872d" category="paragraph">Per impostazione predefinita, i dati vengono considerati obsoleti se l'ultima modifica risale a tre anni fa.</block>
+  <block id="c3d635823e7267511f7a0ba59b131053" category="list-title">Definisci dati obsoleti</block>
+  <block id="41c8212e8259ff083fe9cdf357f8a4a6" category="list-text">In Ransomware Resilience, seleziona **Configurazione**.</block>
+  <block id="2d6e84f94b10924500cc07871b84c4bc" category="list-text">Nella pagina Configurazione, scorrere fino all'intestazione **Definizione dati obsoleti**.</block>
+  <block id="de1a225a67ee04f4d574bda78a6c7680" category="list-text">Nel menu a discesa **Proprietà file**, scegli se vuoi definire i dati obsoleti in base alla data dell'*Ultimo accesso* o dell'*Ultima modifica*.</block>
+  <block id="656961d589e5ba765f1a77e91cdda2d0" category="list-text">Selezionare il periodo di tempo per la definizione dei dati obsoleti.</block>
+  <block id="62fd673ebe947916da532bb59f514b32" category="inline-image-macro">Screenshot delle opzioni di definizione dei dati obsoleti</block>
+  <block id="7b144ea2005a4117bc235b1bec83f6c5" category="paragraph"><block ref="7b144ea2005a4117bc235b1bec83f6c5" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="8d5311b8775f8a9ea8945d76095bb698" category="list-text">Seleziona **Salva**.</block>
+  <block id="38fc1b337c0ea26463916fc2913205c1" category="paragraph"><block ref="38fc1b337c0ea26463916fc2913205c1" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7019a39846e9a2c7f7a80eaba91e4a41" category="paragraph"><block ref="7019a39846e9a2c7f7a80eaba91e4a41" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1d593c3f7480ada9580d93cd753c3f93" category="paragraph">Si tratta di un ID generato dal sistema che corrisponde al tuo indirizzo email. Nella pagina *Gestione NSS*, puoi visualizzare la tua email da<block ref="5444f6f0c3983523c8933a1864b2b390" category="inline-image-macro-rx" type="image"></block> menu.</block>
+  <block id="872eaae7deb6035c20f9bfe6deefd03d" category="list-text">Se hai bisogno di aggiornare i token delle credenziali di accesso, è disponibile anche l'opzione *Aggiorna credenziali* in<block ref="5444f6f0c3983523c8933a1864b2b390" category="inline-image-macro-rx" type="image"></block> menu.</block>
+  <block id="4a0d328244ebc11cdcdafe7537ab73a0" category="section-title">14 gennaio 2026</block>
 </blocks>
