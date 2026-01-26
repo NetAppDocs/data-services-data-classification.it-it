@@ -1138,7 +1138,6 @@
   <block id="02559d50684120805e2f264bdea2e4c1" category="inline-link">installare l'agente Console in locale</block>
   <block id="aada29daee1d64ed0fe907043855cb7e" category="inline-image-macro">Due</block>
   <block id="0e2ddd6334405299d1b4c44e894c9e78" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block>Prerequisiti</block>
-  <block id="339dbb3aad86454446f85f0a0a7f7606" category="paragraph">Assicurati che il tuo ambiente soddisfi i prerequisiti.  Ciò include l'accesso a Internet in uscita per l'istanza, la connettività tra l'agente della console e la classificazione dei dati sulla porta 443 e altro ancora.  &lt;&lt; Prerequisiti,Vedi l'elenco completo&gt;&gt;.</block>
   <block id="ca8a2087e5557e317599344687a57391" category="inline-image-macro">Tre</block>
   <block id="891a7c41846b6bf598b53fd8ad9e3f49" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block>Distribuisci la classificazione dei dati</block>
   <block id="9f0ba00e2450c6e218eaa2d60c8c8ee7" category="paragraph">Avviare la procedura guidata di installazione per distribuire l'istanza di Data Classification nel cloud.</block>
@@ -2722,4 +2721,5 @@
   <block id="1d593c3f7480ada9580d93cd753c3f93" category="paragraph">Si tratta di un ID generato dal sistema che corrisponde al tuo indirizzo email. Nella pagina *Gestione NSS*, puoi visualizzare la tua email da<block ref="5444f6f0c3983523c8933a1864b2b390" category="inline-image-macro-rx" type="image"></block> menu.</block>
   <block id="872eaae7deb6035c20f9bfe6deefd03d" category="list-text">Se hai bisogno di aggiornare i token delle credenziali di accesso, è disponibile anche l'opzione *Aggiorna credenziali* in<block ref="5444f6f0c3983523c8933a1864b2b390" category="inline-image-macro-rx" type="image"></block> menu.</block>
   <block id="4a0d328244ebc11cdcdafe7537ab73a0" category="section-title">14 gennaio 2026</block>
+  <block id="0683badfe3a5feea962602495f98c990" category="paragraph">Assicurati che il tuo ambiente possa soddisfare i prerequisiti. Questi includono outbound accesso a Internet per l'istanza, connettività tra l'agente Console e Data Classification sulla porta 443 e altro ancora. <block ref="c513c1ef65e57d26fcca4062f05d2f7b" category="inline-xref-macro-rx"></block>.</block>
 </blocks>

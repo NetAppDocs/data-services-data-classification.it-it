@@ -33,7 +33,7 @@ Puoi anchelink:https://docs.netapp.com/us-en/console-setup-admin/task-install-co
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Due"]Prerequisiti
 [role="quick-margin-para"]
-Assicurati che il tuo ambiente soddisfi i prerequisiti.  Ciò include l'accesso a Internet in uscita per l'istanza, la connettività tra l'agente della console e la classificazione dei dati sulla porta 443 e altro ancora.  << Prerequisiti,Vedi l'elenco completo>>.
+Assicurati che il tuo ambiente possa soddisfare i prerequisiti. Questi includono outbound accesso a Internet per l'istanza, connettività tra l'agente Console e Data Classification sulla porta 443 e altro ancora. <<Prerequisiti,Vedi l'elenco completo>>.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Tre"]Distribuisci la classificazione dei dati
 [role="quick-margin-para"]
