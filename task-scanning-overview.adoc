@@ -249,12 +249,3 @@ La tabella seguente mostra alcune delle differenze:
 | Tipo di directory | SÌ | SÌ 
 |===
 ====
-
-
-== Con quale rapidità la classificazione dei dati esegue la scansione dei dati
-
-La velocità di scansione è influenzata dalla latenza di rete, dalla latenza del disco, dalla larghezza di banda di rete, dalle dimensioni dell'ambiente e dalle dimensioni di distribuzione dei file.
-
-* Quando si eseguono scansioni di sola mappatura, la classificazione dei dati può analizzare tra 100 e 150 TiB di dati al giorno.
-* Quando si eseguono scansioni Map & Classify, Data Classification può analizzare tra 15 e 40 TiB di dati al giorno.
-
