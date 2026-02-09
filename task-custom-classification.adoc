@@ -87,8 +87,7 @@ Immettere il **Percorso directory** per la directory che contiene i dati di form
 image:custom-category-file-summary.png["Screenshot che mostra il riepilogo dei file caricati per la formazione."]
 
 +
-.. Per modificare il percorso del file o ricaricare i file, seleziona **Cambia percorso**, quindi inserisci i dati e carica nuovamente i file.
-
+La classificazione dei dati visualizza il tempo di completamento stimato per l'addestramento dei dati. .. Per modificare il percorso del file o ricaricare i file, selezionare **Cambia percorso** quindi immettere i dati e caricare nuovamente i file.
 
 . Quando sei soddisfatto dei file caricati, seleziona **Avanti**.
 . Inserisci un **Nome classificatore** e una **Descrizione** per identificare la categoria personalizzata nella dashboard.

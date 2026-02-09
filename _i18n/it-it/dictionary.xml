@@ -586,29 +586,10 @@
   <block id="7d72055dc8f09beeb77f4fa9d71f6382" category="paragraph">Le selezioni del filtro sono:</block>
   <block id="a66a4b74b70237f4c0cbce83303f74d2" category="list-text">"Non classificato - Impossibile ripristinare l'ultimo orario di accesso": mostra i file che non sono stati classificati a causa della mancanza di autorizzazioni di scrittura.</block>
   <block id="3856c8caab06eda61e5fe3e07996939a" category="list-text">"Ultimo orario di accesso classificato e aggiornato": mostra i file che sono stati classificati e la classificazione dei dati non è riuscita a reimpostare l'ultimo orario di accesso alla data originale.  Questo filtro è rilevante solo per gli ambienti in cui è stata attivata l'opzione *Scansione quando mancano le autorizzazioni "attributi di scrittura"*.</block>
-  <block id="eacfad7ae9e6aba32bdbef2948b1d628" category="summary">Alcune funzionalità e caratteristiche non sono disponibili con NetApp Data Classification quando si esegue la scansione degli schemi del database.</block>
-  <block id="e6dbbec80e173d3f91cf2b227477d31c" category="doc">Funzionalità di database supportate e non supportate in NetApp Data Classification</block>
-  <block id="ad52d3616ca8f733ae442a642767c792" category="paragraph">Alcune funzionalità e caratteristiche non sono disponibili con NetApp Data Classification quando si esegue la scansione degli schemi del database.  Vedi l'elenco qui sotto.</block>
-  <block id="990222def8053839fd07dd4a3c81e9dc" category="inline-link-macro">come descritto qui</block>
-  <block id="69ff49bbb82445d0bebdf7216cb4bd32" category="paragraph">Puoi aggiungere gli schemi dei tuoi database alla classificazione dei dati per eseguirne la scansione<block ref="32350e7a1f032d301549bb941192cdc0" category="inline-link-macro-rx"></block> .</block>
   <block id="a1fa27779242b4902f7ae3bdd5c6d508" category="cell">Tipo</block>
   <block id="b5a7adde1af5c87d7fd797b6245c2a39" category="cell">Descrizione</block>
-  <block id="a71f76c3256e4c206a4841d8eb0fed35" category="cell">Server SQL</block>
-  <block id="35686630aa3baddc18c904374e570233" category="cell">Amazon RDS</block>
-  <block id="06df33001c1d7187fdd81ea1f5b277aa" category="cell">Azioni</block>
-  <block id="d779bee8155408e2ad4426f42de462a9" category="cell">Crea query salvata</block>
   <block id="900eba0c97923d74bd8d9e6190e07264" category="cell">✓</block>
-  <block id="c101058e7ea21bbbf2a5ac893088e90b" category="cell">Etichetta</block>
-  <block id="773ecc684d98231f8f23773727622446" category="cell">Assegna a</block>
-  <block id="cd6ae20e52d83f601c5fa12b66f0f6d0" category="cell">Nuova scansione</block>
-  <block id="9dd4e461268c8034f5c8564e155c67a6" category="cell">X</block>
-  <block id="f2a6c498fb90ee345d997f888fce3b18" category="cell">Eliminare</block>
-  <block id="6bc362dbf494c61ea117fe3c71ca48a5" category="cell">Mossa</block>
-  <block id="5fb63579fc981698f97d55bfecb213ea" category="cell">Copia</block>
-  <block id="b021df6aac4654c454f46c77646e745f" category="cell">Etichetta</block>
-  <block id="f3f43e30c8c7d78c6ac0173515e57a00" category="cell">Filtri</block>
   <block id="59f5223754fb9750ccf313de64e06099" category="cell">Query salvate</block>
-  <block id="e80df5ee03a17fe47c471debd1cb6a7b" category="cell">Stato dell'analisi della scansione</block>
   <block id="f5cd54184b354671d5c99cf48104cc07" category="cell">Tipo di sistema</block>
   <block id="a45da96d0bf6575970f2d27af22be28a" category="cell">Sistema</block>
   <block id="8e1608d6951087912c426bcb53d12280" category="cell">Deposito di archiviazione</block>
@@ -621,8 +602,6 @@
   <block id="eed7cc7f64269eb19a98b58ae0d79b6f" category="cell">Tempo scoperto</block>
   <block id="189f63f277cd73395561651753563065" category="cell">Etichette</block>
   <block id="3e9f09095e53d4aa46d296b9c32b7be4" category="cell">Evento di analisi della scansione</block>
-  <block id="7c2647ff45382a42029e7a109ef1b4c5" category="cell">Percorso file/directory</block>
-  <block id="c24fd35c406c9694e3bee288f8825b5c" category="cell">Filtri dei permessi</block>
   <block id="26ec7ebe8b7297e79affc05b3e89352b" category="cell">Numero di identificatori</block>
   <block id="c24fc9c3402e7cb47c72d71cf6d864be" category="cell">Tipo di directory</block>
   <block id="2fb58660fd44cbdef76a54519a9a9737" category="cell">Ora di creazione</block>
@@ -2044,10 +2023,6 @@
   <block id="fb8a04662bc42d13ae8a2d1bddbc05b3" category="cell">Lo stato è sempre "Approfondimenti limitati"</block>
   <block id="29344a3c58cf84dcf0144a3627f021d1" category="cell">Hash del file</block>
   <block id="4df26807127a67f2d98166e4384eea07" category="cell">Autorizzazioni utente/gruppo</block>
-  <block id="ba3e4178a9b73e03e42aae6548738221" category="section-title">Con quale rapidità la classificazione dei dati esegue la scansione dei dati</block>
-  <block id="9ece336caf3d2b843dafc984e27b323e" category="paragraph">La velocità di scansione è influenzata dalla latenza di rete, dalla latenza del disco, dalla larghezza di banda di rete, dalle dimensioni dell'ambiente e dalle dimensioni di distribuzione dei file.</block>
-  <block id="fd09538b9e640fbf352f46c0fa44b064" category="list-text">Quando si eseguono scansioni di sola mappatura, la classificazione dei dati può analizzare tra 100 e 150 TiB di dati al giorno.</block>
-  <block id="7df1c51c08a7ab21455acfcdd0b1cfe4" category="list-text">Quando si eseguono scansioni Map &amp; Classify, Data Classification può analizzare tra 15 e 40 TiB di dati al giorno.</block>
   <block id="fa9ebe7c0c0614d0f74c794a58db2fad" category="summary">Completare alcuni passaggi per avviare la scansione dei dati all'interno StorageGRID direttamente con NetApp Data Classification.</block>
   <block id="6638c5bc122a9b4e0222774a95a04fd5" category="doc">Scansiona i dati StorageGRID con NetApp Data Classification</block>
   <block id="dc3fd4fe9b1bb66db60a59be3884a90c" category="section-title">Esaminare i requisiti di StorageGRID</block>
@@ -2688,7 +2663,6 @@
   <block id="dc6d46e682032130076140b1c6b9f422" category="list-text">Selezionare **Carica file** per la classificazione dei dati per eseguire un controllo dei file. È possibile rivedere il riepilogo dei file, che elenca il nome del file, la dimensione, il tipo e le note se il file è stato ritenuto accettabile per la formazione.</block>
   <block id="60d2aee5a316a80a131d402c7cfaa44a" category="inline-image-macro">Screenshot che mostra il riepilogo dei file caricati per la formazione.</block>
   <block id="6ca27c96af59179d21a409d88cb4139c" category="paragraph"><block ref="6ca27c96af59179d21a409d88cb4139c" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="839860ecb593c72a6c18f98bd45565b0" category="list-text">Per modificare il percorso del file o ricaricare i file, seleziona **Cambia percorso**, quindi inserisci i dati e carica nuovamente i file.</block>
   <block id="78edc8efdc4ac520c8f06ac58e069eac" category="list-text">Quando sei soddisfatto dei file caricati, seleziona **Avanti**.</block>
   <block id="baacdea09c8bef5361744801ca025b67" category="list-text">Selezionare **Salva** per creare la categoria personalizzata.</block>
   <block id="d2edcb6e893e23e45a9b667d3d7f0c9e" category="paragraph">Dopo aver creato una categoria personalizzata, i suoi risultati vengono acquisiti nella successiva scansione pianificata. Per ottenere risultati più rapidamente, avviare manualmente la scansione.</block>
@@ -2722,4 +2696,17 @@
   <block id="872eaae7deb6035c20f9bfe6deefd03d" category="list-text">Se hai bisogno di aggiornare i token delle credenziali di accesso, è disponibile anche l'opzione *Aggiorna credenziali* in<block ref="5444f6f0c3983523c8933a1864b2b390" category="inline-image-macro-rx" type="image"></block> menu.</block>
   <block id="4a0d328244ebc11cdcdafe7537ab73a0" category="section-title">14 gennaio 2026</block>
   <block id="0683badfe3a5feea962602495f98c990" category="paragraph">Assicurati che il tuo ambiente possa soddisfare i prerequisiti. Questi includono outbound accesso a Internet per l'istanza, connettività tra l'agente Console e Data Classification sulla porta 443 e altro ancora. <block ref="c513c1ef65e57d26fcca4062f05d2f7b" category="inline-xref-macro-rx"></block>.</block>
+  <block id="9f8adb7ebffc39f306c40ef2d6a377b1" category="paragraph-title">Attiva la classificazione dei dati con Amazon FSxN per ONTAP direttamente dal canvas della NetApp Console</block>
+  <block id="880dc0b44905babcfa6685da86ba8117" category="paragraph">Ora puoi abilitare Amazon FSxN per i sistemi ONTAP direttamente dal canvas della NetApp Console, consentendoti di avviare più rapidamente la Data Classification per i tuoi sistemi FSxN.</block>
+  <block id="dd8a2d3b3415c2980790a672dff3757f" category="inline-link-macro">Scansiona i volumi Amazon FSxN per ONTAP</block>
+  <block id="db8b5cff328cee1f4914855b931bae02" category="paragraph">Per ulteriori informazioni sull'utilizzo della classificazione dei dati con Amazon FSxN per ONTAP, vedere <block ref="48a47292b9e31aff1079bbdaa3cd4739" category="inline-link-macro-rx"></block>.</block>
+  <block id="3ee3e594e3bac0471e4cda35acc3588a" category="paragraph-title">Limite di esportazione aumentato per l'investigazione delle directory</block>
+  <block id="45f99b8f539f37cc0379b65d3ddafbbf" category="paragraph">Quando si esporta un report di indagine sulle directory dalla dashboard di indagine, ora è possibile includere 10.000 righe. Questo aumento rispetto al precedente limite di 5.000 righe supporta indagini su larga scala relative alla governance dei dati e alla conformità.</block>
+  <block id="e733aab9ce2fc5320fbdd563cba5e12b" category="paragraph">Per ulteriori informazioni, consultare <block ref="d8b3109a5818cc0f43ade4650ffede11" category="inline-link-macro-rx"></block>.</block>
+  <block id="80f498ef50d7bad5da9acf441b502c0f" category="paragraph-title">Limite aumentato per copia e spostamento</block>
+  <block id="401f234e1c84943381dd951c39f2ce3c" category="paragraph">Quando si copiano o si spostano file, ora è possibile copiare o spostare file fino a 250 MB, un aumento rispetto al limite precedente di 50 MB.</block>
+  <block id="244d30ed7d7da13b1f80f1fa008af700" category="paragraph-title">Visualizzazione migliorata per schermi a bassa risoluzione</block>
+  <block id="80bb2719fe9feeb03d5cc88bd71e8a81" category="paragraph">Data Classification ha migliorato le prestazioni di visualizzazione sugli schermi a bassa risoluzione, migliorando l'esperienza utente.</block>
+  <block id="ce4f285e19831c82557359b34d7010e8" category="paragraph">La classificazione dei dati visualizza il tempo di completamento stimato per l'addestramento dei dati. .. Per modificare il percorso del file o ricaricare i file, selezionare **Cambia percorso** quindi immettere i dati e caricare nuovamente i file.</block>
+  <block id="c9d872b23d54864ab58551a55106a3db" category="section-title">09 febbraio 2026</block>
 </blocks>

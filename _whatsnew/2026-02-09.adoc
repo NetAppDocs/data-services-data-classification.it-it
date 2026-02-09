@@ -1,0 +1,27 @@
+= Versione 1.50
+:allow-uri-read: 
+
+
+
+
+=== Versione 1.50
+
+Questa versione di Data Classification include correzioni di bug e i seguenti aggiornamenti:
+
+.Attiva la classificazione dei dati con Amazon FSxN per ONTAP direttamente dal canvas della NetApp Console
+Ora puoi abilitare Amazon FSxN per i sistemi ONTAP direttamente dal canvas della NetApp Console, consentendoti di avviare più rapidamente la Data Classification per i tuoi sistemi FSxN.
+
+Per ulteriori informazioni sull'utilizzo della classificazione dei dati con Amazon FSxN per ONTAP, vedere link:https://docs.netapp.com/us-en/data-services-data-classification/task-scanning-fsx.html["Scansiona i volumi Amazon FSxN per ONTAP"^].
+
+.Limite di esportazione aumentato per l'investigazione delle directory
+Quando si esporta un report di indagine sulle directory dalla dashboard di indagine, ora è possibile includere 10.000 righe. Questo aumento rispetto al precedente limite di 5.000 righe supporta indagini su larga scala relative alla governance dei dati e alla conformità.
+
+Per ulteriori informazioni, consultare link:https://docs.netapp.com/us-en/data-services-data-classification/task-investigate-data.html["Indagare i dati"^].
+
+.Limite aumentato per copia e spostamento
+Quando si copiano o si spostano file, ora è possibile copiare o spostare file fino a 250 MB, un aumento rispetto al limite precedente di 50 MB.
+
+Per ulteriori informazioni, consultare link:https://docs.netapp.com/us-en/data-services-data-classification/task-investigate-data.html["Indagare i dati"^].
+
+.Visualizzazione migliorata per schermi a bassa risoluzione
+Data Classification ha migliorato le prestazioni di visualizzazione sugli schermi a bassa risoluzione, migliorando l'esperienza utente.
