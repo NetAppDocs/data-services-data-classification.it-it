@@ -2709,4 +2709,5 @@
   <block id="80bb2719fe9feeb03d5cc88bd71e8a81" category="paragraph">Data Classification ha migliorato le prestazioni di visualizzazione sugli schermi a bassa risoluzione, migliorando l'esperienza utente.</block>
   <block id="ce4f285e19831c82557359b34d7010e8" category="paragraph">La classificazione dei dati visualizza il tempo di completamento stimato per l'addestramento dei dati. .. Per modificare il percorso del file o ricaricare i file, selezionare **Cambia percorso** quindi immettere i dati e caricare nuovamente i file.</block>
   <block id="c9d872b23d54864ab58551a55106a3db" category="section-title">09 febbraio 2026</block>
+  <block id="0cd5c5ab4d8a458ece2a760f674c681e" category="doc">Versione 1.51</block>
 </blocks>
