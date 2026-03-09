@@ -2796,4 +2796,6 @@
   <block id="9478b45dce4de73855a8e0b13720f895" category="paragraph">Data Classification ora supporta configurazioni proxy trasparenti, consentendo una distribuzione più fluida in ambienti di rete con proxy o con restrizioni.</block>
   <block id="89f7afc8a9b178d4b4346f224d8bffc7" category="paragraph">Per ulteriori informazioni sulla distribuzione in ambienti con restrizioni, vedere <block ref="6804ab8e5e77245509e3dc550ef5b67d" category="inline-link-macro-rx"></block>.</block>
   <block id="df4bdd45174b09881add6730bdfaf045" category="section-title">09 marzo 2026</block>
+  <block id="c929bf2a4cebf50fb64dab464b664919" category="inline-image-macro">Un diagramma che mostra la posizione delle origini dati che puoi analizzare quando utilizzi una singola istanza di Data Classification distribuita in locale senza accesso a internet.</block>
+  <block id="416689a150e5347df135e4852392a307" category="paragraph"><block ref="416689a150e5347df135e4852392a307" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>

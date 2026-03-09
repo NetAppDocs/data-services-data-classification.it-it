@@ -266,6 +266,8 @@ I criteri di esportazione del volume NFS devono consentire l'accesso dall'istanz
 
 Per le configurazioni tipiche, installerai il software su un singolo sistema host.
 
+image:diagram_deploy_onprem_single_host_no_internet.png["Un diagramma che mostra la posizione delle origini dati che puoi analizzare quando utilizzi una singola istanza di Data Classification distribuita in locale senza accesso a internet."]
+
 Seguire questi passaggi quando si installa il software di classificazione dei dati su un singolo host locale in un ambiente offline.
 
 Si noti che tutte le attività di installazione vengono registrate durante l'installazione di Data Classification.  Se si verificano problemi durante l'installazione, è possibile visualizzare il contenuto del registro di controllo dell'installazione.  È scritto a `/opt/netapp/install_logs/` .
