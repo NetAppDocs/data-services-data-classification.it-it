@@ -18,7 +18,7 @@ Quando si esporta un report di indagine sulle directory dalla dashboard di indag
 
 Per ulteriori informazioni, consultare link:https://docs.netapp.com/us-en/data-services-data-classification/task-investigate-data.html["Indagare i dati"^].
 
-.Limite aumentato per copia e spostamento
+.Limiti aumentati per copia e spostamento
 Quando si copiano o si spostano file, ora è possibile copiare o spostare file fino a 250 MB, un aumento rispetto al limite precedente di 50 MB.
 
 Per ulteriori informazioni, consultare link:https://docs.netapp.com/us-en/data-services-data-classification/task-investigate-data.html["Indagare i dati"^].
