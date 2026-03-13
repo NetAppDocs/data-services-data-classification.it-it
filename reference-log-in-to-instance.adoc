@@ -4,7 +4,7 @@ permalink: reference-log-in-to-instance.html
 keywords: log in, data sense, classification 
 summary: A volte potrebbe essere necessario accedere al sistema NetApp Data Classification per poter accedere ai file di registro o modificare i file di configurazione. 
 ---
-= Accedi al sistema NetApp Data Classification
+= Accedi a NetApp Data Classification
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

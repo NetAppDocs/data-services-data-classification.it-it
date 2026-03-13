@@ -14,7 +14,7 @@ Per monitorare le risorse del sistema, vedere link:https://docs.netapp.com/us-en
 .Limite aumentato per copia e spostamento
 Le funzioni di copia e spostamento sono ora supportate per le destinazioni CIFS. Il limite di dimensione per file per entrambe le azioni è aumentato a 1 GB dal precedente limite di 50 MB. I limiti operativi per entrambe le azioni sono aumentati a 1 TB o 5 milioni di file.
 
-Per ulteriori informazioni, consultare link:https://docs.netapp.com/us-en/data-services-data-classification/task-investigate-data.html["Indagare i dati"^].
+Per ulteriori informazioni, consulta link:https://docs.netapp.com/us-en/data-services-data-classification/task-copy-move.html["Copia, sposta ed elimina dati"^].
 
 .Autorizzazioni di configurazione dell'integrazione di Active Directory
 Le modifiche alle impostazioni di integrazione di Active Directory (AD) in Data Classification sono ora riservate agli amministratori. I visualizzatori non hanno più la possibilità di modificare le impostazioni di AD.

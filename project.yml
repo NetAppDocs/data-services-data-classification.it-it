@@ -38,7 +38,7 @@ sidebar:
         url: "/task-deploy-compliance-onprem.html"
       - title: Installa su un host Linux in locale senza accesso a Internet
         url: "/task-deploy-compliance-dark-site.html"
-      - title: Verifica che il tuo host Linux sia pronto per installare Data Classification
+      - title: Verifica la prontezza del tuo host Linux
         url: "/task-test-linux-system.html"
     - title: Attiva la scansione sulle tue fonti dati
       entries:
@@ -68,18 +68,18 @@ sidebar:
       url: "/task-controlling-private-data.html"
     - title: Categorie di dati privati
       url: "/reference-private-data-categories.html"
-    - title: Crea una scansione personalizzata
-      url: "/task-custom-classification.html"
     - title: Indagare i dati
       url: "/task-investigate-data.html"
+    - title: Copia, sposta ed elimina dati
+      url: "/task-copy-move.html"
+    - title: Crea una classificazione personalizzata
+      url: "/task-custom-classification.html"
     - title: Gestisci le query salvate
       url: "/task-using-policies.html"
     - title: Modificare le impostazioni di scansione
       url: "/task-managing-repo-scanning.html"
     - title: Generare report di conformità
       url: "/task-generating-compliance-reports.html"
-    - title: Monitorare lo stato di salute del sistema
-      url: "/task-health-monitor.html"
   - title: Gestire la classificazione dei dati
     entries:
     - title: Escludere le directory dalla scansione
@@ -88,7 +88,9 @@ sidebar:
       url: "/task-add-group-id-as-open.html"
     - title: Definisci dati obsoleti
       url: "/task-stale-data.html"
-    - title: Rimuovere le origini dati dalla classificazione dei dati
+    - title: Monitorare lo stato di salute del sistema
+      url: "/task-health-monitor.html"
+    - title: Rimuovi le fonti di dati
       url: "/task-managing-compliance.html"
     - title: Disinstallare la classificazione dei dati
       url: "/task-uninstall.html"

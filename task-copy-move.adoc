@@ -1,0 +1,83 @@
+---
+sidebar: sidebar 
+permalink: task-copy-move.html 
+keywords: investigation, filter, delete, copy, move, flexclone, sync 
+summary: Dopo aver filtrato i dati nella dashboard di investigation, puoi copiare, spostare ed eliminare dati non strutturati. 
+---
+= Copia, sposta ed elimina file utilizzando NetApp Data Classification
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Oltre a fornire informazioni sulla governance e sulle opportunità di risparmio, NetApp Data Classification consente anche di eseguire azioni sui file dalla sua dashboard di indagine. Dopo aver filtrato i dati nella dashboard di indagine, è possibile copiare, spostare ed eliminare dati non strutturati. L'esecuzione di queste azioni può migliorare la conformità, ad esempio spostando i file in una posizione più sicura, oppure creare opportunità di risparmio eliminando file obsoleti o duplicati.
+
+
+
+== Copia file
+
+Data Classification supporta la copia di file fino a 1 GB di dimensione. Puoi copiare un totale di 1 TB di dati o 5 milioni di file, a seconda di quale limite venga raggiunto per primo. Puoi copiare file verso una destinazione CIFS o NFS. Non c'è alcun impatto sul file di origine quando lo copi.
+
+.Passi
+. Nella dashboard Investigation, seleziona i file che desideri copiare.
+. Sopra l'elenco dei file, seleziona **Copy**.
++
+image:screenshot-copy-move-delete.png["Screenshot delle azioni nella pagina Investigation"]
+
+. Seleziona il protocollo della destinazione per le copie: **NFS** o **CIFS**.
+. Se hai selezionato NFS, inserisci il percorso di destinazione utilizzando le barre oblique, ad esempio  `hostname:/path/to/destination`.
++
+Se hai selezionato CIFS, inserisci il percorso di destinazione utilizzando le barre rovesciate, ad esempio  `\\server\share\path`. Inserisci anche le credenziali **Username** e **Password** per la CIFS share.
+
++
+image:screenshot-copy-nfs.png["Screenshot della funzione di copia per file NFS"]
+
+. Seleziona **Submit**.
+
+
+
+
+== Sposta file
+
+Data Classification supporta lo spostamento di file fino a 1 GB di dimensione. È possibile spostare un totale di 1 TB di dati o 5 milioni di file, a seconda di quale limite venga raggiunto per primo. È possibile spostare i file verso una destinazione CIFS o NFS.
+
+.Passi
+. Nella dashboard Investigation, seleziona i file che desideri spostare.
++
+image:screenshot-copy-move-delete.png["Screenshot delle azioni nella pagina Investigation"]
+
+. Sopra l'elenco dei file, seleziona **Sposta**.
+. Seleziona il protocollo della destinazione: **NFS** o **CIFS**.
+. Se hai selezionato NFS, inserisci il percorso di destinazione utilizzando le barre oblique, ad esempio  `hostname:/path/to/destination`.
++
+Se hai selezionato CIFS, inserisci il percorso di destinazione utilizzando le barre rovesciate, ad esempio  `\\server\share\path`. Inserisci anche le credenziali **Username** e **Password** per la CIFS share.
+
+. Facoltativamente, seleziona **Leave breadcrumb** per lasciare un file breadcrumb nel volume di origine che spiega dove e perché il file è stato spostato.
++
+.. Se hai selezionato **Leave breadcrumb**, inserisci un testo descrittivo che indichi il motivo dello spostamento del file e, se necessario, la nuova posizione.
++
+image:screenshot-move-nfs.png["Screenshot della funzione di spostamento per file NFS"]
+
+
+
+. Seleziona **Sposta elementi**.
+
+
+
+
+== Elimina file
+
+Quando si filtrano i dati nella dashboard di Investigation per individuare opportunità di risparmio di spazio e costi, è possibile eliminare quei file. L'eliminazione dei file è supportata solo per i file non strutturati.
+
+.Passi
+. Nella dashboard Investigation, seleziona i file che desideri eliminare.
+. Nella finestra di dialogo di conferma, inserire "permanently delete".
+. Seleziona **Elimina file** per confermare l'operazione.
++
+image:screenshot-delete.png["Screenshot della finestra di dialogo di eliminazione"]
+
+

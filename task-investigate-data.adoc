@@ -14,7 +14,7 @@ summary: Puoi analizzare i dati della tua organizzazione visualizzandone i detta
 
 
 [role="lead"]
-La dashboard di Data Investigation visualizza informazioni dettagliate sui dati a livello di file e directory, consentendo di ordinare e filtrare i risultati.  La pagina Analisi dati fornisce approfondimenti sui metadati e sulle autorizzazioni di file e directory, nonché sull'identificazione dei file duplicati.  Grazie alle informazioni a livello di file, directory e database, puoi adottare misure per migliorare la conformità della tua organizzazione e risparmiare spazio di archiviazione.  La pagina di analisi dei dati supporta anche lo spostamento, la copia e l'eliminazione dei file.
+La dashboard Data Investigation visualizza informazioni dettagliate a livello di file e directory sui dati, consentendo di ordinare e filtrare i risultati. La pagina Data Investigation presenta informazioni dettagliate sui metadati e le autorizzazioni di file e directory, oltre a identificare i file duplicati. Grazie alle informazioni dettagliate a livello di file, directory e database, è possibile intraprendere azioni per migliorare la conformità dell'organizzazione e risparmiare spazio di storage. La pagina Data Investigation supporta anche link:task-copy-move.html["spostamento, copia ed eliminazione di file"].
 
 
 NOTE: Per ottenere informazioni dalla pagina Indagine, è necessario eseguire una scansione completa della classificazione sulle origini dati.  Le origini dati sottoposte a scansione solo di mappatura non mostrano dettagli a livello di file.
@@ -191,6 +191,9 @@ Utilizza il seguente filtro per visualizzare i file duplicati nel tuo archivio.
 
 | Duplicati | Selezionare se il file è duplicato nei repository. 
 |===
+
+TIP: Dopo aver filtrato i dati, puoi link:task-copy-move.html["copia, sposta ed elimina file non strutturati"] per migliorare la conformità o ottimizzare lo storage.
+
 
 
 == Visualizza i metadati del file
@@ -392,3 +395,10 @@ Dopo aver creato la ricerca o la policy, puoi visualizzarla nella scheda **Query
 
 
 TIP: Potrebbero essere necessari fino a 15 minuti prima che i risultati vengano visualizzati nella pagina Query salvate.
+
+
+
+== Prossimi passi
+
+* link:task-copy-move.html["Copia, sposta ed elimina dati dalla dashboard dell'indagine"]
+
