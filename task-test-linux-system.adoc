@@ -115,7 +115,7 @@ Il software di classificazione dei dati deve essere eseguito su un host che sodd
 
 ** I seguenti sistemi operativi richiedono l'utilizzo del motore contenitore Podman e la versione 1.30 o successiva di Data Classification:
 +
-*** Red Hat Enterprise Linux versione 8.8, 8.10, 9.0, 9.1, 9.2, 9.3, 9.4, 9.5 e 9.6.
+*** Red Hat Enterprise Linux version 8.8, 8.10, 9.0, 9.1, 9.2, 9.3, 9.4, 9.5, 9.6 e 9.7.
 
 
 ** Le estensioni vettoriali avanzate (AVX2) devono essere abilitate sul sistema host.
