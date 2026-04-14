@@ -4,7 +4,7 @@ permalink: task-generating-compliance-reports.html
 keywords: report, privacy, risk, privacy risk assessment, compliance status, severity, compliance, privacy risk, data subjects, privacy, credit cards, pci dss, hipaa, csv file, json file, dsar 
 summary: NetApp Data Classification fornisce report che puoi utilizzare per comprendere meglio lo stato del programma di privacy dei dati della tua organizzazione. 
 ---
-= Visualizza i report sulla conformità NetApp Data Classification
+= Visualizza i report di conformità in NetApp Data Classification
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

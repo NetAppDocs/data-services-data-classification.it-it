@@ -4,7 +4,7 @@ permalink: task-controlling-private-data.html
 keywords: personal files, personal data, sensitive personal files, sensitive personal data, health data, ethnic origin, political opinions, gdpr, email address, credit card, ip address, iban, national ID, identifier, password, sex, criminal, compliance, privacy, filter data, permissions, csv file, json file, highlights 
 summary: 'Ottieni il controllo dei tuoi dati privati visualizzando i dettagli sui dati personali (PII) e sui dati personali sensibili (SPII) nella tua organizzazione.  Puoi anche ottenere visibilità esaminando le categorie e i tipi di file che Data Classification ha trovato nei tuoi dati.' 
 ---
-= Visualizza i dettagli di conformità sui dati privati ​​archiviati nella tua organizzazione con NetApp Data Classification
+= Visualizza i dettagli di conformità relativi ai dati privati aziendali con NetApp Data Classification
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
