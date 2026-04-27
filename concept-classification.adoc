@@ -74,9 +74,9 @@ La classificazione dei dati può analizzare e scansionare dati strutturati e non
 * Gestione Amazon FSx for NetApp ONTAP
 * Azure NetApp Files
 * Cloud Volumes ONTAP (distribuito in AWS, Azure o GCP)
+* Google Cloud NetApp Volumes
 * Cluster ONTAP on-premise
 * StorageGRID
-* Google Cloud NetApp Volumes
 
 
 *Fonti dei dati*
@@ -132,7 +132,7 @@ image:diagram_cloud_compliance_instance.png["Un diagramma che mostra un'istanza 
 
 Si noti quanto segue riguardo all'istanza predefinita:
 
-* In AWS, la classificazione dei dati viene eseguita su un https://aws.amazon.com/ec2/instance-types/m6i/["istanza m6i.4xlarge"^] con un disco GP2 da 500 GiB.  L'immagine del sistema operativo è Amazon Linux 2.  Se distribuita in AWS, puoi scegliere un'istanza di dimensioni inferiori se stai analizzando una piccola quantità di dati.
+* In AWS, Data Classification viene eseguito su un https://aws.amazon.com/ec2/instance-types/m6i/["istanza m6i.4xlarge"^] con un disco GP2 da 500 GiB. L'immagine del sistema operativo è Amazon Linux 2.
 * In Azure, la classificazione dei dati viene eseguita su unlink:https://docs.microsoft.com/en-us/azure/virtual-machines/dv3-dsv3-series#dsv3-series["Standard_D16s_v3 VM"^] con un disco da 500 GiB.  L'immagine del sistema operativo è Ubuntu 22.04.
 * In GCP, la classificazione dei dati viene eseguita su unlink:https://cloud.google.com/compute/docs/general-purpose-machines#n2_machines["VM n2-standard-16"^] con un disco persistente Standard da 500 GiB.  L'immagine del sistema operativo è Ubuntu 22.04.
 * Nelle regioni in cui l'istanza predefinita non è disponibile, Data Classification viene eseguito su un'istanza alternativa. link:reference-instance-types.html["Vedi i tipi di istanza alternativi"] .
@@ -159,8 +159,6 @@ Esaminare le seguenti specifiche per i tipi di istanza:
 
 | Grande (predefinito) | 16 CPU, 64 GB di RAM, SSD da 500 GiB | Può scansionare fino a 250 milioni di file. 
 |===
-Quando si distribuisce Data Classification in Azure o GCP, inviare un'e-mail a ng-contact-data-sense@netapp.com per ricevere assistenza se si desidera utilizzare un tipo di istanza più piccolo.
-
 
 
 == Come funziona la scansione della classificazione dei dati

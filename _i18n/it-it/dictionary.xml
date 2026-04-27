@@ -350,7 +350,6 @@
   <block id="e3039a8cdad0a73851473ddb07dde2db" category="paragraph"><block ref="e3039a8cdad0a73851473ddb07dde2db" category="inline-image-macro-rx" type="image"></block></block>
   <block id="0fcbb838b28fe6620124c2e3523d9aec" category="paragraph">Si noti quanto segue riguardo all'istanza predefinita:</block>
   <block id="51289cc570c497db655052573fd52ce4" category="inline-link">istanza m6i.4xlarge</block>
-  <block id="cd58258f239a8600b9d2702d8474b7ba" category="list-text">In AWS, la classificazione dei dati viene eseguita su un<block ref="8b5561a11e73285eb1f0d9f437aa0677" category="inline-link-rx"></block> con un disco GP2 da 500 GiB.  L'immagine del sistema operativo è Amazon Linux 2.  Se distribuita in AWS, puoi scegliere un'istanza di dimensioni inferiori se stai analizzando una piccola quantità di dati.</block>
   <block id="d4167e5918d44a2511d9c29b74d9811f" category="inline-link-macro">Standard_D16s_v3 VM</block>
   <block id="ba9e8ffa00e4ec6e8fd6ad39395b0771" category="list-text">In Azure, la classificazione dei dati viene eseguita su un<block ref="258fa0e906df18ccf945022280cc0721" category="inline-link-macro-rx"></block> con un disco da 500 GiB.  L'immagine del sistema operativo è Ubuntu 22.04.</block>
   <block id="f62345014eb3b94916730d5fa4eb623f" category="inline-link-macro">VM n2-standard-16</block>
@@ -371,7 +370,6 @@
   <block id="1a7c4f8acb1e42cdd7c2f34894fc2a2a" category="cell">Grande (predefinito)</block>
   <block id="f1fec8e9e1c0fb72e2b217fcc55b8ae5" category="cell">16 CPU, 64 GB di RAM, SSD da 500 GiB</block>
   <block id="ea1a46649fa6479f8f6b7adefbb4450a" category="cell">Può scansionare fino a 250 milioni di file.</block>
-  <block id="804b3eb7f21fe46f64e94599ec406b5d" category="paragraph">Quando si distribuisce Data Classification in Azure o GCP, inviare un'e-mail a ng-contact-data-sense@netapp.com per ricevere assistenza se si desidera utilizzare un tipo di istanza più piccolo.</block>
   <block id="210aaa57065cbe07de752e162872e005" category="section-title">Come funziona la scansione della classificazione dei dati</block>
   <block id="86e78fffe44861a160c4cf918a51d508" category="paragraph">Ad alto livello, la scansione della classificazione dei dati funziona in questo modo:</block>
   <block id="68b79e824b76880b5977d460b5a6cf96" category="list-text">Distribuisci un'istanza di Data Classification nella Console.</block>
@@ -516,7 +514,6 @@
   <block id="dde19a0f40a28ec93e840744c9acff6b" category="section-title">Quale tipo di istanza o VM è richiesta per la classificazione dei dati?</block>
   <block id="21470a3e6a3feaf105174d0e14c5f537" category="inline-link-macro">distribuito nel cloud</block>
   <block id="3cf31c18e1b66993cf63511a5ea327f3" category="paragraph">Quando<block ref="63b25124667f9a48140e6efc7dc1fd70" category="inline-link-macro-rx"></block> :</block>
-  <block id="7c27816a1e01fb6a59e4cfb7c34a2547" category="list-text">In AWS, Data Classification viene eseguito su un'istanza m6i.4xlarge con un disco GP2 da 500 GiB.  Durante la distribuzione è possibile selezionare un tipo di istanza più piccolo.</block>
   <block id="41009856b6a3ebfc92ee460b5d8cd587" category="list-text">In Azure, la classificazione dei dati viene eseguita su una macchina virtuale Standard_D16s_v3 con un disco da 500 GiB.</block>
   <block id="934ed7b265f7f163e5eda8f780809fa6" category="list-text">In GCP, la classificazione dei dati viene eseguita su una VM n2-standard-16 con un disco persistente standard da 500 GiB.</block>
   <block id="cac4c6c3e3aab4c73ea23379444f4211" category="section-title">Posso distribuire la classificazione dei dati sul mio host?</block>
@@ -605,8 +602,6 @@
   <block id="b30d2f4e379d4d1d15b42fb01207e52c" category="summary">Il software di classificazione dei dati deve essere eseguito su un host che soddisfi specifici requisiti del sistema operativo, requisiti di RAM, requisiti software e così via.  Quando si distribuisce la classificazione dei dati nel cloud, si consiglia di utilizzare un sistema con caratteristiche "grandi" per una funzionalità completa.</block>
   <block id="abf286473c09b28744e63e974cf9988b" category="doc">Tipi di istanza NetApp Data Classification supportati</block>
   <block id="6daeedd88ba8cb7688391f66dd283257" category="paragraph">Il software NetApp Data Classification deve essere eseguito su un host che soddisfi specifici requisiti del sistema operativo, requisiti RAM, requisiti software e così via.  Quando si distribuisce la classificazione dei dati nel cloud, si consiglia di utilizzare un sistema con caratteristiche "large" per una funzionalità completa.</block>
-  <block id="e3d9501cf5bf97e937eec87d87b8575b" category="inline-link-macro">Scopri di più su queste limitazioni</block>
-  <block id="a5ed42633f6328596e09b85b7f23e651" category="paragraph">È possibile implementare Data Classification su un sistema con meno CPU e meno RAM, ma ci sono alcune limitazioni quando si utilizzano questi sistemi meno potenti. <block ref="6a2df54a359e7ff07fa6fb48e3814fc6" category="inline-link-macro-rx"></block> .</block>
   <block id="31bcdb40fe40bdf5535d17bbb6b1231c" category="paragraph">Nelle tabelle seguenti, se il sistema contrassegnato come "predefinito" non è disponibile nella regione in cui si sta installando Data Classification, verrà distribuito il sistema successivo nella tabella.</block>
   <block id="c050baa4e510e3ce3e02b5da38a1c517" category="section-title">Tipi di istanza AWS</block>
   <block id="1e4f0991fe8c17eeb30a08a567b6faeb" category="cell">Tipo di istanza</block>
@@ -616,14 +611,6 @@
   <block id="3a69b34ce86dacb205936a8094f6c743" category="cell">Grande</block>
   <block id="eec0d212c1750829ae380457eae9d24d" category="inline-link">m6i.4xlarge</block>
   <block id="a0663cb1844f1b3415ad47f3e1336565" category="cell"><block ref="4a1901a74409198712b3543e7da252d5" category="inline-link-rx"></block>(predefinito) m6a.4xlarge m5a.4xlarge m5.4xlarge m4.4xlarge</block>
-  <block id="87f8a6ab85c9ced3702b4ea641ad4bb5" category="cell">Medio</block>
-  <block id="ae0bb774c8ff14b3dcc932f311aaacb7" category="cell">8 CPU, 32 GB di RAM, SSD da 200 GiB</block>
-  <block id="74b1ff02462cd25206c932a6e717f618" category="inline-link">m6i.2xlarge</block>
-  <block id="c6f3d0ce2f348118098491bd4e596968" category="cell"><block ref="d3d71aa1fb316d99a8a4d2c1c360ebef" category="inline-link-rx"></block>(predefinito) m6a.2xlarge m5a.2xlarge m5.2xlarge m4.2xlarge</block>
-  <block id="2660064e68655415da2628c2ae2f7592" category="cell">Piccolo</block>
-  <block id="4d4d090716714e5940e9220554e56673" category="cell">8 CPU, 16 GB di RAM, SSD da 100 GiB</block>
-  <block id="31f5c89df71ec769af1bb972a418e35d" category="inline-link">c6a.2xlarge</block>
-  <block id="fdf22b4a55e52f224df3e72ab9eb5ca8" category="cell"><block ref="fa55dc5c8a0289d3eee586f1fb616e44" category="inline-link-rx"></block>(predefinito) c5a.2xlarge c5.2xlarge c4.2xlarge</block>
   <block id="254c926efe222a9cced66b6753a3b70c" category="section-title">Tipi di istanza di Azure</block>
   <block id="7c6b159592aa05d7d8934685f5b0c4c8" category="cell">32 CPU, 128 GB di RAM, disco del sistema operativo (2.048 GiB, velocità di trasmissione minima 250 MB/s) e disco dati (SSD da 1 TiB, velocità di trasmissione minima 750 MB/s)</block>
   <block id="02201d429f7390acabd29e5c0c6e22e2" category="inline-link">Standard_D32_v3</block>
@@ -2846,4 +2833,6 @@
   <block id="f15acb0d4fe22bbfd7a457efbbb0c466" category="doc">Visualizza i report di conformità in NetApp Data Classification</block>
   <block id="d8a9eef33f1bf33c7498d8f206f3d120" category="doc">Analizza i dati nella tua organizzazione con NetApp Data Classification</block>
   <block id="12c9b2fe1ef95f2e5943fca98c33135f" category="doc">Modifica le impostazioni di scansione in NetApp Data Classification</block>
+  <block id="d45f223b29c54a03c611d6faaae58cf9" category="list-text">In AWS, Data Classification viene eseguito su un<block ref="8b5561a11e73285eb1f0d9f437aa0677" category="inline-link-rx"></block> con un disco GP2 da 500 GiB. L'immagine del sistema operativo è Amazon Linux 2.</block>
+  <block id="5d8b6e341fd15d744bee3c27b7ca8a68" category="list-text">In AWS, la classificazione dei dati viene eseguita su un'istanza m6i.4xlarge con un disco GP2 da 500 GiB.</block>
 </blocks>
