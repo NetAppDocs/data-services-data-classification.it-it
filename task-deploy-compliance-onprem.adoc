@@ -20,6 +20,9 @@ L'installazione in sede è una buona opzione se si preferisce eseguire la scansi
 
 Lo script di installazione di Data Classification inizia verificando se il sistema e l'ambiente soddisfano i prerequisiti richiesti.  Se tutti i prerequisiti sono soddisfatti, l'installazione avrà inizio.  Se si desidera verificare i prerequisiti indipendentemente dall'esecuzione dell'installazione di Data Classification, è possibile scaricare un pacchetto software separato che verifica solo i prerequisiti. link:task-test-linux-system.html["Scopri come verificare se il tuo host Linux è pronto per installare Data Classification"] .
 
+
+TIP: Per le implementazioni VMware on-premises vSphere, NetApp Data Classification supporta una versione semplificata link:task-deploy-ova.html["implementazione con OVA"].
+
 L'installazione tipica su un host Linux _nei tuoi locali_ presenta i seguenti componenti e connessioni.
 
 image:diagram_deploy_onprem_overview.png["Uno schema dei componenti di rete e della console richiesti e delle relative connessioni."]
@@ -321,7 +324,7 @@ Si noti che tutte le attività di installazione vengono registrate durante l'ins
 
 
 .Passi
-. Scarica il software di classificazione dei dati da https://mysupport.netapp.com/site/products/all/details/cloud-data-sense/downloads-tab/["Sito di supporto NetApp"^] .  Il file da selezionare si chiama *DATASENSE-INSTALLER-<versione>.tar.gz*.
+. Scarica il software di classificazione dei dati da https://mysupport.netapp.com/site/products/all/details/cloud-data-sense/downloads-tab/["Sito di supporto NetApp"^]. Seleziona il file denominato *DATASENSE-INSTALLER-<version>.tar.gz*.
 . Copia il file di installazione sull'host Linux che intendi utilizzare (utilizzando `scp` o qualche altro metodo).
 . Decomprimere il file di installazione sul computer host, ad esempio:
 +
@@ -384,5 +387,9 @@ Il programma di installazione di Data Classification installa i pacchetti, regis
 
 Se è presente connettività sulla porta 8080 tra la macchina host e l'istanza dell'agente Console, l'avanzamento dell'installazione verrà visualizzato nella scheda Classificazione dati nella Console.
 
-.Cosa succederà dopo?
-Dalla pagina Configurazione è possibile selezionare le origini dati che si desidera analizzare.
+
+
+== Prossimi passi
+
+* link:task-scanning-overview.html["Configura la scansione sulle tue origini dati"]
+

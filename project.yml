@@ -36,6 +36,8 @@ sidebar:
         url: "/task-deploy-cloud-compliance.html"
       - title: Installa su un host Linux con accesso a Internet
         url: "/task-deploy-compliance-onprem.html"
+      - title: Installazione locale con OVA
+        url: "/task-deploy-ova.html"
       - title: Installa su un host Linux in locale senza accesso a Internet
         url: "/task-deploy-compliance-dark-site.html"
       - title: Verifica la prontezza del tuo host Linux

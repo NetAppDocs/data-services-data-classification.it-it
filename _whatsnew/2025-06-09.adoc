@@ -1,14 +1,11 @@
-= Versione 1.44
+= Tempi di aggiornamento migliorati per la dashboard di Governance
 :allow-uri-read: 
 
 
 
 
-=== Versione 1.44
+=== Tempi di aggiornamento migliorati per la dashboard di Governance
 
-Questa versione BlueXP classification include:
-
-.Tempi di aggiornamento migliorati per la dashboard di Governance
 Sono stati migliorati i tempi di aggiornamento dei singoli componenti della dashboard di Governance. Nella tabella seguente viene mostrata la frequenza degli aggiornamenti per ciascun componente.
 
 [cols="1,1"]
@@ -53,8 +50,14 @@ Sono stati migliorati i tempi di aggiornamento dei singoli componenti della dash
 |===
 È possibile visualizzare l'ora dell'ultimo aggiornamento e aggiornare manualmente i componenti File duplicati, Dati non aziendali, Ricerche salvate, Dati obsoleti e Repository dati principali per livello di sensibilità. Per ulteriori informazioni sulla dashboard di Governance, vederelink:https://docs.netapp.com/us-en/data-services-data-classification/task-controlling-governance-data.html["Visualizza i dettagli di governance sui dati archiviati nella tua organizzazione"] .
 
-.Miglioramenti delle prestazioni e della sicurezza
+
+
+=== Miglioramenti delle prestazioni e della sicurezza
+
 Sono stati apportati miglioramenti per migliorare le prestazioni, il consumo di memoria e la sicurezza della classificazione BlueXP .
 
-.Correzioni di bug
+
+
+=== Correzioni di bug
+
 Redis è stato aggiornato per migliorare l'affidabilità della BlueXP classification. La BlueXP classification ora utilizza Elasticsearch per migliorare l'accuratezza dei report sul conteggio dei file durante le scansioni.

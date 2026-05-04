@@ -1,0 +1,6 @@
+= 
+:allow-uri-read: 
+
+
+
+TIP: Per le implementazioni VMware on-premises vSphere, NetApp Data Classification supporta una versione semplificata link:task-deploy-ova.html["implementazione con OVA"].
