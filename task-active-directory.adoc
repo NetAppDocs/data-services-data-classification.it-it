@@ -51,7 +51,7 @@ Dopo aver distribuito Data Classification e attivato la scansione sulle origini 
 
 Le credenziali di Active Directory possono essere di sola lettura, ma fornendo le credenziali di amministratore si garantisce che Data Classification possa leggere tutti i dati che richiedono autorizzazioni elevate.  Le credenziali vengono archiviate nell'istanza di classificazione dei dati.
 
-Per i volumi/condivisioni file CIFS, se si desidera assicurarsi che gli "ultimi orari di accesso" dei file non vengano modificati dalle scansioni di classificazione dei dati, l'utente deve disporre dell'autorizzazione di scrittura degli attributi.  Se possibile, consigliamo di far sì che l'utente configurato in Active Directory faccia parte di un gruppo padre nell'organizzazione che dispone delle autorizzazioni per tutti i file.
+Per CIFS volumi/condivisioni file, se si desidera garantire che gli orari di "ultimo accesso" ai file non vengano modificati dalle scansioni di Data Classification, l'utente deve disporre dell'autorizzazione di scrittura sugli attributi. Se possibile, si consiglia di includere l'utente configurato in Active Directory in un gruppo padre dell'organizzazione che disponga delle autorizzazioni per tutti i file.
 
 .Requisiti
 * È necessario che sia già stata configurata una Active Directory per gli utenti della propria azienda.

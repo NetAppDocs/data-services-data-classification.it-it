@@ -2,19 +2,19 @@
 indexpage:
   title: Documentazione NetApp Data Classification
   summary: NetApp Data Classification consente di analizzare e classificare i dati
-    nel multicloud ibrido della tua organizzazione.  La classificazione dei dati utilizza
-    l'elaborazione del linguaggio naturale (NLP) basata sull'intelligenza artificiale
-    per l'analisi e la categorizzazione dei dati contestuali, fornendo informazioni
-    fruibili sui dati per soddisfare i requisiti di conformità, rilevare vulnerabilità
-    di sicurezza, ottimizzare i costi e accelerare la migrazione.
+    nell'ambiente ibrido multicloud della tua organizzazione. Data Classification
+    utilizza l'elaborazione del linguaggio naturale (NLP) basata sull'intelligenza
+    artificiale per l'analisi contestuale e la categorizzazione dei dati, offrendo
+    informazioni utili sui tuoi dati per soddisfare i requisiti di conformità, individuare
+    le vulnerabilità di sicurezza, ottimizzare i costi e accelerare la migrazione.
   keywords: bluexp, data classification, cloud data sense, data sense, compliance,
     security, netapp console, bluexp classification
-  lead: NetApp Data Classification consente di analizzare e classificare i dati nel
-    multicloud ibrido della tua organizzazione.  La classificazione dei dati utilizza
-    l'elaborazione del linguaggio naturale (NLP) basata sull'intelligenza artificiale
-    per l'analisi e la categorizzazione dei dati contestuali, fornendo informazioni
-    fruibili sui dati per soddisfare i requisiti di conformità, rilevare vulnerabilità
-    di sicurezza, ottimizzare i costi e accelerare la migrazione.
+  lead: NetApp Data Classification consente di analizzare e classificare i dati nell'ambiente
+    ibrido multicloud della tua organizzazione. Data Classification utilizza l'elaborazione
+    del linguaggio naturale (NLP) basata sull'intelligenza artificiale per l'analisi
+    contestuale e la categorizzazione dei dati, offrendo informazioni utili sui tuoi
+    dati per soddisfare i requisiti di conformità, individuare le vulnerabilità di
+    sicurezza, ottimizzare i costi e accelerare la migrazione.
   tiles:
   - title: Iniziare
     links:
