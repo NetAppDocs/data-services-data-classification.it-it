@@ -48,7 +48,7 @@ Esaminare l'utilizzo della CPU, l'utilizzo del disco, l'utilizzo del disco e l'u
 == Accedi alla dashboard di Health Monitor
 
 . In Classificazione dati, seleziona **Configurazione**.
-. Sotto l'intestazione **Configurazione**, seleziona **Monitoraggio dello stato di classificazione dei dati**.
+. Seleziona la scheda **Health monitor**.
 . Nella dashboard Health Monitor puoi:
 +
 ** Esaminare l'utilizzo e l'utilizzazione. Se vengono visualizzati avvisi per le metriche di utilizzo o di utilizzo, selezionare l'avviso per ricevere consigli su come risolvere il problema.

@@ -166,7 +166,7 @@ Esaminare le seguenti specifiche per i tipi di istanza:
 Ad alto livello, la scansione della classificazione dei dati funziona in questo modo:
 
 . Distribuisci un'istanza di Data Classification nella Console.
-. È possibile abilitare la mappatura di alto livello (chiamata scansione _Solo mappatura_) o la scansione di livello profondo (chiamata scansione _Mappa e classifica_) su una o più origini dati.
+. È possibile abilitare le scansioni su una o più origini dati.
 . La classificazione dei dati analizza i dati utilizzando un processo di apprendimento basato sull'intelligenza artificiale.
 . Puoi utilizzare i dashboard e gli strumenti di reporting forniti per aiutarti nei tuoi sforzi di conformità e governance.
 
@@ -186,15 +186,15 @@ NOTE: La classificazione dei dati non impone limiti alla quantità di dati che p
 
 
 
-== Qual è la differenza tra le scansioni di mappatura e classificazione?
+== Mappatura e scansioni complete
 
 È possibile eseguire due tipi di scansioni nella classificazione dei dati:
 
-* Le **scansioni di sola mappatura** forniscono solo una panoramica di alto livello dei dati e vengono eseguite su origini dati selezionate.  Le scansioni di sola mappatura richiedono meno tempo rispetto alle scansioni di mappatura e classificazione perché non accedono ai file per visualizzare i dati al loro interno.  Potresti volerlo fare inizialmente per identificare le aree di ricerca e poi eseguire una scansione Map & Classify su tali aree.
-* **Le scansioni Map & Classify** forniscono una scansione approfondita dei tuoi dati.
+* Le scansioni di sola mappatura forniscono solo una panoramica high-level dei dati e vengono eseguite su fonti di dati selezionate. Le scansioni di sola mappatura richiedono meno tempo rispetto alle scansioni complete perché non accedono ai file per visualizzarne i dati. Potrebbe essere utile eseguirle inizialmente per identificare aree di ricerca e poi effettuare una scansione completa su tali aree.
+* **Le scansioni complete** offrono un'analisi approfondita dei tuoi dati. Una scansione completa include una scansione di sola mappatura e una classificazione dei dati all'interno dei file.
 
 
-Per i dettagli sulle differenze tra le scansioni di mappatura e classificazione, vederelink:task-scanning-overview.html["Qual è la differenza tra le scansioni di mappatura e di classificazione?"] .
+Per una ripartizione delle differenze tra scansioni solo mappa e scansioni complete, vedere link:task-scanning-overview.html["Qual è la differenza tra le scansioni di mappatura e di classificazione?"].
 
 
 

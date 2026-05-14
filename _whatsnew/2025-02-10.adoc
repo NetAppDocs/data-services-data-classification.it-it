@@ -18,11 +18,11 @@ Durante la scansione della configurazione, è possibile dare priorità alle scan
 
 Esistono due tipi di scansioni:
 
-* Le *scansioni di sola mappatura* forniscono solo una panoramica di alto livello dei dati.  La mappatura delle fonti dati può essere eseguita molto rapidamente perché non è necessario accedere ai file per visualizzare i dati al loro interno.
+* Le scansioni *solo mappatura* forniscono solo una high-level panoramica dei dati. La mappatura può essere eseguita molto rapidamente sulle origini dati perché non accede ai file per vedere i dati all'interno.
 * Le scansioni *Mappa e classifica* forniscono una scansione approfondita dei tuoi dati.
 
 
-Potresti trarre vantaggio dall'utilizzo di scansioni di sola mappatura per analizzare rapidamente i tuoi dati e identificare le origini dati che richiedono più ricerca e quindi abilitare in seguito le scansioni di mappatura e classificazione solo su tali origini dati o volumi richiesti.
+Potrebbe essere utile utilizzare le scansioni solo mappa per analizzare rapidamente i dati e identificare le origini dati che richiedono ulteriori ricerche, per poi abilitare in seguito le scansioni mappa e di classificazione solo su quelle origini dati o volumi necessari.
 
 La priorità viene assegnata solo alle scansioni di sola mappatura, non alle scansioni di mappatura e classificazione.
 

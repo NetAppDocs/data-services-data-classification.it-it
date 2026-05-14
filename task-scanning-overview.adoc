@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task-scanning-overview.html 
-keywords: cloud compliance, get started, enable cloud compliance, cifs credentials, smb credentials, cloud compliance access, privacy, compliance, dp volumes, data protection volumes, CVO, Cloud Volumes ONTAP, data sense, cloud data sense, mapping-only scans, map and classify, map & classify 
+keywords: cloud compliance, get started, enable cloud compliance, cifs credentials, smb credentials, cloud compliance access, privacy, compliance, dp volumes, data protection volumes, CVO, Cloud Volumes ONTAP, data sense, cloud data sense, map-only scans, map and classify, full 
 summary: Esegui la scansione delle tue fonti dati con NetApp Data Classification. 
 ---
 = Scansiona le origini dati con NetApp Data Classification
@@ -22,19 +22,22 @@ Dopo la scansione iniziale, Data Classification analizza continuamente i dati in
 
 
 
-== Qual è la differenza tra le scansioni di mappatura e classificazione?
+== Comprendere i tipi di scansione
 
 È possibile eseguire due tipi di scansioni nella classificazione dei dati:
 
-* Le **scansioni di sola mappatura** forniscono solo una panoramica di alto livello dei dati e vengono eseguite su origini dati selezionate.  Le scansioni di sola mappatura richiedono meno tempo rispetto alle scansioni di mappatura e classificazione perché non accedono ai file per visualizzare i dati al loro interno.  Potresti volerlo fare inizialmente per identificare le aree di ricerca e poi eseguire una scansione Map & Classify su tali aree.
-* **Le scansioni Map & Classify** forniscono una scansione approfondita dei tuoi dati.
+* Le scansioni di sola mappatura forniscono solo una high-level panoramica dei dati e vengono eseguite su origini dati selezionate. Le scansioni di sola mappatura richiedono meno tempo rispetto alle scansioni complete perché non accedono ai file per vedere i dati all'interno.
+* **Le scansioni complete** offrono un'analisi approfondita dei tuoi dati. Una scansione completa include una scansione di mappatura e una classificazione dei dati all'interno dei file.
 
 
-La tabella seguente mostra alcune delle differenze:
+
+TIP: Eseguire una scansione solo della mappa può essere utile per ottenere una panoramica dei dati e individuare aree specifiche su cui eseguire scansioni complete.
+
+Esaminate le tabelle per vedere quali informazioni vengono visualizzate nelle scansioni solo mappa e nelle scansioni complete.
 
 [cols="47,18,18"]
 |===
-| Caratteristica | Mappa e classifica le scansioni | Scansioni solo di mappatura 
+| Caratteristica | Scansione completa | Scansione solo mappa 
 
 
 | Velocità di scansione | Lento | Veloce 
@@ -72,22 +75,22 @@ La tabella seguente mostra alcune delle differenze:
 
 | Possibilità di visualizzare i metadati dai file** | SÌ | SÌ 
 |===
-{asterisco} La classificazione dei dati non impone limiti alla quantità di dati che può analizzare.  Ogni agente della console supporta la scansione e la visualizzazione di 500 TiB di dati. Per scansionare più di 500 TiB di dati,link:https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html#connector-installation["installare un altro agente Console"^] Poilink:task-deploy-overview.html["distribuire un'altra istanza di classificazione dei dati"] .  + L'interfaccia utente della console visualizza i dati da un singolo connettore.  Per suggerimenti sulla visualizzazione dei dati da più agenti della console, vederelink:https://docs.netapp.com/us-en/console-setup-admin/task-manage-multiple-connectors.html#switch-between-connectors["Lavora con più agenti della console"^] .
+{asterisk}La classificazione dei dati non impone limiti alla quantità di dati che analizza. Ogni agente della Console supporta l'analisi e la visualizzazione di 500 TiB di dati. Per analizzare più di 500 TiB di dati, link:https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html#connector-installation["installare un altro agente Console"^] quindi link:task-deploy-overview.html["distribuire un'altra istanza di classificazione dei dati"]. L'interfaccia utente della Console visualizza i dati da un singolo connettore. Per suggerimenti sulla visualizzazione dei dati da più agenti della Console, vedere link:https://docs.netapp.com/us-en/console-setup-admin/task-manage-multiple-connectors.html#switch-between-connectors["Lavora con più agenti della console"^].
 
 {asterisco}{asterisco} I seguenti metadati vengono estratti dai file durante le scansioni di mappatura:
 
-* Sistema
-* Tipo di sistema
-* Deposito di archiviazione
-* Tipo di file
-* Capacità utilizzata
-* Numero di file
-* Dimensione del file
-* Creazione di file
+* Ora di scoperta del file
 * Ultimo accesso al file
 * File modificato l'ultima volta
-* Ora di scoperta del file
+* Tipo di file
+* Dimensione del file
+* Creazione di file
+* Numero di file
 * Estrazione dei permessi
+* Deposito di archiviazione
+* Sistema
+* Tipo di sistema
+* Capacità utilizzata
 
 
 .Differenze nella dashboard di governance:
@@ -95,7 +98,7 @@ La tabella seguente mostra alcune delle differenze:
 ====
 [cols="40,25,25"]
 |===
-| Caratteristica | Mappa e classifica | Mappa 
+| Caratteristica | Scansione completa | Scansione solo mappa 
 
 
 | dati obsoleti | SÌ | SÌ 
@@ -145,7 +148,7 @@ La tabella seguente mostra alcune delle differenze:
 ====
 [cols="40,25,25"]
 |===
-| Caratteristica | Mappa e classifica | Mappa 
+| Caratteristica | Scansione completa | Scansione solo mappa 
 
 
 | Informazioni personali | SÌ | NO 
@@ -168,7 +171,7 @@ La tabella seguente mostra alcune delle differenze:
 ====
 [cols="40,25,25"]
 |===
-| Caratteristica | Mappa e classifica | Mappa 
+| Caratteristica | Scansione completa | Scansione solo mappa 
 
 
 | Query salvate | SÌ | SÌ 

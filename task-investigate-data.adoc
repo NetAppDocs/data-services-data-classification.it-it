@@ -17,7 +17,7 @@ summary: Puoi analizzare i dati della tua organizzazione visualizzandone i detta
 La dashboard Data Investigation visualizza informazioni dettagliate a livello di file e directory sui dati, consentendo di ordinare e filtrare i risultati. La pagina Data Investigation presenta informazioni dettagliate sui metadati e le autorizzazioni di file e directory, oltre a identificare i file duplicati. Grazie alle informazioni dettagliate a livello di file, directory e database, è possibile intraprendere azioni per migliorare la conformità dell'organizzazione e risparmiare spazio di storage. La pagina Data Investigation supporta anche link:task-copy-move.html["spostamento, copia ed eliminazione di file"].
 
 
-NOTE: Per ottenere informazioni dalla pagina Indagine, è necessario eseguire una scansione completa della classificazione sulle origini dati.  Le origini dati sottoposte a scansione solo di mappatura non mostrano dettagli a livello di file.
+NOTE: Per ottenere informazioni dettagliate dalla pagina Analisi, è necessario eseguire una scansione di classificazione completa delle origini dati. Le origini dati sottoposte a una scansione solo a livello di mappa non mostrano i dettagli a livello di file.
 
 
 

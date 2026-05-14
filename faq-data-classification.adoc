@@ -68,7 +68,7 @@ Le scansioni dei dati hanno un impatto trascurabile sui sistemi di archiviazione
 
 Le prestazioni della scansione possono variare in base alla larghezza di banda della rete e alla dimensione media dei file nel tuo ambiente.  Può dipendere anche dalle caratteristiche dimensionali del sistema host (nel cloud o in locale). Vedere link:concept-classification.html["L'istanza di classificazione dei dati"] E link:task-deploy-overview.html["Distribuzione della classificazione dei dati"] per maggiori informazioni.
 
-Quando si aggiungono inizialmente nuove fonti di dati, è anche possibile scegliere di eseguire solo una scansione di "mappatura" (Solo mappatura) anziché una scansione di "classificazione" completa (Mappa e classifica).  La mappatura delle fonti dati può essere eseguita molto rapidamente perché non è necessario accedere ai file per visualizzare i dati al loro interno. link:task-scanning-overview.html["Scopri la differenza tra una scansione di mappatura e una di classificazione"] .
+Quando si aggiungono nuove origini dati, è possibile anche scegliere di eseguire solo una scansione di sola mappatura o una scansione completa. La mappatura può essere eseguita sulle origini dati molto rapidamente perché non accede ai file per vedere i dati all'interno. link:task-scanning-overview.html["Comprendere la differenza tra una scansione di mappatura e una scansione di classificazione"].
 
 
 
@@ -115,9 +115,9 @@ No. La classificazione dei dati non analizza gli snapshot perché il contenuto �
 
 === Cosa succede se sui volumi ONTAP è abilitato il tiering dei dati?
 
-Quando Data Classification esegue la scansione di volumi che contengono dati inattivi suddivisi in livelli per l'archiviazione di oggetti utilizzando solo scansioni di mappatura, esegue la scansione di tutti i dati: dati presenti sui dischi locali e dati inattivi suddivisi in livelli per l'archiviazione di oggetti.  Ciò vale anche per i prodotti non NetApp che implementano la suddivisione in livelli.
+Quando Data Classification esegue la scansione di volumi che hanno dati freddi sottoposti a tiering verso storage a oggetti utilizzando la sola scansione di mappatura, esegue la scansione di tutti i dati: sia quelli presenti sui dischi locali sia i dati freddi sottoposti a tiering verso storage a oggetti. Questo vale anche per prodotti non-NetApp che implementano il tiering.
 
-La scansione di sola mappatura non surriscalda i dati freddi: questi rimangono freddi e rimangono nell'archivio degli oggetti.  D'altro canto, se si esegue la scansione Map & Classify, alcune configurazioni potrebbero surriscaldare i dati inutilizzati.
+La scansione limitata alla mappatura non riscalda i dati "freddi": questi rimangono tali e conservati in storage a oggetti. D'altra parte, se si esegue la scansione completa, alcune configurazioni potrebbero riscaldare i dati "freddi".
 
 
 
@@ -162,7 +162,7 @@ La classificazione dei dati consente di eseguire una scansione di "mappatura" ge
 +
 Dopo una scansione rapida, è possibile generare un report di mappatura dei dati.  Questo report è una panoramica dei dati archiviati nelle fonti dati aziendali per aiutarti a prendere decisioni sull'utilizzo delle risorse, sulla migrazione, sul backup, sulla sicurezza e sui processi di conformità.
 
-* *Scansione approfondita della classificazione dei dati (scansione mappa e classifica)*: la classificazione dei dati esegue la scansione dei dati utilizzando protocolli standard e autorizzazioni di sola lettura in tutti gli ambienti.  Vengono aperti file selezionati e analizzati per rilevare dati aziendali sensibili, informazioni private e problemi correlati al ransomware.
+* *Scansione approfondita della classificazione dei dati (scansione completa)*: Data Classification analizza i dati utilizzando protocolli standard e autorizzazioni di sola lettura in tutti i tuoi ambienti. I file selezionati vengono aperti e analizzati per individuare dati aziendali sensibili, informazioni private e problematiche relative ai ransomware.
 +
 Dopo una scansione completa, è possibile applicare ai dati numerose funzionalità aggiuntive di classificazione dei dati, come la visualizzazione e la rifinitura dei dati nella pagina Indagine sui dati, la ricerca di nomi all'interno dei file, la copia, lo spostamento e l'eliminazione dei file sorgente e altro ancora.
 

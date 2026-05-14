@@ -60,7 +60,7 @@ Quando aggiungi condivisioni di file al gruppo, devi utilizzare il formato `<hos
 . Nella finestra di dialogo Aggiungi gruppo di condivisioni file, immettere il nome del gruppo di condivisioni, quindi selezionare *Continua*.
 . Seleziona il protocollo per le condivisioni file che stai aggiungendo.
 +
-image:screen-cl-config-shares-add.png["Uno screenshot della finestra modale per aggiungere condivisioni, che mostra le opzioni per selezionare protocolli e condivisioni"]
+image:add-shares.png["Uno screenshot della finestra modale per aggiungere condivisioni, che mostra le opzioni per selezionare protocolli e condivisioni"]
 
 +
 .. Se si aggiungono condivisioni CIFS con autenticazione NTLM, immettere le credenziali di Active Directory per accedere ai volumi CIFS.  Sebbene siano supportate le credenziali di sola lettura, si consiglia di fornire l'accesso completo con le credenziali di amministratore.  Seleziona **Salva**.
@@ -68,21 +68,18 @@ image:screen-cl-config-shares-add.png["Uno screenshot della finestra modale per 
 
 . Aggiungere le condivisioni file che si desidera analizzare (una condivisione file per riga).  Quindi seleziona **Continua**.
 . Una finestra di dialogo di conferma visualizza il numero di condivisioni aggiunte.
+. Decidi come desideri scansionare i volumi. link:task-scanning-overview.html["Qual è la differenza tra le scansioni di mappatura e di classificazione?"].
+. Per abilitare la scansione di tutti i volumi del sistema, selezionare *Attiva scansione* e quindi *Mappa solo tutti i volumi* oppure *Scansione completa di tutti i volumi*.
 +
-Se nella finestra di dialogo sono elencate delle condivisioni che non è stato possibile aggiungere, acquisire queste informazioni in modo da poter risolvere il problema.  Se il problema riguarda una convenzione di denominazione, puoi aggiungere nuovamente la condivisione con un nome corretto.
+Per gestire la scansione solo su volumi selezionati, seleziona *Attiva scansione* quindi *Gestisci*. Nella panoramica del sistema, identifica le risorse che vuoi scansionare. Seleziona il tipo di scansione per ciascun volume quindi impostalo sul tipo di scansione desiderato: completa o solo mappatura.
 
-. Configurare la scansione sul volume:
 +
-** Per abilitare le scansioni di sola mappatura sulle condivisioni file, selezionare *Mappa*.
-** Per abilitare le scansioni complete sulle condivisioni file, seleziona *Mappa e classifica*.
-** Per disattivare la scansione sulle condivisioni file, selezionare *Off*.
-+
-
-NOTE: Per impostazione predefinita, l'interruttore in cima alla pagina per *Esegui scansione quando mancano i permessi "attributi di scrittura"* è disabilitato. Ciò significa che se Data Classification non dispone di autorizzazioni di scrittura degli attributi in CIFS o di autorizzazioni di scrittura in NFS, il sistema non eseguirà la scansione dei file perché Data Classification non può ripristinare l'"ora dell'ultimo accesso" al timestamp originale. + Se si imposta *Scansione in caso di mancanza di autorizzazioni "attributi di scrittura"* su *Attivato*, la scansione reimposta l'orario dell'ultimo accesso ed esegue la scansione di tutti i file indipendentemente dalle autorizzazioni. + Per saperne di più sull'ultimo timestamp di accesso, vederelink:reference-collected-metadata.html#last-access-time-timestamp["Metadati raccolti da fonti di dati nella classificazione dei dati"] .
+Vedere<<Abilita e disabilita le scansioni sui volumi,Abilita e disabilita le scansioni sui volumi>> per i dettagli.
 
 
 
 
+NOTE: La pagina di panoramica del sistema include un'opzione *Scansione senza permessi di scrittura* che è disabilitata per impostazione predefinita. Ciò significa che se Data Classification non dispone dei permessi di scrittura degli attributi in CIFS o dei permessi di scrittura in NFS, il sistema non eseguirà la scansione dei file perché Data Classification non può ripristinare l'"ora dell'ultimo accesso" al timestamp originale. + Se si seleziona l'opzione *Scansione senza permessi di scrittura*, la scansione reimposta l'ora dell'ultimo accesso ed esegue la scansione di tutti i file indipendentemente dai permessi. + Per ulteriori informazioni sul timestamp dell'ultimo accesso, vedere link:reference-collected-metadata.html#last-access-time-timestamp["Metadati raccolti da fonti di dati nella classificazione dei dati"].
 
 .Risultato
 La classificazione dei dati avvia la scansione dei file nelle condivisioni file aggiunte.  Puoixref:#track-the-scanning-progress[Monitora l'avanzamento della scansione] e visualizzare i risultati della scansione nella **Dashboard**.
@@ -98,7 +95,7 @@ Dopo aver creato un gruppo di condivisioni file, è possibile modificare il prot
 
 .Modifica la configurazione del protocollo CIFS
 . Dal menu Classificazione dati, selezionare *Configurazione*.
-. Dalla pagina Configurazione, seleziona il gruppo di condivisioni file che desideri modificare.
+. Dalla pagina Configurazione, individua il sistema di gruppi di condivisione file che desideri modificare, quindi seleziona **Gestisci**.
 . Selezionare **Modifica credenziali CIFS**.
 +
 image:screenshot-edit-cifs-credential.png["Screenshot del menu Modifica credenziali CIFS."]
@@ -110,11 +107,11 @@ image:screenshot-edit-cifs-credential.png["Screenshot del menu Modifica credenzi
 
 .Aggiungi condivisioni di file alle scansioni
 . Dal menu Classificazione dati, selezionare *Configurazione*.
-. Dalla pagina Configurazione, seleziona il gruppo di condivisioni file che desideri modificare.
+. Dalla pagina Configurazione, individua il gruppo di condivisioni file che desideri modificare. Seleziona **Gestisci**.
 . Seleziona **+ Aggiungi azioni**.
 . Seleziona il protocollo per le condivisioni file che stai aggiungendo.
 +
-image:screen-cl-config-shares-add.png["Uno screenshot della finestra modale per aggiungere condivisioni, che mostra le opzioni per selezionare protocolli e condivisioni"]
+image:add-shares.png["Uno screenshot della finestra modale per aggiungere condivisioni, che mostra le opzioni per selezionare protocolli e condivisioni"]
 
 +
 Se si aggiungono condivisioni file a un protocollo già configurato, non sono necessarie modifiche.
@@ -123,14 +120,13 @@ Se si aggiungono condivisioni file a un protocollo già configurato, non sono ne
 Se si aggiungono condivisioni di file con un secondo protocollo, assicurarsi di aver configurato correttamente l'autenticazione come descritto in dettaglio inlink:#prerequisites["prerequisiti"] .
 
 . Aggiungi le condivisioni di file che desideri scansionare (una condivisione di file per riga) utilizzando il formato `<host_name>:/<share_path>` .
-. Selezionare **Continua** per completare l'aggiunta delle condivisioni file.
+. Seleziona **Salva** per completare l'aggiunta delle condivisioni file.
 
 
 .Rimuovere una condivisione file dalle scansioni
 . Dal menu Classificazione dati, selezionare *Configurazione*.
-. Seleziona il sistema da cui desideri rimuovere le condivisioni file.
-. Selezionare *Configurazione*.
-. Dalla pagina Configurazione, seleziona Azioniimage:button-actions-horizontal.png["Icona Azioni"] per la condivisione file che vuoi rimuovere.
+. Individua il sistema da cui desideri rimuovere le condivisioni di file, quindi seleziona **Gestisci**.
+. Dalla pagina di panoramica del sistema, seleziona le azioni image:button-actions-horizontal.png["Icona Azioni"] per la condivisione file che desideri rimuovere.
 . Dal menu Azioni, seleziona *Rimuovi condivisione*.
 
 
@@ -141,6 +137,30 @@ Se si aggiungono condivisioni di file con un secondo protocollo, assicurarsi di 
 È possibile monitorare l'avanzamento della scansione iniziale.
 
 . Selezionare il menu **Configurazione**.
-. Selezionare **Configurazione di sistema**.
-. Per il repository di archiviazione, controllare la colonna Avanzamento scansione per visualizzarne lo stato.
+. Individua il gruppo di condivisione file e seleziona **Gestisci**.
+. Per il repository di storage, controlla la colonna Stato di avanzamento della scansione per visualizzarne lo stato. Sono presenti barre di avanzamento separate se hai abilitato le scansioni complete.
 
+
+
+
+== Abilita e disabilita le scansioni sui volumi
+
+Dalla pagina Configurazione è possibile avviare o interrompere le scansioni su qualsiasi sistema in qualsiasi momento. È inoltre possibile passare da scansioni di sola mappatura a scansioni di mappatura e classificazione, e viceversa. Si consiglia di eseguire la scansione di tutti i volumi di un sistema.
+
+L'interruttore in cima alla pagina per *Scansiona senza permessi di scrittura* è disabilitato per impostazione predefinita. Ciò significa che se Data Classification non dispone dei permessi di scrittura sugli attributi in CIFS o dei permessi di scrittura in NFS, il sistema non eseguirà la scansione dei file perché Data Classification non può ripristinare l'ora dell'ultimo accesso al timestamp originale. Se non ti interessa che l'ora dell'ultimo accesso venga ripristinata, attiva l'interruttore e tutti i file verranno scansionati indipendentemente dai permessi. link:reference-collected-metadata.html#last-access-time-timestamp["Saperne di più"^].
+
+
+NOTE: I nuovi volumi aggiunti al sistema vengono scansionati automaticamente solo quando si imposta l'impostazione *Mappa* o *Scansione completa* nell'area dell'intestazione. Quando l'impostazione per tutti i volumi è *Personalizzata* o *Disattivata*, è necessario attivare la scansione manualmente per ogni nuovo volume che si aggiunge.
+
+image:screenshot_volume_compliance_selection.png["Uno screenshot della pagina di configurazione in cui è possibile abilitare o disabilitare la scansione dei singoli volumi."]
+
+.Passi
+. Dal menu Classificazione dati, selezionare *Configurazione*.
+. Identifica il sistema che desideri analizzare. Seleziona **Attiva scansione**. Nel menu a tendina, scegli **Scansione completa**, **Solo mappa** o **Gestisci scansioni** per aprire il menu di sistema e configurare la scansione su volumi o condivisioni specifici.
++
+Per abilitare o disabilitare le scansioni per singoli volumi, individua i volumi o le condivisioni nell'elenco e seleziona **Mappa**, **Scansione completa** o **Disattiva** accanto al nome del volume.
+
+
+
+.Risultato
+Quando si abilita la scansione, Data Classification avvia la scansione dei volumi selezionati nel sistema. I risultati iniziano ad apparire nella dashboard Conformità non appena la Classificazione dei dati avvia la scansione.  Il tempo di completamento della scansione dipende dalla quantità di dati e può variare da minuti a ore.

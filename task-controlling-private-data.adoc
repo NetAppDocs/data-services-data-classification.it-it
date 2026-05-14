@@ -17,7 +17,7 @@ summary: 'Ottieni il controllo dei tuoi dati privati visualizzando i dettagli su
 Ottieni il controllo dei tuoi dati privati ​​visualizzando i dettagli sui dati personali (PII) e sui dati personali sensibili (SPII) nella tua organizzazione.  Puoi anche ottenere visibilità esaminando le categorie e i tipi di file che NetApp Data Classification ha trovato nei tuoi dati.
 
 
-NOTE: I dettagli sulla conformità a livello di file sono disponibili solo se si esegue una scansione completa della classificazione. Le scansioni di sola mappatura non forniscono dettagli a livello di file.
+NOTE: I dettagli di conformità a livello di file sono disponibili solo se si esegue una scansione di classificazione completa. Le scansioni che si limitano alla mappatura non forniscono dettagli a livello di file.
 
 Per impostazione predefinita, la dashboard Classificazione dati visualizza i dati di conformità per tutti i sistemi e database.  Per visualizzare i dati solo di alcuni sistemi, selezionarli.
 
@@ -50,10 +50,10 @@ image:screenshot_personal_files.png["Uno screenshot della finestra di dialogo de
 Le immagini seguenti mostrano i dati personali presenti in una directory (condivisioni e cartelle). Nella scheda *Strutturato* puoi visualizzare i dati personali presenti nei database. Nella scheda *Non strutturato* è possibile visualizzare i dati a livello di file.
 
 +
-image:screenshot_compliance_investigation_page.png["Uno screenshot delle informazioni dettagliate trovate nei file dopo aver cliccato su Esamina risultati."]
+image:screenshot_compliance_investigation_page.png["Uno screenshot delle informazioni dettagliate trovate nei file dopo aver selezionato Investigate Results."]
 
 +
-image:screenshot_compliance_investigation_page_directory.png["Uno screenshot delle informazioni dettagliate trovate nelle directory dopo aver cliccato su Esamina risultati."]
+image:screenshot_compliance_investigation_page_directory.png["Uno screenshot delle informazioni dettagliate trovate nelle directory dopo aver selezionato Investigate Results."]
 
 
 
@@ -77,5 +77,5 @@ NOTE: Per la scansione dei dati personali sensibili è supportata solo la lingua
 image:screenshot-sensitive-personal.png["Screenshot della scheda dei risultati personali sensibili"] .
 
 . Per esaminare i dettagli di un tipo specifico di dati personali sensibili, seleziona *Visualizza tutto*, quindi seleziona l'icona a freccia *Esamina risultati* per un tipo specifico di dati personali sensibili.
-. Esamina i dati cercando, ordinando, espandendo i dettagli per un file specifico, cliccando su *Esamina risultati* per visualizzare le informazioni mascherate o scaricando l'elenco dei file.
+. Esamina i dati effettuando ricerche, ordinando, espandendo i dettagli di un file specifico, selezionando *Investigate Results* per visualizzare le informazioni mascherate oppure scaricando l'elenco dei file.
 

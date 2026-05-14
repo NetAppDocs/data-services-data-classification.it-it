@@ -12,15 +12,15 @@ I seguenti sistemi operativi richiedono l'utilizzo del motore container Podman e
 
 
 
-=== Dare priorità alle scansioni di sola mappatura
+=== Dare priorità alle scansioni solo mappa
 
-Quando si eseguono scansioni di sola mappatura, è possibile dare priorità alle scansioni più importanti. Questa funzionalità è utile quando si hanno molti ambienti di lavoro e si desidera garantire che le scansioni ad alta priorità vengano completate per prime.
+Quando si eseguono scansioni solo mappa, è possibile assegnare priorità alle scansioni più importanti. Questa funzionalità è utile quando si dispone di molti ambienti di lavoro e si desidera garantire che le scansioni ad alta priorità vengano completate per prime.
 
 Per impostazione predefinita, le scansioni vengono messe in coda in base all'ordine in cui vengono avviate. Grazie alla possibilità di dare priorità alle scansioni, è possibile spostarle in cima alla coda. È possibile dare priorità a più scansioni. La priorità viene assegnata in base all'ordine "first-in, first-out", ovvero la prima scansione a cui si dà priorità viene spostata in cima alla coda; la seconda scansione a cui si dà priorità diventa la seconda nella coda e così via.
 
 La priorità viene concessa una sola volta. Le nuove scansioni automatiche dei dati di mappatura avvengono nell'ordine predefinito.
 
-La priorità è limitata alink:https://docs.netapp.com/us-en/data-services-data-classification/concept-classification.html["scansioni solo di mappatura"^] ; non è disponibile per le scansioni di mappatura e classificazione.
+La prioritizzazione è limitata a link:https://docs.netapp.com/us-en/data-services-data-classification/concept-classification.html["scansioni solo mappa"^]; non è disponibile per le scansioni di mappatura e classificazione.
 
 Per ulteriori informazioni, consultare link:https://docs.netapp.com/us-en/data-services-data-classification/task-managing-repo-scanning.html#prioritize-scans["Dare priorità alle scansioni"^] .
 

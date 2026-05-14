@@ -67,16 +67,14 @@ StorageGRID viene aggiunto all'elenco dei sistemi.
 Dopo aver abilitato la classificazione dei dati su StorageGRID, il passaggio successivo consiste nel configurare i bucket che si desidera analizzare.  La classificazione dei dati rileva tali bucket e li visualizza nel sistema creato.
 
 .Passi
-. Nella pagina Configurazione, individuare il sistema StorageGRID .
-. Nel riquadro del sistema StorageGRID , seleziona *Configurazione*.
-. Per abilitare o disabilitare la scansione, completare uno dei seguenti passaggi:
+. In Classificazione dati, seleziona **Configurazione**.
+. Nella pagina di configurazione, individua il sistema StorageGRID per il quale desideri abilitare la scansione.
+. Decidi come desideri scansionare i volumi. link:task-scanning-overview.html["Qual è la differenza tra le scansioni di mappatura e di classificazione?"].
+. Per abilitare la scansione di tutti i volumi del sistema, selezionare *Attiva scansione* e quindi *Mappa solo tutti i volumi* oppure *Scansione completa di tutti i volumi*.
 +
-** Per abilitare le scansioni di sola mappatura su un bucket, selezionare *Mappa*.
-** Per abilitare le scansioni complete su un bucket, seleziona *Mappa e classifica*.
-** Per disattivare la scansione su un bucket, selezionare *Off*.
-
+Per gestire la scansione solo su volumi selezionati, seleziona *Attiva scansione* quindi *Gestisci*. Nella panoramica del sistema, identifica le risorse che vuoi scansionare. Seleziona il tipo di scansione per ciascun volume quindi impostalo sul tipo di scansione desiderato: completa o solo mappatura.
 
 
 
 .Risultato
-La classificazione dei dati avvia la scansione dei bucket abilitati.  È possibile monitorare l'avanzamento della scansione iniziale accedendo al menu **Configurazione** e selezionando quindi **Configurazione di sistema**.  L'avanzamento di ogni scansione viene visualizzato tramite una barra di avanzamento.  È anche possibile passare il mouse sulla barra di avanzamento per visualizzare il numero di file scansionati rispetto al totale dei file presenti nel volume.  Se sono presenti errori, questi appariranno nella colonna Stato, insieme all'azione richiesta per correggerli.
+La classificazione dei dati avvia la scansione dei bucket che hai abilitato. Puoi monitorare l'avanzamento della scansione iniziale accedendo al menu **Configurazione**. Identifica il sistema e poi seleziona **Gestisci**. L'avanzamento di ogni scansione viene mostrato come una barra di avanzamento. Puoi anche passare il mouse sopra la barra di avanzamento per vedere il numero di file scansionati rispetto al totale dei file nel volume. Se ci sono errori, verranno visualizzati nella colonna Stato, insieme all'azione richiesta per risolvere l'errore.

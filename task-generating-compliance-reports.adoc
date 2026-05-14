@@ -20,7 +20,7 @@ Per impostazione predefinita, i dashboard di classificazione dei dati visualizza
 
 [NOTE]
 ====
-* I report di conformità sono disponibili solo se si esegue una scansione completa della classificazione sulle origini dati.  Le fonti dati che hanno eseguito una scansione di sola mappatura possono generare solo il report di mappatura dei dati.
+* I report di conformità sono disponibili solo se si esegue una scansione di classificazione completa delle origini dati. Le origini dati per le quali è stata eseguita solo una scansione di mappatura possono generare esclusivamente il Data Mapping Report.
 * NetApp non può garantire l'accuratezza al 100% dei dati personali e dei dati personali sensibili identificati dalla classificazione dei dati.  Dovresti sempre convalidare le informazioni esaminando i dati.
 
 

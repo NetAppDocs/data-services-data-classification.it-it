@@ -99,16 +99,13 @@ Il database viene aggiunto all'elenco dei sistemi.
 È possibile interrompere o avviare la scansione completa degli schemi in qualsiasi momento.
 
 
-TIP: Non è possibile selezionare scansioni di sola mappatura per gli schemi del database.
+TIP: Non è disponibile un'opzione per selezionare solo le scansioni di mappatura per gli schemi del database.
 
-. Dalla pagina Configurazione, seleziona il pulsante *Configurazione* per il database che desideri configurare.
+. Dalla pagina di configurazione, seleziona il pulsante *Gestisci* relativo al database che desideri configurare.
 +
 image:screenshot_compliance_db_server_config.png["Uno screenshot della pagina Configurazione scansione in cui è possibile selezionare il pulsante Configurazione."]
 
-. Selezionare gli schemi che si desidera analizzare spostando il cursore verso destra.
-+
-image:screenshot_compliance_select_schemas.png["Uno screenshot della pagina Configurazione scansione in cui è possibile scegliere gli schemi da scansionare."]
-
+. Per ogni schema per cui si desidera abilitare le scansioni, selezionare la colonna *Tipo di scansione* e quindi impostare la scansione su disattivata o **Scansione completa**.
 
 
 .Risultato
