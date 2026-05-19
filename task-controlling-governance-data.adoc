@@ -115,7 +115,7 @@ Il rapporto include le seguenti informazioni:
 |===
 .Passi
 . Da Classificazione dati, seleziona *Governance*.
-. Nel riquadro dei report, seleziona *Report di panoramica completa della mappatura dei dati*.
+. Nel riquadro dei report, seleziona il pulsante **Scarica** nell'intestazione del report Panoramica completa della mappatura dei dati.
 +
 image:screenshot-compliance-report-buttons.png["Uno screenshot della Governance Dashboard che mostra come avviare il Data Mapping Report."]
 

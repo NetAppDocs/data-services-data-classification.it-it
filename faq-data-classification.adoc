@@ -168,7 +168,7 @@ Dopo una scansione completa, è possibile applicare ai dati numerose funzionalit
 
 
 
-La classificazione dei dati acquisisce metadati quali: nome del file, autorizzazioni, ora di creazione, ultimo accesso e ultima modifica.  Ciò include tutti i metadati che appaiono nella pagina Dettagli indagine dati e nei Report indagine dati.
+La classificazione dei dati acquisisce metadati quali: nome del file, autorizzazioni, data di creazione, ultimo accesso e ultima modifica. Ciò include tutti i metadati che appaiono nella pagina Dettagli dell'indagine sui dati e nei Rapporti di indagine sui dati.
 
 La classificazione dei dati può identificare molti tipi di dati privati, come le informazioni personali (PII) e le informazioni personali sensibili (SPII).  Per i dettagli sui dati privati, fare riferimento axref:reference-private-data-categories.html[Categorie di dati privati analizzati dalla classificazione dei dati] .
 

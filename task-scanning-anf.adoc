@@ -46,7 +46,7 @@ La classificazione dei dati deve essere distribuita nel cloud durante la scansio
 Per gestire la scansione solo su volumi selezionati, seleziona *Attiva scansione* quindi *Gestisci*. Nella panoramica del sistema, identifica le risorse che vuoi scansionare. Seleziona il tipo di scansione per ciascun volume quindi impostalo sul tipo di scansione desiderato: completa o solo mappatura.
 
 +
-Vedere<<Abilita e disabilita le scansioni sui volumi,Abilita e disabilita le scansioni sui volumi>> per i dettagli.
+Vedi <<Abilita o disabilita le scansioni sui volumi>> per dettagli.
 
 
 
@@ -104,15 +104,15 @@ Dalla pagina Configurazione è possibile avviare o interrompere le scansioni su 
 L'interruttore in cima alla pagina per *Scansiona senza permessi di scrittura* è disabilitato per impostazione predefinita. Ciò significa che se Data Classification non dispone dei permessi di scrittura sugli attributi in CIFS o dei permessi di scrittura in NFS, il sistema non eseguirà la scansione dei file perché Data Classification non può ripristinare l'ora dell'ultimo accesso al timestamp originale. Se non ti interessa che l'ora dell'ultimo accesso venga ripristinata, attiva l'interruttore e tutti i file verranno scansionati indipendentemente dai permessi. link:reference-collected-metadata.html#last-access-time-timestamp["Saperne di più"^].
 
 
-NOTE: I nuovi volumi aggiunti al sistema vengono scansionati automaticamente solo quando si imposta l'impostazione *Mappa* o *Scansione completa* nell'area dell'intestazione. Quando l'impostazione per tutti i volumi è *Personalizzata* o *Disattivata*, è necessario attivare la scansione manualmente per ogni nuovo volume che si aggiunge.
+NOTE: I nuovi volumi aggiunti al sistema vengono scansionati automaticamente solo se la scansione è abilitata per tutti i volumi. Se hai abilitato la scansione solo su determinati volumi, devi abilitarla manualmente per il nuovo volume aggiunto.
 
 image:screenshot_volume_compliance_selection.png["Uno screenshot della pagina di configurazione in cui è possibile abilitare o disabilitare la scansione dei singoli volumi."]
 
 .Passi
 . Dal menu Classificazione dati, selezionare *Configurazione*.
-. Identifica il sistema che desideri analizzare. Seleziona **Attiva scansione**. Nel menu a tendina, scegli **Scansione completa**, **Solo mappa** o **Gestisci scansioni** per aprire il menu di sistema e configurare la scansione su volumi o condivisioni specifici.
+. Identifica il sistema che desideri scansionare. Seleziona **Attiva scansione**. Nel menu a tendina, scegli **Scansiona tutti i volumi: scansione completa**, **Scansiona tutti i volumi: solo mappatura** o **Gestisci scansioni** per aprire il menu di sistema e configurare la scansione su volumi specifici.
 +
-Per abilitare o disabilitare le scansioni per singoli volumi, individua i volumi o le condivisioni nell'elenco e seleziona **Mappa**, **Scansione completa** o **Disattiva** accanto al nome del volume.
+Per abilitare o disabilitare le scansioni per singoli volumi, individua i volumi nell'elenco. Nella colonna tipo di scansione, seleziona **Solo mappa** o **Scansione completa**.
 
 
 
