@@ -30,7 +30,7 @@
 * Quando si distribuisce un'istanza di elaborazione nel cloud per l'installazione di Data Classification, si consiglia di utilizzare un sistema che soddisfi i requisiti di sistema "Large" sopra indicati:
 +
 ** *Tipo di istanza Amazon Elastic Compute Cloud (Amazon EC2)*: "m6i.4xlarge". link:reference-instance-types.html#aws-instance-types["Vedi altri tipi di istanze AWS"^] .
-** *Dimensioni della VM di Azure*: "Standard_D16s_v3". link:reference-instance-types.html#azure-instance-types["Visualizza altri tipi di istanze di Azure"^] .
+** *Dimensioni della macchina virtuale Azure*: "Standard_D16_v5". link:reference-instance-types.html#azure-instance-types["Visualizza altri tipi di istanze di Azure"^].
 ** *Tipo di macchina GCP*: "n2-standard-16". link:reference-instance-types.html#gcp-instance-types["Vedi altri tipi di istanza GCP"^] .
 
 
