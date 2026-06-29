@@ -27,7 +27,7 @@ Prima di abilitare la classificazione dei dati, rivedere i seguenti prerequisiti
 
 * Le condivisioni possono essere ospitate ovunque, anche nel cloud o in locale.  Le condivisioni CIFS dei vecchi sistemi di archiviazione NetApp 7-Mode possono essere scansionate come condivisioni di file.
 +
-** La classificazione dei dati non può estrarre le autorizzazioni o l'"ultimo orario di accesso" dai sistemi 7-Mode.
+** Data Classification non può estrarre le autorizzazioni o l'“ora dell’ultimo accesso” dai sistemi 7-Mode.
 ** A causa di un problema noto tra alcune versioni di Linux e le condivisioni CIFS sui sistemi 7-Mode, è necessario configurare la condivisione in modo che utilizzi solo SMBv1 con l'autenticazione NTLM abilitata.
 
 
@@ -79,7 +79,7 @@ Vedere<<Abilita e disabilita le scansioni sui volumi,Abilita e disabilita le sca
 
 
 
-NOTE: La pagina di panoramica del sistema include un'opzione *Scansione senza permessi di scrittura* che è disabilitata per impostazione predefinita. Ciò significa che se Data Classification non dispone dei permessi di scrittura degli attributi in CIFS o dei permessi di scrittura in NFS, il sistema non eseguirà la scansione dei file perché Data Classification non può ripristinare l'"ora dell'ultimo accesso" al timestamp originale. + Se si seleziona l'opzione *Scansione senza permessi di scrittura*, la scansione reimposta l'ora dell'ultimo accesso ed esegue la scansione di tutti i file indipendentemente dai permessi. + Per ulteriori informazioni sul timestamp dell'ultimo accesso, vedere link:reference-collected-metadata.html#last-access-time-timestamp["Metadati raccolti da fonti di dati nella classificazione dei dati"].
+NOTE: La pagina di panoramica del sistema include un'opzione *Scansione senza permessi di scrittura* disabilitata per impostazione predefinita. Se Data Classification non dispone dei permessi appropriati, non eseguirà la scansione dei file perché Data Classification non può ripristinare l'ora dell'ultimo accesso al timestamp originale. Puoi ignorare questa impostazione utilizzando l'opzione *Scansione senza permessi di scrittura*. Per saperne di più su questa opzione, vedi link:reference-collected-metadata.html#last-accessed-time-timestamp["Metadati raccolti da fonti di dati nella classificazione dei dati"].
 
 .Risultato
 La classificazione dei dati avvia la scansione dei file nelle condivisioni file aggiunte.  Puoixref:#track-the-scanning-progress[Monitora l'avanzamento della scansione] e visualizzare i risultati della scansione nella **Dashboard**.
@@ -147,7 +147,7 @@ Se si aggiungono condivisioni di file con un secondo protocollo, assicurarsi di 
 
 Dalla pagina Configurazione è possibile avviare o interrompere le scansioni su qualsiasi sistema in qualsiasi momento. È inoltre possibile passare da scansioni di sola mappatura a scansioni di mappatura e classificazione, e viceversa. Si consiglia di eseguire la scansione di tutti i volumi di un sistema.
 
-L'interruttore in cima alla pagina per *Scansiona senza permessi di scrittura* è disabilitato per impostazione predefinita. Ciò significa che se Data Classification non dispone dei permessi di scrittura sugli attributi in CIFS o dei permessi di scrittura in NFS, il sistema non eseguirà la scansione dei file perché Data Classification non può ripristinare l'ora dell'ultimo accesso al timestamp originale. Se non ti interessa che l'ora dell'ultimo accesso venga ripristinata, attiva l'interruttore e tutti i file verranno scansionati indipendentemente dai permessi. link:reference-collected-metadata.html#last-access-time-timestamp["Saperne di più"^].
+L'opzione *Scansione senza permessi di scrittura* è disabilitata per impostazione predefinita. Questo significa che se Data Classification non ha i permessi di scrittura appropriati, il sistema non eseguirà la scansione dei file perché Data Classification non può ripristinare l'“ora dell'ultimo accesso” al valore originale. Se il tuo sistema può tollerare la modifica dell'ora dell'ultimo accesso, seleziona questa opzione. link:reference-collected-metadata.html#last-accessed-time-timestamp["Saperne di più"^].
 
 
 NOTE: I nuovi volumi aggiunti al sistema vengono scansionati automaticamente solo se la scansione è abilitata per tutti i volumi. Se hai abilitato la scansione solo su determinati volumi, devi abilitarla manualmente per il nuovo volume aggiunto.
