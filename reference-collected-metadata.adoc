@@ -56,19 +56,3 @@ Questa funzionalità è applicabile ai sistemi ONTAP locali, Cloud Volumes ONTAP
 
 
 NOTE: I volumi ONTAP configurati con SnapLock hanno autorizzazioni di sola lettura e inoltre non possono ripristinare l'ora dell'ultimo accesso al timestamp originale.
-
-
-
-=== Eventi di analisi della scansione
-
-Nella pagina Investigazione c'è un filtro chiamato _Scan Analysis Event_ che ti permette di visualizzare sia i file che non sono stati classificati perché NetApp Data Classification non è riuscito a ripristinare l'ora dell'ultimo accesso, sia i file che sono stati classificati anche se NetApp Data Classification non è riuscito a ripristinare l'ora dell'ultimo accesso.
-
-image:screenshot_scan_analysis_event_filter.png["Uno screenshot del filtro per vedere quali file sono stati scansionati e quali no, in base al possesso o meno di permessi di scrittura."]
-
-Le selezioni del filtro sono:
-
-* "Non classificato - Impossibile ripristinare l'ultimo accesso" - Questo mostra i file che non sono stati classificati a causa della mancanza di permessi di scrittura.
-* "Classified and updated last accessed time" - Mostra i file che sono stati classificati e per i quali Data Classification non è riuscito a ripristinare l'ultimo accesso alla data originale. Questo filtro è rilevante solo per gli ambienti in cui è abilitata l'opzione *Scan without write permissions*.
-
-
-Se necessario, puoi esportare questi risultati in un report così puoi vedere quali file vengono analizzati o meno a causa delle autorizzazioni. link:task-investigate-data.html#download-your-report["Scopri di più sui report di Data Investigation"^].
