@@ -21,6 +21,7 @@ IMPORTANT: A partire dalla versione 1.31, la classificazione dei dati è disponi
 
 
 
+[[netapp-console]]
 == NetApp Console
 
 La classificazione dei dati è accessibile tramite la NetApp Console.
@@ -33,6 +34,7 @@ Scopri di più sulink:https://docs.netapp.com/us-en/console-setup-admin/concept-
 
 
 
+[[features]]
 == Caratteristiche
 
 La classificazione dei dati utilizza l'intelligenza artificiale (IA), l'elaborazione del linguaggio naturale (NLP) e l'apprendimento automatico (ML) per comprendere il contenuto che analizza, al fine di estrarre entità e categorizzare il contenuto di conseguenza.  Ciò consente alla classificazione dei dati di fornire le seguenti aree di funzionalità.
@@ -65,6 +67,7 @@ La classificazione dei dati fornisce strumenti che possono aiutarti a ridurre il
 
 
 
+[[supported-systems-and-data-sources]]
 == Sistemi supportati e fonti di dati
 
 La classificazione dei dati può analizzare e scansionare dati strutturati e non strutturati provenienti dai seguenti tipi di sistemi e fonti di dati:
@@ -99,12 +102,14 @@ Data Classification supporta le versioni NFS 3.x, 4.0 e 4.1 e le versioni CIFS 1
 
 
 
+[[cost]]
 == Costo
 
 L'utilizzo della classificazione dei dati è gratuito.  Non è richiesta alcuna licenza di classificazione o abbonamento a pagamento.
 
 
 
+[[infrastructure-costs]]
 === Costi delle infrastrutture
 
 * L'installazione di Data Classification nel cloud richiede la distribuzione di un'istanza cloud, che comporta l'addebito di costi da parte del provider cloud presso cui viene distribuita. Vedere <<L'istanza di classificazione dei dati,il tipo di istanza distribuita per ciascun provider cloud>> .  Non ci sono costi se si installa Data Classification su un sistema locale.
@@ -113,6 +118,7 @@ L'utilizzo della classificazione dei dati è gratuito.  Non è richiesta alcuna 
 
 
 
+[[data-transfer-costs]]
 === Costi di trasferimento dati
 
 I costi di trasferimento dati dipendono dalla configurazione.  Se l'istanza di Data Classification e l'origine dati si trovano nella stessa zona di disponibilità e regione, non vi sono costi di trasferimento dati.  Tuttavia, se la fonte dei dati, ad esempio un sistema Cloud Volumes ONTAP , si trova in una zona di disponibilità o regione _diversa_, il tuo provider cloud ti addebiterà i costi di trasferimento dei dati.  Per maggiori dettagli consultare questi link:
@@ -124,6 +130,7 @@ I costi di trasferimento dati dipendono dalla configurazione.  Se l'istanza di D
 
 
 
+[[the-data-classification-instance]]
 == L'istanza di classificazione dei dati
 
 Quando si distribuisce Data Classification nel cloud, la Console distribuisce l'istanza nella stessa subnet dell'agente della Console. https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html["Scopri di più sull'agente Console."^]
@@ -161,6 +168,7 @@ Esaminare le seguenti specifiche per i tipi di istanza:
 |===
 
 
+[[how-data-classification-scanning-works]]
 == Come funziona la scansione della classificazione dei dati
 
 Ad alto livello, la scansione della classificazione dei dati funziona in questo modo:
@@ -186,6 +194,7 @@ NOTE: La classificazione dei dati non impone limiti alla quantità di dati che p
 
 
 
+[[mapping-and-full-scans]]
 == Mappatura e scansioni complete
 
 È possibile eseguire due tipi di scansioni nella classificazione dei dati:
@@ -198,6 +207,7 @@ Per una ripartizione delle differenze tra scansioni solo mappa e scansioni compl
 
 
 
+[[information-that-data-classification-categorizes]]
 == Informazioni che la classificazione dei dati categorizza
 
 La classificazione dei dati raccoglie, indicizza e assegna categorie ai seguenti dati:
@@ -213,6 +223,7 @@ La classificazione dei dati raccoglie, indicizza e assegna categorie ai seguenti
 
 
 
+[[networking-overview]]
 == Panoramica della rete
 
 Data Classification distribuisce un singolo server, o cluster, ovunque tu scelga: nel cloud o in sede.  I server si connettono tramite protocolli standard alle fonti dati e indicizzano i risultati in un cluster Elasticsearch, anch'esso distribuito sugli stessi server.  Ciò consente il supporto per ambienti multi-cloud, cross-cloud, cloud privati e on-premise.

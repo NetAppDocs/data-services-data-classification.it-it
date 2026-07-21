@@ -21,6 +21,7 @@ NOTE: La scansione dei dati provenienti da condivisioni file non NetApp non è s
 
 
 
+[[prerequisites]]
 == Prerequisiti
 
 Prima di abilitare la classificazione dei dati, rivedere i seguenti prerequisiti per assicurarsi di disporre di una configurazione supportata.
@@ -48,6 +49,7 @@ Se si desidera assicurarsi che gli "ultimi orari di accesso" dei file non vengan
 
 
 
+[[create-a-file-shares-group]]
 == Crea un gruppo di condivisione file
 
 Quando aggiungi condivisioni di file al gruppo, devi utilizzare il formato `<host_name>:/<share_path>` .
@@ -89,6 +91,7 @@ NOTE: Se la scansione non viene completata correttamente per una configurazione 
 
 
 
+[[edit-a-file-shares-group]]
 == Modifica un gruppo di condivisione file
 
 Dopo aver creato un gruppo di condivisioni file, è possibile modificare il protocollo CIFS o aggiungere e rimuovere condivisioni file.
@@ -132,6 +135,7 @@ Se si aggiungono condivisioni di file con un secondo protocollo, assicurarsi di 
 
 
 
+[[track-the-scanning-progress]]
 == Monitora l'avanzamento della scansione
 
 È possibile monitorare l'avanzamento della scansione iniziale.
@@ -143,6 +147,7 @@ Se si aggiungono condivisioni di file con un secondo protocollo, assicurarsi di 
 
 
 
+[[enable-and-disable-scans-on-volumes]]
 == Abilita e disabilita le scansioni sui volumi
 
 Dalla pagina Configurazione è possibile avviare o interrompere le scansioni su qualsiasi sistema in qualsiasi momento. È inoltre possibile passare da scansioni di sola mappatura a scansioni di mappatura e classificazione, e viceversa. Si consiglia di eseguire la scansione di tutti i volumi di un sistema.

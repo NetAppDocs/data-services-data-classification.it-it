@@ -18,6 +18,7 @@ Completa alcuni passaggi per eseguire la scansione Amazon FSx per volumi ONTAP c
 
 
 
+[[before-you-begin]]
 == Prima di iniziare
 
 * Per distribuire e gestire la classificazione dei dati è necessario un agente Console attivo in AWS.
@@ -41,6 +42,7 @@ https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html["Interfacce d
 
 
 
+[[deploy-the-data-classification-instance]]
 == Distribuisci l'istanza di classificazione dei dati
 
 link:task-deploy-cloud-compliance.html["Distribuisci la classificazione dei dati"^]se non è già presente un'istanza distribuita.
@@ -53,6 +55,7 @@ Gli aggiornamenti al software di classificazione dei dati sono automatizzati, a 
 
 
 
+[[enable-data-classification-in-your-systems]]
 == Abilita la classificazione dei dati nei tuoi sistemi
 
 È possibile abilitare la classificazione dei dati per FSx per i volumi ONTAP .
@@ -82,6 +85,7 @@ La classificazione dei dati avvia la scansione dei volumi selezionati nel sistem
 ====
 
 
+[[verify-that-data-classification-has-access-to-volumes]]
 == Verificare che la classificazione dei dati abbia accesso ai volumi
 
 Assicurati che Data Classification possa accedere ai volumi controllando la rete, i gruppi di sicurezza e i criteri di esportazione.
@@ -116,6 +120,7 @@ Dopo aver immesso le credenziali, dovresti visualizzare un messaggio che indica 
 
 
 
+[[enable-and-disable-scans-on-volumes]]
 == Abilita e disabilita le scansioni sui volumi
 
 Dalla pagina Configurazione è possibile avviare o interrompere le scansioni su qualsiasi sistema in qualsiasi momento. È inoltre possibile passare da scansioni di sola mappatura a scansioni di mappatura e classificazione, e viceversa. Si consiglia di eseguire la scansione di tutti i volumi di un sistema.
@@ -140,6 +145,7 @@ Quando si abilita la scansione, Data Classification avvia la scansione dei volum
 
 
 
+[[scan-data-protection-volumes]]
 == Scansiona i volumi di protezione dei dati
 
 Per impostazione predefinita, i volumi di protezione dati (DP) non vengono scansionati perché non sono esposti esternamente e Data Classification non può accedervi.  Questi sono i volumi di destinazione per le operazioni SnapMirror da un file system FSx per ONTAP .

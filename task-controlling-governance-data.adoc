@@ -22,6 +22,7 @@ Inoltre, se si prevede di migrare i dati da sedi locali al cloud, è possibile v
 
 
 
+[[review-the-governance-dashboard]]
 == Esaminare la dashboard di governance
 
 La dashboard Governance fornisce informazioni che consentono di aumentare l'efficienza e controllare i costi relativi ai dati archiviati nelle risorse di storage.
@@ -38,6 +39,7 @@ Viene visualizzata la dashboard Governance.
 
 
 
+[[review-savings-opportunities]]
 === Esaminare le opportunità di risparmio
 
 Il componente _Opportunità di risparmio_ mostra i dati che è possibile eliminare o spostare in un archivio di oggetti meno costoso.  I dati in _Opportunità di risparmio_ vengono aggiornati ogni 2 ore.  È anche possibile aggiornare manualmente i dati.
@@ -57,6 +59,7 @@ NOTE: Se una qualsiasi delle tue origini dati implementa la suddivisione in live
 
 
 
+[[create-the-data-discovery-assessment-report]]
 == Creare il report di valutazione della scoperta dei dati
 
 Il rapporto di valutazione della scoperta dei dati fornisce un'analisi di alto livello dell'ambiente scansionato per evidenziare le aree problematiche e i potenziali interventi di risanamento. I risultati si basano sia sulla mappatura che sulla classificazione dei dati. L'obiettivo di questo rapporto è quello di aumentare la consapevolezza di tre aspetti significativi del tuo set di dati:
@@ -94,6 +97,7 @@ La classificazione dei dati genera un report in formato PDF che puoi rivedere e 
 
 
 
+[[create-the-data-mapping-overview-report]]
 == Creare il report di panoramica della mappatura dei dati
 
 Il report di panoramica sulla mappatura dei dati fornisce una panoramica dei dati archiviati nelle fonti dati aziendali per assisterti nelle decisioni relative ai processi di migrazione, backup, sicurezza e conformità.  Il rapporto riassume tutti i sistemi e le fonti di dati.  Fornisce inoltre un'analisi per ciascun sistema.
@@ -128,6 +132,7 @@ Se il report è più grande di 1 MB, il file PDF viene conservato nell'istanza d
 
 
 
+[[review-the-top-data-repositories-listed-by-data-sensitivity]]
 === Esamina i principali repository di dati elencati in base alla sensibilità dei dati
 
 L'area _Principali repository di dati per livello di sensibilità_ del report Panoramica mappatura dati elenca i quattro principali repository di dati (sistemi e origini dati) che contengono gli elementi più sensibili.  Il grafico a barre per ciascun sistema è suddiviso in:
@@ -146,6 +151,7 @@ Questi dati vengono aggiornati ogni due ore e possono essere aggiornati manualme
 
 
 
+[[review-sensitive-data-and-wide-permissions]]
 === Esaminare i dati sensibili e le autorizzazioni estese
 
 L'area _Dati sensibili e autorizzazioni estese_ della dashboard Governance mostra i conteggi dei file che contengono dati sensibili e dispongono di autorizzazioni estese.  Nella tabella sono riportati i seguenti tipi di autorizzazioni:
@@ -161,6 +167,7 @@ L'area _Dati sensibili e autorizzazioni estese_ della dashboard Governance mostr
 
 
 
+[[review-data-listed-by-types-of-open-permissions]]
 === Esaminare i dati elencati in base ai tipi di autorizzazioni aperte
 
 L'area _Autorizzazioni aperte_ del report Panoramica mappatura dati mostra la percentuale per ciascun tipo di autorizzazioni esistenti per tutti i file sottoposti a scansione.  Il grafico mostra i seguenti tipi di autorizzazioni:
@@ -178,6 +185,7 @@ L'area _Autorizzazioni aperte_ del report Panoramica mappatura dati mostra la pe
 
 
 
+[[review-the-age-and-size-of-data]]
 === Esaminare l'età e la dimensione dei dati
 
 È possibile esaminare gli elementi nei grafici _Età_ e _Dimensione_ del report Panoramica mappatura dati per verificare se vi sono dati da eliminare o da spostare in un archivio di oggetti meno costoso.

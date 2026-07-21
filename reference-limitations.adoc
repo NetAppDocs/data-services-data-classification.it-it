@@ -18,6 +18,7 @@ Le limitazioni note identificano funzioni che non sono supportate o non interagi
 
 
 
+[[netapp-data-classification-disabled-options]]
 == Opzioni disabilitate NetApp Data Classification
 
 Nella versione di dicembre 2023 (1.26.6) sono state rimosse le seguenti opzioni:
@@ -29,12 +30,14 @@ Nella versione di dicembre 2023 (1.26.6) sono state rimosse le seguenti opzioni:
 
 
 
+[[data-classification-scanning]]
 == Scansione della classificazione dei dati
 
 Le scansioni di classificazione dei dati presentano le seguenti limitazioni.
 
 
 
+[[data-classification-scans-only-one-share-under-a-volume]]
 === La classificazione dei dati esegue la scansione di una sola condivisione in un volume
 
 Se si dispone di più condivisioni di file in un singolo volume, la classificazione dei dati analizza la condivisione con la gerarchia più elevata.  Ad esempio, se hai azioni come le seguenti:
@@ -70,6 +73,7 @@ Aggiungi tutte le azioni singolarmente, ad esempio:
 
 
 
+[[last-accessed-timestamp]]
 === Ultimo timestamp di accesso
 
 Quando Data Classification esegue una scansione di una directory, la scansione ha effetto sul campo **Ultimo accesso** della directory.  Quando si visualizza il campo **Ultimo accesso**, i metadati riflettono la data e l'ora della scansione oppure l'ultima volta che un utente ha effettuato l'accesso alla directory.

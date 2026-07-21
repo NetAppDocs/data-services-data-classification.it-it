@@ -4,6 +4,7 @@
 
 
 
+[[support-for-rhel-8-10]]
 === Supporto per RHEL 8.10
 
 Questa versione fornisce supporto per Red Hat Enterprise Linux v8.10 oltre alle versioni supportate in precedenza. Ciò è applicabile a qualsiasi installazione manuale in sede della BlueXP classification, comprese le distribuzioni in dark site.
@@ -14,6 +15,7 @@ Scopri di più su https://docs.netapp.com/us-en/data-services-data-classificatio
 
 
 
+[[support-for-nfs-v4-1]]
 === Supporto per NFS v4.1
 
 Questa versione fornisce supporto per NFS v4.1 oltre alle versioni supportate in precedenza.

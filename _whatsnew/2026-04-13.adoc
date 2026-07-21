@@ -4,6 +4,7 @@
 
 
 
+[[general-improvements]]
 === Miglioramenti generali
 
 Questa versione di Data Classification include correzioni di bug, miglioramenti della sicurezza e delle prestazioni.

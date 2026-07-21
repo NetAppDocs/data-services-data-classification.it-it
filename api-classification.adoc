@@ -28,6 +28,7 @@ Le API nella documentazione di Swagger consentono di cercare, aggregare dati, mo
 
 
 
+[[overview]]
 == Panoramica
 
 L'API consente di eseguire le seguenti funzioni:
@@ -56,6 +57,7 @@ L'API è sicura e utilizza lo stesso metodo di autenticazione dell'interfaccia u
 
 
 
+[[accessing-the-swagger-api-reference]]
 == Accesso al riferimento API Swagger
 
 Per accedere a Swagger, avrai bisogno dell'indirizzo IP della tua istanza di Data Classification. Nel caso di un'implementazione cloud, utilizzerai l'indirizzo IP pubblico. Quindi dovrai accedere a questo endpoint:
@@ -64,6 +66,7 @@ Per accedere a Swagger, avrai bisogno dell'indirizzo IP della tua istanza di Dat
 
 
 
+[[example-using-the-apis]]
 == Esempio utilizzando le API
 
 L'esempio seguente mostra una chiamata API per copiare i file.

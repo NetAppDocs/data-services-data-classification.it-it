@@ -44,6 +44,7 @@ NetApp Data Classification raccoglie metadati durante la scansione delle tue ori
 ====
 
 
+[[last-accessed-time]]
 == Ultimo accesso
 
 Quando Data Classification estrae dati dalle condivisioni di file, il sistema operativo lo considera un evento di accesso e aggiorna di conseguenza l'ora dell'ultimo accesso. Dopo la scansione, Data Classification tenta di ripristinare l'ora dell'ultimo accesso al timestamp originale. Se Data Classification non ha i permessi di scrittura degli attributi in CIFS o i permessi di scrittura in NFS, il sistema non può ripristinare l'ora dell'ultimo accesso al timestamp originale.

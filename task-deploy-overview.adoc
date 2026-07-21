@@ -26,6 +26,7 @@ TIP: Per le implementazioni VMware on-premises vSphere, NetApp Data Classificati
 
 
 
+[[on-premises-installation-script]]
 == Script di installazione locale
 
 Sia l'installazione su un host Linux con accesso a Internet sia l'installazione locale su un host Linux senza accesso a Internet utilizzano uno script di installazione. Lo script inizia verificando se il sistema e l'ambiente soddisfano i prerequisiti. Se i prerequisiti sono soddisfatti, l'installazione ha inizio.

@@ -18,6 +18,7 @@ Completare alcuni passaggi per avviare la scansione dei dati all'interno Storage
 
 
 
+[[review-storagegrid-requirements]]
 == Esaminare i requisiti di StorageGRID
 
 Prima di abilitare la classificazione dei dati, rivedere i seguenti prerequisiti per assicurarsi di disporre di una configurazione supportata.
@@ -28,6 +29,7 @@ Prima di abilitare la classificazione dei dati, rivedere i seguenti prerequisiti
 
 
 
+[[deploy-the-data-classification-instance]]
 == Distribuisci l'istanza di classificazione dei dati
 
 Distribuisci Data Classification se non è già stata distribuita un'istanza.
@@ -38,6 +40,7 @@ Se si stanno eseguendo la scansione dei dati da StorageGRID installato in un sit
 
 
 
+[[add-the-storagegrid-service-to-data-classification]]
 == Aggiungere il servizio StorageGRID alla classificazione dei dati
 
 Aggiungere il servizio StorageGRID .
@@ -62,6 +65,7 @@ StorageGRID viene aggiunto all'elenco dei sistemi.
 
 
 
+[[enable-and-disable-scans-on-storagegrid-buckets]]
 == Abilita e disabilita le scansioni sui bucket StorageGRID
 
 Dopo aver abilitato la classificazione dei dati su StorageGRID, il passaggio successivo consiste nel configurare i bucket che si desidera analizzare.  La classificazione dei dati rileva tali bucket e li visualizza nel sistema creato.

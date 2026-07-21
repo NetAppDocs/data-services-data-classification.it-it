@@ -21,6 +21,7 @@ Tutte le classificazioni personalizzate sono disponibili nella dashboard Classif
 
 
 
+[[create-a-custom-personal-identifier]]
 == Crea un identificatore personale personalizzato
 
 La classificazione dei dati consente di creare un identificatore personale personalizzato utilizzando parole chiave contestuali o un'espressione regolare per identificare i dati univoci della tua organizzazione.
@@ -63,6 +64,7 @@ Dopo aver creato un identificatore personale personalizzato, i suoi risultati ve
 
 
 
+[[create-a-custom-category]]
 == Crea una categoria personalizzata
 
 Grazie alle categorie personalizzate puoi categorizzare i dati specifici della tua organizzazione. Le categorie personalizzate vengono create in base ai file di testo caricati, dai quali Data Classification crea un modello di intelligenza artificiale per identificare informazioni simili in altri file.
@@ -99,6 +101,7 @@ Dopo aver creato una categoria personalizzata, i suoi risultati vengono acquisit
 
 
 
+[[edit-a-custom-classifier]]
 == Modifica un classificatore personalizzato
 
 È possibile modificare la logica di un identificatore personale dopo averlo creato. Non è possibile modificare il tipo di identificatore personale o il tipo logico; ad esempio, non è possibile modificare una categoria personalizzata in un identificatore personale personalizzato. Non è inoltre possibile modificare un identificatore personalizzato basato su parole chiave in un identificatore personalizzato basato su espressioni regolari.
@@ -113,6 +116,7 @@ Dopo aver creato una categoria personalizzata, i suoi risultati vengono acquisit
 
 
 
+[[delete-a-custom-classifier]]
 == Elimina un classificatore personalizzato
 
 . In NetApp Data Classification, seleziona *Classificazione personalizzata*.
@@ -122,6 +126,7 @@ Dopo aver creato una categoria personalizzata, i suoi risultati vengono acquisit
 
 
 
+[[next-steps]]
 == Prossimi passi
 
 * xref:task-generating-compliance-reports.html[Generare report di conformità]

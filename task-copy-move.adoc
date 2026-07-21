@@ -18,6 +18,7 @@ Oltre a fornire informazioni sulla governance e sulle opportunità di risparmio,
 
 
 
+[[copy-files]]
 == Copia file
 
 Data Classification supporta la copia di file fino a 1 GB di dimensione. Puoi copiare un totale di 1 TB di dati o 5 milioni di file, a seconda di quale limite venga raggiunto per primo. Puoi copiare file verso una destinazione CIFS o NFS. Non c'è alcun impatto sul file di origine quando lo copi.
@@ -41,6 +42,7 @@ image:screenshot-copy-nfs.png["Screenshot della funzione di copia per file NFS"]
 
 
 
+[[move-files]]
 == Sposta file
 
 Data Classification supporta lo spostamento di file fino a 1 GB di dimensione. È possibile spostare un totale di 1 TB di dati o 5 milioni di file, a seconda di quale limite venga raggiunto per primo. È possibile spostare i file verso una destinazione CIFS o NFS.
@@ -69,6 +71,7 @@ image:screenshot-move-nfs.png["Screenshot della funzione di spostamento per file
 
 
 
+[[delete-files]]
 == Elimina file
 
 Quando si filtrano i dati nella dashboard di Investigation per individuare opportunità di risparmio di spazio e costi, è possibile eliminare quei file. L'eliminazione dei file è supportata solo per i file non strutturati.

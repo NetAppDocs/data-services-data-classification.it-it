@@ -21,6 +21,7 @@ NOTE: Per ottenere informazioni dettagliate dalla pagina Analisi, è necessario 
 
 
 
+[[data-investigation-structure]]
 == Struttura dell'indagine sui dati
 
 La pagina Indagine sui dati ordina i dati in tre schede:
@@ -32,6 +33,7 @@ La pagina Indagine sui dati ordina i dati in tre schede:
 
 
 
+[[data-filters]]
 == Filtri dati
 
 La pagina Analisi dati fornisce numerosi filtri per ordinare i dati in modo da poter trovare ciò di cui hai bisogno.  È possibile utilizzare più filtri contemporaneamente.
@@ -196,6 +198,7 @@ TIP: Dopo aver filtrato i dati, puoi link:task-copy-move.html["copia, sposta ed 
 
 
 
+[[view-file-metadata]]
 == Visualizza i metadati del file
 
 Oltre a mostrare il sistema e il volume in cui risiede il file, i metadati mostrano molte altre informazioni, tra cui le autorizzazioni del file, il proprietario del file e se sono presenti duplicati di questo file.  Questa informazione è utile se stai pianificando dilink:task-using-policies.html["creare query salvate"] perché puoi vedere tutte le informazioni che puoi utilizzare per filtrare i tuoi dati.
@@ -213,6 +216,7 @@ image:screenshot_compliance_file_details.png["Uno screenshot che mostra i dettag
 
 
 
+[[view-user-permissions-for-files-and-directories]]
 == Visualizza i permessi utente per file e directory
 
 Per visualizzare un elenco di tutti gli utenti o gruppi che hanno accesso a un file o a una directory e i tipi di autorizzazioni di cui dispongono, selezionare *Visualizza tutte le autorizzazioni*.  Questa opzione è disponibile solo per i dati nelle condivisioni CIFS.
@@ -237,6 +241,7 @@ TIP: È possibile espandere un livello del gruppo per visualizzare gli utenti ch
 
 
 
+[[check-for-duplicate-files-in-your-storage-systems]]
 == Controlla i file duplicati nei tuoi sistemi di archiviazione
 
 Puoi verificare se nei tuoi sistemi di archiviazione sono archiviati file duplicati.  Questa funzione è utile se si desidera identificare le aree in cui è possibile risparmiare spazio di archiviazione.  È inoltre opportuno assicurarsi che determinati file con autorizzazioni specifiche o informazioni sensibili non vengano duplicati inutilmente nei sistemi di archiviazione.
@@ -276,6 +281,7 @@ TIP: È possibile utilizzare il valore "hash del file" fornito in questa pagina 
 
 
 
+[[download-your-report]]
 == Scarica il tuo report
 
 Puoi scaricare i risultati filtrati in formato CSV o JSON.
@@ -293,6 +299,7 @@ NOTE: È possibile scaricare una versione del file CSV da visualizzare in questo
 
 
 
+[[whats-included-in-the-downloadable-report]]
 === Cosa è incluso nel report scaricabile
 
 Il *Rapporto dati file non strutturati* include le seguenti informazioni sui tuoi file:
@@ -370,6 +377,7 @@ Una finestra di dialogo visualizza un messaggio che indica che i report sono in 
 
 
 
+[[create-a-saved-query-based-on-selected-filters]]
 == Crea una query salvata in base ai filtri selezionati
 
 .Passi
@@ -398,6 +406,7 @@ TIP: Potrebbero essere necessari fino a 15 minuti prima che i risultati vengano 
 
 
 
+[[next-steps]]
 == Prossimi passi
 
 * link:task-copy-move.html["Copia, sposta ed elimina dati dalla dashboard dell'indagine"]

@@ -21,6 +21,7 @@ La dashboard NetApp Data Classification Health Monitor fornisce monitoraggio in 
 
 
 
+[[health-monitor-insights]]
 == Approfondimenti di Health Monitor
 
 La dashboard Health Monitor presenta le informazioni in quattro categorie.
@@ -45,6 +46,7 @@ Esaminare l'utilizzo della CPU, l'utilizzo del disco, l'utilizzo del disco e l'u
 
 
 
+[[access-the-health-monitor-dashboard]]
 == Accedi alla dashboard di Health Monitor
 
 . In Classificazione dati, seleziona **Configurazione**.

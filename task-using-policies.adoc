@@ -26,6 +26,7 @@ image:screenshot_compliance_highlights_tab.png["Uno screenshot della scheda Quer
 
 
 
+[[view-saved-queries-results-in-the-investigation-page]]
 == Visualizza i risultati delle query salvate nella pagina Indagine
 
 Per visualizzare i risultati di una query salvata nella pagina Indagine, selezionareimage:button-gallery-options.gif["Pulsante Altro"] pulsante per una ricerca specifica, quindi seleziona *Esamina risultati*.
@@ -34,6 +35,7 @@ image:screenshot_compliance_highlights_investigate.png["Uno screenshot della sel
 
 
 
+[[create-saved-queries-and-policies]]
 == Crea query e policy salvate
 
 Puoi creare query salvate personalizzate che forniscono risultati per query specifiche della tua organizzazione.  Vengono restituiti risultati per tutti i file e le directory (condivisioni e cartelle) che corrispondono ai criteri di ricerca.
@@ -61,6 +63,7 @@ Dopo aver creato la ricerca o la policy, puoi visualizzarla nella scheda **Query
 
 
 
+[[edit-saved-queries-or-policies]]
 == Modifica query o policy salvate
 
 È possibile modificare il nome e la descrizione di una query salvata.  È anche possibile convertire una query in una policy e viceversa.
@@ -81,6 +84,7 @@ Facoltativamente, è possibile convertire la query in una policy oppure converti
 
 
 
+[[delete-saved-queries]]
 == Elimina le query salvate
 
 Puoi eliminare qualsiasi query o criterio personalizzato salvato se non ti serve più.  Non è possibile eliminare le query salvate di default.
@@ -89,6 +93,7 @@ Per eliminare una query salvata, selezionareimage:button-gallery-options.gif["Pu
 
 
 
+[[default-queries]]
 == Query predefinite
 
 La classificazione dei dati fornisce le seguenti query di ricerca definite dal sistema:

@@ -33,6 +33,7 @@ image:diagram_deploy_onprem_cloud_instance.png["Uno schema dei componenti di ret
 
 
 
+[[quick-start]]
 == Avvio rapido
 
 Inizia subito seguendo questi passaggi oppure scorri verso il basso fino alle sezioni rimanenti per i dettagli completi.
@@ -57,6 +58,7 @@ Scarica il software Cloud Data Classification dal sito di supporto NetApp e copi
 
 
 
+[[create-a-console-agent]]
 == Creare un agente Console
 
 Per installare e utilizzare NetApp Data Classification è necessario un agente Console. Nella maggior parte dei casi, probabilmente avrai già configurato un agente Console prima di tentare di attivare NetApp Data Classification.
@@ -81,6 +83,7 @@ Durante l'installazione di Data Classification sarà necessario l'indirizzo IP o
 
 
 
+[[prepare-the-linux-host-system]]
 == Preparare il sistema host Linux
 
 Il software di classificazione dei dati deve essere eseguito su un host che soddisfi specifici requisiti del sistema operativo, requisiti di RAM, requisiti software e così via.  L'host Linux può trovarsi nella tua rete o nel cloud.
@@ -204,6 +207,7 @@ NOTE: L'indirizzo IP del sistema host di classificazione dei dati non può esser
 
 
 
+[[enable-outbound-internet-access-from-data-classification]]
 == Abilita l'accesso a Internet in uscita dalla classificazione dei dati
 
 La classificazione dei dati richiede l'accesso a Internet in uscita.  Se la rete virtuale o fisica utilizza un server proxy per l'accesso a Internet, assicurarsi che l'istanza di Data Classification disponga di accesso a Internet in uscita per contattare i seguenti endpoint.
@@ -232,6 +236,7 @@ La classificazione dei dati richiede l'accesso a Internet in uscita.  Se la rete
 |===
 
 
+[[verify-that-all-required-ports-are-enabled]]
 == Verificare che tutte le porte richieste siano abilitate
 
 È necessario assicurarsi che tutte le porte necessarie siano aperte per la comunicazione tra l'agente della console, Data Classification, Active Directory e le origini dati.
@@ -285,6 +290,7 @@ I criteri di esportazione del volume NFS devono consentire l'accesso dall'istanz
 |===
 
 
+[[install-data-classification-on-the-linux-host]]
 == Installa Data Classification sull'host Linux
 
 Nelle configurazioni tipiche, il software verrà installato su un singolo sistema host. <<Installazione a host singolo per configurazioni tipiche,Guarda i passaggi qui>> .
@@ -300,6 +306,7 @@ NOTE: Al momento, Data Classification non è in grado di analizzare bucket S3, A
 
 
 
+[[single-host-installation-for-typical-configurations]]
 === Installazione a host singolo per configurazioni tipiche
 
 Esaminare i requisiti e seguire questi passaggi quando si installa il software di classificazione dei dati su un singolo host locale.
@@ -389,6 +396,7 @@ Se è presente connettività sulla porta 8080 tra la macchina host e l'istanza d
 
 
 
+[[next-steps]]
 == Prossimi passi
 
 * link:task-scanning-overview.html["Configura la scansione sulle tue origini dati"]

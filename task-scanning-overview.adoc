@@ -22,6 +22,7 @@ Dopo la scansione iniziale, Data Classification analizza continuamente i dati in
 
 
 
+[[understand-scan-types]]
 == Comprendere i tipi di scansione
 
 È possibile eseguire due tipi di scansioni nella classificazione dei dati:

@@ -20,6 +20,7 @@ Nelle tabelle seguenti, se il sistema contrassegnato come "default" non è dispo
 
 
 
+[[aws-instance-types]]
 == Tipi di istanza AWS
 
 [cols="20,30,25"]
@@ -34,6 +35,7 @@ Nelle tabelle seguenti, se il sistema contrassegnato come "default" non è dispo
 |===
 
 
+[[azure-instance-types]]
 == Tipi di istanza di Azure
 
 [cols="20,30,25"]
@@ -48,6 +50,7 @@ Nelle tabelle seguenti, se il sistema contrassegnato come "default" non è dispo
 |===
 
 
+[[gcp-instance-types]]
 == Tipi di istanza GCP
 
 [cols="20,30,25"]

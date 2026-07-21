@@ -38,6 +38,7 @@ Per la classificazione dei dati sono disponibili i seguenti report:
 
 
 
+[[select-the-systems-for-reports]]
 == Seleziona i sistemi per i report
 
 È possibile filtrare il contenuto della dashboard Conformità alla classificazione dei dati per visualizzare i dati di conformità per tutti i sistemi e database oppure solo per sistemi specifici.
@@ -55,6 +56,7 @@ image:screenshot-report-filter.png["Schermata che mostra il filtraggio dei siste
 
 
 
+[[data-subject-access-request-report]]
 == Segnalazione della richiesta di accesso ai dati dell'interessato
 
 Le normative sulla privacy, come il GDPR europeo, garantiscono agli interessati (come clienti o dipendenti) il diritto di accedere ai propri dati personali.  Quando un soggetto interessato richiede queste informazioni, si parla di DSAR (richiesta di accesso ai dati).  Le organizzazioni sono tenute a rispondere a tali richieste "senza indebito ritardo" e al più tardi entro un mese dal ricevimento.
@@ -104,6 +106,7 @@ Se si sceglie *Locale*, il report viene limitato alle prime 10.000 righe di dati
 
 
 
+[[health-insurance-portability-and-accountability-act-hipaa-report]]
 == Rapporto sulla legge sulla portabilità e responsabilità dell'assicurazione sanitaria (HIPAA)
 
 Il rapporto HIPAA (Health Insurance Portability and Accountability Act) può aiutarti a identificare i file contenenti informazioni sanitarie.  È progettato per aiutare la tua organizzazione a rispettare i requisiti di conformità alle leggi sulla privacy dei dati HIPAA.  Le informazioni ricercate dalla classificazione dei dati includono:
@@ -141,6 +144,7 @@ La classificazione dei dati genera un report in formato PDF.
 
 
 
+[[payment-card-industry-data-security-standard-pci-dss-report]]
 == Rapporto sullo standard di sicurezza dei dati del settore delle carte di pagamento (PCI DSS)
 
 Il report PCI DSS (Payment Card Industry Data Security Standard) può aiutarti a identificare la distribuzione delle informazioni sulle carte di credito nei tuoi file.
@@ -171,6 +175,7 @@ La classificazione dei dati genera un report PDF che puoi rivedere e inviare ad 
 
 
 
+[[privacy-risk-assessment-report]]
 == Rapporto di valutazione del rischio per la privacy
 
 Il rapporto sulla valutazione del rischio per la privacy fornisce una panoramica dello stato del rischio per la privacy della tua organizzazione, come richiesto dalle normative sulla privacy quali GDPR e CCPA.

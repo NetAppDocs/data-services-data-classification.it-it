@@ -18,6 +18,7 @@ Se necessario, è possibile impedire a NetApp Data Classification di analizzare 
 
 
 
+[[deactivate-scans-for-a-system]]
 == Disattivare le scansioni per un sistema
 
 Quando si disattivano le scansioni, Data Classification non esegue più la scansione dei dati sul sistema e rimuove le informazioni indicizzate dall'istanza di Data Classification.  I dati del sistema stesso non vengono eliminati.
@@ -30,6 +31,7 @@ TIP: È anche possibile disattivare le scansioni per un sistema dal pannello Ser
 
 
 
+[[remove-a-database-from-data-classification]]
 == Rimuovere un database dalla classificazione dei dati
 
 Se non è più necessario eseguire la scansione di un determinato database, è possibile eliminarlo dall'interfaccia di classificazione dei dati e interrompere tutte le scansioni.
@@ -39,6 +41,7 @@ Se non è più necessario eseguire la scansione di un determinato database, è p
 
 
 
+[[remove-a-group-of-file-shares-from-data-classification]]
 == Rimuovere un gruppo di condivisioni file dalla classificazione dei dati
 
 Se non si desidera più eseguire la scansione dei file utente da un gruppo di condivisione file, è possibile eliminare il gruppo di condivisione file dall'interfaccia di classificazione dei dati e interrompere tutte le scansioni.

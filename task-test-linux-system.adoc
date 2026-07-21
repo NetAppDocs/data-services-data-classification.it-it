@@ -20,6 +20,7 @@ Lo script di installazione di Data Classification include uno script di test per
 
 
 
+[[getting-started]]
 == Iniziare
 
 Dovrai svolgere le seguenti attività.
@@ -33,6 +34,7 @@ Dovrai svolgere le seguenti attività.
 
 
 
+[[create-a-console-agent]]
 == Creare un agente Console
 
 Per poter installare e utilizzare Data Classification è necessario un agente Console.  Tuttavia, è possibile eseguire lo script Prerequisiti senza un agente Console.
@@ -50,6 +52,7 @@ Quando si esegue lo script dei prerequisiti, è necessario l'indirizzo IP o il n
 
 
 
+[[verify-host-requirements]]
 == Verifica i requisiti dell'host
 
 Il software di classificazione dei dati deve essere eseguito su un host che soddisfi specifici requisiti del sistema operativo, requisiti di RAM e requisiti software.
@@ -168,6 +171,7 @@ Tieni presente che devi riavviare Docker o Podman ogni volta che abiliti o aggio
 
 
 
+[[enable-outbound-internet-access-from-data-classification]]
 == Abilita l'accesso a Internet in uscita dalla classificazione dei dati
 
 La classificazione dei dati richiede l'accesso a Internet in uscita.  Se la rete virtuale o fisica utilizza un server proxy per l'accesso a Internet, assicurarsi che l'istanza di Data Classification disponga di accesso a Internet in uscita per contattare i seguenti endpoint.
@@ -199,6 +203,7 @@ TIP: Questa sezione non è richiesta per i sistemi host installati in siti senza
 |===
 
 
+[[verify-that-all-required-ports-are-enabled]]
 == Verificare che tutte le porte richieste siano abilitate
 
 È necessario assicurarsi che tutte le porte necessarie siano aperte per la comunicazione tra l'agente della console, Data Classification, Active Directory e le origini dati.
@@ -217,6 +222,7 @@ La console rileva i cluster ONTAP tramite HTTPS. Se si utilizzano criteri firewa
 |===
 
 
+[[run-the-data-classification-prerequisites-script]]
 == Eseguire lo script dei prerequisiti per la classificazione dei dati
 
 Per eseguire lo script dei prerequisiti per la classificazione dei dati, seguire questi passaggi.

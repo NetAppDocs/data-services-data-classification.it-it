@@ -18,12 +18,14 @@ Completa alcuni passaggi per iniziare a scansionare gli schemi del tuo database 
 
 
 
+[[review-prerequisites]]
 == Rivedere i prerequisiti
 
 Prima di abilitare la classificazione dei dati, rivedere i seguenti prerequisiti per assicurarsi di disporre di una configurazione supportata.
 
 
 
+[[supported-databases]]
 === Database supportati
 
 La classificazione dei dati può analizzare gli schemi dai seguenti database:
@@ -42,6 +44,7 @@ CAUTION: La funzionalità di raccolta delle statistiche *deve essere abilitata* 
 
 
 
+[[database-requirements]]
 === Requisiti del database
 
 È possibile eseguire la scansione di qualsiasi database con connettività all'istanza di classificazione dei dati, indipendentemente da dove sia ospitato.  Per connettersi al database sono necessarie solo le seguenti informazioni:
@@ -60,6 +63,7 @@ NOTE: Per MongoDB è richiesto un ruolo di amministratore di sola lettura.
 
 
 
+[[deploy-the-data-classification-instance]]
 == Distribuisci l'istanza di classificazione dei dati
 
 Distribuisci Data Classification se non è già stata distribuita un'istanza.
@@ -70,6 +74,7 @@ Se si stanno eseguendo la scansione di schemi di database installati in un sito 
 
 
 
+[[add-the-database-server]]
 == Aggiungere il server del database
 
 Aggiungere il server del database in cui risiedono gli schemi.
@@ -94,6 +99,7 @@ Il database viene aggiunto all'elenco dei sistemi.
 
 
 
+[[enable-and-disable-scans-on-database-schemas]]
 == Abilita e disabilita le scansioni sugli schemi del database
 
 È possibile interrompere o avviare la scansione completa degli schemi in qualsiasi momento.

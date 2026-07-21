@@ -4,6 +4,7 @@
 
 
 
+[[prioritize-classification-scans]]
 === Dare priorità alle scansioni di classificazione
 
 La funzione di classificazione dei dati supporta la possibilità di assegnare priorità alle scansioni di mappatura e classificazione, oltre alle scansioni di sola mappatura, consentendo di selezionare quali scansioni devono essere completate per prime. L'assegnazione di priorità alle scansioni di mappatura e classificazione è supportata sia durante che prima dell'avvio delle scansioni. Se si sceglie di assegnare priorità a una scansione mentre è in corso, verranno assegnate priorità sia alla scansione di mappatura che a quella di classificazione.
@@ -12,6 +13,7 @@ Per ulteriori informazioni, consultare link:https://docs.netapp.com/us-en/data-s
 
 
 
+[[support-for-canadian-personally-identifiable-information-pii-data-categories]]
 === Supporto per le categorie di dati di identificazione personale (PII) canadesi
 
 Le scansioni di classificazione dei dati identificano le categorie di dati PII canadesi. Queste categorie includono informazioni bancarie, numeri di passaporto, numeri di previdenza sociale, numeri di patente di guida e numeri di tessera sanitaria per tutte le province e i territori canadesi.
@@ -20,6 +22,7 @@ Per ulteriori informazioni, consultare link:https://docs.netapp.com/us-en/data-s
 
 
 
+[[custom-classification-preview]]
 === Classificazione personalizzata (anteprima)
 
 La classificazione dei dati supporta classificazioni personalizzate per le scansioni Map & Classify. Grazie alle classificazioni personalizzate, puoi adattare le scansioni di classificazione dei dati per acquisire dati specifici per la tua organizzazione utilizzando espressioni regolari. Questa funzionalità è attualmente in anteprima.
@@ -28,18 +31,21 @@ Per ulteriori informazioni, consultare link:https://docs.netapp.com/us-en/data-s
 
 
 
+[[saved-searches-tab]]
 === Scheda Ricerche salvate
 
 La scheda **Criteri** è stata rinominatalink:https://docs.netapp.com/us-en/data-services-data-classification/task-using-policies.html["**Ricerche salvate**"] . La funzionalità è invariata.
 
 
 
+[[send-scan-events-to-the-audit-page]]
 === Invia eventi di scansione alla pagina Audit
 
 La classificazione dei dati supporta l'invio di eventi di classificazione (quando viene avviata una scansione e quando termina) al link:https://docs.netapp.com/us-en/console-setup-admin/task-monitor-cm-operations.html#audit-user-activity-from-the-bluexp-timeline["Pagina Audit di NetApp Console"^].
 
 
 
+[[security-updates]]
 === Aggiornamenti di sicurezza
 
 * Il pacchetto Keras è stato aggiornato, mitigando le vulnerabilità (BDSA-2025-0107 e BDSA-2025-1984).
@@ -48,12 +54,14 @@ La classificazione dei dati supporta l'invio di eventi di classificazione (quand
 
 
 
+[[performance-enhancements]]
 === Miglioramenti delle prestazioni
 
 Sono stati implementati miglioramenti al codice per ridurre l'utilizzo della RAM e migliorare le prestazioni complessive della classificazione dei dati.
 
 
 
+[[bug-fixes]]
 === Correzioni di bug
 
 Sono stati risolti i bug che causavano il fallimento delle scansioni StorageGRID , il mancato caricamento delle opzioni di filtro della pagina di indagine e il mancato download della valutazione Data Discovery per le valutazioni di grandi volumi.

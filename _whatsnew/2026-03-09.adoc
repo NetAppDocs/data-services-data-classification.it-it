@@ -4,6 +4,7 @@
 
 
 
+[[resource-validation]]
 === Validazione delle risorse
 
 Per garantire l'affidabilità, Data Classification ora convalida la memoria disponibile e le risorse del disco durante le scansioni, la generazione di report e le azioni. Quando l'utilizzo della memoria supera il 95% o lo spazio su disco scende al di sotto di 6 GB, Data Classification sospende automaticamente le operazioni. Le operazioni riprendono quando le risorse sono sufficienti.
@@ -12,6 +13,7 @@ Per monitorare le risorse del sistema, vedere link:https://docs.netapp.com/us-en
 
 
 
+[[increased-limit-for-copy-and-move]]
 === Limite aumentato per copia e spostamento
 
 Le funzioni di copia e spostamento sono ora supportate per le destinazioni CIFS. Il limite di dimensione per file per entrambe le azioni è aumentato a 1 GB dal precedente limite di 50 MB. I limiti operativi per entrambe le azioni sono aumentati a 1 TB o 5 milioni di file.
@@ -20,6 +22,7 @@ Per ulteriori informazioni, consulta link:https://docs.netapp.com/us-en/data-ser
 
 
 
+[[active-directory-integration-configuration-permissions]]
 === Autorizzazioni di configurazione dell'integrazione di Active Directory
 
 Le modifiche alle impostazioni di integrazione di Active Directory (AD) in Data Classification sono ora riservate agli amministratori. I visualizzatori non hanno più la possibilità di modificare le impostazioni di AD.
@@ -28,6 +31,7 @@ Per ulteriori informazioni sul ruolo di Classification viewer, vedere link:https
 
 
 
+[[support-for-rhel-9-7]]
 === Supporto per RHEL 9.7
 
 Data Classification ha aggiunto Red Hat Enterprise Linux v9.7 per l'installazione manuale on-premises, incluse le implementazioni in dark site.
@@ -36,6 +40,7 @@ I seguenti sistemi operativi richiedono l'utilizzo del motore di container Podma
 
 
 
+[[transparent-proxy-support]]
 === Supporto proxy trasparente
 
 Data Classification ora supporta configurazioni proxy trasparenti, consentendo una distribuzione più fluida in ambienti di rete con proxy o con restrizioni.

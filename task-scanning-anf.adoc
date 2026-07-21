@@ -18,12 +18,14 @@ Completa alcuni passaggi per iniziare a usare NetApp Data Classification per Azu
 
 
 
+[[discover-the-azure-netapp-files-system-that-you-want-to-scan]]
 == Individuare il sistema Azure NetApp Files che si desidera analizzare
 
 Se il sistema Azure NetApp Files che si desidera analizzare non è già presente nella NetApp Console come sistema,link:https://docs.netapp.com/us-en/storage-management-azure-netapp-files/task-quick-start.html["aggiungilo nella pagina Sistemi"^] .
 
 
 
+[[deploy-the-data-classification-instance]]
 == Distribuisci l'istanza di classificazione dei dati
 
 link:task-deploy-cloud-compliance.html["Distribuisci la classificazione dei dati"^]se non è già presente un'istanza distribuita.
@@ -34,6 +36,7 @@ La classificazione dei dati deve essere distribuita nel cloud durante la scansio
 
 
 
+[[enable-data-classification-in-your-systems]]
 == Abilita la classificazione dei dati nei tuoi sistemi
 
 È possibile abilitare la classificazione dei dati sui volumi Azure NetApp Files .
@@ -59,6 +62,7 @@ La funzione di classificazione dei dati avvia la scansione dei volumi selezionat
 
 
 
+[[verify-that-data-classification-has-access-to-volumes]]
 == Verificare che la classificazione dei dati abbia accesso ai volumi
 
 Assicurarsi che Data Classification possa accedere ai volumi controllando la rete, i gruppi di sicurezza e i criteri di esportazione.  È necessario fornire a Data Classification le credenziali CIFS affinché possa accedere ai volumi CIFS.
@@ -97,6 +101,7 @@ Dopo aver immesso le credenziali, dovresti visualizzare un messaggio che indica 
 
 
 
+[[enable-or-disable-scans-on-volumes]]
 == Abilita o disabilita le scansioni sui volumi
 
 Dalla pagina Configurazione è possibile avviare o interrompere le scansioni su qualsiasi sistema in qualsiasi momento. È inoltre possibile passare da scansioni di sola mappatura a scansioni di mappatura e classificazione, e viceversa. Si consiglia di eseguire la scansione di tutti i volumi di un sistema.

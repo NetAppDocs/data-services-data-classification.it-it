@@ -25,6 +25,7 @@ Lo script di installazione di Data Classification inizia verificando se il siste
 
 
 
+[[supported-data-sources]]
 == Fonti dati supportate
 
 Quando è installata la modalità privata (talvolta chiamata "offline" o sito "dark"), Data Classification può analizzare solo i dati provenienti da fonti dati che sono anch'esse locali rispetto al sito on-premises. Al momento, Data Classification può analizzare le seguenti fonti dati *locali*:
@@ -37,6 +38,7 @@ Al momento non è disponibile alcun supporto per la scansione di Cloud Volumes O
 
 
 
+[[limitations]]
 == Limitazioni
 
 La maggior parte delle funzionalità di Data Classification funziona quando viene distribuita in un sito senza accesso a Internet. Tuttavia, alcune funzionalità che richiedono l'accesso a Internet non sono supportate, ad esempio:
@@ -51,6 +53,7 @@ Sia l'agente Console che Data Classification richiedono aggiornamenti manuali pe
 
 
 
+[[quick-start]]
 == Avvio rapido
 
 Inizia subito seguendo questi passaggi oppure scorri verso il basso fino alle sezioni rimanenti per i dettagli completi.
@@ -69,12 +72,14 @@ Scarica il software Data Classification dal NetApp Support Site e copia il file 
 
 
 
+[[install-the-console-agent]]
 == Installa l'agente Console
 
 Se non hai già installato un agente Console in modalità privata, https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-private-mode.html["distribuire l'agente Console"^] su un host Linux nel tuo sito offline.
 
 
 
+[[prepare-the-linux-host-system]]
 == Preparare il sistema host Linux
 
 Il software Data Classification deve essere eseguito su un host che soddisfi specifici requisiti del sistema operativo, requisiti di RAM, requisiti software e così via.
@@ -185,7 +190,11 @@ Tieni presente che devi riavviare Docker o Podman ogni volta che abiliti o aggio
 TIP: L'indirizzo IP del sistema host di classificazione dei dati non può essere modificato dopo l'installazione.
 
 
+NOTE: Il programma di installazione di Data Classification riserva UID 4321 e GID 4321. Prima di iniziare l'installazione, assicurati che UID 4321 e GID 4321 non siano in uso sulla macchina host. Se sono già in uso, l'installazione fallirà con un messaggio di errore "invalid user".
 
+
+
+[[verify-console-and-data-classification-prerequisites]]
 == Verificare i prerequisiti di Console e Data Classification
 
 Rivedere i seguenti prerequisiti per assicurarsi di disporre di una configurazione supportata prima di distribuire Data Classification.
@@ -200,6 +209,7 @@ L'istanza di Data Classification utilizza un indirizzo IP privato per garantire 
 
 
 
+[[verify-that-all-required-ports-are-enabled]]
 == Verificare che tutte le porte richieste siano abilitate
 
 È necessario assicurarsi che tutte le porte necessarie siano aperte per la comunicazione tra l'agente della console, Data Classification, Active Directory e le origini dati.
@@ -263,6 +273,7 @@ I criteri di esportazione del volume NFS devono consentire l'accesso dall'istanz
 |===
 
 
+[[install-data-classification-on-the-on-premises-linux-host]]
 == Installa Data Classification sull'host Linux locale
 
 Per le configurazioni tipiche, installerai il software su un singolo sistema host.
@@ -346,6 +357,7 @@ Dalla pagina Configurazione è possibile selezionare il dispositivo locale link:
 
 
 
+[[upgrade-data-classification-software]]
 == Aggiorna il software di classificazione dei dati
 
 Poiché il software Data Classification viene aggiornato regolarmente con nuove funzionalità, è consigliabile controllare periodicamente la disponibilità di nuove versioni per assicurarsi di utilizzare il software e le funzionalità più recenti. Sarà necessario aggiornare manualmente il software Data Classification, poiché non è disponibile una connessione internet per eseguire l'aggiornamento automaticamente.
@@ -394,6 +406,7 @@ Il software Data Classification è stato aggiornato sul tuo host. L'aggiornament
 
 
 
+[[next-steps]]
 == Prossimi passi
 
 * link:task-scanning-overview.html["Configura la scansione sulle tue origini dati"]

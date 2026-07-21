@@ -20,6 +20,7 @@ Alcune delle cose che puoi modificare sono se un repository viene scansionato o 
 
 
 
+[[view-the-scan-status-for-your-repositories]]
 == Visualizza lo stato della scansione per i tuoi repository
 
 È possibile visualizzare i singoli repository sottoposti a scansione da NetApp Data Classification (volumi, bucket, ecc.) per ciascun sistema e origine dati.  Puoi anche vedere quanti sono stati "Mappati" e quanti sono stati "Classificati".  La classificazione richiede più tempo perché l'identificazione completa dell'IA viene eseguita su tutti i dati.
@@ -51,6 +52,7 @@ image:screenshot_compliance_repo_scan_settings.png["Uno screenshot che mostra se
 
 
 
+[[change-the-scan-type]]
 == Modifica il tipo di scansione
 
 Dalla pagina di configurazione è possibile avviare o interrompere le scansioni di un sistema in qualsiasi momento. È inoltre possibile passare da scansioni di sola mappatura a scansioni complete e viceversa.
@@ -74,6 +76,7 @@ Nella configurazione del singolo sistema, selezionare la risorsa che si desidera
 
 
 
+[[prioritize-scans]]
 == Dare priorità alle scansioni
 
 È possibile assegnare priorità alle scansioni della sola mappa o alle scansioni complete più importanti per garantire che le scansioni ad alta priorità vengano completate per prime.
@@ -90,6 +93,7 @@ La priorità viene concessa una sola volta. Le nuove scansioni automatiche dei d
 
 
 
+[[stop-scanning-for-a-repository]]
 == Interrompere la scansione per un repository
 
 È possibile interrompere la scansione di un repository (ad esempio, un volume) se non è più necessario monitorarne la conformità.  Per farlo, è necessario disattivare la scansione.  Quando la scansione è disattivata, tutta l'indicizzazione e le informazioni relative a quel volume vengono rimosse dal sistema e la tariffazione per la scansione dei dati viene interrotta.
@@ -105,6 +109,7 @@ image:screenshot_compliance_config_button.png["Uno screenshot che mostra come se
 
 
 
+[[pause-and-resume-scanning-for-a-repository]]
 == Metti in pausa e riprendi la scansione di un repository
 
 È possibile sospendere la scansione in modo che Data Classification non esegua ulteriori scansioni per rilevare modifiche o aggiunte al repository. Tutti i risultati delle scansioni in corso rimangono accessibili in Data Classification.

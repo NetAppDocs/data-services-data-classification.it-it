@@ -4,6 +4,7 @@
 
 
 
+[[support-for-rhel-9-5]]
 === Supporto per RHEL 9.5
 
 Questa versione fornisce supporto per Red Hat Enterprise Linux v9.5 oltre alle versioni supportate in precedenza. Ciò è applicabile a qualsiasi installazione manuale in sede della BlueXP classification, comprese le distribuzioni in dark site.
@@ -12,6 +13,7 @@ I seguenti sistemi operativi richiedono l'utilizzo del motore container Podman e
 
 
 
+[[prioritize-map-only-scans]]
 === Dare priorità alle scansioni solo mappa
 
 Quando si eseguono scansioni solo mappa, è possibile assegnare priorità alle scansioni più importanti. Questa funzionalità è utile quando si dispone di molti ambienti di lavoro e si desidera garantire che le scansioni ad alta priorità vengano completate per prime.
@@ -26,6 +28,7 @@ Per ulteriori informazioni, consultare link:https://docs.netapp.com/us-en/data-s
 
 
 
+[[retry-all-scans]]
 === Riprova tutte le scansioni
 
 La BlueXP classification supporta la possibilità di ripetere in batch tutte le scansioni non riuscite.
@@ -40,6 +43,7 @@ Per riprovare tutte le scansioni:
 
 
 
+[[improved-categorization-model-accuracy]]
 === Miglioramento della precisione del modello di categorizzazione
 
 L'accuratezza del modello di apprendimento automatico perlink:https://docs.netapp.com/us-en/data-services-data-classification/reference-private-data-categories.html#types-of-sensitive-personal-datapredefined-categories["categorie predefinite"] è migliorato dell'11%.

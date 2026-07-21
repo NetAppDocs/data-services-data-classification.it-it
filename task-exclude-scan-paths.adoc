@@ -21,6 +21,7 @@ NOTE: Per impostazione predefinita, le scansioni di classificazione dei dati esc
 
 
 
+[[supported-data-sources]]
 == Fonti dati supportate
 
 L'esclusione di directory specifiche dalle scansioni di classificazione dei dati è supportata per le condivisioni NFS e CIFS nelle seguenti origini dati:
@@ -34,6 +35,7 @@ L'esclusione di directory specifiche dalle scansioni di classificazione dei dati
 
 
 
+[[define-the-directories-to-exclude-from-scanning]]
 == Definisci le directory da escludere dalla scansione
 
 Prima di poter escludere le directory dalla scansione della classificazione, è necessario accedere al sistema di classificazione dei dati in modo da poter modificare un file di configurazione ed eseguire uno script.  Scopri comelink:reference-log-in-to-instance.html["accedi al sistema di classificazione dei dati"] a seconda che il software sia stato installato manualmente su una macchina Linux o che l'istanza sia stata distribuita nel cloud.
@@ -70,6 +72,7 @@ Tutte le scansioni successive dei dati escluderanno la scansione delle directory
 
 
 
+[[examples]]
 == Esempi
 
 .Configurazione 1:
@@ -140,6 +143,7 @@ data_providers:
 
 
 
+[[escaping-special-characters-in-folder-names]]
 == Escape dei caratteri speciali nei nomi delle cartelle
 
 Se il nome di una cartella contiene uno dei seguenti caratteri speciali e si desidera escludere dalla scansione i dati in quella cartella, sarà necessario utilizzare la sequenza di escape \\ prima del nome della cartella.
@@ -153,6 +157,7 @@ Sintassi nel file di esclusione: `"\\*not_to_scan"`
 
 
 
+[[view-the-current-exclusion-list]]
 == Visualizza l'elenco delle esclusioni corrente
 
 È possibile che il contenuto del `data_provider.yaml` file di configurazione diverso da quello effettivamente commesso dopo l'esecuzione del `update_data_providers_from_config_file.sh` sceneggiatura.  Per visualizzare l'elenco corrente delle directory escluse dalla scansione di Data Classification, eseguire il seguente comando da "/opt/netapp/Datasense/tools/customer_configuration/data_providers":

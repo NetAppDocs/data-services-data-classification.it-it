@@ -4,6 +4,7 @@
 
 
 
+[[enhanced-scan-progress-clarity]]
 === Maggiore chiarezza nell'avanzamento della scansione
 
 Le configurazioni di scansione ora includono informazioni più approfondite sul completamento della scansione. In precedenza, la barra di avanzamento veniva visualizzata solo durante l'esecuzione della scansione. Ora la barra di avanzamento rimane visibile anche dopo il completamento per confermare che le scansioni sono state completate correttamente. È anche possibile visualizzare il numero di file mappati e scansionati.
@@ -12,6 +13,7 @@ Per ulteriori informazioni sulle impostazioni di scansione, vedere link:https://
 
 
 
+[[general-improvements]]
 === Miglioramenti generali
 
 Questa versione di Data Classification include correzioni di bug, miglioramenti della sicurezza e delle prestazioni.

@@ -4,6 +4,7 @@
 
 
 
+[[custom-classification-improvements]]
 === Miglioramenti della classificazione personalizzata
 
 Data Classification ora supporta la creazione di categorie personalizzate per i tuoi dati. È possibile caricare file per perfezionare un modello di intelligenza artificiale che Data Classification utilizza per applicare il marcatore di categoria ai dati. L'interfaccia per tutte le classificazioni personalizzate è stata migliorata.
@@ -12,6 +13,7 @@ Per maggiori informazioni, vedere link:https://docs.netapp.com/us-en/data-servic
 
 
 
+[[custom-stale-data-definition]]
 === Definizione di dati obsoleti personalizzati
 
 La classificazione dei dati ora consente di personalizzare la definizione dei dati obsoleti in modo che si adatti alle esigenze della tua organizzazione. In precedenza, per dati obsoleti si intendevano tutti i dati la cui ultima modifica risaliva a tre anni prima. Ora è possibile identificare i dati obsoleti in base alla data dell'ultimo accesso o dell'ultima modifica; il periodo di tempo può variare da 6 mesi a 10 anni fa.
@@ -20,12 +22,14 @@ Per maggiori informazioni, vedere link:https://docs.netapp.com/us-en/data-servic
 
 
 
+[[improved-performance]]
 === Prestazioni migliorate
 
 I tempi di caricamento per tutte le pagine della Classificazione dati, del report di mappatura dati e dei filtri nella pagina Indagine sono stati ridotti.
 
 
 
+[[estimated-time-for-investigation-reports]]
 === Tempo stimato per i rapporti di indagine
 
 Quando si scarica un rapporto di indagine, la classificazione dei dati ora visualizza il tempo stimato necessario per il completamento del download.
