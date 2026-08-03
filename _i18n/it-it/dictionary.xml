@@ -386,7 +386,6 @@
   <block id="7495d9f71402d3b1d20f08bd19ac6562" category="inline-link-macro">Documentazione API</block>
   <block id="c60d8912991913ddd6b9f743a592511c" category="paragraph">Sì, Data Classification dispone di un'API REST per le funzionalità supportate nella versione Data Classification che fa parte della piattaforma core della Console. Vedere <block ref="66d6eeee3cdd1145e7194200ace05e36" category="inline-link-macro-rx"></block> .</block>
   <block id="ca3545f9022d57ae33eb493cb41afd19" category="section-title">La classificazione dei dati è disponibile tramite i marketplace cloud?</block>
-  <block id="0692a00bf8c746154454f1ab43fbb4c8" category="paragraph">La classificazione dei dati fa parte delle funzionalità principali NetApp Console , quindi non è necessario utilizzare i marketplace per questo servizio.</block>
   <block id="25534560556ecfce50508e26175329db" category="section-title">Scansione e analisi della classificazione dei dati</block>
   <block id="24a4132768e6098eec85404390afef8c" category="paragraph">Le seguenti domande riguardano le prestazioni di scansione e l'analisi della classificazione dei dati.</block>
   <block id="5f92862e4bdeced1587c5a6862cbfac3" category="section-title">Con quale frequenza Data Classification analizza i miei dati?</block>
@@ -2858,4 +2857,7 @@
   <block id="48d7af530cc27d49af5ade8fe42c3203" category="list-text">Data Classification non può estrarre le autorizzazioni o l'“ora dell’ultimo accesso” dai sistemi 7-Mode.</block>
   <block id="d286f8a3091b047a9ce2123e0d54cc64" category="admonition">La pagina di panoramica del sistema include un'opzione *Scansione senza permessi di scrittura* disabilitata per impostazione predefinita. Se Data Classification non dispone dei permessi appropriati, non eseguirà la scansione dei file perché Data Classification non può ripristinare l'ora dell'ultimo accesso al timestamp originale. Puoi ignorare questa impostazione utilizzando l'opzione *Scansione senza permessi di scrittura*. Per saperne di più su questa opzione, vedi <block ref="475bb2fa4f19f7292416b967e8d92ecb" category="inline-link-macro-rx"></block>.</block>
   <block id="308857218552b597ea9cae644ef5a86a" category="admonition">Il programma di installazione di Data Classification riserva UID 4321 e GID 4321. Prima di iniziare l'installazione, assicurati che UID 4321 e GID 4321 non siano in uso sulla macchina host. Se sono già in uso, l'installazione fallirà con un messaggio di errore "invalid user".</block>
+  <block id="7a6e24dc300a73a85d44ed828d28c3db" category="paragraph">La classificazione dei dati è una delle funzionalità principali della NetApp Console. Non devi implementare la classificazione dei dati da un marketplace cloud.</block>
+  <block id="e99dacbe5fb8f13a88a038ccac0ae040" category="section-title">Se riavvii la tua macchina virtuale durante le scansioni, quale impatto avrà sulla scansione?</block>
+  <block id="c11dddbf642df4798f94fb3c97c30774" category="paragraph">Le scansioni persistono. Se riavvii una macchina virtuale mentre le scansioni sono in corso, queste riprendono da dove erano state interrotte dopo il riavvio riuscito della macchina virtuale.</block>
 </blocks>

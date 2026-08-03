@@ -46,7 +46,7 @@ Sì, Data Classification dispone di un'API REST per le funzionalità supportate 
 [[is-data-classification-available-through-the-cloud-marketplaces]]
 === La classificazione dei dati è disponibile tramite i marketplace cloud?
 
-La classificazione dei dati fa parte delle funzionalità principali NetApp Console , quindi non è necessario utilizzare i marketplace per questo servizio.
+La classificazione dei dati è una delle funzionalità principali della NetApp Console. Non devi implementare la classificazione dei dati da un marketplace cloud.
 
 
 
@@ -87,6 +87,13 @@ Data Classification offre ampie capacità di ricerca che semplificano la ricerca
 Una volta trovati i file di interesse, è possibile elencarne le caratteristiche, tra cui tag, account di sistema, bucket, percorso del file, categoria (dalla classificazione), dimensione del file, ultima modifica, stato delle autorizzazioni, duplicati, livello di sensibilità, dati personali, tipi di dati sensibili all'interno del file, proprietario, tipo di file, dimensione del file, ora di creazione, hash del file, se i dati sono stati assegnati a qualcuno che cercava la loro attenzione e altro ancora.  È possibile applicare filtri per escludere le caratteristiche non pertinenti.
 
 La classificazione dei dati prevede anche il controllo degli accessi basato sui ruoli (RBAC) per consentire lo spostamento o l'eliminazione dei file, se sono presenti le autorizzazioni appropriate.  Se non sono presenti le autorizzazioni appropriate, le attività possono essere assegnate a qualcuno nell'organizzazione che dispone delle autorizzazioni appropriate.
+
+
+
+[[if-i-restart-my-vm-during-scans-what-is-the-impact-on-the-scan]]
+=== Se riavvii la tua macchina virtuale durante le scansioni, quale impatto avrà sulla scansione?
+
+Le scansioni persistono. Se riavvii una macchina virtuale mentre le scansioni sono in corso, queste riprendono da dove erano state interrotte dopo il riavvio riuscito della macchina virtuale.
 
 
 
