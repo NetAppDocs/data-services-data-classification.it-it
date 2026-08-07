@@ -2802,7 +2802,6 @@
   <block id="5b727e9ed04fc43b0f4e0f294915a248" category="section-title">Comprendere i tipi di scansione</block>
   <block id="486c832e76fd0638886898fc9c62ff69" category="list-text">Le scansioni di sola mappatura forniscono solo una high-level panoramica dei dati e vengono eseguite su origini dati selezionate. Le scansioni di sola mappatura richiedono meno tempo rispetto alle scansioni complete perché non accedono ai file per vedere i dati all'interno.</block>
   <block id="71ebf849818df3526b1f19c48d22ee23" category="list-text">**Le scansioni complete** offrono un'analisi approfondita dei tuoi dati. Una scansione completa include una scansione di mappatura e una classificazione dei dati all'interno dei file.</block>
-  <block id="81f9f5fbbc14757a16be8eb963cfb5bb" category="admonition">Eseguire una scansione solo della mappa può essere utile per ottenere una panoramica dei dati e individuare aree specifiche su cui eseguire scansioni complete.</block>
   <block id="8666915a830702ebb197dde305a34dc5" category="paragraph">Esaminate le tabelle per vedere quali informazioni vengono visualizzate nelle scansioni solo mappa e nelle scansioni complete.</block>
   <block id="4cc971a27d1b8959788abcd1eab8e72b" category="cell">Scansione completa</block>
   <block id="7f138c4c12db7bfc5e7b57acbcffe2d2" category="cell">Scansione solo mappa</block>
@@ -2860,4 +2859,7 @@
   <block id="7a6e24dc300a73a85d44ed828d28c3db" category="paragraph">La classificazione dei dati è una delle funzionalità principali della NetApp Console. Non devi implementare la classificazione dei dati da un marketplace cloud.</block>
   <block id="e99dacbe5fb8f13a88a038ccac0ae040" category="section-title">Se riavvii la tua macchina virtuale durante le scansioni, quale impatto avrà sulla scansione?</block>
   <block id="c11dddbf642df4798f94fb3c97c30774" category="paragraph">Le scansioni persistono. Se riavvii una macchina virtuale mentre le scansioni sono in corso, queste riprendono da dove erano state interrotte dopo il riavvio riuscito della macchina virtuale.</block>
+  <block id="4c9398ce1129f1601e4d55b176ae4cd8" category="inline-link-macro">dai loro la priorità manualmente</block>
+  <block id="b053d0df91aae10a4ef1dd644b52ec10" category="paragraph">Dopo la scansione iniziale, Data Classification esegue continuamente la scansione dei tuoi dati in modo ciclico per rilevare modifiche incrementali. Le scansioni vengono eseguite automaticamente ogni giorno. Data Classification esegue le scansioni in batch da sei; puoi mettere in pausa le scansioni o <block ref="eb2a9ee088a42a6c145bd3fba80d3402" category="inline-link-macro-rx"></block>.</block>
+  <block id="65f7cd44708007c7eaad8b5c146ed3dc" category="admonition">Eseguire una scansione limitata alla mappa può essere utile per ottenere una panoramica dei tuoi dati. Con questa high-level panoramica, puoi poi decidere su quali fonti di dati effettuare scansioni complete.</block>
 </blocks>

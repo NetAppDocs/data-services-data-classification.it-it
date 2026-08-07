@@ -16,7 +16,7 @@ summary: Esegui la scansione delle tue fonti dati con NetApp Data Classification
 [role="lead"]
 NetApp Data Classification analizza i dati nei repository (i volumi, gli schemi di database o altri dati utente) che selezioni per identificare dati personali e dati sensibili. Data Classification quindi mappa i dati della tua organizzazione, categorizza ciascun file e identifica modelli predefiniti nei dati. Il risultato della scansione è un indice di informazioni personali, informazioni personali sensibili, categorie di dati e tipi di file.
 
-Dopo la scansione iniziale, Data Classification analizza continuamente i dati in modalità round-robin per rilevare modifiche incrementali.  Ecco perché è importante mantenere l'istanza in esecuzione.
+Dopo la scansione iniziale, Data Classification esegue continuamente la scansione dei tuoi dati in modo ciclico per rilevare modifiche incrementali. Le scansioni vengono eseguite automaticamente ogni giorno. Data Classification esegue le scansioni in batch da sei; puoi mettere in pausa le scansioni o link:task-managing-repo-scanning.html#prioritize-scans["dai loro la priorità manualmente"].
 
 È possibile abilitare e disabilitare le scansioni a livello di volume o a livello di schema del database.
 
@@ -32,7 +32,7 @@ Dopo la scansione iniziale, Data Classification analizza continuamente i dati in
 
 
 
-TIP: Eseguire una scansione solo della mappa può essere utile per ottenere una panoramica dei dati e individuare aree specifiche su cui eseguire scansioni complete.
+TIP: Eseguire una scansione limitata alla mappa può essere utile per ottenere una panoramica dei tuoi dati. Con questa high-level panoramica, puoi poi decidere su quali fonti di dati effettuare scansioni complete.
 
 Esaminate le tabelle per vedere quali informazioni vengono visualizzate nelle scansioni solo mappa e nelle scansioni complete.
 
