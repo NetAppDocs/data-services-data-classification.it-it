@@ -293,7 +293,7 @@ I criteri di esportazione del volume NFS devono consentire l'accesso dall'istanz
 [[install-data-classification-on-the-linux-host]]
 == Installa Data Classification sull'host Linux
 
-Nelle configurazioni tipiche, il software verrà installato su un singolo sistema host. <<Installazione a host singolo per configurazioni tipiche,Guarda i passaggi qui>> .
+Nella maggior parte dei casi, installi Data Classification su un singolo sistema host. Questo non è lo stesso host VM dell'agente Console. <<Installazione a host singolo per configurazioni tipiche,Guarda i passaggi qui>>.
 
 image:diagram_deploy_onprem_single_host_internet.png["Un diagramma che mostra la posizione delle origini dati che è possibile analizzare quando si utilizza una singola istanza di Data Classification distribuita in locale con accesso a Internet."]
 
