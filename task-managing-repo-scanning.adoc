@@ -63,14 +63,12 @@ NOTE: Le scansioni di sola mappatura non sono disponibili per i database. Quando
 .Passi
 . Dal menu Classificazione dati, selezionare *Configurazione*.
 . Per modificare il tipo di scansione per tutte le risorse di un sistema, selezionare il menu delle azioni relativo a tale sistema e quindi passare al tipo di scansione desiderato. Ad esempio, per modificare le scansioni di un gruppo di condivisioni file da mapping-only a full, selezionare *Scan all shares: full scan*.
-+
-Per modificare il tipo di scansione per singoli bucket, condivisioni o volumi, selezionare il pulsante **Gestisci** per il sistema.
-
+. Per modificare il tipo di scansione per singoli bucket, condivisioni o volumi, seleziona la scheda **Scansioni attive**. Applica i filtri appropriati per identificare le risorse che vuoi modificare.
 +
 image:screenshot_compliance_config_button.png["Uno screenshot che mostra come selezionare il pulsante Configurazione per un sistema."]
 
 +
-Nella configurazione del singolo sistema, selezionare la risorsa che si desidera modificare. Selezionare il *Tipo di scansione* e quindi passare al tipo di scansione desiderato.
+Nella colonna Tipo di scansione, seleziona la risorsa designata e cambiala in **Solo mappatura** o **Scansione completa**.
 
 
 
@@ -87,8 +85,8 @@ La priorità viene concessa una sola volta. Le nuove scansioni automatiche dei d
 
 .Passi
 . Dal menu Classificazione dati, selezionare *Configurazione*.
-. Individua il sistema per il quale desideri modificare le scansioni, quindi seleziona *Gestisci*.
-. Individua le risorse a cui vuoi dare priorità. Seleziona l'opzione del menu Azioni `...` quindi *Scansione prioritaria*.
+. Seleziona la scheda **Scansioni attive**.
+. Facoltativamente, applica i filtri appropriati per identificare le risorse che vuoi modificare. Trova le risorse a cui vuoi dare priorità. Seleziona l'opzione  `...` del menu azioni, poi *Scansione prioritaria*.
 
 
 
@@ -120,8 +118,8 @@ Se si mettono in pausa le scansioni, gli addebiti non vengono eliminati perché 
 
 .Passi
 . Dal menu Classificazione dati, selezionare *Configurazione*.
-. Individua il sistema per il quale desideri modificare le scansioni, quindi seleziona *Gestisci*.
-. Identifica le risorse che desideri mettere in pausa. Per ogni risorsa, seleziona il menu azioni `...` quindi *Metti in pausa scansione*.
+. Seleziona la scheda **Scansioni attive**.
+. Facoltativamente, applica i filtri appropriati per identificare le risorse che vuoi modificare. Identifica le risorse che vuoi mettere in pausa. Per ogni risorsa, seleziona l'opzione del menu azioni  `...` quindi *Metti in pausa scansione*.
 +
 Se si desidera riprendere la scansione, ripetere la procedura e quindi selezionare *Riprendi scansione*.
 

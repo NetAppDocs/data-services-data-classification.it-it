@@ -1,0 +1,12 @@
+= Scheda Scansioni attive per migliorare la gestione delle scansioni
+:allow-uri-read: 
+
+
+
+
+[[active-scans-tab-to-enhance-scan-management]]
+=== Scheda Scansioni attive per migliorare la gestione delle scansioni
+
+Data Classification ora offre una scheda *Scansioni attive* nel menu Configurazione, offrendo un'esperienza migliorata per la gestione delle scansioni. La scheda Scansioni attive fornisce una panoramica di tutti i volumi che hai attivato per la scansione, con i consueti filtri per ordinare le tue risorse. La scheda offre anche una posizione centrale per dare priorità alle scansioni, metterle in pausa e rivedere gli errori.
+
+Per ulteriori informazioni, vedi link:https://docs.netapp.com/us-en/data-services-data-classification/task-managing-repo-scanning.html["Gestisci le scansioni"^].
