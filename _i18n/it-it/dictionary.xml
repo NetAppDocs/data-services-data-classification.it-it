@@ -2432,7 +2432,6 @@
   <block id="a19fda4781709630dbfb543922e4d612" category="paragraph">I dati obsoleti possono essere definiti in base alla data dell'ultimo accesso o dell'ultima modifica. Le selezioni di periodo di tempo vanno da 6 mesi a 10 anni fa.</block>
   <block id="24ece81002d5816b98626cc57ced872d" category="paragraph">Per impostazione predefinita, i dati vengono considerati obsoleti se l'ultima modifica risale a tre anni fa.</block>
   <block id="c3d635823e7267511f7a0ba59b131053" category="list-title">Definisci dati obsoleti</block>
-  <block id="41c8212e8259ff083fe9cdf357f8a4a6" category="list-text">In Ransomware Resilience, seleziona **Configurazione**.</block>
   <block id="656961d589e5ba765f1a77e91cdda2d0" category="list-text">Selezionare il periodo di tempo per la definizione dei dati obsoleti.</block>
   <block id="8d5311b8775f8a9ea8945d76095bb698" category="list-text">Seleziona **Salva**.</block>
   <block id="38fc1b337c0ea26463916fc2913205c1" category="paragraph"><block ref="38fc1b337c0ea26463916fc2913205c1" category="inline-image-macro-rx" type="image"></block></block>
@@ -2552,7 +2551,6 @@
   <block id="b231d70c2e9c026262bda45de2cf8e61" category="doc">Accedi a NetApp Data Classification</block>
   <block id="f214292b356953b67175bbd37992066d" category="summary">Dopo aver filtrato i dati nella dashboard di investigation, puoi copiare, spostare ed eliminare dati non strutturati.</block>
   <block id="645af234aa1818d98e8bb6c780fb0e42" category="doc">Copia, sposta ed elimina file utilizzando NetApp Data Classification</block>
-  <block id="4c6b11e5b29f298bdccac50248f21007" category="paragraph">Oltre a fornire informazioni sulla governance e sulle opportunità di risparmio, NetApp Data Classification consente anche di eseguire azioni sui file dalla sua dashboard di indagine. Dopo aver filtrato i dati nella dashboard di indagine, è possibile copiare, spostare ed eliminare dati non strutturati. L'esecuzione di queste azioni può migliorare la conformità, ad esempio spostando i file in una posizione più sicura, oppure creare opportunità di risparmio eliminando file obsoleti o duplicati.</block>
   <block id="558f28628ba8ab4cb8420949524832d3" category="section-title">Copia file</block>
   <block id="e54a222aee96b176f405c4031ff80909" category="paragraph">Data Classification supporta la copia di file fino a 1 GB di dimensione. Puoi copiare un totale di 1 TB di dati o 5 milioni di file, a seconda di quale limite venga raggiunto per primo. Puoi copiare file verso una destinazione CIFS o NFS. Non c'è alcun impatto sul file di origine quando lo copi.</block>
   <block id="37214830ec688e601a722f40084e9795" category="list-text">Nella dashboard Investigation, seleziona i file che desideri copiare.</block>
@@ -2576,7 +2574,6 @@
   <block id="9b1a8f320a2c08a8370e356510090979" category="paragraph"><block ref="9b1a8f320a2c08a8370e356510090979" category="inline-image-macro-rx" type="image"></block></block>
   <block id="7afd3db29a42496704a6705958fec121" category="list-text">Seleziona **Sposta elementi**.</block>
   <block id="19e43848563797a6f937c7895b604754" category="section-title">Elimina file</block>
-  <block id="bf7a8fa340e92f5931d748d2f4929afb" category="paragraph">Quando si filtrano i dati nella dashboard di Investigation per individuare opportunità di risparmio di spazio e costi, è possibile eliminare quei file. L'eliminazione dei file è supportata solo per i file non strutturati.</block>
   <block id="fe3f40b2ceb6ec005d118e22ab125813" category="list-text">Nella dashboard Investigation, seleziona i file che desideri eliminare.</block>
   <block id="9f9603fa59f6dd606ff86c8b621cae42" category="list-text">Nella finestra di dialogo di conferma, inserire "permanently delete".</block>
   <block id="de44f74c0cf208f9b074a847f28871e1" category="list-text">Seleziona **Elimina file** per confermare l'operazione.</block>
@@ -2870,4 +2867,6 @@
   <block id="687c102bfd5cd4e0df7368ee54670aa2" category="list-text">Facoltativamente, applica i filtri appropriati per identificare le risorse che vuoi modificare. Identifica le risorse che vuoi mettere in pausa. Per ogni risorsa, seleziona l'opzione del menu azioni <block ref="2f43b42fd833d1e77420a8dae7419000" prefix=" " category="inline-code"></block> quindi *Metti in pausa scansione*.</block>
   <block id="6ffc226d668d783acc3c710ae22bd61d" category="section-title">10 agosto 2026</block>
   <block id="05ad566aec59d2434a4789dad053f408" category="paragraph">*Versione 1.56*</block>
+  <block id="2a6207bf09c73302b5baadda003d21a2" category="paragraph">NetApp Data Classification ti permette di eseguire azioni sui file rilevati nella dashboard di indagine. Dopo aver filtrato i dati, puoi copiare, spostare ed eliminare dati non strutturati per migliorare la compliance, ad esempio spostando i file sensibili in una posizione più sicura, oppure per risparmiare eliminando file vecchi o duplicati.</block>
+  <block id="f011267af7448f5cee47e71e75b30301" category="paragraph">Quando filtri i dati nella dashboard di Investigation per individuare opportunità di risparmio di spazio e costi, puoi eliminare quei file. Puoi eliminare solo i file non strutturati.</block>
 </blocks>

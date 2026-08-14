@@ -14,7 +14,7 @@ summary: Dopo aver filtrato i dati nella dashboard di investigation, puoi copiar
 
 
 [role="lead"]
-Oltre a fornire informazioni sulla governance e sulle opportunità di risparmio, NetApp Data Classification consente anche di eseguire azioni sui file dalla sua dashboard di indagine. Dopo aver filtrato i dati nella dashboard di indagine, è possibile copiare, spostare ed eliminare dati non strutturati. L'esecuzione di queste azioni può migliorare la conformità, ad esempio spostando i file in una posizione più sicura, oppure creare opportunità di risparmio eliminando file obsoleti o duplicati.
+NetApp Data Classification ti permette di eseguire azioni sui file rilevati nella dashboard di indagine. Dopo aver filtrato i dati, puoi copiare, spostare ed eliminare dati non strutturati per migliorare la compliance, ad esempio spostando i file sensibili in una posizione più sicura, oppure per risparmiare eliminando file vecchi o duplicati.
 
 
 
@@ -74,7 +74,7 @@ image:screenshot-move-nfs.png["Screenshot della funzione di spostamento per file
 [[delete-files]]
 == Elimina file
 
-Quando si filtrano i dati nella dashboard di Investigation per individuare opportunità di risparmio di spazio e costi, è possibile eliminare quei file. L'eliminazione dei file è supportata solo per i file non strutturati.
+Quando filtri i dati nella dashboard di Investigation per individuare opportunità di risparmio di spazio e costi, puoi eliminare quei file. Puoi eliminare solo i file non strutturati.
 
 .Passi
 . Nella dashboard Investigation, seleziona i file che desideri eliminare.
