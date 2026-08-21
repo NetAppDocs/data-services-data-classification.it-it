@@ -57,7 +57,7 @@ Quando si esegue lo script dei prerequisiti, è necessario l'indirizzo IP o il n
 
 Il software di classificazione dei dati deve essere eseguito su un host che soddisfi specifici requisiti del sistema operativo, requisiti di RAM e requisiti software.
 
-* La classificazione dei dati deve avvenire su un host dedicato. L'host non può essere condiviso con altre applicazioni o software di terze parti, come gli antivirus.
+* La classificazione dei dati deve essere su un host dedicato. L'host non può essere condiviso con altre applicazioni o software di terze parti come antivirus.
 * Scegli la dimensione più adatta al set di dati che intendi analizzare con Data Classification.
 +
 [cols="17,17,27,31"]
@@ -124,7 +124,7 @@ Il software di classificazione dei dati deve essere eseguito su un host che sodd
 ** Le estensioni vettoriali avanzate (AVX2) devono essere abilitate sul sistema host.
 
 
-* *Red Hat Subscription Management*: l'host deve essere registrato presso Red Hat Subscription Management.  Se non è registrato, il sistema non può accedere ai repository per aggiornare il software di terze parti richiesto durante l'installazione.
+* *Red Hat Subscription Management*: L'host deve essere registrato con Red Hat Subscription Management. Se non è registrato, il sistema non può accedere ai repository per aggiornare il software di terze parti necessario durante l'installazione.
 * *Software aggiuntivo*: è necessario installare il seguente software sull'host prima di installare Data Classification:
 +
 ** A seconda del sistema operativo utilizzato, è necessario installare uno dei seguenti motori container:

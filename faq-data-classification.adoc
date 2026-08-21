@@ -14,7 +14,7 @@ summary: Questa sezione FAQ può aiutarti se stai cercando una risposta rapida a
 
 
 [role="lead"]
-Questa sezione FAQ può aiutarti se stai cercando una risposta rapida a una domanda.
+Utilizza queste FAQ per trovare risposte rapide alle domande più frequenti sulla NetApp Data Classification.
 
 
 
@@ -28,9 +28,9 @@ Le seguenti domande forniscono una comprensione generale della classificazione d
 [[how-does-data-classification-work]]
 === Come funziona la classificazione dei dati?
 
-La classificazione dei dati implementa un ulteriore livello di intelligenza artificiale insieme al sistema NetApp Console e ai sistemi di storage.  Quindi esegue la scansione dei dati su volumi, bucket, database e altri account di archiviazione e indicizza le informazioni sui dati trovate.  La classificazione dei dati sfrutta sia l'intelligenza artificiale che l'elaborazione del linguaggio naturale, a differenza delle soluzioni alternative che si basano comunemente su espressioni regolari e pattern matching.
+La classificazione dei dati implementa un ulteriore livello di intelligenza artificiale insieme al tuo sistema NetApp Console e ai sistemi di storage. Poi analizza i dati su volumi, bucket, database e altri account di storage e indicizza le informazioni che trova. La classificazione dei dati sfrutta sia l'intelligenza artificiale che l'elaborazione del linguaggio naturale, a differenza delle soluzioni alternative che sono comunemente basate su espressioni regolari e riconoscimento di pattern.
 
-La classificazione dei dati utilizza l'intelligenza artificiale per fornire una comprensione contestuale dei dati, consentendo un rilevamento e una classificazione accurati.  È basato sull'intelligenza artificiale perché è progettato per i moderni tipi di dati e per la scalabilità.  Comprende inoltre il contesto dei dati per fornire una scoperta e una classificazione solide e accurate.
+La classificazione dei dati utilizza l'intelligenza artificiale per fornire una comprensione contestuale dei dati per un rilevamento e una classificazione accurati. È guidata dall'IA perché è progettata per i tipi di dati moderni e la loro scala. Comprende anche il contesto dei dati per offrire un rilevamento e una classificazione solidi e accurati.
 
 link:concept-classification.html["Scopri di più su come funziona la classificazione dei dati"] .
 
@@ -73,7 +73,7 @@ Le scansioni dei dati hanno un impatto trascurabile sui sistemi di archiviazione
 [[does-scan-performance-vary]]
 === Le prestazioni della scansione variano?
 
-Le prestazioni della scansione possono variare in base alla larghezza di banda della rete e alla dimensione media dei file nel tuo ambiente.  Può dipendere anche dalle caratteristiche dimensionali del sistema host (nel cloud o in locale). Vedere link:concept-classification.html["L'istanza di classificazione dei dati"] E link:task-deploy-overview.html["Distribuzione della classificazione dei dati"] per maggiori informazioni.
+Le prestazioni della scansione possono variare in base alla larghezza di banda di rete e alla dimensione media dei file nel tuo ambiente. Possono anche dipendere dalle dimensioni e dalla posizione del sistema host (cioè, se si trova nel cloud o on-premises). Vedi link:concept-classification.html["L'istanza di classificazione dei dati"] e link:task-deploy-overview.html["Distribuzione della classificazione dei dati"] per maggiori informazioni.
 
 Quando si aggiungono nuove origini dati, è possibile anche scegliere di eseguire solo una scansione di sola mappatura o una scansione completa. La mappatura può essere eseguita sulle origini dati molto rapidamente perché non accede ai file per vedere i dati all'interno. link:task-scanning-overview.html["Comprendere la differenza tra una scansione di mappatura e una scansione di classificazione"].
 
@@ -114,7 +114,7 @@ NOTE: L'attivazione della classificazione dei dati su un'origine dati determina 
 
 È possibile disattivare la classificazione dei dati per impedire la scansione di un singolo sistema, database o gruppo di condivisione file dalla pagina Configurazione classificazione dati. Vedere link:task-managing-compliance.html["Rimuovere le origini dati dalla classificazione dei dati"] .
 
-Per rimuovere completamente l'istanza di Data Classification, rimuovila manualmente dal portale del tuo provider cloud o dalla posizione locale.
+Per rimuovere completamente l'istanza di Data Classification, rimuovila manualmente dal portale del tuo cloud provider o dalla posizione on-prem.
 
 
 
@@ -137,7 +137,7 @@ No. La classificazione dei dati non analizza gli snapshot perché il contenuto �
 
 Quando Data Classification esegue la scansione di volumi che hanno dati freddi sottoposti a tiering verso storage a oggetti utilizzando la sola scansione di mappatura, esegue la scansione di tutti i dati: sia quelli presenti sui dischi locali sia i dati freddi sottoposti a tiering verso storage a oggetti. Questo vale anche per prodotti non-NetApp che implementano il tiering.
 
-La scansione limitata alla mappatura non riscalda i dati "freddi": questi rimangono tali e conservati in storage a oggetti. D'altra parte, se si esegue la scansione completa, alcune configurazioni potrebbero riscaldare i dati "freddi".
+La scansione limitata alla mappatura non riscalda i dati freddi: restano freddi e rimangono nello storage a oggetti. D'altra parte, se esegui la scansione completa, alcune configurazioni possono riscaldare i dati freddi.
 
 
 
@@ -172,7 +172,7 @@ La classificazione dei dati può analizzare solo i dati provenienti da fonti dat
 
 La classificazione dei dati analizza tutti i file per ottenere informazioni dettagliate su categorie e metadati e visualizza tutti i tipi di file nella sezione Tipi di file della dashboard.
 
-Quando la classificazione dei dati rileva informazioni personali identificabili (PII) o quando esegue una ricerca DSAR, sono supportati solo i seguenti formati di file:
+Quando la classificazione dei dati rileva informazioni di identificazione personale (PII) o quando esegue una ricerca DSAR, sono supportati solo i seguenti formati di file:
 
 `+.CSV, .DCM, .DOC, .DOCX, .JSON, .PDF, .PPTX, .RTF, .TXT, .XLS, .XLSX, Docs, Sheets, and Slides+`
 
@@ -181,7 +181,7 @@ Quando la classificazione dei dati rileva informazioni personali identificabili 
 [[what-kinds-of-data-and-metadata-does-data-classification-capture]]
 === Quali tipi di dati e metadati cattura la classificazione dei dati?
 
-La classificazione dei dati consente di eseguire una scansione di "mappatura" generale o una scansione di "classificazione" completa sulle origini dati.  La mappatura fornisce solo una panoramica di alto livello dei dati, mentre la classificazione fornisce una scansione approfondita dei dati.  La mappatura delle fonti dati può essere eseguita molto rapidamente perché non è necessario accedere ai file per visualizzare i dati al loro interno.
+La classificazione dei dati ti permette di eseguire una scansione di sola mappatura o una scansione completa delle tue origini dati. Le scansioni di sola mappatura forniscono solo una panoramica high-level dei tuoi dati, mentre le scansioni complete offrono un'analisi approfondita dei tuoi dati. Le scansioni di sola mappatura possono essere eseguite molto rapidamente sulle tue origini dati perché non accedono ai file per vedere i dati all'interno.
 
 * *Scansione di mappatura dei dati (scansione solo di mappatura)*: la classificazione dei dati esegue la scansione solo dei metadati.  Ciò è utile per la gestione e la governance dei dati complessivi, per una rapida definizione dell'ambito del progetto, per patrimoni molto ampi e per la definizione delle priorità.  La mappatura dei dati si basa sui metadati ed è considerata una scansione *veloce*.
 +
@@ -211,7 +211,7 @@ Inoltre, se si desidera consentire a determinati utenti di visualizzare solo i r
 [[can-anyone-access-the-private-data-sent-between-my-browser-and-data-classification]]
 === Chiunque può accedere ai dati privati inviati tra il mio browser e Data Classification?
 
-No. I dati privati ​​inviati tra il browser e l'istanza di Data Classification sono protetti tramite crittografia end-to-end tramite TLS 1.2, il che significa che NetApp né terze parti NetApp possono leggerli.  Data Classification non condividerà alcun dato o risultato con NetApp a meno che tu non ne richieda e approvi l'accesso.
+No. I dati privati scambiati tra il tuo browser e l'istanza di Data Classification sono protetti con crittografia end-to-end tramite TLS 1.2, il che significa che NetApp e terze parti non possono leggerli. Data Classification non condivide alcun dato o risultato con NetApp a meno che tu non ne faccia richiesta e ne approvi l'accesso.
 
 I dati scansionati rimangono all'interno del tuo ambiente.
 
@@ -307,7 +307,7 @@ Le seguenti domande riguardano l'istanza separata di Classificazione dei dati.
 [[what-deployment-models-does-data-classification-support]]
 === Quali modelli di distribuzione supporta Data Classification?
 
-La NetApp Console consente all'utente di eseguire scansioni e report sui sistemi praticamente ovunque, inclusi ambienti locali, cloud e ibridi.  La classificazione dei dati viene solitamente distribuita utilizzando un modello SaaS, in cui il servizio è abilitato tramite l'interfaccia della console e non richiede alcuna installazione hardware o software.  Anche in questa modalità di distribuzione "click-and-run", la gestione dei dati può essere eseguita indipendentemente dal fatto che gli archivi dati si trovino in locale o nel cloud pubblico.
+La NetApp Console ti permette di eseguire la scansione e la creazione di report sui sistemi praticamente ovunque, inclusi ambienti on-premises, cloud e ibridi. NetApp Data Classification viene normalmente implementato tramite un modello SaaS, in cui il servizio viene abilitato tramite l'interfaccia della Console e non richiede l'installazione di hardware o software. Anche in questa modalità di implementazione click-and-run, la gestione dei dati può essere effettuata indipendentemente dal fatto che gli archivi dati si trovino on-premises o nel cloud pubblico.
 
 
 

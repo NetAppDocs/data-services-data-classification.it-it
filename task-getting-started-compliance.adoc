@@ -32,10 +32,10 @@ Prima di abilitare la classificazione dei dati, assicurati di disporre di una co
 [[verify-that-data-classification-has-access-to-volumes]]
 == Verificare che la classificazione dei dati abbia accesso ai volumi
 
-Assicurarsi che Data Classification possa accedere ai volumi controllando la rete, i gruppi di sicurezza e i criteri di esportazione.  Sarà necessario fornire a Data Classification le credenziali CIFS affinché possa accedere ai volumi CIFS.
+Assicurarsi che Data Classification possa accedere ai volumi controllando la rete, i gruppi di sicurezza e i criteri di esportazione.  È necessario fornire a Data Classification le credenziali CIFS affinché possa accedere ai volumi CIFS.
 
 .Lista di controllo
-* Assicurarsi che vi sia una connessione di rete tra l'istanza di Data Classification e ciascuna rete che include volumi per Cloud Volumes ONTAP o cluster ONTAP on-prem.
+* Assicurati che ci sia una connessione di rete tra l'istanza di NetApp Data Classification e ogni rete che include volumi per Cloud Volumes ONTAP o cluster ONTAP on-premises.
 * Assicurarsi che il gruppo di sicurezza per Cloud Volumes ONTAP consenta il traffico in entrata dall'istanza di classificazione dei dati.
 +
 È possibile aprire il gruppo di sicurezza per il traffico proveniente dall'indirizzo IP dell'istanza di classificazione dei dati oppure per tutto il traffico dall'interno della rete virtuale.
@@ -51,7 +51,7 @@ Assicurarsi che Data Classification possa accedere ai volumi controllando la ret
 Le credenziali possono essere di sola lettura, ma fornendo le credenziali di amministratore si garantisce che Data Classification possa leggere tutti i dati che richiedono autorizzazioni elevate.  Le credenziali vengono archiviate nell'istanza di classificazione dei dati.
 
 +
-Se si desidera assicurarsi che gli "ultimi orari di accesso" dei file non vengano modificati dalle scansioni di classificazione dei dati, si consiglia che l'utente disponga delle autorizzazioni di scrittura degli attributi in CIFS o delle autorizzazioni di scrittura in NFS. Se possibile, configurare l'utente di Active Directory come parte di un gruppo padre nell'organizzazione che dispone delle autorizzazioni per tutti i file.
+Per garantire che i "last accessed times" dei tuoi file non vengano modificati dalle scansioni di NetApp Data Classification, configura l'utente di Active Directory con le autorizzazioni di Write Attributes in CIFS o con le autorizzazioni di scrittura in NFS. Se possibile, configura l'utente di Active Directory come parte di un gruppo padre nell'organizzazione che abbia le autorizzazioni su tutti i file.
 
 +
 Se le credenziali sono state immesse correttamente, un messaggio conferma che tutti i volumi CIFS sono stati autenticati correttamente.
@@ -63,12 +63,12 @@ Se le credenziali sono state immesse correttamente, un messaggio conferma che tu
 [[enable-or-disable-scans-on-volumes]]
 == Abilita o disabilita le scansioni sui volumi
 
-Dalla pagina Configurazione è possibile avviare o interrompere le scansioni su qualsiasi sistema in qualsiasi momento. È inoltre possibile passare da scansioni di sola mappatura a scansioni di mappatura e classificazione, e viceversa. Si consiglia di eseguire la scansione di tutti i volumi di un sistema.
+Puoi avviare o interrompere le scansioni su qualsiasi sistema in qualsiasi momento dal menu Configurazione. Puoi anche passare dalle scansioni di sola mappatura alle scansioni complete e viceversa.
 
-L'opzione *Scansione senza permessi di scrittura* è disabilitata per impostazione predefinita. Questo significa che se Data Classification non ha i permessi di scrittura appropriati, il sistema non eseguirà la scansione dei file perché Data Classification non può ripristinare l'“ora dell'ultimo accesso” al valore originale. Se il tuo sistema può tollerare la modifica dell'ora dell'ultimo accesso, seleziona questa opzione. link:reference-collected-metadata.html#last-accessed-time-timestamp["Saperne di più"^].
+L'opzione *Scansione senza permessi di scrittura* è disabilitata per impostazione predefinita. Questo significa che se Data Classification non ha i permessi di scrittura appropriati, il sistema non eseguirà la scansione dei file perché Data Classification non può ripristinare l'ora dell'ultimo accesso al valore originale. Se il tuo sistema può tollerare la modifica dell'ora dell'ultimo accesso, seleziona questa opzione. link:reference-collected-metadata.html#last-accessed-time-timestamp["Saperne di più"^].
 
 
-NOTE: I nuovi volumi aggiunti al sistema vengono scansionati automaticamente solo se la scansione è abilitata per tutti i volumi. Se hai abilitato la scansione solo su determinati volumi, devi abilitarla manualmente per il nuovo volume aggiunto.
+NOTE: I nuovi volumi aggiunti al sistema vengono scansionati automaticamente solo se hai abilitato la scansione per tutti i volumi. Se hai abilitato la scansione solo su determinati volumi, devi abilitarla manualmente per il volume appena aggiunto.
 
 image:screenshot_volume_compliance_selection.png["Uno screenshot della pagina di configurazione in cui è possibile abilitare o disabilitare la scansione dei singoli volumi."]
 
@@ -84,4 +84,4 @@ Per abilitare o disabilitare le scansioni per singoli volumi, individua i volumi
 Quando si abilita la scansione, Data Classification avvia la scansione dei volumi selezionati nel sistema. I risultati iniziano ad apparire nella dashboard Conformità non appena la Classificazione dei dati avvia la scansione.  Il tempo di completamento della scansione dipende dalla quantità di dati e può variare da minuti a ore.
 
 
-NOTE: La classificazione dei dati analizza solo una condivisione file in un volume.  Se nei volumi sono presenti più condivisioni, sarà necessario eseguire la scansione di tali altre condivisioni separatamente, come gruppo di condivisioni. link:reference-limitations.html#data-classification-scans-only-one-share-under-a-volume["Vedi maggiori dettagli su questa limitazione della classificazione dei dati"^] .
+NOTE: La classificazione dei dati analizza una sola condivisione file all'interno di un volume. Se nei volumi sono presenti più condivisioni, devi analizzare quelle altre condivisioni separatamente come gruppo di condivisioni. link:reference-limitations.html#data-classification-scans-only-one-share-under-a-volume["Vedi maggiori dettagli su questa limitazione della classificazione dei dati"^].

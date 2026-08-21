@@ -4,7 +4,7 @@ permalink: task-deploy-overview.html
 keywords: cloud compliance, data sense, get started, deploy cloud data sense, outbound internet, endpoints, cloud compliance internet, web browser connectivity, cloud compliance access, privacy, compliance, bluexp classification 
 summary: Pianifica quale distribuzione di NetApp Data Classification soddisfa le tue esigenze. 
 ---
-= Scegli il metodo di implementazione di NetApp Data Classification
+= NetApp Metodi di implementazione di Data Classification
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,11 +14,11 @@ summary: Pianifica quale distribuzione di NetApp Data Classification soddisfa le
 
 
 [role="lead"]
-È possibile implementare NetApp Data Classification in diversi modi. Esamina i metodi disponibili per scegliere quello più adatto alle tue esigenze.
+NetApp Data Classification supporta diversi metodi di implementazione per soddisfare differenti requisiti di rete e connettività. Esamina i metodi disponibili per scegliere l'opzione più adatta al tuo ambiente.
 
 * link:task-deploy-cloud-compliance.html["Distribuisci nel cloud utilizzando la console"] . La Console distribuisce l'istanza di classificazione dei dati nella stessa rete del provider cloud dell'agente della Console.
-* link:task-deploy-compliance-onprem.html["Installa su un host Linux con accesso a Internet"] . Installa Data Classification su un host Linux nella tua rete o su un host Linux nel cloud che abbia accesso a Internet.  Questo tipo di installazione può essere una buona opzione se si preferisce eseguire la scansione dei sistemi ONTAP locali utilizzando un'istanza di classificazione dei dati anch'essa ubicata in sede, sebbene non sia un requisito.
-* link:task-deploy-compliance-dark-site.html["Installa su un host Linux in un sito locale senza accesso a Internet"], nota anche come _modalità privata_. Questo tipo di installazione, che utilizza uno script di installazione, non ha connettività con il livello SaaS della console.
+* link:task-deploy-compliance-onprem.html["Installa su un host Linux con accesso a Internet"]. Installa Data Classification su un host Linux nella tua rete o nel cloud. Questa opzione potrebbe essere utile se preferisci eseguire la scansione dei sistemi ONTAP locali da un'istanza di Data Classification situata in locale, ma non è obbligatorio che l'istanza sia installata in locale.
+* link:task-deploy-compliance-dark-site.html["Installa su un host Linux in un sito locale senza accesso a Internet"], chiamata _modalità privata_. Questo tipo di installazione, che utilizza uno script di installazione, non ha connettività con il layer SaaS della Console.
 
 
 
@@ -29,6 +29,6 @@ TIP: Per le implementazioni VMware on-premises vSphere, NetApp Data Classificati
 [[on-premises-installation-script]]
 == Script di installazione locale
 
-Sia l'installazione su un host Linux con accesso a Internet sia l'installazione locale su un host Linux senza accesso a Internet utilizzano uno script di installazione. Lo script inizia verificando se il sistema e l'ambiente soddisfano i prerequisiti. Se i prerequisiti sono soddisfatti, l'installazione ha inizio.
+Entrambi i metodi di installazione utilizzano uno script di installazione. Lo script verifica se il sistema e l'ambiente soddisfano i prerequisiti. Se sì, l'installazione inizia.
 
-È disponibile un pacchetto software separato per verificare la readiness del tuo Linux. Per eseguire il pacchetto di verifica, consulta link:task-test-linux-system.html["verifica che il tuo host Linux sia pronto per installare Data Classification"].
+È disponibile un pacchetto software separato per verificare se il tuo host Linux è pronto. Per eseguire il pacchetto di verifica, consulta link:task-test-linux-system.html["verifica che il tuo host Linux sia pronto per installare Data Classification"].

@@ -4,7 +4,7 @@
 
 .Passi
 . Nella scheda Indagine, definisci una ricerca selezionando i filtri che desideri utilizzare. Vederelink:task-investigate-data.html["Filtraggio dei dati nella pagina Indagine"] per i dettagli.
-. Dopo aver impostato tutte le caratteristiche del filtro come preferisci, seleziona *Salva query*.
+. Una volta configurate tutte le caratteristiche del filtro, seleziona *Salva query*.
 +
 image:../media/screenshot_compliance_save_as_highlight.png["Screenshot che mostra come salvare una query filtrata come query salvata."]
 
@@ -21,4 +21,4 @@ image:../media/screenshot_compliance_save_highlight2.png["Uno screenshot che mos
 
 
 
-Dopo aver creato la ricerca o la policy, puoi visualizzarla nella scheda **Query salvate**.
+Una volta creata la ricerca o la policy, puoi visualizzarla nella scheda **Query salvate**.

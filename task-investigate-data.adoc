@@ -57,7 +57,7 @@ Utilizza i seguenti filtri per visualizzare la quantità di informazioni sensibi
 | Livello di sensibilità | Selezionare il livello di sensibilità: Personale, Personale sensibile o Non sensibile. 
 
 
-| Numero di identificatori | Selezionare l'intervallo di identificatori sensibili rilevati per file.  Include dati personali e dati personali sensibili.  Quando si filtra nelle directory, la classificazione dei dati somma le corrispondenze di tutti i file in ogni cartella (e sottocartelle).  NOTA: nella versione di dicembre 2023 (1.26.6) è stata rimossa l'opzione per calcolare il numero di dati di informazioni personali identificabili (PII) per directory. 
+| Numero di identificatori | Seleziona l'intervallo di identificatori sensibili rilevati per file. Include dati personali e dati personali sensibili. Quando filtri nelle directory, NetApp Data Classification somma le corrispondenze di tutti i file in ogni cartella (e sottocartella). NOTA: la release di dicembre 2023 (versione 1.26.6) ha rimosso l'opzione per calcolare il numero di dati di identificazione personale (PII) per directory. 
 
 
 | Dati personali | Seleziona illink:reference-private-data-categories.html["tipi di dati personali"] . 
@@ -382,7 +382,7 @@ Una finestra di dialogo visualizza un messaggio che indica che i report sono in 
 
 .Passi
 . Nella scheda Indagine, definisci una ricerca selezionando i filtri che desideri utilizzare. Vederelink:task-investigate-data.html["Filtraggio dei dati nella pagina Indagine"] per i dettagli.
-. Dopo aver impostato tutte le caratteristiche del filtro come preferisci, seleziona *Salva query*.
+. Una volta configurate tutte le caratteristiche del filtro, seleziona *Salva query*.
 +
 image:../media/screenshot_compliance_save_as_highlight.png["Screenshot che mostra come salvare una query filtrata come query salvata."]
 
@@ -399,7 +399,7 @@ image:../media/screenshot_compliance_save_highlight2.png["Uno screenshot che mos
 
 
 
-Dopo aver creato la ricerca o la policy, puoi visualizzarla nella scheda **Query salvate**.
+Una volta creata la ricerca o la policy, puoi visualizzarla nella scheda **Query salvate**.
 
 
 TIP: Potrebbero essere necessari fino a 15 minuti prima che i risultati vengano visualizzati nella pagina Query salvate.

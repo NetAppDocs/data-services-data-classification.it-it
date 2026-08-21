@@ -2,4 +2,4 @@
 :allow-uri-read: 
 
 
-+ Se si desidera assicurarsi che gli "ultimi orari di accesso" dei file non vengano modificati dalle scansioni di classificazione dei dati, si consiglia che l'utente disponga delle autorizzazioni di scrittura degli attributi in CIFS o delle autorizzazioni di scrittura in NFS. Se possibile, configurare l'utente di Active Directory come parte di un gruppo padre nell'organizzazione che dispone delle autorizzazioni per tutti i file.
++ Per assicurarti che gli orari di "ultimo accesso" dei tuoi file non vengano modificati dalle scansioni di Data Classification, configura l'utente di Active Directory con i permessi di Write Attributes in CIFS o i permessi di scrittura in NFS. Se possibile, configura l'utente di Active Directory come parte di un gruppo principale nell'organizzazione che abbia i permessi su tutti i file.

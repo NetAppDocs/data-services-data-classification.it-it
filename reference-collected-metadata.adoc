@@ -14,7 +14,7 @@ summary: 'La classificazione dei dati raccoglie determinati metadati durante l"e
 
 
 [role="lead"]
-NetApp Data Classification raccoglie metadati durante la scansione delle tue origini dati e dei tuoi sistemi. La maggior parte dei metadati è disponibile, ma alcuni attributi non sono disponibili per tutti i protocolli.
+NetApp Data Classification raccoglie metadati durante la scansione delle origini dati e dei sistemi. Alcuni attributi dei metadati non sono disponibili per tutti i protocolli.
 
 [cols="15,25,25,25"]
 |===
@@ -47,7 +47,7 @@ NetApp Data Classification raccoglie metadati durante la scansione delle tue ori
 [[last-accessed-time]]
 == Ultimo accesso
 
-Quando Data Classification estrae dati dalle condivisioni di file, il sistema operativo lo considera un evento di accesso e aggiorna di conseguenza l'ora dell'ultimo accesso. Dopo la scansione, Data Classification tenta di ripristinare l'ora dell'ultimo accesso al timestamp originale. Se Data Classification non ha i permessi di scrittura degli attributi in CIFS o i permessi di scrittura in NFS, il sistema non può ripristinare l'ora dell'ultimo accesso al timestamp originale.
+Quando Data Classification estrae dati dalle condivisioni di file, il sistema operativo lo considera un evento di accesso e aggiorna di conseguenza l'ora dell'ultimo accesso. Dopo la scansione, Data Classification tenta di ripristinare l'ora dell'ultimo accesso al timestamp originale. Se Data Classification non dispone delle autorizzazioni di scrittura sugli attributi in CIFS o delle autorizzazioni di scrittura in NFS, il sistema non può ripristinare l'ora dell'ultimo accesso al timestamp originale.
 
 Per impostazione predefinita, Data Classification non esegue la scansione dei file se non dispone delle autorizzazioni di scrittura per ripristinare il timestamp originale. Se i tuoi dati possono tollerare che l'ora dell'ultimo accesso non venga ripristinata al timestamp originale, abilita l'opzione *Scansione senza autorizzazioni di scrittura* nella pagina di configurazione del sistema.
 
@@ -56,4 +56,4 @@ image:screenshot_scan_missing_permissions.png["Uno screenshot che mostra l'inter
 Questa funzionalità è applicabile ai sistemi ONTAP locali, Cloud Volumes ONTAP, Azure NetApp Files, Amazon FSx for NetApp ONTAP e condivisioni file di terze parti.
 
 
-NOTE: I volumi ONTAP configurati con SnapLock hanno autorizzazioni di sola lettura e inoltre non possono ripristinare l'ora dell'ultimo accesso al timestamp originale.
+NOTE: I volumi ONTAP configurati con SnapLock hanno permessi di sola lettura e inoltre non possono ripristinare l'ora dell'ultimo accesso al timestamp originale.

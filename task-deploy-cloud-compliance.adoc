@@ -16,7 +16,7 @@ summary: 'Completa alcuni passaggi per distribuire NetApp Data Classification ne
 [role="lead"]
 È possibile distribuire NetApp Data Classification nel cloud con NetApp Console.  La Console distribuisce l'istanza di classificazione dei dati nella stessa rete del provider cloud dell'agente della Console.
 
-Nota che puoi anchelink:task-deploy-compliance-onprem.html["installare Data Classification su un host Linux con accesso a Internet"] .  Questo tipo di installazione può essere una buona opzione se si preferisce eseguire la scansione dei sistemi ONTAP locali utilizzando un'istanza di classificazione dei dati anch'essa ubicata in sede, ma non è un requisito.  Il software funziona esattamente allo stesso modo, indipendentemente dal metodo di installazione scelto.
+Tieni presente che puoi anche link:task-deploy-compliance-onprem.html["installare Data Classification su un host Linux con accesso a Internet"]. Questo tipo di installazione può essere una buona opzione se preferisci eseguire la scansione dei sistemi ONTAP locali utilizzando un'istanza di Data Classification anch'essa locale, ma non è un requisito. Il software funziona esattamente allo stesso modo indipendentemente dal metodo di installazione che scegli.
 
 
 
@@ -45,9 +45,9 @@ Avviare la procedura guidata di installazione per distribuire l'istanza di Data 
 [[create-a-console-agent]]
 == Creare un agente Console
 
-Se non disponi già di un agente Console, creane uno nel tuo cloud provider. Vedi  https://docs.netapp.com/us-en/console-setup-admin/concept-install-options-aws.html["creazione di un agente Console in AWS"^] o  https://docs.netapp.com/us-en/console-setup-admin/concept-install-options-azure.html["creazione di un agente Console in Azure"^], oppure  https://docs.netapp.com/us-en/console-setup-admin/concept-install-options-google.html["creazione di un agente Console in GCP"^]. Nella maggior parte dei casi, probabilmente hai già un agente Console configurato prima di tentare di attivare Data Classification perché la maggior parte  https://docs.netapp.com/us-en/console-setup-admin/task-install-connector-on-prem.html["Le funzionalità della console richiedono un agente della console"], ma ci sono casi in cui dovrai configurarne uno ora.
+Se non hai già un agente Console, creane uno nel tuo cloud provider. Vedi  https://docs.netapp.com/us-en/console-setup-admin/concept-install-options-aws.html["creazione di un agente Console in AWS"^] o  https://docs.netapp.com/us-en/console-setup-admin/concept-install-options-azure.html["creazione di un agente Console in Azure"^], oppure  https://docs.netapp.com/us-en/console-setup-admin/concept-install-options-google.html["creazione di un agente Console in GCP"^]. Nella maggior parte dei casi, probabilmente hai già un agente Console configurato prima di provare ad attivare Data Classification perché la maggior parte  https://docs.netapp.com/us-en/console-setup-admin/task-install-connector-on-prem.html["Le funzionalità della console richiedono un agente della console"], ma ci sono casi in cui devi configurarne uno ora.
 
-Esistono alcuni scenari in cui è necessario utilizzare un agente Console distribuito in uno specifico provider cloud:
+Ci sono alcuni scenari in cui devi usare un agente Console distribuito in uno specifico cloud provider:
 
 * Quando si esegue la scansione dei dati in Cloud Volumes ONTAP in AWS o Amazon FSx per i bucket ONTAP , si utilizza un agente Console in AWS.
 * Quando si esegue la scansione dei dati in Cloud Volumes ONTAP in Azure o in Azure NetApp Files, si utilizza un agente Console in Azure.

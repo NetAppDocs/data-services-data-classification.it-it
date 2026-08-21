@@ -14,11 +14,11 @@ summary: Le query salvate sono filtri personalizzati che forniscono risultati di
 
 
 [role="lead"]
-NetaApp Data Classification supporta il salvataggio delle query di ricerca.  Con una query salvata, puoi creare filtri personalizzati per ordinare le query frequenti nella pagina di indagine sui dati.  La classificazione dei dati include anche query salvate predefinite basate su richieste comuni.
+NetApp Data Classification ti permette di salvare le query di ricerca e creare filtri personalizzati per trovare i dati nella pagina Indagini. Puoi usare query predefinite oppure creare query e criteri salvati per agire sui dati corrispondenti.
 
 La scheda *Query salvate* nella dashboard Conformità elenca tutte le query salvate predefinite e personalizzate disponibili in questa istanza di Classificazione dati.
 
-Le query salvate possono essere salvate anche come **policy**.  Mentre le query filtrano i dati, i criteri consentono di agire sui dati.  Con una policy: puoi eliminare i dati rilevati o inviare aggiornamenti via email sui dati rilevati.
+Puoi convertire le query salvate in **policy**. Mentre le query filtrano i dati, le policy ti permettono di agire sui dati. Con una policy, puoi eliminare i dati rilevati o inviare aggiornamenti via email su di essi.
 
 Le query salvate vengono visualizzate anche nell'elenco dei filtri nella pagina Indagine.
 
@@ -29,7 +29,7 @@ image:screenshot_compliance_highlights_tab.png["Uno screenshot della scheda Quer
 [[view-saved-queries-results-in-the-investigation-page]]
 == Visualizza i risultati delle query salvate nella pagina Indagine
 
-Per visualizzare i risultati di una query salvata nella pagina Indagine, selezionareimage:button-gallery-options.gif["Pulsante Altro"] pulsante per una ricerca specifica, quindi seleziona *Esamina risultati*.
+Per visualizzare i risultati delle query salvate nella pagina Indagini, seleziona il pulsante image:button-gallery-options.gif["Pulsante Altro"] per una ricerca, poi seleziona *Indaga sui risultati*.
 
 image:screenshot_compliance_highlights_investigate.png["Uno screenshot della selezione di Esamina risultati per una ricerca specifica dalla scheda Query salvata."]
 
@@ -38,11 +38,11 @@ image:screenshot_compliance_highlights_investigate.png["Uno screenshot della sel
 [[create-saved-queries-and-policies]]
 == Crea query e policy salvate
 
-Puoi creare query salvate personalizzate che forniscono risultati per query specifiche della tua organizzazione.  Vengono restituiti risultati per tutti i file e le directory (condivisioni e cartelle) che corrispondono ai criteri di ricerca.
+Puoi creare query salvate personalizzate che restituiscono risultati specifici per la tua organizzazione. I risultati vengono restituiti per tutti i file e le directory (condivisioni e cartelle) che corrispondono ai criteri di ricerca.
 
 .Passi
 . Nella scheda Indagine, definisci una ricerca selezionando i filtri che desideri utilizzare. Vederelink:task-investigate-data.html["Filtraggio dei dati nella pagina Indagine"] per i dettagli.
-. Dopo aver impostato tutte le caratteristiche del filtro come preferisci, seleziona *Salva query*.
+. Una volta configurate tutte le caratteristiche del filtro, seleziona *Salva query*.
 +
 image:../media/screenshot_compliance_save_as_highlight.png["Screenshot che mostra come salvare una query filtrata come query salvata."]
 
@@ -59,7 +59,7 @@ image:../media/screenshot_compliance_save_highlight2.png["Uno screenshot che mos
 
 
 
-Dopo aver creato la ricerca o la policy, puoi visualizzarla nella scheda **Query salvate**.
+Una volta creata la ricerca o la policy, puoi visualizzarla nella scheda **Query salvate**.
 
 
 
@@ -68,16 +68,16 @@ Dopo aver creato la ricerca o la policy, puoi visualizzarla nella scheda **Query
 
 È possibile modificare il nome e la descrizione di una query salvata.  È anche possibile convertire una query in una policy e viceversa.
 
-Non è possibile modificare le query salvate predefinite.  Non è possibile modificare i filtri di una query salvata.  In alternativa, è possibile visualizzare i risultati dell'indagine di una query salvata, modificare o alterare i filtri, quindi salvarla come nuova query o criterio.
+Non puoi modificare le query salvate predefinite o i filtri di una query salvata esistente. Invece, visualizza i risultati dell'investigazione della query salvata, cambia i filtri e salva il risultato come nuova query o criterio.
 
 .Passi
 . Dalla pagina Query salvate, seleziona *Modifica ricerca* per la ricerca che desideri modificare.
 +
 image:screenshot-edit-search.png["Uno screenshot che mostra la query Modifica salvata."]
 
-. Apportare le modifiche ai campi nome e descrizione.  Per modificare solo i campi nome e descrizione.
+. Apporta modifiche ai campi nome e descrizione.
 +
-Facoltativamente, è possibile convertire la query in una policy oppure convertire la policy in una query salvata.  Attivare l'opzione *Esegui come criterio* secondo necessità. ..  Se stai convertendo la query in un criterio, scegli *Elimina definitivamente* o *Invia aggiornamenti via email*.  Se scegli gli aggiornamenti via e-mail, puoi inviare via e-mail i risultati della query a _tutti_ gli utenti della Console con cadenza giornaliera, settimanale o mensile.  In alternativa, è possibile inviare la notifica a un indirizzo e-mail specifico con le stesse frequenze.
+Puoi opzionalmente convertire la query in una policy o convertire la policy in una query salvata. Attiva o disattiva l'opzione *Esegui come policy* secondo necessità. .. Se stai convertendo la query in una policy, scegli se *Eliminare definitivamente* o *Inviare aggiornamenti via email*. Se scegli gli aggiornamenti via email, puoi inviare i risultati della query a _tutti_ gli utenti della Console ogni giorno, settimana o mese. In alternativa, puoi inviare la notifica a un indirizzo email specifico con la stessa frequenza.
 
 . Selezionare *Salva* per completare le modifiche.
 
@@ -112,7 +112,7 @@ File con più di 20 identificatori di dati personali o colonne di database con p
 
 * **Dati privati - Non aggiornati da oltre 7 anni**
 +
-File contenenti informazioni personali o sensibili, modificati l'ultima volta più di 7 anni fa
+File contenenti informazioni personali o dati personali sensibili, modificati più di sette anni fa
 
 * **Protezione - Alta**
 +
@@ -120,11 +120,11 @@ File o colonne di database che contengono una password, informazioni sulla carta
 
 * **Protezione - Basso**
 +
-File a cui non si è avuto accesso per più di 3 anni
+File a cui non hai avuto accesso per più di tre anni
 
 * **Protezione - Media**
 +
-File che contengono file o colonne di database con identificatori di dati personali, tra cui numeri di identificazione, numeri di identificazione fiscale, numeri di patente di guida, ID medicinali o numeri di passaporto
+File o colonne di database che contengono identificativi di dati personali, inclusi numeri di identificazione, codici fiscali, numeri di patente di guida, identificativi medici o numeri di passaporto
 
 * **Dati personali sensibili - Rischio elevato**
 +

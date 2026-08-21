@@ -36,7 +36,7 @@ Prima di abilitare la classificazione dei dati, rivedere i seguenti prerequisiti
 * È possibile aggiungere una condivisione DFS (Distributed File System) come una normale condivisione CIFS.  Poiché Data Classification non è a conoscenza del fatto che la condivisione è basata su più server/volumi combinati in un'unica condivisione CIFS, potrebbero essere visualizzati errori di autorizzazione o connettività relativi alla condivisione quando in realtà il messaggio si applica solo a una delle cartelle/condivisioni che si trova su un server/volume diverso.
 * Per le condivisioni CIFS (SMB), assicurati di disporre delle credenziali di Active Directory che forniscano l'accesso in lettura alle condivisioni.  Le credenziali di amministratore sono preferibili nel caso in cui Data Classification debba analizzare dati che richiedono autorizzazioni elevate.
 +
-Se si desidera assicurarsi che gli "ultimi orari di accesso" dei file non vengano modificati dalle scansioni di classificazione dei dati, si consiglia che l'utente disponga delle autorizzazioni di scrittura degli attributi in CIFS o delle autorizzazioni di scrittura in NFS. Se possibile, configurare l'utente di Active Directory come parte di un gruppo padre nell'organizzazione che dispone delle autorizzazioni per tutti i file.
+Per garantire che i "last accessed times" dei tuoi file non vengano modificati dalle scansioni di NetApp Data Classification, configura l'utente di Active Directory con le autorizzazioni di Write Attributes in CIFS o con le autorizzazioni di scrittura in NFS. Se possibile, configura l'utente di Active Directory come parte di un gruppo padre nell'organizzazione che abbia le autorizzazioni su tutti i file.
 
 * Tutte le condivisioni file CIFS in un gruppo devono utilizzare le stesse credenziali di Active Directory.
 * È possibile combinare condivisioni NFS e CIFS (utilizzando Kerberos o NTLM).  È necessario aggiungere le azioni al gruppo separatamente.  Ciò significa che è necessario completare il processo due volte, una volta per protocollo.
@@ -150,12 +150,12 @@ Se si aggiungono condivisioni di file con un secondo protocollo, assicurarsi di 
 [[enable-and-disable-scans-on-volumes]]
 == Abilita e disabilita le scansioni sui volumi
 
-Dalla pagina Configurazione è possibile avviare o interrompere le scansioni su qualsiasi sistema in qualsiasi momento. È inoltre possibile passare da scansioni di sola mappatura a scansioni di mappatura e classificazione, e viceversa. Si consiglia di eseguire la scansione di tutti i volumi di un sistema.
+Puoi avviare o interrompere le scansioni su qualsiasi sistema in qualsiasi momento dal menu Configurazione. Puoi anche passare dalle scansioni di sola mappatura alle scansioni complete e viceversa.
 
-L'opzione *Scansione senza permessi di scrittura* è disabilitata per impostazione predefinita. Questo significa che se Data Classification non ha i permessi di scrittura appropriati, il sistema non eseguirà la scansione dei file perché Data Classification non può ripristinare l'“ora dell'ultimo accesso” al valore originale. Se il tuo sistema può tollerare la modifica dell'ora dell'ultimo accesso, seleziona questa opzione. link:reference-collected-metadata.html#last-accessed-time-timestamp["Saperne di più"^].
+L'opzione *Scansione senza permessi di scrittura* è disabilitata per impostazione predefinita. Questo significa che se Data Classification non ha i permessi di scrittura appropriati, il sistema non eseguirà la scansione dei file perché Data Classification non può ripristinare l'ora dell'ultimo accesso al valore originale. Se il tuo sistema può tollerare la modifica dell'ora dell'ultimo accesso, seleziona questa opzione. link:reference-collected-metadata.html#last-accessed-time-timestamp["Saperne di più"^].
 
 
-NOTE: I nuovi volumi aggiunti al sistema vengono scansionati automaticamente solo se la scansione è abilitata per tutti i volumi. Se hai abilitato la scansione solo su determinati volumi, devi abilitarla manualmente per il nuovo volume aggiunto.
+NOTE: I nuovi volumi aggiunti al sistema vengono scansionati automaticamente solo se hai abilitato la scansione per tutti i volumi. Se hai abilitato la scansione solo su determinati volumi, devi abilitarla manualmente per il volume appena aggiunto.
 
 image:screenshot_volume_compliance_selection.png["Uno screenshot della pagina di configurazione in cui è possibile abilitare o disabilitare la scansione dei singoli volumi."]
 

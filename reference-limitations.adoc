@@ -24,7 +24,7 @@ Le limitazioni note identificano funzioni che non sono supportate o non interagi
 Nella versione di dicembre 2023 (1.26.6) sono state rimosse le seguenti opzioni:
 
 * L'opzione per attivare la raccolta dei registri di controllo è stata disabilitata.
-* Durante l'indagine di Directories, l'opzione per calcolare il numero di dati di informazioni personali identificabili (PII) da parte di Directories non è disponibile.
+* Durante l'indagine sulle directory, l'opzione per calcolare il numero di dati di identificazione personale (PII) per directory non è disponibile.
 * L'opzione per integrare i dati tramite etichette di Azure Information Protection (AIP) è stata disabilitata.
 
 

@@ -14,7 +14,7 @@ summary: 'Le funzionalità NetApp Data Classification disponibili tramite l"inte
 
 
 [role="lead"]
-Le funzionalità NetApp Data Classification disponibili tramite l'interfaccia utente Web sono disponibili anche tramite l'API REST.
+Utilizza l'API REST di NetApp Data Classification per accedere alle stesse funzionalità disponibili nell'interfaccia utente web.
 
 Nella Classificazione dei dati sono definite quattro categorie che corrispondono alle schede nell'interfaccia utente:
 
@@ -41,7 +41,7 @@ L'API consente di eseguire le seguenti funzioni:
 
 * Crea query utilizzando le istruzioni "AND" e "OR", includi ed escludi informazioni e molto altro.
 +
-Ad esempio, è possibile individuare file _senza_ informazioni personali identificabili (PII) specifiche (funzionalità non disponibile nell'interfaccia utente).  È anche possibile escludere campi specifici dall'operazione di esportazione.
+Ad esempio, puoi individuare file _senza_ specifiche informazioni di identificazione personale (PII) (funzionalità non disponibile nell'interfaccia utente). Puoi anche escludere campi specifici dall'operazione di esportazione.
 
 * Eseguire azioni
 +
@@ -60,7 +60,7 @@ L'API è sicura e utilizza lo stesso metodo di autenticazione dell'interfaccia u
 [[accessing-the-swagger-api-reference]]
 == Accesso al riferimento API Swagger
 
-Per accedere a Swagger, avrai bisogno dell'indirizzo IP della tua istanza di Data Classification. Nel caso di un'implementazione cloud, utilizzerai l'indirizzo IP pubblico. Quindi dovrai accedere a questo endpoint:
+Per accedere a Swagger, ti serve l'indirizzo IP della tua istanza di Data Classification. Per una deployment cloud, usa l'indirizzo IP pubblico. Poi devi accedere a questo endpoint:
 
 \https://<ip_classificazione>/documentazione
 
@@ -72,7 +72,7 @@ Per accedere a Swagger, avrai bisogno dell'indirizzo IP della tua istanza di Dat
 L'esempio seguente mostra una chiamata API per copiare i file.
 
 .Richiesta API
-Inizialmente sarà necessario ottenere tutti i campi e le opzioni rilevanti affinché un sistema possa visualizzare tutti i filtri nella scheda di indagine.
+Devi ottenere tutti i campi e le opzioni rilevanti per visualizzare tutti i filtri nella scheda Investigation.
 
 [source, http]
 ----
@@ -434,14 +434,14 @@ curl -X GET "http://{classification_ip}/api/{classification_version} /search/opt
   ]
 }
 ----
-Utilizzeremo questa risposta nei parametri della nostra richiesta per filtrare i file desiderati che vogliamo copiare.
+Utilizza la risposta nei parametri della richiesta per filtrare i file che vuoi copiare.
 
 È possibile applicare un'azione a più elementi.  I tipi di azioni supportati includono: sposta, elimina e copia.
 
-Creeremo l'azione di copia:
+Crea l'azione di copia:
 
 .Richiesta API
-La prossima API è l'API di azione e consente di creare più azioni.
+Questa API ti permette di creare più azioni.
 
 [source, http]
 ----
