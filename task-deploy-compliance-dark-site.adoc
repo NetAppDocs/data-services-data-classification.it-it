@@ -14,7 +14,7 @@ summary: 'Completa alcuni passaggi per installare NetApp Data Classification su 
 
 
 [role="lead"]
-Utilizza la modalità privata per installare NetApp Data Classification su un host Linux in una sede locale senza accesso a Internet. Questa implementazione utilizza uno script di installazione e mantiene l'istanza di Data Classification disconnessa dal layer SaaS di NetApp Console, permettendoti di analizzare le origini dati locali in un ambiente isolato.
+Usa la modalità privata per installare NetApp Data Classification su un host Linux in una sede on-premises senza accesso a internet (nota anche come installazione offline o dark site). Questa distribuzione utilizza uno script di installazione e mantiene l'istanza di Data Classification disconnessa dal layer SaaS di NetApp Console, permettendoti di analizzare le origini dati locali in un ambiente isolato.
 
 link:https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["Scopri le diverse modalità di distribuzione per l'agente Console e Data Classification"^].
 
@@ -28,7 +28,7 @@ Lo script di installazione di Data Classification verifica se il sistema e l'amb
 [[supported-data-sources]]
 == Fonti dati supportate
 
-Quando è installata la modalità privata (talvolta chiamata "offline" o sito "dark"), Data Classification può analizzare solo i dati provenienti da fonti dati che sono anch'esse locali rispetto al sito on-premises. Al momento, Data Classification può analizzare le seguenti fonti dati *locali*:
+Quando installi Data Classification in modalità privata, puoi analizzare solo i dati provenienti da origini dati che sono anch'esse locali al sito on-premises. Al momento, Data Classification può analizzare le seguenti origini dati *locali*:
 
 * Sistemi ONTAP on-premise
 * Schemi di database
@@ -40,6 +40,8 @@ Al momento non è disponibile alcun supporto per la scansione di Cloud Volumes O
 
 [[limitations]]
 == Limitazioni
+
+La migrazione dell'agente Console a un host diverso non è supportata quando Data Classification è distribuito su un agente Console. Se hai bisogno di Classification su un altro agente Console in un sito offline, distribuisci un nuovo agente Console e una nuova istanza di Data Classification sul nuovo host.
 
 La maggior parte delle funzionalità di Data Classification funziona quando viene distribuita in un sito senza accesso a Internet. Tuttavia, alcune funzionalità che richiedono l'accesso a Internet non sono supportate, ad esempio:
 

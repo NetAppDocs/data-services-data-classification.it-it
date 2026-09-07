@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: concept-classification.html 
-keywords: artificial intelligence, ai, compliance, cloud compliance, dsar, personal data, personal information, sensitive, personal sensitive data, gdpr, hipaa, scans, scanning,  governance, cloud data sense, data sense, privacy control, classification, optimization, bluexp, bluexp classification, netapp console 
+keywords: artificial intelligence, ai, compliance, cloud compliance, dsar, personal data, personal information, sensitive, personal sensitive data, gdpr, hipaa, scans, scanning, governance, cloud data sense, data sense, privacy control, classification, optimization, bluexp, bluexp classification, netapp console 
 summary: Data Classification è un servizio di governance dei dati per NetApp Console che analizza le fonti di dati aziendali on-premise e cloud per mappare e classificare i dati e identificare le informazioni private. Ciò può contribuire a ridurre i rischi per la sicurezza e la conformità, a diminuire i costi di archiviazione e ad agevolare i progetti di migrazione dei dati. 
 ---
 = Scopri di più sulla NetApp Data Classification
